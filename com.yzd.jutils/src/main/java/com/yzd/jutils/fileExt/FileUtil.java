@@ -21,4 +21,11 @@ public class FileUtil {
         }
         return null;
     }
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        String insurerXmlStr = FileUtil.read("/project.properties", "utf-8");
+    }
 }
