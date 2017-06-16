@@ -1,5 +1,7 @@
 package com.yzd.jutils.patterns.singleton;
 
+import com.yzd.jutils.print.PrintUtil;
+
 /**
  * todo 单例- 静态内部类
  * Created by zd.yao on 2017/4/28.
@@ -14,5 +16,6 @@ public class Singleton {
     }
     private Singleton (){
         //todo do something
+        PrintUtil.outLn("init");
     }
 }
