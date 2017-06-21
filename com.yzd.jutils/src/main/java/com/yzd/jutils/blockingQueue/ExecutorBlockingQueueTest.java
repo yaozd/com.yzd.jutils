@@ -21,11 +21,11 @@ public class ExecutorBlockingQueueTest {
      */
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        BlockingQueue<Runnable> queue = new ArrayBlockingQueue<Runnable>(3);
+        BlockingQueue<Runnable> queue = new ArrayBlockingQueue<Runnable>(2);
 
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(3, 3, 1, TimeUnit.HOURS, queue, new ThreadPoolExecutor.CallerRunsPolicy());
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 8, 1, TimeUnit.HOURS, queue, new ThreadPoolExecutor.CallerRunsPolicy());
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
             final int index = i;
             System.out.println("task: " + (index+1));
             Runnable run = new Runnable() {
@@ -34,14 +34,21 @@ public class ExecutorBlockingQueueTest {
                     System.out.println("thread start--------" + (index+1));
                     try {
                         //Thread.sleep(Long.MAX_VALUE);
-                        Thread.sleep(50000);//测试休眠50秒
+                        Thread.sleep(50);//测试休眠50秒
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    System.out.println("thread end" + (index+1));
+                    System.out.println("thread end==================" + (index+1));
                 }
             };
             executor.execute(run);
+            //executor.shutdown();
+            //executor.awaitTermination(10,TimeUnit.SECONDS);
+           int size= executor.getQueue().size();
+            if(size==1){
+                System.out.println("////////////////////////////////////");
+            }
         }
+        executor.shutdown();
     }
 }
