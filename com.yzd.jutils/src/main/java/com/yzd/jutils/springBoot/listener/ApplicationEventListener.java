@@ -46,6 +46,7 @@ public class ApplicationEventListener {
     }
     if (event instanceof ContextClosedEvent) {
     // 应用关闭
+    // kill PID 不要使用kill -9 PID
     System.out.println("应用关闭");
     return;
     }
