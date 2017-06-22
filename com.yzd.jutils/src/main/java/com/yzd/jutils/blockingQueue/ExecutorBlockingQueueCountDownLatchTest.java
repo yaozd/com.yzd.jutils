@@ -197,7 +197,7 @@ class Task implements Callable<Integer> {
             PrintUtil.outLn(1);
             PrintUtil.outLn(latch.getCount());
             if (latch.getCount() < 30) {
-                int a2 = 1 / 0;//为测试产生一个异常
+                //int a2 = 1 / 0;//为测试产生一个异常
             }
             TimeUnit.MICROSECONDS.sleep(100);
             return tempList.size();
