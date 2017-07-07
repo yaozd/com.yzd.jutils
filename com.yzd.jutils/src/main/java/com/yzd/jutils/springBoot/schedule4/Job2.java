@@ -36,6 +36,8 @@ public class Job2 {
         //注：以redis消息的MD5的值做为独占锁
     }
 
+    //从redis 里面读取消息可放到一个单独的抽象类里AbstractJob中，可以使代码更加清楚
+    //通过静态方法引用就可以
     private String getString() throws InterruptedException {
         //
         String cmd=null;
