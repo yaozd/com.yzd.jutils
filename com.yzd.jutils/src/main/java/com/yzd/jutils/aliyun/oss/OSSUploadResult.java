@@ -10,4 +10,6 @@ public class OSSUploadResult {
     private String bucketName;
     private String diskName;
     private String fileName;
+    //md5的值用于以后文件的验证
+    private String md5Value;
 }
