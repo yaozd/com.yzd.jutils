@@ -78,9 +78,18 @@ public class AESUtil {
         return cs == null || cs.length() == 0;
     }
 
-    public static void main(String[] args) throws Exception {
+    /**
+     *  Java 加密 AES 对称加密算法
+     *  http://blog.csdn.net/uikoo9/article/details/27982575
+     *  Java、C#双语版配套AES加解密示例
+     *  http://www.cnblogs.com/lzrabbit/p/3639503.html
+     * @param args
+     * @throws Exception
+     */
+    public static void main(String[] args)  {
         //AES 加密默认情况下都是使用UTF-8做为内容的编码的格式
         //不过AES有key有多种情况当前是通过SecureRandom生成
+        //如果KEY是严格的不16位不需要SecureRandom生成的话，可以参考【Java、C#双语版配套AES加解密示例】http://www.cnblogs.com/lzrabbit/p/3639503.html
         String encodeName="utf-8";
         String content = "hello";
         System.out.println("加密前：" + content);

@@ -22,5 +22,11 @@ public class CollectionsTest {
         map2.put("1", "1");
         //java怎么用一行代码初始化ArrayList
         List<String> places = Arrays.asList("Buenos Aires", "Córdoba", "La Plata");
+        // Java中如何遍历Map对象的4种方法
+        // http://blog.csdn.net/tjcyjd/article/details/11111401
+        Map<Integer, Integer> map1 = new HashMap<Integer, Integer>();
+        for (Map.Entry<Integer, Integer> entry : map1.entrySet()) {
+            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+        }
     }
 }
