@@ -51,6 +51,10 @@ public class BigDecimalUtil {
         String v2= BigDecimalUtil.mul("4.015", "100");
         String v1= BigDecimalUtil.div("200000", "0.002",2);
         System.out.println(v2);
+        //删除小数点后面的数据
+        Object obj= new Double(v2).intValue();
+        System.out.println(obj.toString());
+        //
         System.out.println(v1);
     }
 }
