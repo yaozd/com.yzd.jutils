@@ -1,6 +1,9 @@
 package com.yzd.jutils.stringExt;
 
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  *
@@ -21,5 +24,14 @@ public class StringUtil {
         } catch (UnsupportedEncodingException e) {
             throw new IllegalArgumentException(e);
         }
+    }
+    public static void StringToList(){
+        String[] s={"1","2","3","5","6"};
+        List<String> listA = Arrays.asList(s);
+        List<String> listB = new ArrayList<String>();
+        listB.addAll(listA);
+        listB.add("7");
+        String[]s2=listB.toArray(new String[]{});
+
     }
 }
