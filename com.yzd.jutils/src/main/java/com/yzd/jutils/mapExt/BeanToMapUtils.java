@@ -93,7 +93,7 @@ public class BeanToMapUtils {
             String propertyName = descriptor.getName();
             if (!propertyName.equals("class")) {
                 Method readMethod = descriptor.getReadMethod();
-                System.err.println(propertyName);
+                //System.err.println(propertyName);
                 Object result = null;
                 try {
                     result = readMethod.invoke(bean, new Object[0]);
