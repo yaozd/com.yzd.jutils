@@ -23,6 +23,9 @@ public class Application {
     @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
     @ImportResource("classpath:com.yzd.dubbo.monitor.provider.xml")
     @EnableScheduling
+    //如果发现missing.properties不存在，则抛出异常，也可以使用ignoreResourceNotFound=true去忽略
+    //@PropertySource(value = "classpath:server.properties",ignoreResourceNotFound = true)
+    @PropertySource(value = "classpath:server.properties")
     public class ApplicationMonitorWeb {
         *//**
          * Used when run as JAR
