@@ -26,6 +26,9 @@ public class Application {
     //如果发现missing.properties不存在，则抛出异常，也可以使用ignoreResourceNotFound=true去忽略
     //@PropertySource(value = "classpath:server.properties",ignoreResourceNotFound = true)
     @PropertySource(value = "classpath:server.properties")
+    //@Autowired Environment可以读取server.properties中的数据
+    //private Environment env;
+    //String val= env.getProperty("project.isTest");
     public class ApplicationMonitorWeb {
         *//**
          * Used when run as JAR
