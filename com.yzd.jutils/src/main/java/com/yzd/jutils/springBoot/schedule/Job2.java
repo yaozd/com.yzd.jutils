@@ -13,6 +13,8 @@ import java.util.concurrent.*;
 @Component
 public class Job2 {
     final static BlockingQueue<String> queue = new ArrayBlockingQueue<String>(1);
+    //fixedRate 固定每分钟执行一次
+    //fixedDelay 上次任务结束后一分钟后再次执行
     @Scheduled(initialDelay = 3000, fixedDelay = 1000 * 5)
     public void task_writeQueue() throws InterruptedException {
         SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
