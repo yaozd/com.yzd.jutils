@@ -47,6 +47,16 @@ public class ApplicationEventListener {
     if (event instanceof ContextClosedEvent) {
     // 应用关闭
     // kill PID 不要使用kill -9 PID
+    // Java利用ShutDownHook关闭系统资源
+    //http://blog.csdn.net/jaune161/article/details/46422881
+    ShutdownHook(Thread hook)方法，可以注册一个JVM关闭的钩子，这个钩子可以在以下几种场景被调用：
+    1）程序正常退出
+    2）使用System.exit()
+    3）终端使用Ctrl+C触发的中断
+    4）系统关闭
+    5）使用Kill pid命令干掉进程
+    ===
+    window 下可以通过Ctrl+C触发关闭
     System.out.println("应用关闭");
     return;
     }
@@ -62,6 +72,16 @@ public class ApplicationEventListener {
     app.addListeners(new ApplicationEventListener());
     app.run(args);
     }
+    }
+     //=================
+    public static void main(String[] args) throws InterruptedException {
+    logger.info("项目启动--BEGIN");
+    SpringApplication app = new SpringApplication(Application.class);
+    app.addListeners(new EventListener());
+    ApplicationContext ctx =app.run(args);
+    logger.info("项目启动--END");
+    CountDownLatch closeLatch = ctx.getBean(CountDownLatch.class);
+    closeLatch.await();
     }
      */
 }
