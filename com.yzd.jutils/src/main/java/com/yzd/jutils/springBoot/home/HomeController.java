@@ -61,5 +61,13 @@ public class HomeController {
      //LoginCallbackVM vm = new LoginCallbackVM("FAILURE", "TradeError");
      return vm;
      }
+     //测试同时使用get与post方法
+     @RestController
+     public class TestController {
+     @RequestMapping("openExe")
+     public void openExe(String id,@RequestBody String body){
+     int debug=0;
+     }
+     }
      */
 }

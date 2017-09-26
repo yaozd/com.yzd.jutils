@@ -8,9 +8,9 @@ import java.util.Map;
  */
 public class _MainTest {
     public static void main(String[] args){
-        String url="http://fanyi.baidu.com/";
+        String url="http://localhost:10001/openExe";
         Map<String,String> getParam=new HashMap<>();
-        getParam.put("a","111");
-        String result= HttpUtil.sendPostXML(url,getParam,"","utf-8","utf-8");
+        getParam.put("id","中国");
+        String result= HttpUtil.sendPostXML(url,getParam,"5678","utf-8","utf-8");
     }
 }
