@@ -1,5 +1,6 @@
 package com.yzd.jutils.shardingExt.betweenExt;
 
+import com.google.common.collect.Range;
 import org.junit.Test;
 
 import java.util.List;
@@ -12,8 +13,16 @@ import java.util.List;
  * Created by zd.yao on 2017/11/2.
  */
 public class _MainTest {
+    //目前只有between操作会触发doBetweenSharding方法
+    //大于（>）与小于（<）操作是不会触发doBetweenSharding方法
     @Test
     public void between(){
+        //shardingjdbc返回实际数据类型
+        //shardingValue.getValueRange()
+        Range<Integer> range1 = Range.closed(0, 9);
+        System.out.println("Lower Bound: " + range1.lowerEndpoint());
+        System.out.println("Upper Bound: " + range1.upperEndpoint());
+        //
         StoreRegion first=new StoreRegion(0L,10L);
         StoreRegion second=new StoreRegion(2L,10L);
         boolean isInclude=isInRegion(first,second);
