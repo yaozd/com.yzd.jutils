@@ -1,9 +1,11 @@
 package com.yzd.jutils.person;
 
+import java.io.Serializable;
+
 /**
  * Created by zd.yao on 2017/4/28.
  */
-public class Person {
+public class Person implements Serializable{
 
     public Person(int id,String address,  String name,int age) {
         this.address = address;
