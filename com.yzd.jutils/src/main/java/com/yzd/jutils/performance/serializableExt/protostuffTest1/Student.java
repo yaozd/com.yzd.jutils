@@ -5,7 +5,8 @@ import io.protostuff.Tag;
 import java.io.Serializable;
 
 public class Student  implements Serializable {
-	@Tag(1)  
+    private static final long serialVersionUID = -3646646866678777010L;
+    @Tag(1)
     private String name;  
     @Tag(2)  
     private String studentNo;  
