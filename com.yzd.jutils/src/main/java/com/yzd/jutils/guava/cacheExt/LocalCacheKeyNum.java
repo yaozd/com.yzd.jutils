@@ -19,18 +19,18 @@ public class LocalCacheKeyNum {
         return SingletonHolder.INSTANCE;
     }
     //缓存KEY的编号数量
-    public LoadingCache<String, Integer> keyNumber;
+    public LoadingCache<String, Long> keyNumber;
     private LocalCacheKeyNum (){
         PrintUtil.outLn("LocalCacheKeyNum=step 01");
-        LoadingCache<String, Integer> cache;
+        LoadingCache<String, Long> cache;
         cache = CacheBuilder.newBuilder()
-                .maximumSize(1000)
-                //缓存是时间大于keyAccessCount的时间
+                .maximumSize(10)
+                //缓存是时间大于keyAccessCount的时间为15秒
                 .expireAfterWrite(15, TimeUnit.SECONDS)
-                .build(new CacheLoader<String, Integer>() {
+                .build(new CacheLoader<String, Long>() {
                     @Override
-                    public Integer load(String key) {
-                        return 1;
+                    public Long load(String key) {
+                        return 1L;
                     }
                 });
         keyNumber=cache;
