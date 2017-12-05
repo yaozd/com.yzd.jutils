@@ -15,7 +15,7 @@ public class _MainTest {
     //目前KEY的结构：P01.HelloWorld:b0baee9d279d34fa1dfd71aadb908c3f#151209921
     String key="P01.HelloWorld:b0baee9d279d34fa1dfd71aadb908c3f";
     @Test
-    public void example1() throws Exception{
+    public void example_final() throws Exception{
         String tempKey="";
         while (true){
             String keyFullName= LocalCacheKeyUtil.getKeyFullNameOfKeyCount(key);

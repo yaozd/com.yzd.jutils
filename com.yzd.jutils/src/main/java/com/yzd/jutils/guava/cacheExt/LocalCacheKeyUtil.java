@@ -48,7 +48,7 @@ public class LocalCacheKeyUtil {
         }
     }
     //负载均衡=使用访问数对缓存编号取余
-    public static Long getKeyNum(String key){
+    public static Long getLoadBalanceOfKeyNum(String key){
         Long sizeOfKeyCount=LocalCacheKeyUtil.getValueOfKeyAccessCount(key);
         Long sizeOfKeyNum=LocalCacheKeyUtil.getValueOfKeyNumber(key);
         //PrintUtil.outLn(sizeOfKeyCount + "=_MainTest=TEST=" + sizeOfKeyNum);
