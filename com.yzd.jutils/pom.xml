@@ -151,4 +151,106 @@
             </plugin>
         </plugins>
     </build>
+    <repositories>
+        <repository>
+            <id>hb-snapshot</id>
+            <name>hb Snapshot Repository</name>
+            <url>http://n.hb.com:8081/nexus/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <updatePolicy>always</updatePolicy> <!-- 表示更新频率 never always interval daily daily为默认值  -->
+                <enabled>true</enabled>
+                <checksumPolicy>warn</checksumPolicy><!-- 表示maven检查和查验文件的策略 -->
+            </snapshots>
+        </repository>
+        <repository>
+            <id>nexus-aliyun</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>central</id>
+            <name>Maven2 Central Repository</name>
+            <layout>default</layout>
+            <url>http://repo1.maven.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>unidal.releases</id>
+            <url>http://unidal.org/nexus/content/repositories/releases/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-libs-snapshot</id>
+            <url>https://repo.spring.io/libs-snapshot</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>jboss-cache</id>
+            <name>jboss-cache</name>
+            <url>http://repository.jboss.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>mvnsearch</id>
+            <name>mvnsearch Maven Repository</name>
+            <url>http://www.mvnsearch.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>ibiblio</id>
+            <name>ibiblio Maven Repository</name>
+            <url>http://www.ibiblio.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>mirrors.ibiblio</id>
+            <name>mirrors.ibiblio Maven Repository</name>
+            <url>http://mirrors.ibiblio.org/pub/mirrors/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>repo.springsource.org</id>
+            <name>repo.springsource.org-releases</name>
+            <url>http://repo.springsource.org/libs-milestone-local</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <url>http://repo1.maven.org/maven2</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>unidal.releases</id>
+            <url>http://unidal.org/nexus/content/repositories/releases/</url>
+        </pluginRepository>
+    </pluginRepositories>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>hb-snapshot</id>
+            <name>hb Snapshot Repository</name>
+            <url>http://n.hb.com:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
