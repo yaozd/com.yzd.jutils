@@ -12,4 +12,6 @@
  https://www.cnblogs.com/snidget/archive/2013/02/05/2893344.html
  Guava学习笔记：Google Guava 类库简介
  https://www.cnblogs.com/peida/archive/2013/06/08/3120820.html
+ Guava: Google Core Libraries for Java 10.0.1 API
+ http://tool.oschina.net/apidocs/apidoc?api=guava
  */
