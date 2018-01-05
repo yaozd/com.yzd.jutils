@@ -30,5 +30,6 @@ public class _MainTest {
         Integer val= userService.get(new IdForBaodanLock("12345678"),1);
         System.out.println("redis cache val="+val);
         System.out.println("empty val");
+        throw  new BaodanLockException("测试异常");
     }
 }
