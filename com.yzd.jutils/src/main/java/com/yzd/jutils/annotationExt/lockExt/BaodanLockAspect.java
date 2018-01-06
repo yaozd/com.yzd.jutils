@@ -1,7 +1,6 @@
 package com.yzd.jutils.annotationExt.lockExt;
 
 import com.google.common.base.Preconditions;
-import com.yzd.jutils.stringExt.StringUtil;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -29,7 +28,7 @@ public class BaodanLockAspect {
         Preconditions.checkNotNull(lock.getId(),"保单锁ID不能为空");
         Preconditions.checkArgument(lock.getId().length()>5,"保单锁ID长度必须大于5，当前lock.getId()=["+lock.getId()+"]");
         BaodanLock baodanLock=getAnnotation(proceedingJoinPoint,BaodanLock.class);
-        String name= baodanLock.key().getName();
+        String name= baodanLock.key().name();
         try {
             //互斥锁命名规则：
             //项目编号+方法名+XX公司缩写+“：”+XX单号
