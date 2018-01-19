@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2016/10/12.
@@ -55,4 +56,15 @@ public class FastJsonUtil {
     public static <T> T deserializeAny(String json, TypeReference<T> type) {
         return JSON.parseObject(json, type);
     }
+
+    /**
+     * json与map之间的转换
+     * @param json
+     * @return
+     */
+    @SuppressWarnings("unchecked")
+    public static Map<String,Object> json2Map(String json){
+        return JSON.parseObject(json, Map.class);
+    }
+
 }
