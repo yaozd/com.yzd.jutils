@@ -44,5 +44,9 @@ public class RestfullApiTest {
         Response responseOptions=get("/other01/doSelectById").thenReturn();
         responseOptions.body();
         responseOptions.andReturn().body().asString();
+        //
+        given().cookie("name", "xx").when().get("/xxx").then().body(notNullValue());
+        given().header("name", "xx").when().get("/xxx").then().body(notNullValue());
+        given().contentType("application/json").when().get("/xxx").then().body(notNullValue());
     }
 }
