@@ -7,6 +7,9 @@ import java.io.Serializable;
  */
 public class Person implements Serializable{
 
+    public Person(){
+
+    }
     public Person(int id,String address,  String name,int age) {
         this.address = address;
         this.id = id;

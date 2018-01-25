@@ -15,6 +15,8 @@ import org.junit.Test;
 public class RestfullApiTest {
 
     //参考：
+    //rest-assured接口测试框架中文文档--官方
+    //https://github.com/RookieTester/rest-assured-doc
     //REST Assured：为REST/HTTP服务提供方便测试的Java DSL
     //http://hao.jobbole.com/rest-assured/
     //使用REST-Assured对API接口进行自动化测试
@@ -26,6 +28,17 @@ public class RestfullApiTest {
     public void before() {
         RestAssured.baseURI = "http://localhost:8080/";
         //RestAssured.port = 80;
+    }
+    @Test
+    public void t1(){
+        given().
+                param("x", "y").
+                expect().
+                statusCode(400).
+                body("lotto.lottoId", equalTo(6)).
+                when().
+                get("/lotto");
+        given().param("x", "y").and().header("z", "w").when().get("/something").then().assertThat().statusCode(200).and().body("x.y", equalTo("z"));
     }
     @Test
     //URL为http://api.douban.com/v2/book/1220562
