@@ -23,6 +23,8 @@ public class _MainTest {
     //https://www.cnblogs.com/cqc8/p/6869562.html
     //ProceedingJoinPoint获取当前方法
     //http://blog.csdn.net/meiyang1990/article/details/50562046
+    //java aop redis缓存
+    //http://blog.csdn.net/u014695188/article/details/51499947/
     public static void main(String[] args){
         SpringApplication app = new SpringApplication(_MainTest.class);
         app.setBannerMode(Banner.Mode.OFF);
