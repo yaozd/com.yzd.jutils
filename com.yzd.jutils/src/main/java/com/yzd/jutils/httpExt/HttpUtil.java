@@ -137,6 +137,52 @@ public class HttpUtil {
         }
         return urlParameters;
     }
+    public static String sendPost2(String url, String postBody, String inEncoding, String outEncoding,  Map<String, String> requestHeaders) {
+        CloseableHttpClient httpClient = HttpClients.createDefault();
+        HttpPost httpPost = new HttpPost(url);
+        if(requestHeaders==null){
+            requestHeaders=new HashMap<>();
+        }
+        for (Map.Entry<String, String> entry : requestHeaders.entrySet()) {
+            httpPost.addHeader(entry.getKey(), entry.getValue());
+        }
+        String response;
+        try {
+            HttpEntity entity = new ByteArrayEntity(postBody.getBytes(inEncoding));
+            httpPost.setEntity(entity);
+            CloseableHttpResponse httpResponse = httpClient.execute(httpPost);
+            HttpEntity httpEntity = httpResponse.getEntity();
+            response = EntityUtils.toString(httpEntity, outEncoding);
+            httpClient.close();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return response;
+    }
+    public static String sendDelete2(String url, String postBody, String inEncoding, String outEncoding,  Map<String, String> requestHeaders) {
+        CloseableHttpClient httpClient = HttpClients.createDefault();
+        HttpDeleteWithBody httpDelete=new HttpDeleteWithBody(url);
+        if(requestHeaders==null){
+            requestHeaders=new HashMap<>();
+        }
+        for (Map.Entry<String, String> entry : requestHeaders.entrySet()) {
+            httpDelete.addHeader(entry.getKey(), entry.getValue());
+        }
+        String response;
+        try {
+            HttpEntity entity = new ByteArrayEntity(postBody.getBytes(inEncoding));
+
+            httpDelete.setEntity(entity);
+            CloseableHttpResponse httpResponse = httpClient.execute(httpDelete);
+            HttpEntity httpEntity = httpResponse.getEntity();
+            response = EntityUtils.toString(httpEntity, outEncoding);
+            httpClient.close();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return response;
+    }
+
 
 }
 

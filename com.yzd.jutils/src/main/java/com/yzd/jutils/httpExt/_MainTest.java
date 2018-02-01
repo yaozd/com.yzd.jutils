@@ -11,6 +11,9 @@ public class _MainTest {
         String url="http://localhost:10001/openExe";
         Map<String,String> getParam=new HashMap<>();
         getParam.put("id","中国");
+        //HttpClient-HttpDelete支持HttpEntity
+        String baiduUrl="https://www.baidu.com/";
+        String result1= HttpUtil.sendDelete2(baiduUrl,"","utf-8","utf-8",null);
         String result= HttpUtil.sendPostXML(url,getParam,"5678","utf-8","utf-8");
     }
 }
