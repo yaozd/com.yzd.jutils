@@ -1,4 +1,4 @@
-package com.yzd.jutils.blockingQueue;
+package com.yzd.jutils.executors;
 
 import java.util.Random;
 import java.util.concurrent.*;
@@ -6,7 +6,7 @@ import java.util.concurrent.*;
 //参考：
 // Java多线程--异步执行框架Executor
 // http://blog.csdn.net/hello_worldee/article/details/77880220
-public class CallableAndFuture {
+public class _TestMain {
     //Java异步调用-多线程实现
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         //异步调用
@@ -42,6 +42,7 @@ public class CallableAndFuture {
         executor.shutdownNow();
         System.out.println("任务的执行结果："+returnVal);
         System.out.println("任务的执行结果End");
+        t1();
     }
     //使用CompletionService实现任务
     //ExecutorCompletionService:实现了CompletionService，将执行完成的任务放到阻塞队列中，通过take或poll方法来获得执行结果
