@@ -23,6 +23,10 @@ public class ExceptionUtil {
         try {
             String[] arr = {"111", "222"};
             arr[2] = "fff";
+            //java.lang.ArithmeticException: / by zero
+            int i=1-1;
+            int t= 10/i;
+            //
         } catch (Exception e) {
             String info = getErrorInfoFromException(e);
             System.out.println(info);
