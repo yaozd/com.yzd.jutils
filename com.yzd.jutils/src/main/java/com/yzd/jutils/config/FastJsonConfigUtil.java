@@ -1,6 +1,7 @@
 package com.yzd.jutils.config;
 
 import com.yzd.jutils.fastjson.FastJsonUtil;
+import com.yzd.jutils.person.Person;
 import com.yzd.jutils.print.PrintUtil;
 
 import java.util.HashMap;
@@ -17,6 +18,13 @@ public class FastJsonConfigUtil {
     }
 
     public static void main(String[] args) {
+        //数组转换的json的例子
+        Object[] args1= new Object[3];
+        args1[0]=1;
+        args1[1]=new Person();
+        args1[2]=new HashMap<>();
+        String a=FastJsonUtil.serialize(args1);
+        System.out.println(a);
         String PUBLIC_KEY_ZA = "PUBLIC_KEY_ZA";
         String PRIVATE_KEY_HB = "PRIVATE_KEY_HB";
         String APP_KEY = "APP_KEY";

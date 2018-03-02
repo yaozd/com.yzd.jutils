@@ -97,8 +97,12 @@ public class _MainTest2 {
     @Test
     public void t5(){
         Long t1=168039545856589824L;
+        //十进制转为36进制
         String ttt= Long.toString(t1, 36);
+        //36进制转为十进制
+        Long ttt2=Long.parseLong(ttt,36);
         PrintUtil.outLn(ttt);
+        PrintUtil.outLn(ttt2);
         long t2=t1>>22;
         //1477929600000L=2016-11-1-0:0:0
         long t3= 1477929600000L+t2;
