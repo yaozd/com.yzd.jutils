@@ -46,6 +46,16 @@ public class BigDecimalUtil {
         //表示进行四舍五入的操作
         return b1.divide(b2, len, DEFAULT_ROUND).toString();
     }
+    //在JAVA中怎么比较Double类型数据的大小？
+    //非整型数，运算由于精度问题，可能会有误差，建议使用BigDecimal类型！
+    public static int compareTo(String d1, String d2) {
+        //当此 BigDecimal 在数字上小于、等于或大于 val 时，返回 -1、0 或 1。
+        BigDecimal data1 = new BigDecimal(d1);
+        BigDecimal data2 = new BigDecimal(d2);
+        int copareResult= data1.compareTo(data2);
+        return copareResult;
+    }
+
     public static void main(String[] args) {
         System.out.println(4.015*100);
         String v2= BigDecimalUtil.mul("4.015", "100");
