@@ -44,6 +44,7 @@ public class _MainTest {
             return;
         }
         String percent=resultList.get(4);
+        String price=resultList.get(2);
         double zfVal=Double.parseDouble(percent.replace("'","").replace("%","").replace("+",""));
         System.out.println("step-04="+zfVal);
         //在JAVA中怎么比较Double类型数据的大小？
@@ -54,15 +55,15 @@ public class _MainTest {
         BigDecimal data2 = new BigDecimal(d2);
         int copareResult= data1.compareTo(data2);
         if(copareResult==1){
-            System.out.println("大于"+d2+";当前值="+zfVal);
+            System.out.println("大于"+d2+"%;当前值="+zfVal+"%;当前价格="+price);
             return;
         }
         if(copareResult==0){
-            System.out.println("等于"+d2+";当前值="+zfVal);;
+            System.out.println("等于"+d2+"%;当前值="+zfVal+"%;当前价格="+price);;
             return;
         }
         if(copareResult==-1){
-            System.out.println("小于"+d2+";当前值="+zfVal);;
+            System.out.println("小于"+d2+"%;当前值="+zfVal+"%;当前价格="+price);;
             return;
         }
     }
@@ -99,6 +100,7 @@ public class _MainTest {
             return;
         }
         String percent=resultList.get(4);
+        String price=resultList.get(2);
         double zfVal=Double.parseDouble(percent.replace("'","").replace("%","").replace("+",""));
         System.out.println("step-04="+zfVal);
         //在JAVA中怎么比较Double类型数据的大小？
@@ -109,15 +111,15 @@ public class _MainTest {
         BigDecimal data2 = new BigDecimal(d2);
         int copareResult= data1.compareTo(data2);
         if(copareResult==1){
-            System.out.println("大于"+d2+";当前值="+zfVal);
+            System.out.println("大于"+d2+"%;当前值="+zfVal+"%;当前价格="+price);
             return;
         }
         if(copareResult==0){
-            System.out.println("等于"+d2+";当前值="+zfVal);;
+            System.out.println("等于"+d2+"%;当前值="+zfVal+"%;当前价格="+price);;
             return;
         }
         if(copareResult==-1){
-            System.out.println("小于"+d2+";当前值="+zfVal);;
+            System.out.println("小于"+d2+"%;当前值="+zfVal+"%;当前价格="+price);;
             return;
         }
     }
