@@ -14,4 +14,6 @@
  https://www.cnblogs.com/peida/archive/2013/06/08/3120820.html
  Guava: Google Core Libraries for Java 10.0.1 API
  http://tool.oschina.net/apidocs/apidoc?api=guava
+ GUAVA常用方法总结整理 集合 排序 文件
+ https://my.oschina.net/u/1024107/blog/858790
  */

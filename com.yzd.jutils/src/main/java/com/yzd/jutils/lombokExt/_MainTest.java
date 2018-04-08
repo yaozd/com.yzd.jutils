@@ -9,6 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class _MainTest {
+    //使用lombok提高编码效率
+    //https://blog.csdn.net/v2sking/article/details/73431364
+
     //toString 转为实体类
     @Test
     public void t1(){
