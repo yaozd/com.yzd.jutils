@@ -201,4 +201,8 @@ public class RegExUtil {
             return returnValue;
         }
     }
+    public static Matcher getMatcher(String regEx, String str) {
+        Pattern pat = Pattern.compile(regEx);
+        return pat.matcher(str);
+    }
 }
