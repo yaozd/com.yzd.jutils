@@ -3,6 +3,8 @@ package com.yzd.jutils.math;
 import com.yzd.jutils.print.PrintUtil;
 import org.junit.Test;
 
+import java.util.Date;
+
 public class _MainTest {
     @Test
     public void T1_MoneyUtil() {
@@ -65,10 +67,53 @@ public class _MainTest {
         System.out.println(t1);
         int t2=NumberUtil.FromNumberSystem26(t1);
         System.out.println(t2);
-        int[] numbers = { 1, 10, 26, 27, 256, 702, 703,52142362 };
+        int[] numbers = { 1, 10, 26, 27, 256, 702, 703,52142362,1523447874 };
+        for (int n : numbers){
+            String s =Long.toString(n, 32);
+            System.out.println(n + "\t" + s + "\t" + NumberUtil.FromNumberSystem26(s));
+        }
+    }
+    @Test
+    public void t4(){
+        String t1= NumberUtil.ToNumberSystem26(1);
+        System.out.println(t1);
+        int t2=NumberUtil.FromNumberSystem26(t1);
+        System.out.println(t2);
+        int[] numbers = { 1, 10, 26, 27, 256, 702, 703,52142362,1523447874 };
         for (int n : numbers){
             String s = NumberUtil.ToNumberSystem26(n);
             System.out.println(n + "\t" + s + "\t" + NumberUtil.FromNumberSystem26(s));
         }
+    }
+    //渠道ID生成规则
+    @Test
+    public void t5(){
+        int secondTimestamp=getSecondTimestampTwo(new Date());
+        String secondTimestampTo26 = NumberUtil.ToNumberSystem26(secondTimestamp);
+        int v26ToSecondTimestamp=NumberUtil.FromNumberSystem26(secondTimestampTo26);
+        String secondTimestampToStr=String.valueOf(secondTimestamp);
+        String last4StrOfSecondTimestamp=secondTimestampToStr.substring(secondTimestampToStr.length()-4);
+        //时间戳的26进制+最后4位的组合
+        //DXESWGC0685
+        String channelId=secondTimestampTo26+last4StrOfSecondTimestamp;
+        System.out.println(secondTimestampToStr);
+        System.out.println(secondTimestampTo26);
+        System.out.println(v26ToSecondTimestamp);
+        System.out.println(last4StrOfSecondTimestamp);
+        System.out.println(channelId);
+
+    }
+
+    /**
+     * 获取精确到秒的时间戳
+     * @param date
+     * @return
+     */
+    public static int getSecondTimestampTwo(Date date){
+        if (null == date) {
+            return 0;
+        }
+        String timestamp = String.valueOf(date.getTime()/1000);
+        return Integer.valueOf(timestamp);
     }
 }
