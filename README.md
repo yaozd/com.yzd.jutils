@@ -27,6 +27,11 @@
 ```java
   http://www.joda.org/joda-time/quickstart.html
 ```
+## learn 设计模式与算法
+```java
+  https://github.com/sdslnmd/learn
+  https://github.com/yaozd/learn  （备份）
+```
 ## Markdown编辑器
 ```java
   MaHua 在线markdown编辑器
