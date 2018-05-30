@@ -40,7 +40,7 @@ public class T1 {
         parma_JobList.put("length","10");
         String content_JobList=sendGet(url_JobList,parma_JobList,cookie_Login);
         XXLJob_RecordsFiltered jsonToRecordsFiltered= FastJsonUtil.deserialize(content_JobList,XXLJob_RecordsFiltered.class);
-        XXLJob_RecordsFiltered recordsFiltered = Optional.ofNullable(jsonToRecordsFiltered).orElse(new XXLJob_RecordsFiltered());
+        XXLJob_RecordsFiltered recordsFiltered = Optional.ofNullable(jsonToRecordsFiltered).orElseGet(()->new XXLJob_RecordsFiltered());
         String jobDesc="N03国商数据推送任务";
         Integer id=null;
         for(XXLJob_R_Data data:recordsFiltered.getData()){
