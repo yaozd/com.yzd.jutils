@@ -15,7 +15,10 @@ Long y=new Long(127);
 System.out.println(x==y);
 System.out.println(x.equals(y));
 答：
-
+true
+false
+false
+true
 
 
 
@@ -43,7 +46,8 @@ class Singleton{
 	}
 }
 答：
-
+counter1 = 1
+counter2 = 0
 
 
 问题4：ArrayBlockingQueue, CountDownLatch类的作用与使用场景
