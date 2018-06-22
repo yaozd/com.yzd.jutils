@@ -24,5 +24,13 @@ public class _MainTest {
      final <T> void good(final List<T> values) {
      ...
      }
+     private Object deserialize(Class returnType, String cacheDataInRedis) {
+     // 序列化结果应该是List对象
+     if (returnType.isAssignableFrom(List.class)) {
+     return FastJsonUtil.deserializeList(cacheDataInRedis, returnType);
+     } else {
+     return FastJsonUtil.deserialize(cacheDataInRedis, returnType);
+     }
+     }
      */
 }
