@@ -34,6 +34,11 @@ Hutool 对文件、流、加密解密、转码、正则、线程、XML、日期�
 Hutool并非框架，而是一个工具类方法集合，随用随取，且随时可被替换，与任何框架不冲突。 Hutool的大部分工具方法并不依赖第三方包（extra模块对第三方框架封装工具类除外），
 轻量简洁。 http://www.hutool.cn -- 编辑
 https://gitee.com/loolly/hutool
+=======
+## learn 设计模式与算法
+```java
+  https://github.com/sdslnmd/learn
+  https://github.com/yaozd/learn  （备份）
 ```
 ## Markdown编辑器
 ```java
