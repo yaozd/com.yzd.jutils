@@ -1,7 +1,10 @@
 package com.yzd.jutils.fastjsonFilter.model;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.yzd.jutils.fastjsonFilter.SensitiveLogInfo;
 import com.yzd.jutils.fastjsonFilter.SensitiveLogType;
+
+import java.util.Date;
 
 public class CardInfo {
     private String userId;
@@ -15,7 +18,10 @@ public class CardInfo {
     private String phone;
     @SensitiveLogInfo(type = SensitiveLogType.PASSWORD)
     private String password;
-
+    //date日期类型没有@JSONField(format="yyyy-MM-dd HH:mm:ss")，则序列化为时间戳格式
+    //一般日期类型的数据在传输过程中都统一使用String字符串类型。方便接收与数据显示
+    @JSONField(format="yyyy-MM-dd HH:mm:ss")
+    private Date createDate;
     public String getUserId() {
         return userId;
     }
@@ -70,5 +76,13 @@ public class CardInfo {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 }

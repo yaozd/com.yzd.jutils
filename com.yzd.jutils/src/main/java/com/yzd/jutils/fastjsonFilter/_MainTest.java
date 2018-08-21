@@ -3,6 +3,8 @@ package com.yzd.jutils.fastjsonFilter;
 import com.yzd.jutils.fastjsonFilter.model.CardInfo;
 import org.junit.Test;
 
+import java.util.Date;
+
 public class _MainTest {
     //通过fastJson对日志中的敏感信息(如：密码、身份证、电话、银行卡等)，进行日志字段脱敏处理
     //自定义Json注解实现输出日志字段脱敏
@@ -15,6 +17,7 @@ public class _MainTest {
         cardInfo.setCertId("123456711118971118");
         cardInfo.setPassword(null);
         cardInfo.setPhone("15210445510");
+        cardInfo.setCreateDate(new Date());
         //
         System.out.println(FastJsonLogUtil.toJsonString(cardInfo));
     }
