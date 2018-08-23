@@ -35,6 +35,21 @@ public class StringUtil {
         String[]s2=listB.toArray(new String[]{});
 
     }
+    /***
+     * 是否包含大写字母
+     * @param str
+     * @return
+     */
+    public boolean isContainUpperCase(String str) {
+        for(int i=0; i<str.length(); i++){
+            char c = str.charAt(i);
+            if(c >= 65 && c <= 90) {
+                return true;
+            }
+        }
+        //str.charAt(index)
+        return false;
+    }
     private static final Pattern INT_PATTERN = Pattern.compile("^\\d+$");
 
     public static boolean isBlank(String str) {
