@@ -38,7 +38,7 @@ https://gitee.com/loolly/hutool
 ## learn 设计模式与算法
 ```java
   https://github.com/sdslnmd/learn
-  https://github.com/yaozd/learn  （备份）
+  https://github.com/yaozd/learn  （备份）
 ```
 ## Markdown编辑器
 ```java
@@ -79,6 +79,14 @@ spring-boot-elasticsearch-demo
 Spring Boot 中使用 Java API 调用 Elasticsearch
 spring-boot-lucene-demo
 ```
+### [YApi 可视化接口管理平台](https://github.com/ymfe/yapi)
+~~~
+-arvin推荐-2018-08-23
+去哪儿-开源
+https://github.com/yaozd/yapi
+https://github.com/ymfe/yapi
+YApi 是一个可本地部署的、打通前后端及QA的、可视化的接口管理平台 https://yapi.ymfe.org
+~~~
 
 
 
