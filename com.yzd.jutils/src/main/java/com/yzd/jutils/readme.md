@@ -6,7 +6,18 @@ https://github.com/yaozd/yapi
 https://github.com/ymfe/yapi
 YApi 是一个可本地部署的、打通前后端及QA的、可视化的接口管理平台 https://yapi.ymfe.org
 ~~~
-
+### SpringBoot配置logging日志及输出日志
+```
+https://blog.csdn.net/small_mouse0/article/details/77840582
+#配置日志
+logging:
+  #配置日志文件路径
+  path: G:\work_space\study_spring2\study_boot_demo\log
+  level:
+    xatu.zsl: debug #不同目录下的日志可配置不同级别
+    org.springfromework.web: info
+    org.hibernate: error
+```
 ### IntelliJ IDEA中快捷键
 1.自动生成test单元测试
 ```
