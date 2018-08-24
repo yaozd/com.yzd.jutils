@@ -6,6 +6,33 @@ https://github.com/yaozd/yapi
 https://github.com/ymfe/yapi
 YApi 是一个可本地部署的、打通前后端及QA的、可视化的接口管理平台 https://yapi.ymfe.org
 ~~~
+### [分布式任务调度平台XXL-JOB](https://github.com/yaozd/xxl-job)
+```
+https://github.com/yaozd/xxl-job
+https://github.com/xuxueli/xxl-job
+===
+https://github.com/itliusir/xxl-job-admin
+https://github.com/felton321/xxl-job-admin-spring-boot
+https://github.com/yaozd/xxl-job-admin-spring-boot(felton321/xxl-job-admin-spring-boot备份)
+
+```
+### 技术面试需要掌握的基础知识整理-特别推荐-byArvin-2018-08-24
+```
+https://github.com/itliusir/Interview-Notebook
+https://github.com/yaozd/CS-Notes（备份）
+https://github.com/CyC2018/CS-Notes
+```
+### spring-boot-starter-hbase
+```
+https://github.com/banyanbbt/spring-boot-starter-hbase
+https://github.com/yaozd/spring-boot-starter-hbase
+```
+#### spring-cloud-zuul-ratelimit
+```
+https://github.com/marcosbarbero/spring-cloud-zuul-ratelimit
+https://github.com/yaozd/spring-cloud-zuul-ratelimit
+```
+
 ### SpringBoot配置logging日志及输出日志
 ```
 https://blog.csdn.net/small_mouse0/article/details/77840582
