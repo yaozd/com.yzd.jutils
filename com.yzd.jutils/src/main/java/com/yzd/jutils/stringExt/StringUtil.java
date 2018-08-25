@@ -4,6 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  *
@@ -33,5 +34,49 @@ public class StringUtil {
         listB.add("7");
         String[]s2=listB.toArray(new String[]{});
 
+    }
+    /***
+     * 是否包含大写字母
+     * @param str
+     * @return
+     */
+    public boolean isContainUpperCase(String str) {
+        for(int i=0; i<str.length(); i++){
+            char c = str.charAt(i);
+            if(c >= 65 && c <= 90) {
+                return true;
+            }
+        }
+        //str.charAt(index)
+        return false;
+    }
+    private static final Pattern INT_PATTERN = Pattern.compile("^\\d+$");
+
+    public static boolean isBlank(String str) {
+        return str == null || str.length() == 0;
+    }
+
+    public static boolean isEmpty(String str) {
+        return str == null || str.length() == 0;
+    }
+
+    public static boolean isNotEmpty(String str) {
+        return str != null && str.length() > 0;
+    }
+
+    public static boolean isEquals(String s1, String s2) {
+        if (s1 == null && s2 == null) {
+            return true;
+        } else {
+            return s1 != null && s2 != null ? s1.equals(s2) : false;
+        }
+    }
+
+    public static boolean isInteger(String str) {
+        return str != null && str.length() != 0 ? INT_PATTERN.matcher(str).matches() : false;
+    }
+
+    public static int parseInteger(String str) {
+        return !isInteger(str) ? 0 : Integer.parseInt(str);
     }
 }

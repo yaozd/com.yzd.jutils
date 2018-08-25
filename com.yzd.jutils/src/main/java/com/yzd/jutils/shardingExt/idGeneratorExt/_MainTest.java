@@ -1,6 +1,7 @@
 package com.yzd.jutils.shardingExt.idGeneratorExt;
 
 import com.yzd.jutils.dateExt.DateUtil2;
+import com.yzd.jutils.print.PrintUtil;
 import org.junit.Test;
 
 import java.text.SimpleDateFormat;
@@ -43,7 +44,8 @@ public class _MainTest {
         System.out.println("====2");
         Date d1= DateUtil2.string2Date("2017-11-13");
         long currentDate= d1.getTime();
-        long tt1=Long.valueOf(currentDate - IdGenerator.SJDBC_EPOCH << 22 );
+        System.out.println("IdGenerator.SJDBC_EPOCH="+IdGenerator.SJDBC_EPOCH);
+        long tt1=Long.valueOf((currentDate - IdGenerator.SJDBC_EPOCH) << 22 );
         System.out.println("反向推理出id的值="+tt1);
         long tt2=t1>>22;
         //将41bit时间位转为时间戳
@@ -55,6 +57,58 @@ public class _MainTest {
         String tt4 = simpleDateFormat.format(date11);
         System.out.println(tt4);
 
+    }
+
+    @Test
+    public void IdGeneratorToDate(){
+        System.out.println("====通过id的值反向推理出时间是多少");
+        Long t1=154377230745599999L;
+        //Long t1=216503267729866752L;
+        //
+        long t2=t1>>22;
+        //新纪元--此值一定要与IdGenerator.SJDBC_EPOCH保持相同，目前2016-11-01是当当，当前定义的。
+        //IdGenerator.SJDBC_EPOCH=2016-11-01 00:00:00
+        //1477929600000L=2016-11-1-0:0:0
+        long t3= 1477929600000L+t2;
+        System.out.println(t3);
+        Date date = new Date(t3);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+        String t4 = simpleDateFormat.format(date);
+        System.out.println(t4);
+    }
+    @Test
+    public void DateToIdGenerator(){
+        System.out.println("====通过时间反向推理出id的值是多少");
+        //Date d1= DateUtil2.string2Date("2018-06-21 10:26:41");
+        Date d1= DateUtil2.string2Date("2018-01-01 00:00:00");
+        //
+        long currentDate= d1.getTime();
+        //新纪元--此值一定要与IdGenerator.SJDBC_EPOCH保持相同，目前2016-11-01是当当，当前定义的，是可以调整的
+        //IdGenerator.SJDBC_EPOCH=2016-11-01 00:00:00
+        //1477929600000L=2016-11-1-0:0:0
+        System.out.println("IdGenerator.SJDBC_EPOCH="+IdGenerator.SJDBC_EPOCH);
+        long tt1=Long.valueOf((currentDate - 1477929600000L)<< 22);
+        System.out.println("反向推理出id的值="+tt1);
+    }
+
+    /***
+     * 实际生产中需要配置数据库的存储范围
+     */
+    @Test
+    public void DBStoreRegion_DateToIdGenerator(){
+        System.out.println("====通过时间反向推理出id的值是多少");
+        //Date d1= DateUtil2.string2Date("2018-06-21 10:26:41");
+        //Date d1= DateUtil2.string2Date("2018-01-01 00:00:00");
+        Date d1= DateUtil2.string2Date("2020-01-01 00:00:00");
+        //
+        long currentDate= d1.getTime();
+        //新纪元--此值一定要与IdGenerator.SJDBC_EPOCH保持相同，目前2016-11-01是当当，当前定义的，是可以调整的。
+        //IdGenerator.SJDBC_EPOCH=2016-11-01 00:00:00
+        //1477929600000L=2016-11-1-0:0:0
+        System.out.println("IdGenerator.SJDBC_EPOCH="+IdGenerator.SJDBC_EPOCH);
+        long tt1=Long.valueOf((currentDate - 1477929600000L)<< 22);
+        System.out.println("反向推理出id的值,2018年最小值="+tt1);
+        System.out.println("反向推理出id的值,2017年最大值="+(tt1-1L));
     }
 
 

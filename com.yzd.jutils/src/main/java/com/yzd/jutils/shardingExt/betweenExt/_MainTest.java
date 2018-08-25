@@ -2,6 +2,7 @@ package com.yzd.jutils.shardingExt.betweenExt;
 
 import com.google.common.collect.Range;
 import org.junit.Test;
+import org.omg.CORBA.PUBLIC_MEMBER;
 
 import java.util.List;
 
@@ -28,10 +29,23 @@ public class _MainTest {
         boolean isInclude=isInRegion(first,second);
         System.out.println(isInclude);
         //
-        StoreRegion t2=new StoreRegion(201601L,201701l);
+        StoreRegion t2=new StoreRegion(201601L,201701L);
         List<String> nameList=StoreRegionEnum.getCollection(t2);
         for(String name:nameList){
             System.out.println(name);
+        }
+    }
+
+    /***
+     * 在分库分表的IN ,=操作就相当于StoreRegion t2=new StoreRegion(1L,1L);
+     * order_id=1,等价于 order_id>=1 and order_id<=1;
+     */
+    @Test
+    public void between_sameValue(){
+        StoreRegion t2=new StoreRegion(201807L,201807L);
+        List<String> nameList=StoreRegionEnum.getCollection(t2);
+        for(String name:nameList){
+            System.out.println(""+name);
         }
     }
     //region 判断两个区间是否重叠
