@@ -40,3 +40,33 @@ package com.yzd.jutils.springBoot.mockBeanTest;
  you can decide if method calls going to the spy should be "intercepted" (then you are using the spy as if it would be a mock); or be "passed through" to the actual object the spy wraps around.
  */
 
+//SpringBoot | 第十三章：测试相关（单元测试、性能测试）
+//http://www.importnew.com/29579.html
+//基于ContiPerf的性能测试
+///**
+// * 编写接口测试类
+// * @author oKong
+// *
+// */
+//@RunWith(SpringRunner.class)
+////SpringBootTest 是springboot 用于测试的注解，可指定启动类或者测试环境等，这里直接默认。
+//@SpringBootTest
+//public class UnitTestServiceTest {
+//
+//    @Autowired
+//    UnitTestService testService;
+//
+//    //引入 ContiPerf 进行性能测试
+//    @Rule
+//    public ContiPerfRule contiPerfRule = new ContiPerfRule();
+//
+//    @Test
+//    //10个线程 执行10次
+//    @PerfTest(invocations = 100,threads = 10)
+//    public void test() {
+//        String msg = "this is a test";
+//        String result = testService.process(msg);
+//        //断言 是否和预期一致
+//        Assert.assertEquals(msg, result);
+//    }
+//}

@@ -1,0 +1,10 @@
+
+##
+idea 高级调试技巧
+https://www.cnblogs.com/yjmyzz/p/idea-advanced-debug-tips.html
+作者：菩提树下的杨过
+一、条件断点
+二、回到"上一步"
+三、多线程调试
+四、远程调试
+五、临时执行表达式/修改变量的运行值
