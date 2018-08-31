@@ -1,0 +1,4 @@
+##
+Drools(BRMS) 速成教程(上）
+https://www.cnblogs.com/yjmyzz/p/drools-tutorial.html
+作者：菩提树下的杨过

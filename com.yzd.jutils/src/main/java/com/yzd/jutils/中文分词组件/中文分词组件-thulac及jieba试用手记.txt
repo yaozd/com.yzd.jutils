@@ -1,0 +1,11 @@
+
+###
+中文分词组件：thulac及jieba试用手记
+https://www.cnblogs.com/yjmyzz/p/jieba_thulac_demo.html
+一、THULAC
+
+THULAC由《清华大学自然语言处理与社会人文计算实验室》研制推出的一套中文词法分析工具包。
+官网地址：http://thulac.thunlp.org，该项目提供了多种语言，本文以java版为例，先下载以下二个组件：
+1、THULAC_lite_v1_2分词java版可执行的jar包：THULAC_lite_java_v1_2_run.jar
+2、THULAC模型，包括分词模型和词性标注模型（v1_2）: Models_v1_v2(v1_2).zip
+把THULAC模型解压到与jar文件相同的目录下，默认会生成models目录。
