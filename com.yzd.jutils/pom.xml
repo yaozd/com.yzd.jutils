@@ -197,6 +197,13 @@
             <artifactId>annotations</artifactId>
             <version>13.0</version>
         </dependency>
+        <!--consul-client begin-->
+        <dependency>
+            <groupId>com.orbitz.consul</groupId>
+            <artifactId>consul-client</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <!--consul-client end-->
     </dependencies>
     <build>
         <plugins>
