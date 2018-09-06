@@ -21,35 +21,37 @@ import java.util.Map;
 
 /**
  * 参考：
- *
- * 
+ * <p>
+ * <p>
  * 从网上下载pdf到本地
  * Created by zd.yao on 2017/8/4.
  */
 public class InputStream2PdfUtil {
-    public static void main(String[] args){
-        byte[] getData =getInputStreamByPost("", null, null);
+    public static void main(String[] args) {
+        byte[] getData = getInputStreamByPost("", null, null);
         try {
             InputStream2Pdf(getData);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    private static void InputStream2Pdf(byte[] getData)throws IOException{
+
+    private static void InputStream2Pdf(byte[] getData) throws IOException {
         //byte[] getData = readInputStream(inputStream);
         File file = new File("G:\\1.pdf");
         FileOutputStream fos = new FileOutputStream(file);
         fos.write(getData);
-        if(fos!=null){
+        if (fos != null) {
             fos.close();
         }
     }
 
-    public static String sendPost(String url, Map<String, String> params,String inEncoding){
-        String outEncoding=inEncoding;
+    public static String sendPost(String url, Map<String, String> params, String inEncoding) {
+        String outEncoding = inEncoding;
         return sendPost(url, params, inEncoding, outEncoding, new BasicHeader("Mozilla/5.0", "User-Agent"));
     }
-    public static String sendPost(String url, Map<String, String> params,String inEncoding,String outEncoding, Header... requestHeaders){
+
+    public static String sendPost(String url, Map<String, String> params, String inEncoding, String outEncoding, Header... requestHeaders) {
         CloseableHttpClient httpClient = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost(url);
         if (requestHeaders != null && requestHeaders.length > 0) {
@@ -87,11 +89,12 @@ public class InputStream2PdfUtil {
         return response;
     }
 
-    public static  byte[] getInputStreamByPost(String url, Map<String, String> params,String inEncoding){
-        String outEncoding=inEncoding;
+    public static byte[] getInputStreamByPost(String url, Map<String, String> params, String inEncoding) {
+        String outEncoding = inEncoding;
         return getInputStreamByPost(url, params, inEncoding, outEncoding, new BasicHeader("Mozilla/5.0", "User-Agent"));
     }
-    public static  byte[] getInputStreamByPost(String url, Map<String, String> params,String inEncoding,String outEncoding, Header... requestHeaders){
+
+    public static byte[] getInputStreamByPost(String url, Map<String, String> params, String inEncoding, String outEncoding, Header... requestHeaders) {
         CloseableHttpClient httpClient = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost(url);
         if (requestHeaders != null && requestHeaders.length > 0) {
@@ -103,7 +106,7 @@ public class InputStream2PdfUtil {
         for (String key : params.keySet()) {
             urlParameters.add(new BasicNameValuePair(key, params.get(key)));
         }
-        byte[] response =null;
+        byte[] response = null;
         try {
             httpPost.setEntity(new UrlEncodedFormEntity(urlParameters, inEncoding));
             CloseableHttpResponse httpResponse = httpClient.execute(httpPost);
@@ -115,17 +118,19 @@ public class InputStream2PdfUtil {
         }
         return response;
     }
+
     /**
      * 从输入流中获取字节数组
+     *
      * @param inputStream
      * @return
      * @throws IOException
      */
-    public static  byte[] readInputStream(InputStream inputStream) throws IOException {
+    public static byte[] readInputStream(InputStream inputStream) throws IOException {
         byte[] buffer = new byte[1024];
         int len = 0;
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        while((len = inputStream.read(buffer)) != -1) {
+        while ((len = inputStream.read(buffer)) != -1) {
             bos.write(buffer, 0, len);
         }
         bos.close();

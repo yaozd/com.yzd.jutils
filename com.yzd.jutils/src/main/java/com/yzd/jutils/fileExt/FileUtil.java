@@ -10,7 +10,7 @@ import java.io.InputStream;
  */
 public class FileUtil {
 
-    public static String read(String path,String encoding) {
+    public static String read(String path, String encoding) {
         InputStream inputStream = FileUtil.class.getClass().getResourceAsStream(path);
         try {
             return IOUtils.toString(inputStream, encoding);
@@ -21,8 +21,8 @@ public class FileUtil {
         }
         return null;
     }
+
     /**
-     *
      * @param args
      */
     public static void main(String[] args) {
