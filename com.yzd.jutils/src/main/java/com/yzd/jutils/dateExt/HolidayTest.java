@@ -108,9 +108,9 @@ public class HolidayTest {
         String [] da = date.split("-");
 
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.YEAR, Integer.valueOf(da[0]));
-        calendar.set(Calendar.MONTH, Integer.valueOf(da[1])-1);//月份比正常小1,0代表一月
-        calendar.set(Calendar.DAY_OF_MONTH, Integer.valueOf(da[2]));
+        calendar.set(Calendar.YEAR, Integer.parseInt(da[0]));
+        calendar.set(Calendar.MONTH, Integer.parseInt(da[1])-1);//月份比正常小1,0代表一月
+        calendar.set(Calendar.DAY_OF_MONTH, Integer.parseInt(da[2]));
         holidayList.add(calendar);
     }
 
@@ -121,9 +121,9 @@ public class HolidayTest {
         String[] da = date.split("-");
 
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.YEAR, Integer.valueOf(da[0]));
-        calendar.set(Calendar.MONTH, Integer.valueOf(da[1]) - 1);//月份比正常小1,0代表一月
-        calendar.set(Calendar.DAY_OF_MONTH, Integer.valueOf(da[2]));
+        calendar.set(Calendar.YEAR, Integer.parseInt(da[0]));
+        calendar.set(Calendar.MONTH, Integer.parseInt(da[1]) - 1);//月份比正常小1,0代表一月
+        calendar.set(Calendar.DAY_OF_MONTH, Integer.parseInt(da[2]));
         weekendList.add(calendar);
     }
 }
