@@ -117,7 +117,11 @@ https://github.com/yaozd/spring-boot-starter-hbase
 https://github.com/marcosbarbero/spring-cloud-zuul-ratelimit
 https://github.com/yaozd/spring-cloud-zuul-ratelimit
 ```
-
+#### [Java Library Examples](https://github.com/biezhi/java-library-examples)
+```
+https://github.com/biezhi/java-library-examples
+https://github.com/yaozd/java-library-examples
+```
 
 
 
