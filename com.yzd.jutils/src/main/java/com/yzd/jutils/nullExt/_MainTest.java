@@ -1,10 +1,10 @@
 package com.yzd.jutils.nullExt;
 
+import com.google.common.base.MoreObjects;
 import com.google.common.base.Optional;
 import com.yzd.jutils.person.Person;
 import lombok.NonNull;
 import org.apache.commons.collections.CollectionUtils;
-import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
@@ -31,7 +31,11 @@ public class _MainTest {
         // 不建议使用guava
         Optional<List<Person>> personListField= Optional.fromNullable(personList);
         System.out.println(personListField.isPresent());
-        // 建议使用 commons.lang3
+        //==
+        //为null给默认值--推荐MoreObjects方法-byArvin
+        String ret=null;
+        String val= MoreObjects.firstNonNull(ret, "默认值");//使用MoreObjects.firstNonNull
+        // 建议使用 commons.lang3-byArvin
         List<String> stringList=null;
         stringList= ObjectUtils.defaultIfNull(stringList, new ArrayList<String>());
         System.out.println(stringList.isEmpty());
