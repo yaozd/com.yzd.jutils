@@ -38,15 +38,15 @@ public class IssueGuava {
         //  list.add(new StoreGoods(null));
         list.add(new StoreGoods(1));
         list.add(new StoreGoods(1));
-
-        Map<Integer, StoreGoods> map = Maps.uniqueIndex(list, new Function<StoreGoods, Integer>() {
+        //Error:java: java.lang.AssertionError: input.getId -当前java版本不支持此方法Maps.uniqueIndex
+      /*  Map<Integer, StoreGoods> map = Maps.uniqueIndex(list, new Function<StoreGoods, Integer>() {
             @Override
             public Integer apply(StoreGoods input) {
                 return input.getId();
             }
         });
         // 使用lambda写法-推荐使用-byArvin
-        Map<Integer, StoreGoods> map2 = Maps.uniqueIndex(list, input -> input.getId());
+        Map<Integer, StoreGoods> map2 = Maps.uniqueIndex(list, input -> input.getId());*/
     }
     class StoreGoods{
         public Integer getId() {
