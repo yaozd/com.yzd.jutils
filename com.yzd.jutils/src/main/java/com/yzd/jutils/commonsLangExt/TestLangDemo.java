@@ -53,8 +53,8 @@ public class TestLangDemo {
         Object a = new Object();
         Object b = a;
         Object c = new Object();
-        System.out.println(ObjectUtils.equals(a, b));
-        System.out.println(ObjectUtils.equals(a, c));
+        //System.out.println(ObjectUtils.equals(a, b));
+        //System.out.println(ObjectUtils.equals(a, c));
 
         System.out.println("用父类Object的toString()方法返回对象信息.");
         Date date = new Date();
@@ -62,8 +62,8 @@ public class TestLangDemo {
         System.out.println(date);
 
         System.out.println("返回类本身的toString()方法结果,对象为null时，返回0长度字符串.");
-        System.out.println(ObjectUtils.toString(date));
-        System.out.println(ObjectUtils.toString(null));
+        //System.out.println(ObjectUtils.toString(date));
+        //System.out.println(ObjectUtils.toString(null));
         System.out.println(date);
     }
 
@@ -76,7 +76,7 @@ public class TestLangDemo {
 
         Date reDate = (Date) SerializationUtils.deserialize(bytes);
         System.out.println(reDate);
-        System.out.println(ObjectUtils.equals(date, reDate));
+        //System.out.println(ObjectUtils.equals(date, reDate));
         System.out.println(date == reDate);
 
         FileOutputStream fos = null;
@@ -105,14 +105,14 @@ public class TestLangDemo {
     public void randomStringUtilsDemo() {
         System.out.println("**RandomStringUtilsDemo**");
         System.out.println("生成指定长度的随机字符串,好像没什么用.");
-        System.out.println(RandomStringUtils.random(500));
+        //System.out.println(RandomStringUtils.random(500));
 
         System.out.println("在指定字符串中生成长度为n的随机字符串.");
-        System.out.println(RandomStringUtils.random(5, "abcdefghijk"));
+        //System.out.println(RandomStringUtils.random(5, "abcdefghijk"));
 
         System.out.println("指定从字符或数字中生成随机字符串.");
-        System.out.println(RandomStringUtils.random(5, true, false));
-        System.out.println(RandomStringUtils.random(5, false, true));
+        //System.out.println(RandomStringUtils.random(5, true, false));
+        //System.out.println(RandomStringUtils.random(5, false, true));
 
     }
 
@@ -137,7 +137,7 @@ public class TestLangDemo {
         System.out.println(StringUtils.difference("aaabcde", "aaaccde"));
 
         System.out.println("截去字符串为以指定字符串结尾的部分.");
-        System.out.println(StringUtils.chomp("aaabcde", "de"));
+        //System.out.println(StringUtils.chomp("aaabcde", "de"));
 
         System.out.println("检查一字符串是否为另一字符串的子集.");
         System.out.println(StringUtils.containsOnly("aad", "aadd"));
@@ -171,7 +171,7 @@ public class TestLangDemo {
     public void systemUtilsDemo() {
         System.out.println(genHeader("SystemUtilsDemo"));
         System.out.println("获得系统文件分隔符.");
-        System.out.println(SystemUtils.FILE_SEPARATOR);
+        //System.out.println(SystemUtils.FILE_SEPARATOR);
 
         System.out.println("获得源文件编码.");
         System.out.println(SystemUtils.FILE_ENCODING);
@@ -208,10 +208,10 @@ public class TestLangDemo {
     public void stringEscapeUtilsDemo() {
         System.out.println(genHeader("StringEcsapeUtils"));
         System.out.println("转换特殊字符.");
-        System.out.println("html:" + StringEscapeUtils.escapeHtml3(" "));
-        System.out.println("html:" + StringEscapeUtils.escapeHtml4(" "));
-        System.out.println("html:" + StringEscapeUtils.unescapeHtml3("<p>"));
-        System.out.println("html:" + StringEscapeUtils.unescapeHtml4("<p>"));
+        //System.out.println("html:" + StringEscapeUtils.escapeHtml3(" "));
+        //System.out.println("html:" + StringEscapeUtils.escapeHtml4(" "));
+        //System.out.println("html:" + StringEscapeUtils.unescapeHtml3("<p>"));
+        //System.out.println("html:" + StringEscapeUtils.unescapeHtml4("<p>"));
     }
 
 
@@ -227,7 +227,7 @@ public class TestLangDemo {
         System.out.println(NumberUtils.isDigits("123.1"));
 
         System.out.println("判断字符串是否是有效数字.");
-        System.out.println(NumberUtils.isNumber("0123.1"));
+        //System.out.println(NumberUtils.isNumber("0123.1"));
     }
 
     public void dateFormatUtilsDemo() {
