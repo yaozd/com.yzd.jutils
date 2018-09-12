@@ -1,7 +1,9 @@
 ### 分布式事务研究
-- [微服务架构下分布式事务解决方案——阿里GTS](https://www.cnblogs.com/jiangyu666/p/8522547.html)
+- [微服务架构下分布式事务解决方案——阿里GTS-byArvin推荐](https://www.cnblogs.com/jiangyu666/p/8522547.html)
 - [消息事务+最终一致性](https://blog.csdn.net/mine_song/article/details/64118963)
-- [EasyTransaction](https://github.com/QNJR-GROUP/EasyTransaction)
+- [EasyTransaction-byArvin推荐](https://github.com/QNJR-GROUP/EasyTransaction)
+- [LCN分布式事务框架v4.0](https://github.com/codingapi/tx-lcn)
+- [分布式事务解决方案框架（LCN）](https://www.jianshu.com/p/73beee3c70e9)
 
 可以借鉴阿里GTS的思路：
 ```
