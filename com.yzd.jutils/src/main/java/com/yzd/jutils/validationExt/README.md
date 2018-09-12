@@ -1,0 +1,1 @@
+### [Java Bean Validation 最佳实践](https://www.cnblogs.com/beiyan/p/5946345.html)
