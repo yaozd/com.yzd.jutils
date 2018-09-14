@@ -5,6 +5,18 @@
 - [feign官网示例详解](http://p.codekk.com/detail/Android/OpenFeign/feign)
 - [Feign不支持PATCH请求的解决办法](https://blog.csdn.net/menggudaoke/article/details/77884674)
 
+### Feign使用问题集合：
+- 问题：java.lang.IllegalStateException: Method has too many Body parameters
+
+```
+@RequestLine("POST /doLogin")
+//前提：独产使用feign的情况
+//问题：java.lang.IllegalStateException: Method has too many Body parameters
+//@RequestParam("sign")调整为 @Param("sign")String sign
+//String getBaseToken(GetBaseTokenForm form, @RequestParam("sign")String sign);
+String getBaseToken(GetBaseTokenForm form, @Param("sign")String sign);
+```
+
 ### http请求神器之Feign
 - [Spring Cloud_13_Feign第三方注解与请求拦截器-zipkin](https://blog.csdn.net/zhaozao5757/article/details/79445196)
 - [Spring Cloud Feign 使用Apache的HTTP Client替换Feign原生httpclient](https://blog.csdn.net/yang920106/article/details/79103867/)

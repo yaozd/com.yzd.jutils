@@ -1,5 +1,8 @@
 package com.yzd.jutils.timestampExt;
 
+import com.yzd.jutils.dateExt.DateUtil2;
+import org.joda.time.DateTime;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -12,6 +15,11 @@ public class TimestampTest {
     //Java获取当前时间戳/时间戳转换
     //https://www.cnblogs.com/EasonJim/p/7896082.html
     public static void main(String[] args) {
+        DateTime dt7 = new DateTime(System.currentTimeMillis());
+        System.out.println(dt7.toDate().getTime());
+        System.out.println(dt7.plusMinutes(5).toDate().getTime());
+        System.out.println(dt7.plusMinutes(5).toDate().getTime()-dt7.toDate().getTime());
+        System.out.println("==========================");
         // 精确到毫秒
         // 获取当前时间戳
         System.out.println(System.currentTimeMillis());
@@ -30,7 +38,7 @@ public class TimestampTest {
         // 输出字符串
         System.out.println(df.format(new Date()));
         // 获取指定时间Date对象，参数是时间戳，只能精确到秒
-        System.out.println(new Date(1510369871));
+        System.out.println(new Date(1536896407917L));
         //精确到毫秒才可以-byArvin 2018-0-12
         System.out.println("System.currentTimeMillis()");
         System.out.println(new Date(System.currentTimeMillis()));
