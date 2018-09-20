@@ -51,13 +51,21 @@ byArvin-2018-09-20
 #### 动态路由问题
 - [zuul动态配置路由规则，从DB读取](https://blog.csdn.net/hxpjava1/article/details/78304003)
 
-####　熔断处理
+#### 熔断处理
+- [熔断处理-fallback](http://www.cnblogs.com/yjmyzz/p/spring-cloud-zuul-demo.html)
 
-
+```
+spring-cloud-demo
+https://github.com/yjmyzz/spring-cloud-demo
+https://github.com/yaozd/spring-cloud-demo-2
+```
 #### 灰度发布(Gated Launch/Gray Release)
 - [灰度发布(Gated Launch/Gray Release)](http://www.cnblogs.com/yjmyzz/p/spring-cloud-zuul-demo.html#)
 
 ```
+spring-cloud-demo
+https://github.com/yjmyzz/spring-cloud-demo
+https://github.com/yaozd/spring-cloud-demo-2
 ```
 ####　Zuul超时问题
 - [Zuul超时问题，微服务响应超时，zuul进行熔断](https://blog.csdn.net/tianyaleixiaowu/article/details/78772269)
