@@ -63,6 +63,7 @@ https://github.com/yaozd/spring-cloud-demo-2
 - [灰度发布(Gated Launch/Gray Release)](http://www.cnblogs.com/yjmyzz/p/spring-cloud-zuul-demo.html#)
 
 ```
+灰度发布匹配规则：用户ID，用户名，用户类型等或是特定的前置字母等
 spring-cloud-demo
 https://github.com/yjmyzz/spring-cloud-demo
 https://github.com/yaozd/spring-cloud-demo-2
