@@ -9,6 +9,8 @@ package com.yzd.jutils.reflectExt;
 
 public class Hello{
 
+    private String name ;
+
     public String helloStrs(){
         //根据不同的方法名称，调用不用的方法
         System.out.println("hello1");
