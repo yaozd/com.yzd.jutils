@@ -3,6 +3,14 @@
 https://github.com/scalad/SpringBoot-RabbitMQ
 https://github.com/yaozd/SpringBoot-RabbitMQ
 ```
+### [rabbitmq实现延迟消息(附源码)](https://blog.csdn.net/Justnow_/article/details/81626901)
+
+```
+rabbitmq-springboot
+https://github.com/AAA-AA/rabbitmq-springboot
+
+```
+
 ### [Spring Boot配置多个RabbitMQ](https://blog.csdn.net/qq_37608766/article/details/80912370)
 ```
 [Spring Boot配置多个RabbitMQ](https://blog.csdn.net/qq_37608766/article/details/80912370)
