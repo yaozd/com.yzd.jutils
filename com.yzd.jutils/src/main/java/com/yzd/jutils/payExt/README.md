@@ -1,0 +1,9 @@
+### [pay-支付参考DEMO](https://github.com/kongzhidea/pay)
+```
+https://github.com/kongzhidea/pay
+https://github.com/yaozd/pay
+```
+# 微信支付，支付宝支付
+
+## pay 目录为微信、支付宝支付接口联调
+## pay-platform 为支付平台，集成微信、支付宝支付，通过http形式提供给业务方调用，推荐！！
