@@ -1,4 +1,5 @@
 ### ZUUL的技术问题
+- [Spring Cloud Zuul网关 Filter、熔断、重试、高可用的使用方式](https://blog.csdn.net/ityouknow/article/details/79215698)
 
 #### 限流问题
 - [Spring Cloud限流思路及解决方案-byArvin推荐](https://www.cnblogs.com/xifenglou/p/8519700.html)
