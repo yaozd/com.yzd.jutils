@@ -7,7 +7,8 @@
 ```
 1.sentinel控制台的实时监控仅存储 5 分钟以内的数据-生产调整为30分钟或1小时
 2.sentinel控制台负载均衡-nginx
-3.sentinel控制台扩充内存-通过Hazelcast(分布式内存数据网格实现)
+3.sentinel控制台扩充内存-通过Hazelcast(分布式内存数据网格实现)，建议使用Redis
+注：还是不要使用Hazelcast，建议使用Redis，java程序本身最好不要缓存任何数据，把数据放在外置存储器中，可提高稳定性。
 4.sentinel控制台的实时监控数据持久化-influxDB，CrateDB（CrateDB是商业软件），ES等
 注：推荐存储节点使用influxDB-byArvin-201809211138
 5.grafna图表可视化
