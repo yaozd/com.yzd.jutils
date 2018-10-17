@@ -106,3 +106,11 @@ public class UserMapperTest {
 源码在这里spring-boot-mybatis-annotation
 
 ```
+#### mybatis不能找到对应的mapper，错误示例：dataReport与datareport是不相同的
+```
+mybatis 一定要保持mapper与xml的路径一致。
+错误示例：dataReport与datareport是不相同的
+com.jebao.jebaodb.dao.mapper.dataReport.JinGuanTongMapper.java
+com\jebao\jebaodb\dao\mapper\datareport\JinGuanTongMapper.xml
+
+```
