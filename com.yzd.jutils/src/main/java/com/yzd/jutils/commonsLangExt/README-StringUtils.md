@@ -277,6 +277,9 @@ StringUtils.difference("abc", "ab") = ""
 StringUtils.difference("ab", "abxyz") = "xyz"
 StringUtils.difference("abcde", "abxyz") = "xyz"
 StringUtils.difference("abcde", "xyz") = "xyz"
+
+startsWith(CharSequence str, CharSequence suffix) 检查字符串是否以指定字符开始，返回一个boolean
+
 endsWith(CharSequence str, CharSequence suffix) 检查字符串是否以指定字符结尾，返回一个boolean
 
 StringUtils.endsWith(null, null)      = true
