@@ -1,9 +1,49 @@
 
 ### 1.[commons-lang中常用方法](https://blog.csdn.net/chenleixing/article/details/43093991)
 ### 2.[common-long包简介](https://blog.csdn.net/west8623/article/details/50380725)
+### 3.[CommonLang3中的StringUtils最全解析](https://blog.csdn.net/xuxiaoxie/article/details/52095930?utm_source=blogxgwz1)
 
 ### 2.[java工具类Apache Commons Long ,BeanUtils](https://blog.csdn.net/feicongcong/article/details/53374399)
+```
+ArrayUtils – 用于对数组的操作，如添加、查找、删除、子数组、倒序、元素类型转换等；
 
+BitField – 用于操作位元，提供了一些方便而安全的方法；
+
+BooleanUtils – 用于操作和转换boolean或者Boolean及相应的数组；
+
+CharEncoding – 包含了Java环境支持的字符编码，提供是否支持某种编码的判断；
+
+CharRange – 用于设定字符范围并做相应检查；
+
+CharSet – 用于设定一组字符作为范围并做相应检查；
+
+CharSetUtils – 用于操作CharSet；
+
+CharUtils – 用于操作char值和Character对象；
+
+ClassUtils – 用于对Java类的操作，不使用反射；
+
+ObjectUtils – 用于操作Java对象，提供null安全的访问和其他一些功能；
+
+RandomStringUtils – 用于生成随机的字符串；
+
+SerializationUtils – 用于处理对象序列化，提供比一般Java序列化更高级的处理能力；
+
+StringEscapeUtils – 用于正确处理转义字符，产生正确的Java、JavaScript、HTML、XML和SQL代码；
+
+StringUtils – 处理String的核心类，提供了相当多的功能；
+
+SystemUtils – 在java.lang.System基础上提供更方便的访问，如用户路径、Java版本、时区、操作系统等判断；
+
+Validate – 提供验证的操作，有点类似assert断言；
+
+WordUtils – 用于处理单词大小写、换行等。
+--------------------- 
+作者：Bill-Zhang 
+来源：CSDN 
+原文：https://blog.csdn.net/zlfprogram/article/details/78189878 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+```
 ```
 Apache Commons包估计是Java中使用最广发的工具包了，很多框架都依赖于这组工具包中的一部分，它提供了我们常用的一些编程需要，但是JDK没能提供的机能，最大化的减少重复代码的编写。
 
