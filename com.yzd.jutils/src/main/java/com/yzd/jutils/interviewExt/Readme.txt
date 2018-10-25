@@ -53,4 +53,20 @@ counter2 = 0
 问题4：ArrayBlockingQueue, CountDownLatch类的作用与使用场景
 答：
 
+问题5：mysql的事务四个特性以及事务的四个隔离级别
+https://blog.csdn.net/csdnxingyuntian/article/details/57081233
+spring的4种事务特性，5种隔离级别，7种传播行为
+https://blog.csdn.net/weixin_38070406/article/details/78157603?utm_source=blogkpcl3
+
+
+问题6：集合的默认初始容量、加载因子、扩容增量
+http://www.cnblogs.com/lanzhi/p/6467269.html
+Map是一个双列集合
+==
+HashMap：默认初始容量为16
+（为何是16：16是2^4，可以提高查询效率，另外，32=16<<1       -->至于详细的原因可另行分析，或分析源代码）
+加载因子为0.75：即当 元素个数 超过 容量长度的0.75倍 时，进行扩容
+扩容增量：原容量的 1 倍
+如 HashSet的容量为16，一次扩容后是容量为32
+
 
