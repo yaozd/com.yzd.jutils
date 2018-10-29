@@ -295,6 +295,13 @@ public class TestLangDemo {
      * @param args
      */
     public static void main(String[] args) {
+        //用 // 代替 http:// 有什么好处(自适应https)
+        String urlFile="https://filetest.com";
+        urlFile=ObjectUtils.defaultIfNull(urlFile,"");
+        urlFile= StringUtils.removeAll(urlFile, "^http:");
+        urlFile= StringUtils.removeAll(urlFile, "^https:");
+        System.out.println(urlFile);
+
         // commons-lang中常用方法
         // https://blog.csdn.net/chenleixing/article/details/43093991
 
