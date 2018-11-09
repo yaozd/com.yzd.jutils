@@ -33,12 +33,16 @@ CentOS7使用firewalld打开关闭防火墙与端口
 百度云-》开发工具-》N-Nginx-》Nginx-Upsync动态配置
 ```
 
+### consul官网
+-[https://www.consul.io/downloads.html](https://www.consul.io/downloads.html)
+
 ### 安装Consul:
 
 - 1.安装Consul
 ```
 yum -y install unzip
 1.cd /usr/local/
+2.推荐安装最新版，目前最新版为consul_1.3.0_linux_amd64.zip-byArvin
 2.wget https://releases.hashicorp.com/consul/0.7.5/consul_0.7.5_linux_amd64.zip
 3.unzip consul_0.7.5_linux_amd64.zip
 ----
