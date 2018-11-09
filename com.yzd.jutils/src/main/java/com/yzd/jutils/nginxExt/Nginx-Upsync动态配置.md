@@ -60,6 +60,9 @@ yum -y install unzip
 2.  ./consul agent -dev
 ## 必须要绑定本机IP,不然其他机器无法访问
 3.  ./consul agent -dev -client 192.168.1.239
+4.进程守护
+nohup ./consul agent -dev -client 192.168.1.239 >consul.log 2>&1 &
+
 ```
 
 ### 安装 Upsync
