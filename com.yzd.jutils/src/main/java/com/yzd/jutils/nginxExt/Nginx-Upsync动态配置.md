@@ -6,6 +6,16 @@ nginx-upsync-module
 https://github.com/weibocom/nginx-upsync-module
 For http protocol. nginx-upsync-module, sync upstreams from consul or etcd and so on, dynamiclly modify backend-servers attributes(weight, max_fails, down...), needn't reload nginx
 ```
+### reload与upsync性能对比
+
+```
+架构之微服务设计(Nginx + Upsync)
+https://www.cnblogs.com/InCsharp/p/6810106.html
+应用案例：
+模块已经应用在微博的各类业务中，下面图表对比分析使用模块前后的 QPS 与耗时变化。
+从数据可以得出，reload 操作时造成 nginx 的请求处理能力下降约 10%，Nginx 本身的耗时会增长 50%+。若是频繁的扩容缩容，reload 操作造成的开销会更加明显。
+```
+
 ### CentOS7使用firewalld打开关闭防火墙与端口
 
 ```
@@ -148,8 +158,13 @@ http{
         
         location / {
             proxy_pass http://myproject;
-            }
         }
+        #查看当前代理的信息
+	    location /upstream_list {
+         	upstream_show;
+     	}
+    }
+	
 }
 ```
 
@@ -186,6 +201,8 @@ curl -X PUT -d '{"weight":10, "max_fails":2, "fail_timeout":10, "down":0}' http:
 http://192.168.1.239:1222/html/vue-css.html
 Ngnix代理：
 http://192.168.1.239:8080/html/vue-css.html
+查看当前Nginx代理的信息
+http://192.168.1.239:8080/upstream_list
 ```
 
 
@@ -195,3 +212,5 @@ http://192.168.1.239:8080/html/vue-css.html
 - [nginx+upsync+consul 构建动态nginx配置系统](http://blog.51cto.com/lee90/2056182)
 - [Consul+Nginx+Upsync+Linux+Keepalived+Lvs的动态负载均衡](http://www.cnblogs.com/lzh110/p/9452463.html)
 - [基于Nginx dyups模块的站点动态上下线并实现简单服务治理](https://www.cnblogs.com/beyondbit/p/6063132.html)
+- [Nginx容器动态流量管理方案-nginx-upsync-module+nginx_upstream_check_module初体验](https://blog.csdn.net/yueguanghaidao/article/details/52801043)
+- [lazy-balancer(可视化管理页面-参考)](https://github.com/v55448330/lazy-balancer)
