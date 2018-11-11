@@ -1,3 +1,11 @@
+### 解决MySql导出数据到Excel身份证格式错误
+```
+SELECT ud_true_name as 姓名,CONCAT("=",ud_id_number) as 身份证号 
+from tmp_table_income_user_1111 as A JOIN tb_user_details as B on A.ind_login_id=B.ud_login_id where ud_is_del=1
+------------
+然后再把“=”替换为空
+```
+
 ### 通过select查询结果创建新表（场景：作为临时表提供查询使用）
 ```
 Create table tmp_table_fullname(
