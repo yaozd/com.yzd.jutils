@@ -1,3 +1,31 @@
+
+### mysql生成一个连续的时间序列-按月或者日
+
+```
+【(select @i:= -1) t 必须加上】
+select date_add('2021-01-01',interval @i:=@i+1 day) as date 
+from ( select 1 union all select 1 union all select 1 union all select 1) as tmp,(select @i:= -1) t
+---------
+【(select @i:= -1) t 必须加上】
+
+select date_add('2016-04-01',interval @i:=@i+1 MONTH) as date 
+from ( select 1 union all select 1 union all select 1 union all select 1
+) as tmp,(select @i:= -1) t
+
+```
+
+### [mysql语句里时间格式化](https://www.cnblogs.com/fan-lp/p/5659921.html)
+
+```
+SELECT DATE_FORMAT(now(),'%Y%m')
+
+## 201811
+
+SELECT DATE_FORMAT(now(),'%Y-%m-%d')
+
+##2018-11-12
+```
+
 ### mysql中通过身份证计算年纪与性别
 
 ```
