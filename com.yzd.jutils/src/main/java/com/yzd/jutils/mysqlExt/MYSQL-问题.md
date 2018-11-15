@@ -1,5 +1,20 @@
 ###A.问题
 
+JDBC中The server time zone value '???ú±ê×??±??' is ............. 的错误
+出现这个的原因是因为 mysql返回的时间总是有问题，比实际时间要早8小时--问题解决
+https://blog.csdn.net/weixin_37577564/article/details/80329775
+---------------------
+解决办法
+
+public static final  String URL="jdbc:mysql://localhost:3306/jdbc01?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false";//链接的mysql
+
+在jdbc连接的url后面加上serverTimezone=GMT即可解决问题，如果需要使用gmt+8时区，需要写成GMT%2B8
+
+问题就会解决；
+
+---------------------
+###A.问题
+
 mysql数据库error: Found option without preceding group in config file 问题解决
 https://blog.csdn.net/wyx100/article/details/52859381
 ---------------------
