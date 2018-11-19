@@ -1,3 +1,7 @@
+
+#### [SpringBoot配置(配置文件占位符)](https://blog.csdn.net/baidu_36216018/article/details/79597923)
+#### [详解Spring Boot加载properties和yml配置文件](https://www.jb51.net/article/111063.htm)
+#### [SpringBoot配置(@PropertySource @ImportResource @Bean 注解)](https://blog.csdn.net/baidu_36216018/article/details/79595516)
 #### [SpringBoot四种读取properties文件的方式](https://blog.csdn.net/thc1987/article/details/78789426)
 
 ```
