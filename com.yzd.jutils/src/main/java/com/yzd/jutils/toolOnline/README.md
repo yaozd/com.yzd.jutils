@@ -9,7 +9,14 @@
 - [http://www.atool.org/](http://www.atool.org/)
 - [开源中国-http://tool.oschina.net/](http://tool.oschina.net/)
 - [TOOL-https://tool.lu/-byArvin推荐](https://tool.lu/)
+- [开发者工具网](http://tool.sufeinet.com/Encrypt/Base64.aspx)
 
 ### 娱乐
 - [egouz-国内外网站大全](http://www.egouz.com/asia/china/)
 - [egouz-中国美食网站大全](http://www.egouz.com/asia/china/food/)
+
+#### 常用工具
+- [在线字节换算器](https://calc.itzmx.com/)
+- [在线字数统计工具-汉字+数字+字母](http://www.mb5u.com/tool/zishutongji/)
+- [在线计算字符串长度-所有字符](http://tool.sufeinet.com/creater/ExeStringLen.aspx)
+- 
