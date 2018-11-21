@@ -46,7 +46,30 @@ public class HttpUtil {
         }
         return response;
     }
-
+    public static boolean sendGetForCheckFileIsExist(String url) {
+        CloseableHttpClient httpClient=null;
+        CloseableHttpResponse httpResponse=null;
+        try {
+            URI uri = new URIBuilder(url).build();
+            HttpGet httpGet = new HttpGet(uri);
+            httpGet.addHeader("User-Agent", "Mozilla/5.0");
+            httpClient = HttpClients.createDefault();
+            httpResponse = httpClient.execute(httpGet);
+            httpResponse.close();
+            int httpStatus=httpResponse.getStatusLine().getStatusCode();
+            if(httpStatus==200){return true;}
+        } catch (Exception e) {
+            throw new IllegalStateException(e);
+        }finally {
+            try {
+                if(httpResponse!=null){httpResponse.close();}
+                if(httpClient!=null){httpClient.close();}
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return false;
+    }
     public static String sendGet(String url, Map<String, String> params) {
         List<NameValuePair> urlParameters = new ArrayList<NameValuePair>(params.size());
         for (String key : params.keySet()) {

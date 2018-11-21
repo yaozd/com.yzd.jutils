@@ -72,7 +72,10 @@ public class ConsulTest {
         //// Client will prepend "service:" for service level checks.
         //// Note that you need to continually check in before the TTL expires, otherwise your service's state will be marked as "critical".
         // ttl(10L)过期时间为10秒
-        Registration.RegCheck single = Registration.RegCheck.tcp("127.0.0.1:18080", 5).ttl(13L);
+        //Registration.RegCheck single = Registration.RegCheck.tcp("127.0.0.1:18080", 5).ttl(13L);
+        //调整为ttl(13L);无ttl的方式
+        //TCP+ Interval 的check 方式
+        Registration.RegCheck single = Registration.RegCheck.tcp("127.0.0.1:18080", 5);
         Registration service = ImmutableRegistration.builder()
                 .id(serviceId)
                 .name(serviceName)
@@ -145,7 +148,10 @@ public class ConsulTest {
         //// Client will prepend "service:" for service level checks.
         //// Note that you need to continually check in before the TTL expires, otherwise your service's state will be marked as "critical".
         // ttl(10L)过期时间为10秒
-        Registration.RegCheck single = Registration.RegCheck.tcp("127.0.0.1:18080", 5).ttl(13L);
+        //Registration.RegCheck single = Registration.RegCheck.tcp("127.0.0.1:18080", 5).ttl(13L);
+        //调整为ttl(13L);无ttl的方式
+        //TCP+ Interval 的check 方式
+        Registration.RegCheck single = Registration.RegCheck.tcp("127.0.0.1:18080", 5);
         Registration service = ImmutableRegistration.builder()
                 .id(serviceId)
                 .name(serviceName)

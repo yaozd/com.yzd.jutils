@@ -1,3 +1,53 @@
+
+### mysql生成一个连续的时间序列-按月或者日
+
+```
+【(select @i:= -1) t 必须加上】
+select date_add('2021-01-01',interval @i:=@i+1 day) as date 
+from ( select 1 union all select 1 union all select 1 union all select 1) as tmp,(select @i:= -1) t
+---------
+【(select @i:= -1) t 必须加上】
+
+select date_add('2016-04-01',interval @i:=@i+1 MONTH) as date 
+from ( select 1 union all select 1 union all select 1 union all select 1
+) as tmp,(select @i:= -1) t
+
+```
+
+### [mysql语句里时间格式化](https://www.cnblogs.com/fan-lp/p/5659921.html)
+
+```
+SELECT DATE_FORMAT(now(),'%Y%m')
+
+## 201811
+
+SELECT DATE_FORMAT(now(),'%Y-%m-%d')
+
+##2018-11-12
+```
+
+### mysql中通过身份证计算年纪与性别
+
+```
+SELECT 
+person_invest_no,substring(person_invest_no,7,8) birth,
+year(now())- year(substring(person_invest_no,7,8)) age ,
+IF(LEFT(SUBSTRING(person_invest_no,17),1)%2=1,"男","女") AS sex
+from tmp_table_person_nopay_money_type_1111
+
+----
+
+SELECT person_invest_no,substring(person_invest_no,7,8) birth,year(now())- year(substring(person_invest_no,7,8)) age from tmp_table_person_nopay_money_type_1111
+```
+
+### 解决MySql导出数据到Excel身份证格式错误
+```
+SELECT ud_true_name as 姓名,CONCAT("=",ud_id_number) as 身份证号 
+from tmp_table_income_user_1111 as A JOIN tb_user_details as B on A.ind_login_id=B.ud_login_id where ud_is_del=1
+------------
+然后再把“=”替换为空
+```
+
 ### 通过select查询结果创建新表（场景：作为临时表提供查询使用）
 ```
 Create table tmp_table_fullname(

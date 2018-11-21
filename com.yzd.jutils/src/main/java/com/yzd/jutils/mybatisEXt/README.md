@@ -1,3 +1,14 @@
+### Mybatis的示例
+- Jebao-Mybatis-Generator-示例四-[独立代码生成无包含依赖包].zip
+- Jebao-Mybatis-Generator-示例三-[独立代码生成包含依赖包].zip
+- ngnix-upsync-deploy-示例二-[代码生成无依赖].zip
+- springboot-mybatis-demo-示例一-[实现数据库连接].zip
+```
+下载地址：
+百度云-》软件开发java-》J-M-Mybatis的示例
+```
+
+
 ### [如何优雅的使用mybatis](https://www.cnblogs.com/ityouknow/p/6037431.html)
 ```
 2、application.properties 添加相关配置

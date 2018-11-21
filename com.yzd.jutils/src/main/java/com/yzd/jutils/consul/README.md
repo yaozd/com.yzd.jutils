@@ -1,3 +1,6 @@
+### consul官网
+-[https://www.consul.io/downloads.html](https://www.consul.io/downloads.html)
+
 ### consul参考
 -  [rickfast/consul-client](https://github.com/rickfast/consul-client)
 -  [consul-02.consul服务注册实现（java）](https://blog.csdn.net/Sukiyou_xixi/article/details/80378391)

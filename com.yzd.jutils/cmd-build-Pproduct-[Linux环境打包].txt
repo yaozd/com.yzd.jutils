@@ -1,0 +1,7 @@
+Linux环境打包推荐使用下面的命令
+
+mvn clean install -Ptest -DskipTests
+
+
+
+mvn clean install -Pproduct -DskipTests
