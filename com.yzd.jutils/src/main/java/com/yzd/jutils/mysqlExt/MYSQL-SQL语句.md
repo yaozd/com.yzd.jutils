@@ -1,4 +1,17 @@
 
+### mysql身份证信息脱敏
+
+```
+MySQL对身份证号、手机号等敏感数据脱敏教程
+https://www.2cto.com/database/201802/719575.html
+
+-- 身份证脱敏-1脱敏后4位；2脱敏中间11位
+SELECT ud_id_number,INSERT(ud_id_number, 15, 4, '****'),INSERT(ud_id_number, 4, 11, '****') from tb_user_details LIMIT 10
+
+-- 姓名脱敏
+SELECT ud_true_name,INSERT(ud_true_name, 2, 4, '某某') from tb_user_details LIMIT 10
+```
+
 ### mysql生成一个连续的时间序列-按月或者日
 
 ```
