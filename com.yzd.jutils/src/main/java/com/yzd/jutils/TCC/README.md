@@ -4,6 +4,8 @@
 - [EasyTransaction-byArvin推荐](https://github.com/QNJR-GROUP/EasyTransaction)
 - [LCN分布式事务框架v4.0](https://github.com/codingapi/tx-lcn)
 - [分布式事务解决方案框架（LCN）](https://www.jianshu.com/p/73beee3c70e9)
+- [tmycat1-分布式事务的一种实现方式——状态流转](https://github.com/yu199195/tmycat1)
+- [myth-基于可靠消息最终一致性分布式事务框架](https://github.com/yu199195/myth)
 
 可以借鉴阿里GTS的思路：
 ```
