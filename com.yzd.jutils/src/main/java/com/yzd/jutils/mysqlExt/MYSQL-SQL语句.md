@@ -1,39 +1,39 @@
-### ÅĞ¶ÏÓÃ»§µ±ÈÕÊÇ·ñÇ©µ½
+### åˆ¤æ–­ç”¨æˆ·å½“æ—¥æ˜¯å¦ç­¾åˆ°
 
 ```
-Ö´ĞĞËÙ¶ÈÏà²î10±¶
-1.Ö´ĞĞÊ±¼äÊÇ3ºÁÃë
+æ‰§è¡Œé€Ÿåº¦ç›¸å·®10å€
+1.æ‰§è¡Œæ—¶é—´æ˜¯3æ¯«ç§’
 select sr_id from tb_sign_record where sr_login_id=139866 ORDER BY sr_id DESC LIMIT 1
-2.Ö´ĞĞÊ±¼äÊÇ48ºÁÃë
+2.æ‰§è¡Œæ—¶é—´æ˜¯48æ¯«ç§’
 select sr_id, sr_login_id, sr_count, sr_gold_count, sr_create_time, sr_update_time, sr_voucher, sr_medal, sr_type, sr_ii_id, sr_gold from tb_sign_record 
 where sr_login_id=139866 ORDER BY sr_create_time DESC LIMIT 0,1
-3.Ö´ĞĞÊ±¼äÊÇ48ºÁÃë
+3.æ‰§è¡Œæ—¶é—´æ˜¯48æ¯«ç§’
 select sr_id, sr_login_id, sr_count, sr_gold_count, sr_create_time, sr_update_time, sr_voucher, sr_medal, sr_type, sr_ii_id, sr_gold from tb_sign_record 
 where sr_login_id=139866 ORDER BY sr_create_time DESC LIMIT 0,1
 
 ```
 
-### mysqlÉí·İÖ¤ĞÅÏ¢ÍÑÃô
+### mysqlèº«ä»½è¯ä¿¡æ¯è„±æ•
 
 ```
-MySQL¶ÔÉí·İÖ¤ºÅ¡¢ÊÖ»úºÅµÈÃô¸ĞÊı¾İÍÑÃô½Ì³Ì
+MySQLå¯¹èº«ä»½è¯å·ã€æ‰‹æœºå·ç­‰æ•æ„Ÿæ•°æ®è„±æ•æ•™ç¨‹
 https://www.2cto.com/database/201802/719575.html
 
--- Éí·İÖ¤ÍÑÃô-1ÍÑÃôºó4Î»£»2ÍÑÃôÖĞ¼ä11Î»
+-- èº«ä»½è¯è„±æ•-1è„±æ•å4ä½ï¼›2è„±æ•ä¸­é—´11ä½
 SELECT ud_id_number,INSERT(ud_id_number, 15, 4, '****'),INSERT(ud_id_number, 4, 11, '****') from tb_user_details LIMIT 10
 
--- ĞÕÃûÍÑÃô
-SELECT ud_true_name,INSERT(ud_true_name, 2, 4, 'Ä³Ä³') from tb_user_details LIMIT 10
+-- å§“åè„±æ•
+SELECT ud_true_name,INSERT(ud_true_name, 2, 4, 'æŸæŸ') from tb_user_details LIMIT 10
 ```
 
-### mysqlÉú³ÉÒ»¸öÁ¬ĞøµÄÊ±¼äĞòÁĞ-°´ÔÂ»òÕßÈÕ
+### mysqlç”Ÿæˆä¸€ä¸ªè¿ç»­çš„æ—¶é—´åºåˆ—-æŒ‰æœˆæˆ–è€…æ—¥
 
 ```
-¡¾(select @i:= -1) t ±ØĞë¼ÓÉÏ¡¿
+ã€(select @i:= -1) t å¿…é¡»åŠ ä¸Šã€‘
 select date_add('2021-01-01',interval @i:=@i+1 day) as date 
 from ( select 1 union all select 1 union all select 1 union all select 1) as tmp,(select @i:= -1) t
 ---------
-¡¾(select @i:= -1) t ±ØĞë¼ÓÉÏ¡¿
+ã€(select @i:= -1) t å¿…é¡»åŠ ä¸Šã€‘
 
 select date_add('2016-04-01',interval @i:=@i+1 MONTH) as date 
 from ( select 1 union all select 1 union all select 1 union all select 1
@@ -41,7 +41,7 @@ from ( select 1 union all select 1 union all select 1 union all select 1
 
 ```
 
-### [mysqlÓï¾äÀïÊ±¼ä¸ñÊ½»¯](https://www.cnblogs.com/fan-lp/p/5659921.html)
+### [mysqlè¯­å¥é‡Œæ—¶é—´æ ¼å¼åŒ–](https://www.cnblogs.com/fan-lp/p/5659921.html)
 
 ```
 SELECT DATE_FORMAT(now(),'%Y%m')
@@ -53,13 +53,13 @@ SELECT DATE_FORMAT(now(),'%Y-%m-%d')
 ##2018-11-12
 ```
 
-### mysqlÖĞÍ¨¹ıÉí·İÖ¤¼ÆËãÄê¼ÍÓëĞÔ±ğ
+### mysqlä¸­é€šè¿‡èº«ä»½è¯è®¡ç®—å¹´çºªä¸æ€§åˆ«
 
 ```
 SELECT 
 person_invest_no,substring(person_invest_no,7,8) birth,
 year(now())- year(substring(person_invest_no,7,8)) age ,
-IF(LEFT(SUBSTRING(person_invest_no,17),1)%2=1,"ÄĞ","Å®") AS sex
+IF(LEFT(SUBSTRING(person_invest_no,17),1)%2=1,"ç”·","å¥³") AS sex
 from tmp_table_person_nopay_money_type_1111
 
 ----
@@ -67,21 +67,26 @@ from tmp_table_person_nopay_money_type_1111
 SELECT person_invest_no,substring(person_invest_no,7,8) birth,year(now())- year(substring(person_invest_no,7,8)) age from tmp_table_person_nopay_money_type_1111
 ```
 
-### ½â¾öMySqlµ¼³öÊı¾İµ½ExcelÉí·İÖ¤¸ñÊ½´íÎó
+### è§£å†³MySqlå¯¼å‡ºæ•°æ®åˆ°Excelèº«ä»½è¯æ ¼å¼é”™è¯¯
+
 ```
-SELECT ud_true_name as ĞÕÃû,CONCAT("=",ud_id_number) as Éí·İÖ¤ºÅ 
+æ¨èæ–¹æ³•ï¼šæµ‹è¯•å¯è¡Œ
+SELECT ud_true_name,CONCAT("\t",ud_id_number) as idnumber  from tb_user_details LIMIT 290
+
+-------------------------------------
+SELECT ud_true_name as å§“å,CONCAT("=",ud_id_number) as èº«ä»½è¯å· 
 from tmp_table_income_user_1111 as A JOIN tb_user_details as B on A.ind_login_id=B.ud_login_id where ud_is_del=1
 ------------
-È»ºóÔÙ°Ñ¡°=¡±Ìæ»»Îª¿Õ
+ç„¶åå†æŠŠâ€œ=â€æ›¿æ¢ä¸ºç©º
 ```
 
-### Í¨¹ıselect²éÑ¯½á¹û´´½¨ĞÂ±í£¨³¡¾°£º×÷ÎªÁÙÊ±±íÌá¹©²éÑ¯Ê¹ÓÃ£©
+### é€šè¿‡selectæŸ¥è¯¢ç»“æœåˆ›å»ºæ–°è¡¨ï¼ˆåœºæ™¯ï¼šä½œä¸ºä¸´æ—¶è¡¨æä¾›æŸ¥è¯¢ä½¿ç”¨ï¼‰
 ```
 Create table tmp_table_fullname(
 select ind_bp_id,ud_true_name,ud_phone,concat(ud_true_name,ud_phone)as fullName from tb_income_detail as tid JOIN tb_user_details as tud on tid.ind_login_id=tud.ud_login_id 
 where ind_fund_type=1 and ind_money>=1000  )
 ```
-### ½«¶àĞĞ±äÎªÒ»ĞĞ
+### å°†å¤šè¡Œå˜ä¸ºä¸€è¡Œ
 ```
 -group_concat(fullName Separator ';')
 --
@@ -89,19 +94,19 @@ Create table tmp_table_touziren(
 select ind_bp_id ,group_concat(fullName Separator ';') as touziren,count(*) as countNum from tmp_table_fullname group by ind_bp_id
 )
 ```
-### Ê±¼ä²Ù×÷-¼õÒ»¸ö¼¾¶È
+### æ—¶é—´æ“ä½œ-å‡ä¸€ä¸ªå­£åº¦
 ```
 Create table tmp_table_plan(
 select bp_id, bp_number,bp_name,bp_true_name,bp_loan_money,bp_rate,bp_interest_st,
-date_sub(bp_repay_time,interval 1 day) as 'µÚ1¼¾¶È',
-date_add(date_sub(bp_repay_time,interval 1 day), interval -3 month) as 'µÚ2¼¾¶È',
-date_add(date_sub(bp_repay_time,interval 1 day), interval -6 month) as 'µÚ3¼¾¶È',
-date_add(date_sub(bp_repay_time,interval 1 day), interval -9 month) as 'µÚ4¼¾¶È',
+date_sub(bp_repay_time,interval 1 day) as 'ç¬¬1å­£åº¦',
+date_add(date_sub(bp_repay_time,interval 1 day), interval -3 month) as 'ç¬¬2å­£åº¦',
+date_add(date_sub(bp_repay_time,interval 1 day), interval -6 month) as 'ç¬¬3å­£åº¦',
+date_add(date_sub(bp_repay_time,interval 1 day), interval -9 month) as 'ç¬¬4å­£åº¦',
 bp_status,bp_cycle_type,bp_interest_pay_type   
 from tb_bid_plan where  bp_loan_money>=1000  and bp_status=10 and bp_interest_st <'2018-09-01' and bp_is_del=1 
 )
 ```
-### ½«Á½¸ö×Ö¶ÎºÏ²¢ÎªÒ»¸ö×Ö¶Î
+### å°†ä¸¤ä¸ªå­—æ®µåˆå¹¶ä¸ºä¸€ä¸ªå­—æ®µ
 ```
 -concat(ud_true_name,ud_phone)as fullName
 --
