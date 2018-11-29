@@ -1,3 +1,17 @@
+### 判断用户当日是否签到
+
+```
+执行速度相差10倍
+1.执行时间是3毫秒
+select sr_id from tb_sign_record where sr_login_id=139866 ORDER BY sr_id DESC LIMIT 1
+2.执行时间是48毫秒
+select sr_id, sr_login_id, sr_count, sr_gold_count, sr_create_time, sr_update_time, sr_voucher, sr_medal, sr_type, sr_ii_id, sr_gold from tb_sign_record 
+where sr_login_id=139866 ORDER BY sr_create_time DESC LIMIT 0,1
+3.执行时间是48毫秒
+select sr_id, sr_login_id, sr_count, sr_gold_count, sr_create_time, sr_update_time, sr_voucher, sr_medal, sr_type, sr_ii_id, sr_gold from tb_sign_record 
+where sr_login_id=139866 ORDER BY sr_create_time DESC LIMIT 0,1
+
+```
 
 ### mysql身份证信息脱敏
 
