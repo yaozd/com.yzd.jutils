@@ -231,6 +231,12 @@
             <artifactId>feign-gson</artifactId>
             <version>8.18.0</version>
         </dependency>
+        <!-- Kryo -->
+        <dependency>
+            <groupId>com.esotericsoftware</groupId>
+            <artifactId>kryo-shaded</artifactId>
+            <version>4.0.0</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
