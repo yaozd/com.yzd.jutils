@@ -15,6 +15,14 @@ h5 微信分享朋友和朋友圈
 https://www.cnblogs.com/liangzia/p/7569443.html
 -------------------------------------
 3. 签名算法实现
+===
+微信 JS 接口签名校验工具
+https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=jsapisign
+===
+阿里云-Nginx代理，导致请求都http，可法识别当前请求是http还是https的，会造成签名失败
+===
+H5开启微信的debug=true,在手机微信中执行时会弹出调试窗口
+===
 参考：
 h5 微信分享朋友和朋友圈
 https://www.cnblogs.com/liangzia/p/7569443.html
