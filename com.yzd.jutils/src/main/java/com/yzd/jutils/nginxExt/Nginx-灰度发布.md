@@ -92,6 +92,15 @@ http{
 }
 
 ```
+#### 名词解释
+```
+www_yzd_com网站为例
+网站-正常版本：www_yzd_com_normal
+网站-灰度版本：www_yzd_com_gray
+Cookie名称：request_version_id
+Cookie值：gray
+upstream变量：$www_yzd_com_upst
+```
 #### 相关资料下载地址
 ```
 百度云：开发工具>N-Nginx-Nginx-灰度发版
