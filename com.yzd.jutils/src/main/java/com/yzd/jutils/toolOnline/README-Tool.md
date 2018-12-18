@@ -15,3 +15,5 @@ bejson中有许多工具：
 - [Html/MarkDown互转工具](http://www.bejson.com/convert/html2markdown/)
 - [quartz/Cron/Crontab表达式在线校验工具](http://www.bejson.com/othertools/cronvalidate/)
 - [在线html转js,js转html](http://www.bejson.com/convert/html_js/)
+
+- [纳秒换算](https://cn.office-converter.com/Nanoseconds-Time-Converter)
