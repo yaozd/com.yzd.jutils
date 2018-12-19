@@ -45,10 +45,6 @@ public class RegexUtils {
             return resultList;
         }
 
-        if(p==null){
-            System.out.println("构造Pattern时发生错误！");
-            return resultList;
-        }
         Matcher m = p.matcher(INPUT);		//利用patter对象为被匹配的文本构造一个Matcher对象
         while(m.find()){ //如果在任何位置中发现匹配的字符串……
             resultList.add(m.group()); //保存匹配到的字符串

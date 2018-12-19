@@ -13,7 +13,9 @@ import java.util.regex.PatternSyntaxException;
  */
 
 public class RegExUtil {
-
+    private RegExUtil(){
+        throw new IllegalStateException("RegExUtil class");
+    }
     /**
      * 要求大小写都匹配正则表达式
      * @param pattern 正则表达式模式
@@ -169,7 +171,7 @@ public class RegExUtil {
      * @since  1.0
      */
     public static String escapeDollarBackslash(String original) {
-        StringBuffer buffer=new StringBuffer(original.length());
+        StringBuilder buffer=new StringBuilder(original.length());
         for (int i=0;i<original.length();i++) {
             char c=original.charAt(i);
             if (c=='\\'||c=='$') {
