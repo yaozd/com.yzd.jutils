@@ -1,6 +1,7 @@
 百度云--》j-r-rundeck中有备份 
 # 官方文档
 
+- [Rundeck文档（2.10.6）-google翻译版](https://translate.google.com/translate?hl=zh-CN&sl=en&u=https://rundeck.org/2.10.6/manual/jobs.html&prev=search)
 - [https://rundeck.org/docs/manual/getting-started.html](https://rundeck.org/docs/manual/getting-started.html)
 - [https://rundeck.org/docs/api/](https://rundeck.org/docs/api/)
 - [Download Rundeck-jar包的形式运行](https://rundeck.org/download/jar/)
@@ -47,7 +48,26 @@ Sequential方式，每个Step按照节点顺序执行, 当所有节点的上一�
 添加认证：
 ssh-copy-id -i ~/.ssh/id_rsa.pub  root@192.168.1.241
 ```
+#### Rundeck-示例job-demo-来自田亮
 
+```
+通过“source /etc/profile;”加载环境变量
+
+解决ssh执行脚本无法使用环境变量
+手动执行一次source, 如 
+ssh user@host “source /etc/profile; /path/script.sh” 
+/etc/profile文件设置环境变量
+---------------------------------------
+例如（-Rundeck）：
+#!/bin/bash -l
+source /etc/profile
+cd /data/server-package/script
+rm -rf /data/server-package/http-server-demo-0.0.1-SNAPSHOT.jar.bak > /dev/null 2>&1 
+mv /data/server-package/http-server-demo-0.0.1-SNAPSHOT.jar /data/server-package/http-server-demo-0.0.1-SNAPSHOT.jar.bak > /dev/null 2>&1 
+wget -qP /tmp http://192.168.1.5/root/operation.tl.exmaple.delopy/raw/master/http/http-server-demo-0.0.1-SNAPSHOT.jar
+mv /tmp/http-server-demo-0.0.1-SNAPSHOT.jar /data/server-package
+sh http2.sh start
+```
 #### Rundeck配置mysql
 - [rundeck 自动发布平台](https://yq.aliyun.com/wenji/293772)
 - [rundeck部署](https://wenku.baidu.com/view/84c78b15fab069dc5122019d.html)
