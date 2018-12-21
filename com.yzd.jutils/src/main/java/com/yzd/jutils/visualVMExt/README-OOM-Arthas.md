@@ -22,6 +22,27 @@ dashboard 说明：https://alibaba.github.io/arthas/dashboard.html
 ```
 ### [查看dashboard](https://alibaba.github.io/arthas/dashboard.html)
 
+###　Arthas-常用命令
+```
+1.dashboard (相当于：visualVM)
+2.thread (相当于：jstack,查看线程情况)
+3.jvm （查看当前JVM信息，包括线程相关统计信息与VM进程最大可以打开的文件描述符数）
+4.jad （反编译指定已加载类的源码）
+5.redefine （可以通过redefine命令来达到线上不重启，动态更新代码的效果）
+5.monitor （方法执行监控）
+6.watch （能观察到的范围为：返回值、抛出异常、输入参数）
+7.tt (测试重放，减少测试小姐姐重复发请求)
+分享及其资料：当DUBBO遇上Arthas - 排查问题的实践
+https://github.com/alibaba/arthas/issues/327
+```
+### tt-怎样减少测试小姐姐重复发请求的麻烦?
+```
+1.tt -t命令捕获到了3个请求
+tt -t com.example.UserServiceImpl findUser
+2.tt --play可以重放请求
+tt --play -i 1000
+```
+
 ### [手动安装Arthas](https://alibaba.github.io/arthas/manual-install.html)
 
 ### -Arthas使用重点，必须先启动Arthas，然后再启动jar程序。(这个理论是不对的，但是执行下面的debug后，再可以任意启动不分先后，目前暂不知为什么)
