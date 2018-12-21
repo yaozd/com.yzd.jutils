@@ -25,7 +25,10 @@ dashboard 说明：https://alibaba.github.io/arthas/dashboard.html
 ###　Arthas-常用命令
 ```
 1.dashboard (相当于：visualVM)
-2.thread (相当于：jstack,查看线程情况)
+2.thread (相当于：jstack,查看线程情况-用于CPU 占用率过高或都线程阻塞)
+参考：
+记一次线上Java程序导致服务器CPU占用率过高的问题排除过程
+https://www.jianshu.com/p/3667157d63bb
 3.jvm （查看当前JVM信息，包括线程相关统计信息与VM进程最大可以打开的文件描述符数）
 4.jad （反编译指定已加载类的源码）
 5.redefine （可以通过redefine命令来达到线上不重启，动态更新代码的效果）
