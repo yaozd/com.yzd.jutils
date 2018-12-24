@@ -28,3 +28,17 @@ TransactionDefinition.PROPAGATION_NESTED：如果当前存在事务，则创建�
 原文：https://blog.csdn.net/fanxb92/article/details/81296005 
 ```
 ### -[链式方法调用的事务问题剖析](https://blog.csdn.net/fanxb92/article/details/82784348)
+
+### -[Spring中声明式事务的注解@Transactional的参数的总结（REQUIRED和REQUIRES_NEW的与主方法的回滚问题）](https://blog.csdn.net/gpf951101/article/details/77751025)
+```
+系统默认的是REQUIRED属性。
+常用的是REQUIRED和REQUIRES_NEW,所以此处只说明这两种属性。
+下面先看系统默认的REQUIRED属性。
+purchase代表两个声明了事务的方法，并且传播行为是系统的默认行为。同时checkout也是一个声明了事务的方法，在该方法中调用前述的两个方法。当checkout执行到第一个方法的时候，第一个方法继续使用checkout的事务进行执行，第二个方法一样，所以整个方法只有一个事务。
+下面介绍REQUIRES_NEW属性。
+方法含义和上述一样，知识两个子方法的传播属性均为REQUIRES_NEW。主方法的事务tx1执行到第一个方法的时候，挂起，然后子方法的事务进行，第二个方法类似。
+如果一个事务发生了错误，那么回滚。所以REQUIRED属性中，如果第二个方法发生错误，第一个方法也会回滚，然而REQUIRES_NEW属性中，第二个方法发生错误，因为第一个是单独的事务，所以不会受到影响。
+--------------------- 
+原文：https://blog.csdn.net/gpf951101/article/details/77751025 
+```
+

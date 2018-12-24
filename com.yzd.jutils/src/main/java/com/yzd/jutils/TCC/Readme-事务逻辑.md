@@ -14,3 +14,11 @@
 4.反向处理逻辑--根据日志节点的信息
 -------------------------------------
 ```
+
+### 分布式事务-通过REQUIRES_NEW把大事务切割为小事务
+```
+分布式事务中，建议使用REQUIRES_NEW把大事务切割为小事务
+TransactionDefinition.PROPAGATION_REQUIRES_NEW：创建一个新的事务，如果当前存在事务，则把当前事务挂起。
+Spring中声明式事务的注解@Transactional的参数的总结（REQUIRED和REQUIRES_NEW的与主方法的回滚问题
+原文：https://blog.csdn.net/gpf951101/article/details/77751025 
+```
