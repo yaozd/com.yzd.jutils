@@ -14,3 +14,7 @@ etcdctl -C http://etcdmaster:4001 cluster-health
 ```
 参考：
 632180 Kubernetes实战 ,吴龙辉 ,P272.pdf
+
+#### [etcd安装和所遇到的坑](http://www.cnblogs.com/devilwind/p/8880677.html)
+
+
