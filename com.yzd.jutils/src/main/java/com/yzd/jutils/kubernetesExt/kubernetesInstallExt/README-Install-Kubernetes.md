@@ -4,6 +4,8 @@
 - [Kubernetes安装配置与服务部署-推荐byArvin](https://blog.csdn.net/u013760355/article/details/68061976)
 - [在CentOS7.3下yum安装Kubernetes1.4傻瓜教程-推荐byArvin](https://blog.csdn.net/lic95/article/details/55015284)
 - [Centos7使用yum方式部署Kubernetes1.5集群](https://blog.csdn.net/bbwangj/article/details/81701300)
+- [搭建docker私有仓库，建立k8s集群](https://www.cnblogs.com/djhull/archive/2016/12/02/6125130.html)
+- [支撑大规模公有云的Kubernetes改进与优化 (3)](https://www.cnblogs.com/menkeyi/p/7279236.html)
 
 ### 
 - [kubernetes的eviction机制](https://blog.csdn.net/redenval/article/details/84237654)
@@ -228,6 +230,14 @@ systemctl status docker
 systemctl status kube-proxy
 systemctl status kubelet
 
+```
+- master主机上查看node1节点
+```
+[root@master ~]# kubectl get nodes
+NAME      STATUS    AGE
+node1     Ready     1d
+------------------------
+PS:node1节点已成功，其他node节点都可以参考node1的方法
 ```
 - 解决kubernetes启动容器时，容器一直是ContainerCreating不能running
 ```
