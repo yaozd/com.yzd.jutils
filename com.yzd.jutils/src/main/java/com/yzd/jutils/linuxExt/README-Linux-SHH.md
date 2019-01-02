@@ -31,3 +31,19 @@ watch -n 1 'ps aux |grep java'
 ```
 tailf：日志跟踪打印
 ```
+### -[大文件日志查看-less](https://www.cnblogs.com/aijianshi/p/5750911.html)
+```
+less test2.log
+1.全屏导航
+ctrl + F - 向前移动一屏
+ctrl + B - 向后移动一屏
+ctrl + D - 向前移动半屏
+ctrl + U - 向后移动半屏
+2.单行导航
+j - 向前移动一行
+k - 向后移动一行
+3.其它导航
+G - 移动到最后一行
+g - 移动到第一行
+q / ZZ - 退出 less 命令
+```
