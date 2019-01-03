@@ -40,3 +40,13 @@ show processlist
 --------------------- 
 
 ```
+
+### [隔离性有隔离级别(4个) ](https://blog.csdn.net/w_linux/article/details/79666086)
+```
+事物A和事物B之间具有一定的隔离性
+隔离性有隔离级别(4个) 
+1.读未提交：read uncommitted
+2.读已提交：read committed
+3.可重复读(默认的隔离级别)：repeatable read
+4.串行化：serializable
+```
