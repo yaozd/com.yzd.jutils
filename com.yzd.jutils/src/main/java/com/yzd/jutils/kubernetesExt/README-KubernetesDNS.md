@@ -5,6 +5,7 @@
 
 - [配置k8s dns](https://www.cnblogs.com/menkeyi/p/7120292.html)
 - [部署kubernetes dns 服务](https://www.jianshu.com/p/8fb1b1265ec8)
+- [kubernetes搭建-超哥推荐-里面DNS简单实用](https://www.cnblogs.com/xiaogongzi/articles/8334516.html)
 - [k8s入门系列之扩展组件(一)DNS安装篇-推荐by田亮](https://www.cnblogs.com/xkops/p/6232392.html)
 - [k8s入门系列之扩展组件(二)kube-ui安装篇](https://www.cnblogs.com/xkops/p/6233470.html)
 > etcd配置
