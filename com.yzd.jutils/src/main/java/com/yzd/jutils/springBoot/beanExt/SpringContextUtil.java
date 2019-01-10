@@ -1,6 +1,7 @@
 package com.yzd.jutils.springBoot.beanExt;
 
 /**
+ * Spring Boot中静态方法如何调用Spring容器中的Bean
  * Created by zd.yao on 2017/9/28.
  */
 
@@ -21,6 +22,9 @@ public class SpringContextUtil {
     }
     private ApplicationContext ctx;
     public void setCtx(ApplicationContext ctx) {
+        if(this.ctx!=null){
+            throw new IllegalStateException("当前上下文已存在！");
+        }
         this.ctx = ctx;
     }
     public  <T> T getBean(Class<T> var1){
