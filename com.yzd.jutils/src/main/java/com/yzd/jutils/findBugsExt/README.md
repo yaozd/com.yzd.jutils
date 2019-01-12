@@ -1,5 +1,5 @@
 ### A.[FindBugs-IDEA插件的使用](https://blog.csdn.net/feibendexiaoma/article/details/72821781)
-
+> [FindBugs错误问题详解](https://scholers.iteye.com/blog/638000)
 #### [1]Boxing/unboxing to parse a primitive
 ```
 问题出在 自动装箱和拆箱的检查。
