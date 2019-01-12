@@ -245,6 +245,7 @@
                 <artifactId>lombok-maven-plugin</artifactId>
                 <version>1.16.6.1</version>
             </plugin>
+            <!--有关详细信息, 请使用 -Xlint:unchecked 重新编译。-->
             <!-- maven编译报错 -source 1.5 中不支持 lambda 表达式-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -253,6 +254,7 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                    <compilerArgument>-Xlint:unchecked</compilerArgument>
                 </configuration>
             </plugin>
         </plugins>
