@@ -1,12 +1,12 @@
 ## helloworld
-1. [jQuery ½Ì³Ì](https://www.runoob.com/jquery/jquery-tutorial.html)
-2. [jQueryÔÚÏßÔËĞĞ-¿É¿ìËÙ²âÊÔ½Å±¾](https://www.runoob.com/try/try.php?filename=tryjquery_hide)
-3. [ÓÍºï½Å±¾-¿ª·¢ÈëÃÅ](https://www.cnblogs.com/dachie/archive/2012/09/28/2706508.html)
+1. [jQuery æ•™ç¨‹](https://www.runoob.com/jquery/jquery-tutorial.html)
+2. [jQueryåœ¨çº¿è¿è¡Œ-å¯å¿«é€Ÿæµ‹è¯•è„šæœ¬](https://www.runoob.com/try/try.php?filename=tryjquery_hide)
+3. [æ²¹çŒ´è„šæœ¬-å¼€å‘å…¥é—¨](https://www.cnblogs.com/dachie/archive/2012/09/28/2706508.html)
 
 ```
-Ò»¸öºÜºÃÍæµÄ¶«Î÷ÓÍºï½Å±¾Ó³ÈëÑÛÁ±!
+ä¸€ä¸ªå¾ˆå¥½ç©çš„ä¸œè¥¿æ²¹çŒ´è„šæœ¬æ˜ å…¥çœ¼å¸˜!
 
-Ë²¼ä¾õµÃ×Ô¼º»áµãJS£¬Í¦ºÃ¡£±¾×Å°®Ñ§Ï°µÄÌ¬¶È£¬ÓÃÍíÉÏµÄÊ±¼ä×öÁË¸öĞ¡µÄDEMO£ºhttp://www.dachie.com/userscript/
+ç¬é—´è§‰å¾—è‡ªå·±ä¼šç‚¹JSï¼ŒæŒºå¥½ã€‚æœ¬ç€çˆ±å­¦ä¹ çš„æ€åº¦ï¼Œç”¨æ™šä¸Šçš„æ—¶é—´åšäº†ä¸ªå°çš„DEMOï¼šhttp://www.dachie.com/userscript/
 
 // ==UserScript==
 // @name          Hello World
@@ -17,28 +17,28 @@
 // @exclude       http://www.diveintogreasemonkey.org/*
 // ==/UserScript==
 
-ÕûÌå½á¹¹»ù±¾ÉÏÊÇÕâÑù¡£
+æ•´ä½“ç»“æ„åŸºæœ¬ä¸Šæ˜¯è¿™æ ·ã€‚
 
-»¹¿ÉÒÔ// @require http://code.jquery.com/jquery-1.8.2.js Ò»Ğ©ÄãĞèÒªµÄÀà¿âµ½ÓÍºï½Å±¾ÖĞÊ¹ÓÃ
+è¿˜å¯ä»¥// @require http://code.jquery.com/jquery-1.8.2.js ä¸€äº›ä½ éœ€è¦çš„ç±»åº“åˆ°æ²¹çŒ´è„šæœ¬ä¸­ä½¿ç”¨
 ```
-## ±àĞ´²âÊÔ½Å±¾
-1. [ÒıÓÃjQueryÀà¿â]
+## ç¼–å†™æµ‹è¯•è„šæœ¬
+1. [å¼•ç”¨jQueryç±»åº“]
 
 ```
-// @require http://code.jquery.com/jquery-1.8.2.js Ò»Ğ©ÄãĞèÒªµÄÀà¿âµ½ÓÍºï½Å±¾ÖĞÊ¹ÓÃ
+// @require http://code.jquery.com/jquery-1.8.2.js ä¸€äº›ä½ éœ€è¦çš„ç±»åº“åˆ°æ²¹çŒ´è„šæœ¬ä¸­ä½¿ç”¨
 ```
-2. [ÊéĞ´µÚÒ»¸öÓÍºï(Greasemonkey)²å¼ş](http://www.360doc.com/content/11/1216/22/1162553_172819386.shtml)
+2. [ä¹¦å†™ç¬¬ä¸€ä¸ªæ²¹çŒ´(Greasemonkey)æ’ä»¶](http://www.360doc.com/content/11/1216/22/1162553_172819386.shtml)
 3. Demo-01
 
 ```
 // ==UserScript==
-// @name baiduÍ¼Æ¬ÏÂÔØ
+// @name baiduå›¾ç‰‡ä¸‹è½½
 // @version 20160402.1113
 // @author qhq
 // @homepageURL    https://greasyfork.org/zh-CN/scripts/14710
 // @supportURL		https://greasyfork.org/zh-CN/scripts/14710/feedback
 // @icon         https://assetcdn.500px.org/assets/favicon-1e8257b93fb787f8ceb66b5522ee853c.ico
-// @description  baiduÍ¼Æ¬ÏÂÔØÌí¼ÓÏÂÔØÍ¼Æ¬°´Å¥
+// @description  baiduå›¾ç‰‡ä¸‹è½½æ·»åŠ ä¸‹è½½å›¾ç‰‡æŒ‰é’®
 // @include http*://*.baidu.com/*
 // @grant none
 // @namespace https://greasyfork.org/users/9065
@@ -54,13 +54,13 @@
 
 ```
 // ==UserScript==
-// @name baiduÍ¼Æ¬ÏÂÔØ
+// @name baiduå›¾ç‰‡ä¸‹è½½
 // @version 20160402.1113
 // @author qhq
 // @homepageURL    https://greasyfork.org/zh-CN/scripts/14710
 // @supportURL		https://greasyfork.org/zh-CN/scripts/14710/feedback
 // @icon         https://assetcdn.500px.org/assets/favicon-1e8257b93fb787f8ceb66b5522ee853c.ico
-// @description  baiduÍ¼Æ¬ÏÂÔØÌí¼ÓÏÂÔØÍ¼Æ¬°´Å¥
+// @description  baiduå›¾ç‰‡ä¸‹è½½æ·»åŠ ä¸‹è½½å›¾ç‰‡æŒ‰é’®
 // @include http*://www.baidu.com/*
 // @grant none
 // @namespace https://greasyfork.org/users/9065
@@ -79,8 +79,8 @@
     // Your code here...
 })();
 ```
-## jQueryÕıÔòÊı¾İ¾İÌáÈ¡
-1.ÑéÖ¤£ºtest
+## jQueryæ­£åˆ™æ•°æ®æ®æå–
+1.éªŒè¯ï¼štest
 ```
 <script type="text/javascript">
   $(function(){
@@ -88,25 +88,25 @@
     var email = $(this).val();
     var reg = /\w+[@]{1}\w+[.]\w+/;
     if(reg.test(email)){
-     $(":input[name='check']").val("emailºÏ·¨");
+     $(":input[name='check']").val("emailåˆæ³•");
     }else{
-     $(":input[name='check']").val("ÇëÊäÈëÕıÈ·µÄemailµØÖ·");
+     $(":input[name='check']").val("è¯·è¾“å…¥æ­£ç¡®çš„emailåœ°å€");
     }
    });
   });
  </script>
 ```
-2.Ê¾Àı£ºjsÊ¹ÓÃÕıÔò±í´ïÊ½groupÀ´ÌáÈ¡×Ö·û´®ÖĞµÄÊı¾İ-match
+2.ç¤ºä¾‹ï¼šjsä½¿ç”¨æ­£åˆ™è¡¨è¾¾å¼groupæ¥æå–å­—ç¬¦ä¸²ä¸­çš„æ•°æ®-match
 ```
 https://blog.csdn.net/diandian82/article/details/9023707
 //
 var linkStr = "/black-mountain/35-cotton-creek-cir-black-mountain-nc-421_537763.html";
-// À¨ºÅ±íÊ¾×é¡£·ÃÎÊ¿ÉÒÔÓÃgroup[index]À´·ÃÎÊÃ¿×éµÄĞÅÏ¢
+// æ‹¬å·è¡¨ç¤ºç»„ã€‚è®¿é—®å¯ä»¥ç”¨group[index]æ¥è®¿é—®æ¯ç»„çš„ä¿¡æ¯
 var linkRegx = /\/([^\/]+)\/.+-(\d+)_(\d+).html/;
 var group = linkStr.match(linkRegx);
 console.log(group);
 /*
-Êä³ö½á¹ûÎª£º
+è¾“å‡ºç»“æœä¸ºï¼š
 [ '/black-mountain/35-cotton-creek-cir-black-mountain-nc-421_537763.html',
   'black-mountain',
   '421',
@@ -132,7 +132,7 @@ console.log(group);
   });
   //============================================
 ```
-3.Ìæ»»£ºreplace
+3.æ›¿æ¢ï¼šreplace
 ```
 https://www.jb51.net/article/43286.htm
 <script language="JavaScript"> 
@@ -141,23 +141,23 @@ var str  = "John Smith";
 var newstr = str.replace(myReg, "$2, $1"); 
 document.write(newstr); 
 </script>
-½«Êä³ö"Smith, John" 
+å°†è¾“å‡º"Smith, John" 
 ```
-4.jsÕıÔòº¯Êımatch¡¢exec¡¢test¡¢search¡¢replace¡¢splitÊ¹ÓÃ½éÉÜ¼¯ºÏ
+4.jsæ­£åˆ™å‡½æ•°matchã€execã€testã€searchã€replaceã€splitä½¿ç”¨ä»‹ç»é›†åˆ
 ```
 1.split
 function SplitDemo(){ 
 var s, ss; 
 var s = "The rain in Spain falls mainly in the plain."; 
-// ÕıÔò±í´ïÊ½£¬ÓÃ²»·Ö´ó²»Ğ´µÄs½øĞĞ·Ö¸ô¡£ 
+// æ­£åˆ™è¡¨è¾¾å¼ï¼Œç”¨ä¸åˆ†å¤§ä¸å†™çš„sè¿›è¡Œåˆ†éš”ã€‚ 
 ss = s.split(/s/i); 
 return(ss); 
 } 
 document.write(SplitDemo()); 
 2.
-jsÕıÔò±í´ïÊ½Ö®exec()·½·¨¡¢match()·½·¨ÒÔ¼°search()·½·¨ 
+jsæ­£åˆ™è¡¨è¾¾å¼ä¹‹exec()æ–¹æ³•ã€match()æ–¹æ³•ä»¥åŠsearch()æ–¹æ³• 
  
-ÏÈ¿´´úÂë£º
+å…ˆçœ‹ä»£ç ï¼š
 
 var sToMatch = "test, Tes, tst, tset, Test, Tesyt, sTes";
 var reEs = /es/gi;
