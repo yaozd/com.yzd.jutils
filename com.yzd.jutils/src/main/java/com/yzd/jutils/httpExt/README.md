@@ -17,3 +17,11 @@
 //这种写法是根据你请求的协议自动添加协议的。举个栗子：你的网站是http协议，那么其实你访问的就是http://xxxx 如果你的网站是https协议的，那么请求的地址会变成https://xxxx 要知道，如果你写成了http://xxx. 那么如果你们的网站线上是https，那么可能会报安全警告，有的浏览器甚至没法正常加载页面。如果你直接写成https，要知道，本地开发可是http啊...
 
 ```
+
+### 3.[header中Content-Disposition的作用与使用方法](https://www.jb51.net/article/30565.htm)
+```
+Response.AppendHeader("Content-Disposition","attachment;filename=FileName.txt"); 
+--------------------
+服务端向客户端游览器发送文件时，如果是浏览器支持的文件类型，一般会默认使用浏览器打开，比如txt、jpg等，会直接在浏览器中显示。
+如果需要提示用户保存，就要利用Content-Disposition进行一下处理，关键在于一定要加上attachment： 
+```
