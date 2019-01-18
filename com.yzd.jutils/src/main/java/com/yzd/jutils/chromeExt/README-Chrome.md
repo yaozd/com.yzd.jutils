@@ -15,6 +15,7 @@ ctrl+shift+delete
 
 ### chrome-常用插件
 - [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+- [google-translate](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)-推荐使用byArvin
 - [Right Click Translate](https://chrome.google.com/webstore/detail/right-click-translate/piojkjkndneggfaibepkmabjnkjlhlmk)
 - [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall)
 - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
