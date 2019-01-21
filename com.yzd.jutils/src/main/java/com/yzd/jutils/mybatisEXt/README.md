@@ -1,4 +1,5 @@
 ### Mybatis的示例
+- SpringBoot整合Mybatis完整详细版-[SpringBoot-1.5.17.RELEASE版本-包含API代码模板]-2019-01-19-1149.zip(推荐参考byArvin-2019-01-21-1029)
 - Jebao-Mybatis-Generator-示例四-[独立代码生成无包含依赖包].zip
 - Jebao-Mybatis-Generator-示例三-[独立代码生成包含依赖包].zip
 - ngnix-upsync-deploy-示例二-[代码生成无依赖].zip
