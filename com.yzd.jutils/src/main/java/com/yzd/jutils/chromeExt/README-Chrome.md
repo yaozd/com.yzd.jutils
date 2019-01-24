@@ -24,3 +24,5 @@ ctrl+shift+delete
 - [The QR Code Extension](https://chrome.google.com/webstore/detail/the-qr-code-extension/oijdcdmnjjgnnhgljmhkjlablaejfeeb)
 - [Web Sniffer](https://chrome.google.com/webstore/detail/web-sniffer/ndfgffclcpdbgghfgkmooklaendohaef)-WEB-请求监控插件
 > 使用场景：图片上传到京东云后不能在线浏览而是直接下载时，可通过此工具查看请求响应的头。
+- [Save Page WE](https://chrome.google.com/webstore/detail/save-page-we/dhhpefjklgkmgeafimnjhojgjamoafof)-保存完整个html页面-方便日后查看
+- [magnifying-glass](https://chrome.google.com/webstore/detail/magnifying-glass/elhdjgjjmodgmhkokebhegekjooiaofm)-放大镜
