@@ -10,6 +10,7 @@
 - [开源中国-http://tool.oschina.net/](http://tool.oschina.net/)
 - [TOOL-https://tool.lu/-byArvin推荐](https://tool.lu/)
 - [开发者工具网](http://tool.sufeinet.com/Encrypt/Base64.aspx)
+- [www.toolfk.com-推荐](http://www.toolfk.com)
 
 ### 娱乐
 - [egouz-国内外网站大全](http://www.egouz.com/asia/china/)
