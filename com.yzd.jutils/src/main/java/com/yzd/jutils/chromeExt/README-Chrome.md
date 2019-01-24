@@ -14,15 +14,15 @@ ctrl+shift+delete
 ```
 
 ### chrome-常用插件
-- [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
-- [baidu-translate百度翻译：网页翻译、海淘神器](https://chrome.google.com/webstore/detail/%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91%EF%BC%9A%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E3%80%81%E6%B5%B7%E6%B7%98%E7%A5%9E%E5%99%A8/edhchknefojhifoiebpcbkhcjlkkklci)-推荐使用byArvin
-- [google-translate](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)-暂不推荐使用byArvin
-- [Right Click Translate](https://chrome.google.com/webstore/detail/right-click-translate/piojkjkndneggfaibepkmabjnkjlhlmk)-暂不推荐使用byArvin
-- [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall)
-- [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
-- [EditThisCookie](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg)
-- [The QR Code Extension](https://chrome.google.com/webstore/detail/the-qr-code-extension/oijdcdmnjjgnnhgljmhkjlablaejfeeb)
-- [Web Sniffer](https://chrome.google.com/webstore/detail/web-sniffer/ndfgffclcpdbgghfgkmooklaendohaef)-WEB-请求监控插件
+- [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)-提供方：tampermonkey.net
+- [baidu-translate百度翻译：网页翻译、海淘神器](https://chrome.google.com/webstore/detail/%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91%EF%BC%9A%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E3%80%81%E6%B5%B7%E6%B7%98%E7%A5%9E%E5%99%A8/edhchknefojhifoiebpcbkhcjlkkklci)-推荐使用byArvin-提供方：fanyi.baidu.com
+- [google-translate](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)-暂不推荐使用byArvin-提供方：translate.google.com
+- [Right Click Translate](https://chrome.google.com/webstore/detail/right-click-translate/piojkjkndneggfaibepkmabjnkjlhlmk)-暂不推荐使用byArvin-提供方：https://ericvan76.github.io
+- [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall)-提供方：one-tab.com
+- [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)-提供方：Raymond Hill (gorhill)
+- [EditThisCookie](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg)-提供方：editthiscookie.com
+- [The QR Code Extension](https://chrome.google.com/webstore/detail/the-qr-code-extension/oijdcdmnjjgnnhgljmhkjlablaejfeeb)-提供方：Manuel Braun
+- [Web Sniffer](https://chrome.google.com/webstore/detail/web-sniffer/ndfgffclcpdbgghfgkmooklaendohaef)-WEB-请求监控插件-提供方：5ms.ru
 > 使用场景：图片上传到京东云后不能在线浏览而是直接下载时，可通过此工具查看请求响应的头。
-- [Save Page WE](https://chrome.google.com/webstore/detail/save-page-we/dhhpefjklgkmgeafimnjhojgjamoafof)-保存完整个html页面-方便日后查看
-- [magnifying-glass](https://chrome.google.com/webstore/detail/magnifying-glass/elhdjgjjmodgmhkokebhegekjooiaofm)-放大镜
+- [Save Page WE](https://chrome.google.com/webstore/detail/save-page-we/dhhpefjklgkmgeafimnjhojgjamoafof)-保存完整个html页面-方便日后查看-提供方：DW-dev
+- [Magnifying Glass (Hover Zoom)](https://chrome.google.com/webstore/detail/magnifying-glass-hover-zo/gfcbebjdigncefnokoncehghgfndjcgn)-放大镜-提供方：Yubi

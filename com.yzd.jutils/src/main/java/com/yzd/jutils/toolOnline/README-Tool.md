@@ -17,3 +17,6 @@ bejson中有许多工具：
 - [在线html转js,js转html](http://www.bejson.com/convert/html_js/)
 
 - [纳秒换算](https://cn.office-converter.com/Nanoseconds-Time-Converter)
+
+- [免费CDN加速服务](https://www.toolfk.com/tool-online-cdnjs)
+- [Linux常用命令大全](https://www.toolfk.com/tool-find-linux)

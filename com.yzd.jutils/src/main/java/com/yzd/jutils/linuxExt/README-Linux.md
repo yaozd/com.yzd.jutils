@@ -1,3 +1,4 @@
+- [Linux常用命令大全](https://www.toolfk.com/tool-find-linux)
 
 ### [CentOS7使用firewalld打开关闭防火墙与端口](https://www.cnblogs.com/moxiaoan/p/5683743.html)
 
