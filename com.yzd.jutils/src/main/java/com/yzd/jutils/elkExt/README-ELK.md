@@ -11,3 +11,10 @@ multiline.pattern: '^\[ELK=]'
 4.正则-数据提取-logstash
 \[ELK=]\[(?<createTime>[^]]*)]├[^┤]+┤\[(?<level>[^]]*)]-\[(?<logger>[^]]*)][\s\S]*
 ```
+
+### GenerateBigLog
+```
+ * 生成1亿数据，用于ES框架搭建使用
+ * 日志生成在当前目录下
+ 百云度->软件开发-java->J-B-BigLog->com.yzd.generate.big.log-生成1亿测试数据-ES框架测试.zip
+```
