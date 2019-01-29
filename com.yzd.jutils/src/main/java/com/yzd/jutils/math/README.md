@@ -12,3 +12,12 @@ String str = bd.toPlainString();
 ```
 ### B.Number操作推荐使用commonsloang 3.x -NumberUtils
 ### C.[NumberUtils的简单举例使用](https://blog.csdn.net/weixin_30363263/article/details/81287531)
+
+### [java对BigDecimal类型数据的操作、比较](https://blog.csdn.net/sy18868876085/article/details/84716118)
+```
+int r=big_decimal.compareTo(BigDecimal.Zero); //和0，Zero比较
+if(r==0) //等于
+if(r==1) //大于
+if(r==-1) //小于
+
+```
