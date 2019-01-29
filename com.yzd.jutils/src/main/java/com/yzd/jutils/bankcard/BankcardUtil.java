@@ -5,6 +5,7 @@ package com.yzd.jutils.bankcard;
  */
 
 import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.ThreadUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -107,7 +108,7 @@ public class BankcardUtil {
      *
      * @param args
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 //        ## java-generator
 //        https://github.com/yaozd/java-generator
 //        各种随机生成器，包括身份证号码，银行卡号，姓名，手机号，电子邮箱地址等
@@ -116,6 +117,10 @@ public class BankcardUtil {
         //String cardNumber = "6228 4828 9820 3884 767";
         //String cardNumber = "6228 2017 0216 1025 019";
         T2();
+        for (int i = 0; i <20 ; i++) {
+            Thread.sleep(1000);
+            T2();
+        }
 
     }
 

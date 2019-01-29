@@ -20,3 +20,6 @@ bejson中有许多工具：
 
 - [免费CDN加速服务](https://www.toolfk.com/tool-online-cdnjs)
 - [Linux常用命令大全](https://www.toolfk.com/tool-find-linux)
+
+
+- [在线身份证号码生成器](http://sfz.uzuzuz.com)
