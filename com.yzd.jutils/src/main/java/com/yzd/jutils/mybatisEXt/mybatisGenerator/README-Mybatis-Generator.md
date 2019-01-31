@@ -1,5 +1,5 @@
-### Mybatis的示例
-- Temp-Mybatis-Generator-Root-2019-01-31-1056-备份-[shop-generator-by小龙推荐].zip(推荐参考byArvin-2019-01-24-1601)
+### Mybatis的示例-(Mybatis插件生成参考)
+- Temp-Mybatis-Generator-Root-2019-01-31-1056-备份-[shop-generator-by小龙推荐].zip(推荐参考byArvin-Mybatis插件生成参考)
 ```
 下载地址：
 百度云-》软件开发java-》J-M-Mybatis的示例
