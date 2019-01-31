@@ -1,3 +1,9 @@
+### Mybatis的示例
+- Temp-Mybatis-Generator-Root-2019-01-31-1056-备份-[shop-generator-by小龙推荐].zip(推荐参考byArvin-2019-01-24-1601)
+```
+下载地址：
+百度云-》软件开发java-》J-M-Mybatis的示例
+```
 ### mybatis代码生成模板-POM.XML的配置
 #### 参考代码
 - [com.yzd.transaction.root](https://github.com/yaozd/com.yzd.transaction.root)
