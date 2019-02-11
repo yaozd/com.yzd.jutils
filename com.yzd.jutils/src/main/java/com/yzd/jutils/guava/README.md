@@ -1,3 +1,5 @@
+### Guava 使用 Google Guava 美化你的 Java 代码：1~4
+- [使用 Google Guava 美化你的 Java 代码：1~4-推荐参考-byArvin](https://my.oschina.net/leejun2005/blog/172328)
 ### Guava 常用工具类
 - [Guava 常用工具类](https://blog.csdn.net/timchen525/article/details/80753759)
 - [Guava学习笔记：Google Guava 类库简介](http://www.cnblogs.com/peida/archive/2013/06/08/3120820.html)

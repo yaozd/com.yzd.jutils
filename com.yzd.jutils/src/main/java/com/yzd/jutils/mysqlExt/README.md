@@ -4,6 +4,16 @@
 阿里云的数据库安全审计可以查看sql语句:SQL内容+SQL执行时间
 ```
 
+### MYSQL-玩转processlist，高效追溯MySQL活跃连接数飙升根因
+```
+Show processlist
+查看当前连接情况，如：canal用户是否已经连接成功等
+参考：
+mysql processlist详细说明
+http://blog.itpub.net/29371470/viewspace-2137391/
+玩转processlist，高效追溯MySQL活跃连接数飙升根因
+https://dbaplus.cn/news-11-1396-1.html
+```
 ### MYSQL
 - mysql未知项目数据库优化
 
