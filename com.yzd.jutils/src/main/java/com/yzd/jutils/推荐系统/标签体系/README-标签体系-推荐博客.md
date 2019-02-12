@@ -13,6 +13,9 @@ https://github.com/Thinkgamer/Machine-Learning-With-Python/tree/master/Recommend
 >data-extract-clean-analysis <br>
 https://github.com/xpleaf/data-extract-clean-analysis
 
+- [架构师手记 15 个性化标签系统的需求分析](https://wenku.baidu.com/view/e42498c8284ac850ac024249)
+> 百度云-》电子书-》D-大数据-》架构师手记 15 个性化标签系统的需求分析
+
 - []()
-- []()
+
 - []()

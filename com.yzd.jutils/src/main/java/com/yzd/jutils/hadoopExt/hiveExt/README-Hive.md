@@ -34,7 +34,11 @@ select * from p1,p2 where p1.object_id=p2.object_id and p1.hash_value=4 and p2.h
 --------------------- 
 通过哈希进行切割，变大为小。
 ```
-> []()
+> [用sqoop将mysql的数据导入到hive表中](http://www.cnblogs.com/xuyou551/p/7998846.html)
+
+> [在hive中分析数据然后将数据导出到mysql中练习](https://blog.csdn.net/qq_37662746/article/details/78186828)
+
+> [将Hive统计分析结果导入到MySQL数据库表中（二）——使用Hive和MySQL JDBC驱动](https://blog.csdn.net/NIITYZU/article/details/45198531)
 ```
 
 ```
