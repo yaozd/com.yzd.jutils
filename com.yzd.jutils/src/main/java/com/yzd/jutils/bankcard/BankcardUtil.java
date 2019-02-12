@@ -116,6 +116,7 @@ public class BankcardUtil {
         //TODO  随机生成一个银行卡卡号
         //String cardNumber = "6228 4828 9820 3884 767";
         //String cardNumber = "6228 2017 0216 1025 019";
+        // T2:北京-工商银行
         T2();
         for (int i = 0; i <20 ; i++) {
             Thread.sleep(1000);
@@ -141,11 +142,12 @@ public class BankcardUtil {
         SimpleDateFormat df = new SimpleDateFormat("HHmmss");
         cardNumber = String.format("%s%sX", cardNumber, df.format(new Date()));
         char luhnVal = BankcardUtil.getBankCardLuhnVal(cardNumber);
-        System.out.println("luhnVal = " + luhnVal);
+        //System.out.println("luhnVal = " + luhnVal);
         cardNumber = cardNumber.replace('X', luhnVal);
         boolean isOk = BankcardUtil.checkBankCard(cardNumber);
         if (isOk) {
-            System.out.println("cardNumber = " + cardNumber);
+            //System.out.println("cardNumber = " + cardNumber);
+            System.out.println(cardNumber);
         }
         if (!isOk) {
             System.out.println("生成银行卡号不正确");
