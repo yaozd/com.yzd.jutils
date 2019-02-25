@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="jquery.base64.js"></script>
+    <script>
+        var b="你好world";
+        //btoa is encode
+        var a=$.base64.btoa(b,true);
+        console.log(a)
+        //atob is decode
+        console.log(b===$.base64.atob(a,true));
+        window.onload=function(){
+            document.getElementById("p1").innerHTML="原始数据："+b;
+            document.getElementById("p2").innerHTML="加密："+a;
+            document.getElementById("p3").innerHTML="解密："+b;
+        }
+    </script>
+</head>
+<body>
+    <h2>Base64-js版</h2>
+    <h3>javascript base64 加密与解密</h3>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+</body>
+</html>
