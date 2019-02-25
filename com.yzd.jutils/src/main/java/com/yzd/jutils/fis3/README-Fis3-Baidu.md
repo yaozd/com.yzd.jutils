@@ -23,6 +23,8 @@ Node 版本要求 0.8.x，0.10.x, 0.12.x，4.x，6.x，不在此列表中的版�
 > FIS WEBPACK区别
 - [我想问下fis3和webpack有什么区别](https://div.io/topic/1623)
 - [Fis3构建迁移Webpack之路](https://www.cnblogs.com/cpselvis/p/7859665.html)
+- [前端构建工具漫谈，fis3、webpack、rollup.js-推荐参考byArvin](https://zhuanlan.zhihu.com/p/20933749)
+- [基于fis3的纯前端解决方案，拿来即用的fis3脚手架](https://github.com/yanhaijing/fis3-base)-fis-conf.js
 
 > [FIS-项目中使用fis常见问题汇总](http://feg.netease.com/archives/fis-questions.html)
 ```
