@@ -1,5 +1,5 @@
 ###　Ｓｅｎｔｉｎｅｌ流量控制方案
-- [Sentinel]()
+- [Sentinel](https://github.com/alibaba/Sentinel)
 - [Sentinel-WIKI]()
 
 #### Sentinel流量控制方案生产设计思路-byArvin-V201809211055
@@ -48,6 +48,9 @@ https://github.com/YoungHu/Sentinel
 [接入 Sentinel 控制台的步骤如下（缺一不可）：](http://dubbo.apache.org/zh-cn/blog/sentinel-introduction-for-dubbo.html)
 ```  
 按照 Sentinel 控制台文档 启动控制台
+PS:例如控制台的启动
+java -jar -Dcsp.sentinel.api.port=8720 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dproject.name=sentinel-dashboard .\sentinel-dashboard-1.4.2.jar
+--------------------
 应用引入 sentinel-transport-simple-http 依赖，以便控制台可以拉取对应应用的相关信息
 给应用添加相关的启动参数，启动应用。需要配置的参数有：
 -Dcsp.sentinel.api.port：客户端的 port，用于上报相关信息（默认为 8719）
@@ -66,3 +69,32 @@ https://github.com/YoungHu/Sentinel
  可以参考 Sentinel 文档，更多的场景等待你去挖掘！
 ```
 #### [Sentinel 与 Hystrix 的对比](https://github.com/alibaba/Sentinel/wiki/Sentinel-%E4%B8%8E-Hystrix-%E7%9A%84%E5%AF%B9%E6%AF%94)
+
+#### [Spring Cloud Alibaba Sentinel 的所有配置信息](https://github.com/spring-cloud-incubator/spring-cloud-alibaba/wiki/Sentinel)
+
+> 
+[Sentinel-Wiki-中文](https://github.com/alibaba/Sentinel/wiki/主流框架的适配)<br>
+[Sentinel-如何使用](https://github.com/alibaba/Sentinel/wiki/如何使用)<br>
+[Spring Cloud Alibaba Sentinel 的所有配置信息](https://github.com/spring-cloud-incubator/spring-cloud-alibaba/wiki/Sentinel)<br>
+[Sentinel-动态规则扩展](https://github.com/alibaba/Sentinel/wiki/动态规则扩展)<br>
+[Sentinel-主流框架的适配](https://github.com/alibaba/Sentinel/wiki/主流框架的适配)
+
+> 示例-01
+```
+按照 Sentinel 控制台文档 启动控制台
+PS:例如控制台的启动
+java -jar -Dcsp.sentinel.api.port=8720 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dproject.name=sentinel-dashboard .\sentinel-dashboard-1.4.2.jar
+--------------------
+
+```
+
+>
+[自定义限流处理逻辑](https://blog.csdn.net/qq_36081696/article/details/86128487)<br>
+[利用Spring Cloud Aalibaba Sentinel完成 Spring Cloud 应用的限流管理示例](https://blog.csdn.net/qq_36081696/article/details/86128487)<br>
+[Dubbo使用Sentinel来对服务进行降级与限流-推荐参考byArvin](https://blog.csdn.net/pwh19920920/article/details/85252203)<br>
+[sentinel-dubbo](https://github.com/pwh19920920/sentinel-dubbo)<br>
+[sentinel-dubbo-备份yzd](https://github.com/yaozd/sentinel-dubbo)<br>
+[sentinel控制台监控数据持久化【InfluxDB】-推荐参考byArvin](https://www.cnblogs.com/cdfive2018/p/9914838.html)<br>
+[cdfive/Sentinel-数据持久化InfluxDB](https://github.com/cdfive/Sentinel/tree/winxuan_develop/sentinel-dashboard)<br>
+[cdfive/Sentinel-数据持久化InfluxDB-备份yzd](https://github.com/yaozd/Sentinel)<br>
+
