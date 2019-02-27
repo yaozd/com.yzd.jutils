@@ -45,6 +45,17 @@ https://github.com/YoungHu/Sentinel
 2.
 **注意:** 实时监控仅存储 5 分钟以内的数据，如果需要持久化，需要通过调用[实时监控](https://github.com/alibaba/Sentinel/wiki/%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7)接口来定制。
 ```
+
+> [Sentinel 控制台-帮助文档](https://github.com/alibaba/Sentinel/wiki/控制台)
+```
+java -Dserver.port=8080 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dproject.name=sentinel-dashboard -jar sentinel-dashboard.jar
+
+java -Dserver.port=8080 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dproject.name=sentinel-dashboard -jar sentinel-dashboard-1.4.2.jar
+
+java -jar  -Dserver.port=8080 -Dcsp.sentinel.api.port=8720 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dproject.name=sentinel-dashboard .\sentinel-dashboard-1.4.2.jar
+----------------
+sentinel-dashboard-1.4.2.jar=》百度云=》软件开发-JAVA=》J-S-Sentinel-流量控制=》sentinel-dashboard-1.4.2-bak-2019-02-27-1156.zip
+```
 [接入 Sentinel 控制台的步骤如下（缺一不可）：](http://dubbo.apache.org/zh-cn/blog/sentinel-introduction-for-dubbo.html)
 ```  
 按照 Sentinel 控制台文档 启动控制台
