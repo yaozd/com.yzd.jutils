@@ -56,6 +56,16 @@ java -jar  -Dserver.port=8080 -Dcsp.sentinel.api.port=8720 -Dcsp.sentinel.dashbo
 ----------------
 sentinel-dashboard-1.4.2.jar=》百度云=》软件开发-JAVA=》J-S-Sentinel-流量控制=》sentinel-dashboard-1.4.2-bak-2019-02-27-1156.zip
 ```
+> [sentinel控制台监控数据持久化【InfluxDB】-代码实现-github-地址](https://github.com/yaozd/Sentinel/tree/dev-yzd)
+```
+分支：dev-yzd
+https://github.com/yaozd/Sentinel/tree/dev-yzd
+https://github.com/yaozd/Sentinel/tree/dev-yzd
+参考：
+sentinel控制台监控数据持久化【InfluxDB】-推荐参考byArvin
+https://www.cnblogs.com/cdfive2018/p/9914838.html
+```
+
 [接入 Sentinel 控制台的步骤如下（缺一不可）：](http://dubbo.apache.org/zh-cn/blog/sentinel-introduction-for-dubbo.html)
 ```  
 按照 Sentinel 控制台文档 启动控制台
