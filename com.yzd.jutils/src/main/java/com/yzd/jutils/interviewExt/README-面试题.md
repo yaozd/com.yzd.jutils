@@ -1,7 +1,8 @@
 ## JAVA-面试题-参考
 >
-[advanced-java](https://github.com/doocs/advanced-java)<br>
-[https://github.com/yaozd/advanced-java](https://github.com/yaozd/advanced-java)
+- [https://github.com/xingshaocheng/architect-awesome-后端架构师技术图谱](https://github.com/xingshaocheng/architect-awesome)
+- [advanced-java-互联网Java工程师进阶知识完全扫盲](https://github.com/doocs/advanced-java)<br>
+- [https://github.com/yaozd/advanced-java](https://github.com/yaozd/advanced-java)
 ```
 本系列知识出自中华石杉，我对这部分知识做了一个系统的整理，方便学习查阅。By the way，微信公众号石杉的架构笔记（id:shishan100）有其它很多架构知识，墙裂推荐~
 
