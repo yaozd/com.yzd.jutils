@@ -26,4 +26,17 @@ chmod +x /usr/local/bin/docker-compose
 ```
 docker pull soyking/e3w
 docker images -a
+docker ps
+列出所有容器
+docker container ls
+-------------------- 
+Docker常用命令
+https://www.cnblogs.com/yaohong/p/7842499.html
+简略：
+容器生命周期：run、start/stop/restart、kill、rm、pause/unpause、create、exec
+容器操作：ps、inspect、top、attach、events、logs、wait、export、port
+容器rootfs：commit、cp、diff
+镜像仓库：login/logout、pull、push、search
+本地镜像管理：images、rmi、tag、build、history、save、import
+info|version：info、version       【docker info/vaersion分别查看系统信息和版本信息】 
 ```
