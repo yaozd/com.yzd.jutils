@@ -19,3 +19,8 @@ PS:变量的类型：Custom
 &var-userId=131093
 http://192.168.1.237:3000/d/Wk_L9pCmz/new-dashboard-copy?orgId=1&var-userId=131093
 ```
+> Grafana 时间间隔调整-》$__interval
+```
+时间间隔调整,可以通过自定义变量，其中“Step count”是把当前时间段切割为多少分的意思。
+如：500，则是分为500段，有500个时间指标。平均分段的意思
+``` 
