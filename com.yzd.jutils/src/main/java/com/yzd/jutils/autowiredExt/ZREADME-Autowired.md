@@ -40,5 +40,71 @@ public class TempServiceRepository {
 @Primary的意思是在众多相同的bean中，优先使用用@Primary注解的bean.
 而@Qualifier这个注解则指定某个bean有没有资格进行注入。
 ```
-> []()
+> [Spring Boot系列四 Spring @Value 属性注入使用总结一](https://blog.csdn.net/hry2015/article/details/72353994/)
+```
+ @Value("${influxdb.url}")
+ public void setUrl(String url) {
+     InfluxDBUtils.url = url;
+ }
+
+ @Value("${influxdb.username}")
+ public void setUsername(String username) {
+     InfluxDBUtils.username = username;
+ }
+ ---------------------
+@Value("normal")
+private String normal; // 注入普通字符串
+
+@Value("#{systemProperties['os.name']}")
+private String systemPropertiesName; // 注入操作系统属性
+
+@Value("#{ T(java.lang.Math).random() * 100.0 }")
+private double randomNumber; //注入表达式结果
+
+@Value("#{beanInject.another}")
+private String fromAnotherBean; // 注入其他Bean属性：注入beanInject对象的属性another，类具体定义见下面
+
+@Value("classpath:com/hry/spring/configinject/config.txt")
+private Resource resourceFile; // 注入文件资源
+
+@Value("http://www.baidu.com")
+private Resource testUrl; // 注入URL资源
+ --------------------- 
+```
+> [springBoot注解大全](https://www.cnblogs.com/tanwei81/p/6814022.html)
+```
+Spring自带依赖注入注解
+
+1 @Required：依赖检查；
+
+2 @Autowired：自动装配2 自动装配，用于替代基于XML配置的自动装配 基于@Autowired的自动装配，默认是根据类型注入，可以用于构造器、字段、方法注入
+
+3 @Value：注入SpEL表达式 用于注入SpEL表达式，可以放置在字段方法或参数上
+@Value(value = "SpEL表达式")  
+@Value(value = "#{message}")  
+4 @Qualifier：限定描述符，用于细粒度选择候选者
+@Qualifier限定描述符除了能根据名字进行注入，但能进行更细粒度的控制如何选择候选者
+@Qualifier(value = "限定标识符") 
+-------------------------------------
+一、注解(annotations)列表 
+@SpringBootApplication：包含了@ComponentScan、@Configuration和@EnableAutoConfiguration注解。其中@ComponentScan让spring Boot扫描到Configuration类并把它加入到程序上下文。
+
+@Configuration 等同于spring的XML配置文件；使用Java代码可以检查类型安全。
+
+@EnableAutoConfiguration 自动配置。
+
+@ComponentScan 组件扫描，可自动发现和装配一些Bean。
+
+@Component可配合CommandLineRunner使用，在程序启动后执行一些基础任务。
+
+@RestController注解是@Controller和@ResponseBody的合集,表示这是个控制器bean,并且是将函数的返回值直 接填入HTTP响应体中,是REST风格的控制器。
+
+@Autowired自动导入。
+
+@PathVariable获取参数。
+
+@JsonBackReference解决嵌套外链问题。
+
+@RepositoryRestResourcepublic配合spring-boot-starter-data-rest使用。
+```
 > []()
