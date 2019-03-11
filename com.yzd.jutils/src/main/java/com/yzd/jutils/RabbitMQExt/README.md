@@ -11,11 +11,16 @@ https://github.com/AAA-AA/rabbitmq-springboot
 
 ```
 
+> MQ对比选型
+- [Redis与RabbitMQ作为消息队列的比较](https://blog.csdn.net/jordandandan/article/details/68946839)
+
 ### [Spring Boot配置多个RabbitMQ](https://blog.csdn.net/qq_37608766/article/details/80912370)
 ```
 [Spring Boot配置多个RabbitMQ](https://blog.csdn.net/qq_37608766/article/details/80912370)
 ```
 这个指南将引导你建立一个RabbitMQ AMQP服务器发布和订阅消息的过程。
+
+
 
 ### 声明
 可以使用本人阿里云安装好的RabbitMQ服务器
