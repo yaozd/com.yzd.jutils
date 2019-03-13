@@ -62,6 +62,10 @@ public static Student getNotParameterStudent1(){
 @Qualifier("student1")
 Student student3;
 ```
+> [SpringBoot基础篇Bean之条件注入@Condition使用姿势](https://blog.csdn.net/liuyueyi25/article/details/83244263)
+- [@ConditionalOnProperty](https://blog.csdn.net/weixin_36833780/article/details/80886942)
+- [@ConditionalOnProperty来控制Configuration是否生效](https://www.jianshu.com/p/68a75c093023)
+
 > [Spring Boot系列四 Spring @Value 属性注入使用总结一](https://blog.csdn.net/hry2015/article/details/72353994/)
 ```
  @Value("${influxdb.url}")

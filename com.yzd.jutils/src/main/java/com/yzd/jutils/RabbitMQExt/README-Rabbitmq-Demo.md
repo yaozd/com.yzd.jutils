@@ -51,13 +51,31 @@ RK:routingKey:P到X绑定的Key，不是唯一的，可以相同。
 ----------------------
 P->M->X->RK->BK->Q->C->M
 ```
+> [AcknowledgeMode选择](https://blog.csdn.net/weixin_38380858/article/details/84963944)
+```
+AcknowledgeMode.NONE模式
+AcknowledgeMode.AUTO模式
+AcknowledgeMode.MANUAL模式
+
+对比
+无ack模式：效率高，存在丢失大量消息的风险。
+有ack模式：效率低，不会丢消息。
+```
 > 参考书
 - [RabbitMQ实战](https://book.douban.com/subject/26649178/?from=tag)
 
 > 推荐参考-配置多个RabbitMQ
 - [Spring Boot配置多个RabbitMQ-推荐参考byArvin](https://blog.csdn.net/qq_37608766/article/details/80912370)
+- [SpringBoot中如何监听两个不同源的RabbitMQ消息队列-推荐参考byArvin](https://blog.csdn.net/u012129558/article/details/79495298)
 ```
 监听(消费方)与生产者（消息生产方）配置
+```
+> [rabbitmq的延迟队列](https://blog.csdn.net/u012129558/article/details/85330768)
+```
+延迟队列能做什么？
+订单业务： 在电商/点餐中，都有下单后 30 分钟内没有付款，就自动取消订单。
+短信通知： 下单成功后 60s 之后给用户发送短信通知。
+失败重试： 业务操作失败后，间隔一定的时间进行失败重试。
 ```
 
 > 推荐参考
@@ -69,6 +87,7 @@ P->M->X->RK->BK->Q->C->M
 - [springboot整合rabbitMQ步骤介绍以及各模式发布接收消息的Demo](https://blog.csdn.net/u011059021/article/details/79827793)
 - [RabbitMQ笔记十五：消息确认之一（Publisher Confirms）-手写]()
 - [RabbitMq（一）走进RabbitMq-推荐参考byArvin-可实现自定义绑定RabbitMQ的连接监听](https://www.jianshu.com/p/a5f7fce67803)
+- [随便谈谈RabbitMQ与springBoot进行集成-RabbitAutoConfig](https://blog.csdn.net/roykingw/article/details/78404956)
 ```
 @RabbitListener(containerFactory = "helloRabbitListenerContainer",queues = "spring-boot")
 PS:重新定义containerFactory的实现
