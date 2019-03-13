@@ -31,13 +31,53 @@ Consumer:消息消费者,就是接受消息的程序.
 Channel:消息通道,在客户端的每个连接里,可建立多个channel.
 */
 --------------------- 
+exchange交换机机制
+什么是交换机
+binding？
+Direct Exchange交换机：所有binding到该交换机上的queue，routing-key都和queue的name一样
+Topic Exchange交换机：通配符交换机，exchange会把消息发送到一个或者多个满足通配符规则的routing-key的queue。其中*表号匹配一个word，#匹配多个word和路径，路径之间通过.隔开。如满足a.*.c的routing-key有a.hello.c；满足#.hello的routing-key有a.b.c.helo
+Fanout Exchange交换机：该交换机会把消息发送到所有binding到该交换机上的queue。这种是publisher/subcribe模式。用来做广播最好
+Header Exchange交换机：设置header attribute参数类型的交换机
 ```
+> Rabttimq-基本请求流程
+```
+P: 生产者
+X：交换机
+Q：消息队列
+C：消费者
+BK:bindingKey：Q到X绑定的Key，不是唯一的，可以相同。
+M：消息
+RK:routingKey:P到X绑定的Key，不是唯一的，可以相同。
+----------------------
+P->M->X->RK->BK->Q->C->M
+```
+> 参考书
+- [RabbitMQ实战](https://book.douban.com/subject/26649178/?from=tag)
+
+> 推荐参考-配置多个RabbitMQ
+- [Spring Boot配置多个RabbitMQ-推荐参考byArvin](https://blog.csdn.net/qq_37608766/article/details/80912370)
+```
+监听(消费方)与生产者（消息生产方）配置
+```
+
 > 推荐参考
 - [rabbitMq生产者角度:消息持久化、事务机制、PublisherConfirm、mandatory](https://blog.csdn.net/u014045580/article/details/70311746)
 - [RabbitMQ实战篇10-消息确认机制之消息的准确发布](https://blog.csdn.net/zhuzhezhuzhe1/article/details/80706167)
-- [Git-https://github.com/zhuzhegithub/rabbitmq](https://github.com/zhuzhegithub/rabbitmq)
+- [Git-https://github.com/zhuzhegithub/rabbitmq-推荐byArvin](https://github.com/zhuzhegithub/rabbitmq)
 - [Springboot整合一之Springboot整合RabbitMQ](https://blog.csdn.net/zhuzhezhuzhe1/article/details/80454956)
 - [Git-https://github.com/zhuzhegithub/springboot-rabbitmq](https://github.com/zhuzhegithub/springboot-rabbitmq)
 - [springboot整合rabbitMQ步骤介绍以及各模式发布接收消息的Demo](https://blog.csdn.net/u011059021/article/details/79827793)
+- [RabbitMQ笔记十五：消息确认之一（Publisher Confirms）-手写]()
+- [RabbitMq（一）走进RabbitMq-推荐参考byArvin-可实现自定义绑定RabbitMQ的连接监听](https://www.jianshu.com/p/a5f7fce67803)
+```
+@RabbitListener(containerFactory = "helloRabbitListenerContainer",queues = "spring-boot")
+PS:重新定义containerFactory的实现
+```
+- [Springboot中整合RabbitMq之Topic模式](https://blog.csdn.net/zhaodj5660/article/details/79895562)
 - []()
+- []()
+- []()
+
 > Rabbitmq-spring boot-demo
+- [Git-https://github.com/zhuzhegithub/springboot-rabbitmq](https://github.com/zhuzhegithub/springboot-rabbitmq)
+- [Git-https://github.com/zhuzhegithub/rabbitmq-推荐byArvin](https://github.com/zhuzhegithub/rabbitmq)

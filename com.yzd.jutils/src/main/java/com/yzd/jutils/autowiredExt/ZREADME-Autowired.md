@@ -1,6 +1,14 @@
 # 1个接口对应多个实现类
 > 示例--服务仓库
 ```
+@Service("T1TempServiceImp")
+public class T1TempServiceImp implements ITempServiceInf {
+    @Override
+    public void hello() {
+        System.out.println("hello-T1TempServiceImp");
+    }
+}
+----------------------
 @Service
 public class TempServiceRepository {
 
@@ -39,6 +47,20 @@ public class TempServiceRepository {
 @Primary和@Qualifier这两个注解的意思：
 @Primary的意思是在众多相同的bean中，优先使用用@Primary注解的bean.
 而@Qualifier这个注解则指定某个bean有没有资格进行注入。
+```
+> [@bean的属性介绍](https://www.cnblogs.com/SpringStudy/p/8590036.html)
+```
+/*
+  使用Beans上参数的名字，可以指定多个
+ */
+@Bean(name={"student1"})
+public static Student getNotParameterStudent1(){
+    return new Student();
+}
+----------------------
+@Autowired
+@Qualifier("student1")
+Student student3;
 ```
 > [Spring Boot系列四 Spring @Value 属性注入使用总结一](https://blog.csdn.net/hry2015/article/details/72353994/)
 ```
