@@ -1,3 +1,6 @@
+> Spring-boot-RabbitMQ参考代码-byArvin
+- [https://github.com/yaozd/rabbitmq/tree/dev-yzd](https://github.com/yaozd/rabbitmq/tree/dev-yzd)
+
 >  RabbitMQ-Install
 - [windows10环境下的RabbitMQ安装步骤（图文）](https://blog.csdn.net/weixin_39735923/article/details/79288578)
 ```
@@ -61,6 +64,36 @@ AcknowledgeMode.MANUAL模式
 无ack模式：效率高，存在丢失大量消息的风险。
 有ack模式：效率低，不会丢消息。
 ```
+> PublisherConfirms
+- [RabbitMQ笔记十五：消息确认之一（Publisher Confirms）](https://www.jianshu.com/p/0db95a3e972c)
+
+> 消费者 push和pull模式(java 默认是push方式，pull方式需要用户自己代码实现)
+- [RocketMQ - 8 消费者 push和pull模式，配置参数](https://blog.csdn.net/qq_32020035/article/details/82109547)
+- [RocketMQ Pull和Push](https://blog.csdn.net/u014362882/article/details/80424527)
+```
+Push和Pull模式
+push和pull模式在前面已经有说过了。push是broker主动去向consumer推送消息，他们之间只需要保持长连接即可。pull是consumer主动去向broker拉取消息。 
+push就是我们前面讲到的模式MQPushConsumer就是push模式。 
+pull模式将不会给出例子，因为比较繁琐。pull模式有两种做法，一种自己主动记录每次获取消息的offset，下次再次获取从这次的最大下标+1去获取，期间多长时间执行拉取，由自己实现。第二种由rocketmq帮我们完成，consumer消费完后提醒broker更新最新拉取消息的offset，多长时间拉取一次可以由设置属性让rocketmq帮我们完成。 
+因为pull模式是间隔一定时间去broker拉取下标从多少开始的一批消息。不可避免的容易出现重复消息的事情，所以如果使用pull，要多加一部消息去重的策略。具体的pull示例，可以参考rocketmq的example中的simple包，里面有对两种做法进行示例
+--------------------- 
+区别是： 
+push方式里，consumer把轮询过程封装了，并注册MessageListener监听器，取到消息后，唤醒MessageListener的consumeMessage()来消费，对用户而言，感觉消息是被推送过来的。
+
+pull方式里，取消息的过程需要用户自己写，首先通过打算消费的Topic拿到MessageQueue的集合，遍历MessageQueue集合，然后针对每个MessageQueue批量取消息，一次取完后，记录该队列下一次要取的开始offset，直到取完了，再换另一个MessageQueue
+--------------------- 
+```
+- [Consumer中的basicConsume的实现是订阅消息（PUSH）；Consumer中的basicGet的实现是轮训（PULL）]
+```
+Consumer中的basicConsume的实现是订阅消息（PUSH）；Consumer中的basicGet的实现是轮训（PULL）
+----
+basicGet是比较早的实现。
+参考：
+
+RabbitMQ的几种典型使用场景
+http://www.cnblogs.com/luxiaoxun/p/3918054.html
+```
+
 > 参考书
 - [RabbitMQ实战](https://book.douban.com/subject/26649178/?from=tag)
 
@@ -81,7 +114,7 @@ AcknowledgeMode.MANUAL模式
 > 推荐参考
 - [rabbitMq生产者角度:消息持久化、事务机制、PublisherConfirm、mandatory](https://blog.csdn.net/u014045580/article/details/70311746)
 - [RabbitMQ实战篇10-消息确认机制之消息的准确发布](https://blog.csdn.net/zhuzhezhuzhe1/article/details/80706167)
-- [Git-https://github.com/zhuzhegithub/rabbitmq-推荐byArvin](https://github.com/zhuzhegithub/rabbitmq)
+- [Git-https://github.com/zhuzhegithub/rabbitmq推荐byArvin](https://github.com/zhuzhegithub/rabbitmq)
 - [Springboot整合一之Springboot整合RabbitMQ](https://blog.csdn.net/zhuzhezhuzhe1/article/details/80454956)
 - [Git-https://github.com/zhuzhegithub/springboot-rabbitmq](https://github.com/zhuzhegithub/springboot-rabbitmq)
 - [springboot整合rabbitMQ步骤介绍以及各模式发布接收消息的Demo](https://blog.csdn.net/u011059021/article/details/79827793)
