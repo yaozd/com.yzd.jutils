@@ -64,6 +64,21 @@ AcknowledgeMode.MANUAL模式
 无ack模式：效率高，存在丢失大量消息的风险。
 有ack模式：效率低，不会丢消息。
 ```
+> 公平调度-prefetch与消息投递-PrefetchCount(默认值：250)关键业务-建议设置为1，保证均匀地分发消息
+- [RabbitMQ小记（二）——公平调度vs循环调度](https://blog.csdn.net/qq_41599820/article/details/88077497)
+- [RabbitMQ之Qos prefetch](https://www.jianshu.com/p/4d043d3045ca)
+```
+公平调度
+//关键业务-建议设置为1，保证均匀地分发消息
+  factory.setPrefetchCount(1);
+---------------------------      
+通过设置Qos的prefetch count来控制consumer的流量。同时设置得当也会提高consumer的吞吐量。
+prefetch与消息投递
+prefetch允许为每个consumer指定最大的unacked messages数目。
+简单来说就是用来指定一个consumer一次可以从Rabbit中获取多少条message并缓存在client中(RabbitMQ提供的各种语言的client library)。
+一旦缓冲区满了，Rabbit将会停止投递新的message到该consumer中直到它发出ack。
+```
+
 > PublisherConfirms
 - [RabbitMQ笔记十五：消息确认之一（Publisher Confirms）](https://www.jianshu.com/p/0db95a3e972c)
 
