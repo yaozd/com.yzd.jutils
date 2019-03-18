@@ -24,3 +24,7 @@ http://192.168.1.237:3000/d/Wk_L9pCmz/new-dashboard-copy?orgId=1&var-userId=1310
 时间间隔调整,可以通过自定义变量，其中“Step count”是把当前时间段切割为多少分的意思。
 如：500，则是分为500段，有500个时间指标。平均分段的意思
 ``` 
+> Grafana 页面时间区间参数向子页面模板传值-》$__from 与$__to 
+```
+/d/aCoc7hCik/test237-userdetail?orgId=1&var-userName=$__cell_1&from=$__from&to=$__to
+``` 
