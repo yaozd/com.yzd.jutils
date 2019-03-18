@@ -23,4 +23,8 @@
  - Arthas-阿尔萨斯
  - xxs攻击  xss表示Cross Site Scripting(跨站脚本攻击)-参考CMS静态-[com.yzd.cms-example](https://github.com/yaozd/com.yzd.cms-example/tree/develop)
  - influxdb+grafana-Test237-河边走用户分析
- - 
+ - RabbitMQ[https://github.com/yaozd/rabbitmq/tree/dev-yzd](https://github.com/yaozd/rabbitmq/tree/dev-yzd)
+ 
+    1.公平调试
+    2.补偿机制
+    3.幂等处理

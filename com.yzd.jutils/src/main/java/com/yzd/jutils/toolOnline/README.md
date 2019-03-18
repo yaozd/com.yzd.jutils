@@ -1,3 +1,6 @@
+### 推荐使用
+- [爱资料在线工具-https://www.toolnb.com](https://www.toolnb.com)
+
 ### 在线工具集
 - [字节单位换算器 | Gb,Kb,Mb单位换算工具](http://www.elecfans.com/tools/zijiehuansuan.html)
 - [站长工具体-http://tool.chinaz.com/](http://tool.chinaz.com/)
