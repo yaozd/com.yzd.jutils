@@ -2,6 +2,7 @@
 > InfluxDB-SQL语法查询
 - [influxDB学习笔记-SQL语法查询-推荐参考byArvin](https://blog.csdn.net/vtnews/article/details/80197045)
 - [InfluxDB系列学习教程目录](https://www.linuxdaxue.com/influxdb-study-series-manual.html)
+- [InfluxDB数据备份与恢复](https://blog.51cto.com/357712148/2165716)
 
 
 0. 字符串字段查询--必须使用单引号
@@ -33,7 +34,11 @@ SELECT SUM("count") FROM "productdetail_metric" WHERE $timeFilter GROUP BY time(
 ```
 PS:
 SQL:SELECT  COUNT(DISTINCT(userId)) FROM "productdetail_metric" WHERE $timeFilter fill(null)
-
+```
+5.[InfluxDB删除数据](https://blog.51cto.com/3922078/2316723)
+```
+PS:
+Delete FROM "productdetail_metric" WHERE time >= 1552838400000ms and time <= 1553443199999ms AND userName='aaa'
 ```
 
 
