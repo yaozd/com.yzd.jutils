@@ -27,4 +27,19 @@ http://192.168.1.237:3000/d/Wk_L9pCmz/new-dashboard-copy?orgId=1&var-userId=1310
 > Grafana 页面时间区间参数向子页面模板传值-》$__from 与$__to 
 ```
 /d/aCoc7hCik/test237-userdetail?orgId=1&var-userName=$__cell_1&from=$__from&to=$__to
-``` 
+
+```
+> [plugins ajax](https://grafana.com/plugins/ryantxu-ajax-panel)
+```
+AJAX Panel for Grafana
+https://grafana.com/plugins/ryantxu-ajax-panel
+```
+> [Plotly-散点图](https://grafana.com/plugins/natel-plotly-panel)
+```
+Scatter plots and more
+https://grafana.com/plugins/natel-plotly-panel
+```
+> [Pie Chart-饼图](https://grafana.com/plugins/grafana-piechart-panel)
+```
+https://grafana.com/plugins/grafana-piechart-panel
+```

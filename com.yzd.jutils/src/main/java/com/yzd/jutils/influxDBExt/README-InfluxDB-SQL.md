@@ -40,6 +40,13 @@ SQL:SELECT  COUNT(DISTINCT(userId)) FROM "productdetail_metric" WHERE $timeFilte
 PS:
 Delete FROM "productdetail_metric" WHERE time >= 1552838400000ms and time <= 1553443199999ms AND userName='aaa'
 ```
+6.[基于InfluxDB实现分页查询功能](https://www.cnblogs.com/liugh/p/10123459.html)
+```
+  假设前台传过来的页数字段是page，每页条数字段是rows，那么查询指定页指定条数可以这样写：
+  SELECT time,Field列 FROM measurement WHERE 时间范围 LIMIT rows OFFSET (page - 1)*rows
+  PS:
+  SELECT * FROM "cpu33" ORDER BY time limit  100 OFFSET 100000 
+```
 
 
 
