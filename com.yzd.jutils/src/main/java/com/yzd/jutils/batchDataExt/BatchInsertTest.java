@@ -11,6 +11,10 @@ import java.util.concurrent.TimeUnit;
 
 @Slf4j
 public class BatchInsertTest {
+    //推荐参考byArvin-2019-03-22
+    //批量导入到InfluxDb
+    //https://github.com/yaozd/com.yzd.influxdb.root.git
+    //InfluxDBUtil4BatchInsertTest.batchInsert()
 
     //BatchInsertTest:批量插入数据到数据库（influxdb或者mysql）
 
@@ -31,8 +35,8 @@ public class BatchInsertTest {
             DataRepository.PRODUCT.putData(String.valueOf(i));
         }
         //读取数据
-        List<String> data = getBatchData();
-        log.info("data.size()=" + data.size());
+        List<String> data = DataRepository.PRODUCT.batchData(100,1);
+        log.info("data size="+data.size());
         //转换数据
 
         //批量插入到influxdb

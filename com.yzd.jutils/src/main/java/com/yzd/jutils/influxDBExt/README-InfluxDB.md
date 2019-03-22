@@ -1,4 +1,5 @@
 > InfluxDBUtils使用参考：
+- [https://github.com/yaozd/com.yzd.influxdb.root.git](https://github.com/yaozd/com.yzd.influxdb.root.git)-byArvin推荐
 - [InfluxDB使用教程：Java版InfluxDB工具类](https://blog.csdn.net/x541211190/article/details/83216589)
 - [sentinel控制台监控数据持久化【InfluxDB】-代码实现-github-地址](https://github.com/yaozd/Sentinel/tree/dev-yzd)
 - 工具类静态变量赋值
