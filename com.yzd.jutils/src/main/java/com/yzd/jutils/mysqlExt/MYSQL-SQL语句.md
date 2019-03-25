@@ -1,3 +1,13 @@
+
+### [mysql 按照月份统计](https://blog.csdn.net/u010918487/article/details/80285025)
+```
+select ud_create_time AS "time",count(*) AS total  FROM tb_user_details WHERE  ud_is_del=1 GROUP BY DATE_FORMAT(ud_create_time, '%Y-%m')
+```
+### [MySql计算百分比](https://blog.csdn.net/wmin0909/article/details/7865037)
+```
+SELECT total/total_us_card from (SELECT count(1) as total from tb_user_details where ud_is_del=1) T1,(SELECT count(1) as total_us_card from tb_user_details where ud_bank_card_no is not null and ud_is_del=1)T2;
+```
+
 ### 判断用户当日是否签到
 
 ```
