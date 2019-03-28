@@ -25,3 +25,5 @@ bejson中有许多工具：
 
 
 - [在线身份证号码生成器](http://sfz.uzuzuz.com)
+
+- [在线文件大小(bit,bytes,KB,MB,GB,TB)转换换算](http://www.bejson.com/convert/filesize/)

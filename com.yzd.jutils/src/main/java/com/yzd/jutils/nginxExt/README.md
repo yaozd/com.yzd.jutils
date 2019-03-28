@@ -88,3 +88,9 @@ http{
 : not work in Windows Vista and later due to address space layout 
 : randomization being enabled in these Windows versions.
 ```
+
+
+> [Nginx URL重写（rewrite）配置及信息详解](https://www.cnblogs.com/czlun/articles/7010604.html)
+```
+rewrite ^/(.*) http://www.czlun.com/$1 permanent;
+```

@@ -42,4 +42,24 @@ sql_mode=STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION
 5.net start mysql
 --------------------
 
+### mysql max_allowed_packet查询和修改
+```
+mysql根据配置文件会限制server接受的数据包大小。
+有时候大的插入和更新会被max_allowed_packet 参数限制掉，导致失败。
+查看目前配置  
+show VARIABLES like '%max_allowed_packet%';
+-------
+mysql max_allowed_packet 默认值（字节）：1024 （为1k）
+===
+阿里云数据库导出的数据库备份sql的中insert的合并大小5m
+所以建议把max_allowed_packet的值调整为16777216 （16M） 
+
+在线文件大小(bit,bytes,KB,MB,GB,TB)转换换算
+http://www.bejson.com/convert/filesize/
+
+```
+
+
+---------------------
+
 ---------------------
