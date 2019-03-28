@@ -71,6 +71,12 @@ http://www.bejson.com/convert/filesize/
 ```
 ### MYSQL-索引-最左原则
 
+### [MyBatis中Like语句使用方式](https://www.cnblogs.com/icewee/articles/6927841.html)
+```
+SELECT * FROM user
+WHERE name LIKE CONCAT('%',#{name},'%')
+PS:CONCAT的方式目前测试也是可以走索引的。
+```
 ---------------------
 
 ---------------------
