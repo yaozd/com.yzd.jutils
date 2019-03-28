@@ -58,7 +58,18 @@ mysql max_allowed_packet 默认值（字节）：1024 （为1k）
 http://www.bejson.com/convert/filesize/
 
 ```
-
+### [Mybatis 中$与#的区别](https://www.cnblogs.com/hellokitty1/p/6007801.html)
+```
+#与的区别最大在于：#{} 传入值时，sql解析时，参数是带引号的，而{}穿入值，sql解析时，参数是不带引号的
+-------
+二:使用$与#
+   #{}: 解析为一个 JDBC 预编译语句（prepared statement）的参数标记符，一个 #{ } 被解析为一个参数占位符 。
+   ${}: 仅仅为一个纯碎的 string 替换，在动态 SQL 解析阶段将会进行变量替换。
+ eg: 
+  select id,name,age from student where name=#{name}   -- name='cy'
+  select id,name,age from student where name=${name}    -- name=cy
+```
+### MYSQL-索引-最左原则
 
 ---------------------
 
