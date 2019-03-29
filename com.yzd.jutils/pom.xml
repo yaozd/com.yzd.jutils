@@ -265,7 +265,7 @@
         </plugins>
     </build>
     <repositories>
-        <repository>
+        <!--<repository>
             <id>hb-snapshot</id>
             <name>hb Snapshot Repository</name>
             <url>http://n.hb.com:8081/nexus/content/repositories/snapshots</url>
@@ -273,11 +273,11 @@
                 <enabled>false</enabled>
             </releases>
             <snapshots>
-                <updatePolicy>always</updatePolicy> <!-- 表示更新频率 never always interval daily daily为默认值  -->
+                <updatePolicy>always</updatePolicy> &lt;!&ndash; 表示更新频率 never always interval daily daily为默认值  &ndash;&gt;
                 <enabled>true</enabled>
-                <checksumPolicy>warn</checksumPolicy><!-- 表示maven检查和查验文件的策略 -->
+                <checksumPolicy>warn</checksumPolicy>&lt;!&ndash; 表示maven检查和查验文件的策略 &ndash;&gt;
             </snapshots>
-        </repository>
+        </repository>-->
         <repository>
             <id>nexus-aliyun</id>
             <url>http://maven.aliyun.com/nexus/content/groups/public</url>
