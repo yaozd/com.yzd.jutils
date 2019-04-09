@@ -41,3 +41,15 @@
         </plugins>
     </build>
 ```
+
+#### MyBatis Generator配置文件--useActualColumnNames
+- [MyBatis Generator配置文件--指定生成实体类使用实际的表列名作为实体类的属性名](https://www.jianshu.com/p/65038e08c5b8)
+```
+<!--MVN 命令：mvn mybatis-generator:generate-->
+<!-- 示例-begin-->
+<table tableName="tb_ifcert_data_monitor" enableDeleteByPrimaryKey="false" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+    <property name="useActualColumnNames" value="true"/>
+    <!--identity=true 代表生成自增长的id -->
+    <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+</table>
+```
