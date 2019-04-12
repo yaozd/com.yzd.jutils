@@ -21,7 +21,7 @@
 - []()
 - []()
 
-### 一些Kettle使用的小示例-kettle_demo-master-学习示例-2019-04-12
+### 一些Kettle使用的小示例-kettle_demo-master-学习示例
 - [https://github.com/happyapple668/kettle_demo](https://github.com/happyapple668/kettle_demo)
 - [https://github.com/yaozd/kettle_demo](https://github.com/yaozd/kettle_demo)-备份
 - [百度云盘-开发工具>S-数据同步-Kettle]
