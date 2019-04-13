@@ -28,6 +28,16 @@
 ```
 一些Kettle的小示例程序，每个文件夹下面都是单独的示例。run_main.kjb或run_main.ktr是每个示例的入口
 ```
+### kettle循环分页导入数据
+- [kettle循环分页导入数据](https://my.oschina.net/jgy/blog/908272)
+- [Kettle实现循环控制分批次抽取数据](https://ask.hellobi.com/blog/hql15/4298)
+- []()
+- []()
+### Kettle变量参数传递介绍
+- [【Kettle从零开始】第八弹之Kettle变量参数传递介绍](https://blog.csdn.net/rotkang/article/details/21008271)
+
+### Kettle命令行使用说明
+- [Kettle命令行使用说明](http://www.kettle.net.cn/1349.html)
 
 ### kettle-问题集合
 - [kettle连接数据库，官方jdbc jar包下载以及布置安装](https://blog.csdn.net/Mr_Tanga/article/details/81014889)
