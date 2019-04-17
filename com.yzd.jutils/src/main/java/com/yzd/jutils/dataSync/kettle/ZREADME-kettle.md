@@ -59,3 +59,18 @@ org.gjt.mm.mysql.Driver
 -----------------------------------
 链接：https://pan.baidu.com/s/1ARjQw_z-Ybd1CSQGHg-oCA 密码：prj0
 ```
+
+### 变量的的使用
+- [kettle学习笔记及最佳实践](https://my.oschina.net/jim19770812/blog/2251131?from=timeline)
+
+```
+${Internal.Entry.Current.Directory}/test.ktr可以表示当前目录下的test.ktr，同时适配repository模式和local文件模式
+关于变量的使和编程语言中的变量不太一样，无法使用在同一个转换中定义和获取当前转换内修改过的变量，变通方法是拆成两个转换来使用，这问题卡了好几天才找到原因。
+在job/转换通过-param:varname=value的方式传参时，如果发现变量无法解析，那么一定是job和转换的命名参数里没有配置（双击空白处，有个命名参数页签....）
+在job/转换开始执行的时候通过日志输出一下用到的变量是个很好的习惯
+作业和转换都要有命名参数startrow,pagesize,startdate,enddate几个，这样可以在调用的时候灵活控制分页以及起止时间，灵活实现全量和增量迁移
+对变量冲突的问题要小心，特别是同一个job并行处理多个转换时更是如此，因此在job里并行执行转换时要格外小心。
+
+写变量时有对变量作用域的设置:
+推荐设置成Valid in the root job，不推荐Valid in the Java Virtual Matchine。
+```
