@@ -1,3 +1,15 @@
+### mysql中dual表
+```
+select 1 from dual
+```
+### MySQL create database 指定utf-8编码
+```
+如下脚本创建数据库yourdbname，并制定默认的字符集是utf8。
+CREATE DATABASE IF NOT EXISTS yourdbname DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
+如果要创建默认gbk字符集的数据库可以用下面的sql:
+create database yourdb DEFAULT CHARACTER SET gbk COLLATE gbk_chinese_ci;
+--------------------- 
+```
 
 ### [mysql 按照月份统计](https://blog.csdn.net/u010918487/article/details/80285025)
 ```
