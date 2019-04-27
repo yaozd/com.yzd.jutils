@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="dao.mapper.ifcert.TbIfcertPushLogMapper" >
+  <resultMap id="BaseResultMap" type="entity.ifcert.TbIfcertPushLog" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="batch_num" property="batchNum" jdbcType="VARCHAR" />
+    <result column="interface_type" property="interfaceType" jdbcType="INTEGER" />
+    <result column="send_date" property="sendDate" jdbcType="VARCHAR" />
+    <result column="send_time" property="sendTime" jdbcType="TIMESTAMP" />
+    <result column="check_code" property="checkCode" jdbcType="VARCHAR" />
+    <result column="total_num" property="totalNum" jdbcType="INTEGER" />
+    <result column="push_status" property="pushStatus" jdbcType="INTEGER" />
+    <result column="balance_status" property="balanceStatus" jdbcType="INTEGER" />
+    <result column="balance_time" property="balanceTime" jdbcType="TIMESTAMP" />
+    <result column="storage_status" property="storageStatus" jdbcType="INTEGER" />
+    <result column="gmt_create_time" property="gmtCreateTime" jdbcType="TIMESTAMP" />
+    <result column="gmt_is_deleted" property="gmtIsDeleted" jdbcType="INTEGER" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="entity.ifcert.TbIfcertPushLogWithBLOBs" extends="BaseResultMap" >
+    <result column="request_msg" property="requestMsg" jdbcType="LONGVARCHAR" />
+    <result column="response_msg" property="responseMsg" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, batch_num, interface_type, send_date, send_time, check_code, total_num, push_status, 
+    balance_status, balance_time, storage_status, gmt_create_time, gmt_is_deleted
+  </sql>
+  <sql id="Blob_Column_List" >
+    request_msg, response_msg
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from tb_ifcert_push_log
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <insert id="insert" parameterType="entity.ifcert.TbIfcertPushLogWithBLOBs" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into tb_ifcert_push_log (batch_num, interface_type, send_date, 
+      send_time, check_code, total_num, 
+      push_status, balance_status, balance_time, 
+      storage_status, gmt_create_time, gmt_is_deleted, 
+      request_msg, response_msg)
+    values (#{batchNum,jdbcType=VARCHAR}, #{interfaceType,jdbcType=INTEGER}, #{sendDate,jdbcType=VARCHAR}, 
+      #{sendTime,jdbcType=TIMESTAMP}, #{checkCode,jdbcType=VARCHAR}, #{totalNum,jdbcType=INTEGER}, 
+      #{pushStatus,jdbcType=INTEGER}, #{balanceStatus,jdbcType=INTEGER}, #{balanceTime,jdbcType=TIMESTAMP}, 
+      #{storageStatus,jdbcType=INTEGER}, #{gmtCreateTime,jdbcType=TIMESTAMP}, #{gmtIsDeleted,jdbcType=INTEGER}, 
+      #{requestMsg,jdbcType=LONGVARCHAR}, #{responseMsg,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="entity.ifcert.TbIfcertPushLogWithBLOBs" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into tb_ifcert_push_log
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="batchNum != null" >
+        batch_num,
+      </if>
+      <if test="interfaceType != null" >
+        interface_type,
+      </if>
+      <if test="sendDate != null" >
+        send_date,
+      </if>
+      <if test="sendTime != null" >
+        send_time,
+      </if>
+      <if test="checkCode != null" >
+        check_code,
+      </if>
+      <if test="totalNum != null" >
+        total_num,
+      </if>
+      <if test="pushStatus != null" >
+        push_status,
+      </if>
+      <if test="balanceStatus != null" >
+        balance_status,
+      </if>
+      <if test="balanceTime != null" >
+        balance_time,
+      </if>
+      <if test="storageStatus != null" >
+        storage_status,
+      </if>
+      <if test="gmtCreateTime != null" >
+        gmt_create_time,
+      </if>
+      <if test="gmtIsDeleted != null" >
+        gmt_is_deleted,
+      </if>
+      <if test="requestMsg != null" >
+        request_msg,
+      </if>
+      <if test="responseMsg != null" >
+        response_msg,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="batchNum != null" >
+        #{batchNum,jdbcType=VARCHAR},
+      </if>
+      <if test="interfaceType != null" >
+        #{interfaceType,jdbcType=INTEGER},
+      </if>
+      <if test="sendDate != null" >
+        #{sendDate,jdbcType=VARCHAR},
+      </if>
+      <if test="sendTime != null" >
+        #{sendTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="checkCode != null" >
+        #{checkCode,jdbcType=VARCHAR},
+      </if>
+      <if test="totalNum != null" >
+        #{totalNum,jdbcType=INTEGER},
+      </if>
+      <if test="pushStatus != null" >
+        #{pushStatus,jdbcType=INTEGER},
+      </if>
+      <if test="balanceStatus != null" >
+        #{balanceStatus,jdbcType=INTEGER},
+      </if>
+      <if test="balanceTime != null" >
+        #{balanceTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="storageStatus != null" >
+        #{storageStatus,jdbcType=INTEGER},
+      </if>
+      <if test="gmtCreateTime != null" >
+        #{gmtCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtIsDeleted != null" >
+        #{gmtIsDeleted,jdbcType=INTEGER},
+      </if>
+      <if test="requestMsg != null" >
+        #{requestMsg,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="responseMsg != null" >
+        #{responseMsg,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="entity.ifcert.TbIfcertPushLogWithBLOBs" >
+    update tb_ifcert_push_log
+    <set >
+      <if test="batchNum != null" >
+        batch_num = #{batchNum,jdbcType=VARCHAR},
+      </if>
+      <if test="interfaceType != null" >
+        interface_type = #{interfaceType,jdbcType=INTEGER},
+      </if>
+      <if test="sendDate != null" >
+        send_date = #{sendDate,jdbcType=VARCHAR},
+      </if>
+      <if test="sendTime != null" >
+        send_time = #{sendTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="checkCode != null" >
+        check_code = #{checkCode,jdbcType=VARCHAR},
+      </if>
+      <if test="totalNum != null" >
+        total_num = #{totalNum,jdbcType=INTEGER},
+      </if>
+      <if test="pushStatus != null" >
+        push_status = #{pushStatus,jdbcType=INTEGER},
+      </if>
+      <if test="balanceStatus != null" >
+        balance_status = #{balanceStatus,jdbcType=INTEGER},
+      </if>
+      <if test="balanceTime != null" >
+        balance_time = #{balanceTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="storageStatus != null" >
+        storage_status = #{storageStatus,jdbcType=INTEGER},
+      </if>
+      <if test="gmtCreateTime != null" >
+        gmt_create_time = #{gmtCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtIsDeleted != null" >
+        gmt_is_deleted = #{gmtIsDeleted,jdbcType=INTEGER},
+      </if>
+      <if test="requestMsg != null" >
+        request_msg = #{requestMsg,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="responseMsg != null" >
+        response_msg = #{responseMsg,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="entity.ifcert.TbIfcertPushLogWithBLOBs" >
+    update tb_ifcert_push_log
+    set batch_num = #{batchNum,jdbcType=VARCHAR},
+      interface_type = #{interfaceType,jdbcType=INTEGER},
+      send_date = #{sendDate,jdbcType=VARCHAR},
+      send_time = #{sendTime,jdbcType=TIMESTAMP},
+      check_code = #{checkCode,jdbcType=VARCHAR},
+      total_num = #{totalNum,jdbcType=INTEGER},
+      push_status = #{pushStatus,jdbcType=INTEGER},
+      balance_status = #{balanceStatus,jdbcType=INTEGER},
+      balance_time = #{balanceTime,jdbcType=TIMESTAMP},
+      storage_status = #{storageStatus,jdbcType=INTEGER},
+      gmt_create_time = #{gmtCreateTime,jdbcType=TIMESTAMP},
+      gmt_is_deleted = #{gmtIsDeleted,jdbcType=INTEGER},
+      request_msg = #{requestMsg,jdbcType=LONGVARCHAR},
+      response_msg = #{responseMsg,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="entity.ifcert.TbIfcertPushLog" >
+    update tb_ifcert_push_log
+    set batch_num = #{batchNum,jdbcType=VARCHAR},
+      interface_type = #{interfaceType,jdbcType=INTEGER},
+      send_date = #{sendDate,jdbcType=VARCHAR},
+      send_time = #{sendTime,jdbcType=TIMESTAMP},
+      check_code = #{checkCode,jdbcType=VARCHAR},
+      total_num = #{totalNum,jdbcType=INTEGER},
+      push_status = #{pushStatus,jdbcType=INTEGER},
+      balance_status = #{balanceStatus,jdbcType=INTEGER},
+      balance_time = #{balanceTime,jdbcType=TIMESTAMP},
+      storage_status = #{storageStatus,jdbcType=INTEGER},
+      gmt_create_time = #{gmtCreateTime,jdbcType=TIMESTAMP},
+      gmt_is_deleted = #{gmtIsDeleted,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

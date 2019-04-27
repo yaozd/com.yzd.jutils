@@ -11,3 +11,7 @@ Windows Registry Editor Version 5.00
 @="cmd.exe /k cd %l"
 ```
 - 使用方法：右击，选择“CmdPrompt”或“进入DOS命令行”
+
+- DOS打开控制面板
+    - CMD=>control
+    

@@ -20,3 +20,39 @@ for (Map.Entry<Integer, List<TbIfcertPushLog>> entry : map4PushLog2InterfaceType
     }
 }
 ```
+### 示例-02
+```
+    //利息与本金计算
+    @Test
+    public void interestAndCapital(){
+        List<TbIncomeDetail>itemList=new ArrayList<>();
+        itemList.add(getTbIncomeDetail(1,"10",1));
+        itemList.add(getTbIncomeDetail(2,"10",1));
+        itemList.add(getTbIncomeDetail(3,"10",1));
+        itemList.add(getTbIncomeDetail(4,"10",1));
+        itemList.add(getTbIncomeDetail(4,"100",2));
+        //
+        List<TbIncomeDetail>itemList4Periods=itemList.stream().filter(m->m.getIndFundType()==1).collect(Collectors.toList());
+        for(TbIncomeDetail item4Periods:itemList4Periods){
+            BigDecimal money4Interest=itemList.stream().filter(m->m.getIndPeriods()==item4Periods.getIndPeriods()&&m.getIndFundType()==1).findFirst().orElseGet(()->item4Zero()).getIndMoney();
+            BigDecimal money4Capital=itemList.stream().filter(m->m.getIndPeriods()==item4Periods.getIndPeriods()&&m.getIndFundType()==2).findFirst().orElseGet(()->item4Zero()).getIndMoney();
+            log.info("XX="+item4Periods.getIndPeriods()+"XX-VAL="+money4Interest+"XX-VAL="+money4Capital);
+        }
+        //
+    }
+
+    private TbIncomeDetail item4Zero() {
+        TbIncomeDetail item4Zero=new TbIncomeDetail();
+        item4Zero.setIndMoney(new BigDecimal("0"));
+        return item4Zero;
+    }
+
+    private TbIncomeDetail getTbIncomeDetail(Integer indPeriods, String indMoney, Integer indFundType) {
+        TbIncomeDetail item1=new TbIncomeDetail();
+        item1.setIndBpId(1L);
+        item1.setIndPeriods(indPeriods);
+        item1.setIndMoney(new BigDecimal(indMoney));
+        item1.setIndFundType(indFundType);
+        return item1;
+    }
+```
