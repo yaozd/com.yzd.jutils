@@ -206,6 +206,7 @@
   </update>
   <!--自定义脚本////////////////////////////////////////////////////////////////////////////////////////////////-->
   <sql id="Query_Where_Clause" >
+    <if test="pojo != null" >
       <if test="pojo.id != null"> AND id = #{pojo.id} </if>
       <if test="pojo.batchNum != null"> AND batch_num = #{pojo.batchNum} </if>
       <if test="pojo.interfaceType != null"> AND interface_type = #{pojo.interfaceType} </if>
@@ -220,9 +221,10 @@
       <if test="pojo.storageStatus != null"> AND storage_status = #{pojo.storageStatus} </if>
       <if test="pojo.gmtCreateTime != null"> AND gmt_create_time = #{pojo.gmtCreateTime} </if>
       <if test="pojo.gmtIsDeleted != null"> AND gmt_is_deleted = #{pojo.gmtIsDeleted} </if>
+    </if>
   </sql>
   <sql id="Page_Where_Clause">
-    <if test="pageWhere != null">limit #{pageWhere.begin},#{pageWhere.pageSize}</if>
+    <if test="pageWhere != null">limit #{pageWhere.begin},#{pageWhere.size}</if>
   </sql>
   <sql id="Query_Where_ClauseForPojo" >
     <where>

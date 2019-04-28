@@ -4,6 +4,7 @@ import com.yzd.jutils.person.Person;
 import org.jetbrains.annotations.Nullable;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -31,8 +32,15 @@ public class _MainTest {
         System.out.println(children);
     }
 
+    /**
+     * Stream-取集合中某一对象的某一字段的值
+     */
     @Test
     public void t2(){
+        //取集合中某一对象的字段的值
+        List<Person> itemList4Person=new ArrayList<>();
+        String name= itemList4Person.stream().filter(w->w.getName()!=null).map(Person::getName).findFirst().orElseGet(()->"default-value");
+        System.out.println(name);
          getPerson();
     }
 
