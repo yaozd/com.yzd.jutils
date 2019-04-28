@@ -1,10 +1,12 @@
 package com.yzd.jutils.streamExt;
 
 import com.yzd.jutils.person.Person;
+import org.jetbrains.annotations.Nullable;
 import org.junit.Test;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -27,5 +29,21 @@ public class _MainTest {
                         limit(100).
                         collect(Collectors.partitioningBy(p -> p.getAge() < 18));
         System.out.println(children);
+    }
+
+    @Test
+    public void t2(){
+         getPerson();
+    }
+
+    private Person getPerson() {
+        // Optional.ofNullable - 允许传递为 null 参数
+        Integer value1 = null;
+        Optional<Integer> a = Optional.ofNullable(value1);
+        List<Person> itemList4Person=null;
+        if(itemList4Person==null){return null;}
+        //如果是在mybatis-selectOnlyOne
+        itemList4Person.stream().findFirst().orElseGet(()->null);
+        return itemList4Person.stream().findFirst().get();
     }
 }

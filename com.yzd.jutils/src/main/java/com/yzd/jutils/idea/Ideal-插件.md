@@ -10,5 +10,6 @@
 - Lombok Plugin
 - SonarLint
 - VisualVM Launcher
+- Vue.js
 - 
 - 
