@@ -15,7 +15,10 @@ mapWhere.interfaceType4Count（数量）--group by的情况
 字符串：
 mapWhere.batchNum4LikeAll（全模糊 :like * txt *）
 mapWhere.batchNum4LikeRight（右模糊 :like txt*）
-mapWhere.batchNum4LikeRight（左模糊:like *txt）
+mapWhere.batchNum4LikeLeft（左模糊:like *txt）
+LIKE CONCAT('%',#{mapWhere.batchNum4LikeAll},'%' )
+LIKE CONCAT(#{mapWhere.batchNum4LikeRight},'%' )
+LIKE CONCAT('%',#{mapWhere.batchNum4LikeLeft})
 ```
 - XML脚本
 -

@@ -26,3 +26,4 @@ ctrl+shift+delete
 > 使用场景：图片上传到京东云后不能在线浏览而是直接下载时，可通过此工具查看请求响应的头。
 - [Save Page WE](https://chrome.google.com/webstore/detail/save-page-we/dhhpefjklgkmgeafimnjhojgjamoafof)-保存完整个html页面-方便日后查看-提供方：DW-dev
 - [Magnifying Glass (Hover Zoom)](https://chrome.google.com/webstore/detail/magnifying-glass-hover-zo/gfcbebjdigncefnokoncehghgfndjcgn)-放大镜-提供方：Yubi
+- [Fatkun图片批量下载](https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf)-提供方：aituxiu
