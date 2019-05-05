@@ -1,4 +1,6 @@
-# Shiro权限管理
+- 参考项目-byArvin
+    - [https://github.com/yaozd/com.yzd.shiro.root](https://github.com/yaozd/com.yzd.shiro.root)
+# 1.Shiro权限管理
 ### 参考文章
 - [Shiro + JWT + SpringBoot + MySQL + Redis(Jedis)实现无状态鉴权机制(Restful风格API)](https://blog.csdn.net/wang926454/article/details/82971291)
     - [https://github.com/wang926454/ShiroJwt](https://github.com/wang926454/ShiroJwt)

@@ -1,3 +1,8 @@
+### IntelliJ IDEA 注册码
+- [http://idea.lanyus.com](http://idea.lanyus.com)
+```
+请加“0.0.0.0 account.jetbrains.com”及““0.0.0.0 www.jetbrains.com””到hosts中屏蔽联网
+```
 
 ###　Plugins常用插件
 
