@@ -1,3 +1,14 @@
+### 查询mysql数据库中所有表名
+```
+1.所有数据库
+SHOW DATABASES
+2.数据库中所有表名
+select table_name from information_schema.tables where table_schema='当前数据库'
+eg:
+select table_name from information_schema.tables where table_schema='wyait'
+
+```
+
 ### mysql中dual表
 ```
 select 1 from dual

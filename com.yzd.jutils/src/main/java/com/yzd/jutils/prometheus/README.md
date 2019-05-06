@@ -15,3 +15,10 @@
  java进行正则数据提取
  
 ```
+
+### 监控场景分析
+```
+Zabbix 主要是服务器方面监控（磁盘、带宽等）；
+pinpoint、Skywalking、CAT主要是做分布式链路跟踪+应用性能，其中分布式链路跟踪是主要特点；
+如果你侧重应用应用性能（如：redis,tomcat,mysql,jvm等）可以使用Prometheus+influxdb+grafana
+```
