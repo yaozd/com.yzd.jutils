@@ -1,3 +1,22 @@
+### mysql中怎么将数字转换为字符串
+```
+123 + ''
+这样
+或者 CONCAT(123, '')
+```
+### [MySQL 字符串拼接](https://www.cnblogs.com/northeastTycoon/p/5505637.html)
+```
+ CONCAT(string1,string2,…) 
+ CONCAT_WS(separator,str1,str2,...)
+ eg:
+ SELECT CONCAT_WS('#',fd_login_id,fd_bp_id,fd_serial_amount,DATE_FORMAT(fd_create_time,'%Y%m%d'))as newId ,fd_id 
+ from dual
+```
+### [mySql中IFNULL的使用说明](https://www.cnblogs.com/chunyansong/p/5301896.html)
+```
+select stu.*,IFNULL(score.english_score,0) from tbl_student stu,tbl_score score where 1=1 and stu.stu_id=score.stu_id
+```
+
 ### 查询mysql数据库中所有表名
 ```
 1.所有数据库
