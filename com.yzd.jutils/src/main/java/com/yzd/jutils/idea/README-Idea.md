@@ -64,4 +64,6 @@ Shift+F6，重构 – 重命名
 Alt+Insert，可以生成构造器/Getter/Setter等
 Ctrl+Alt+V，可以引入变量。例如：new String(); 自动导入变量定义
 Ctrl+Alt+T，可以把代码包在一个块内，例如：try/catch
+Ctrl+Shift+U，大小写转化
+Ctrl+Q 显示注释文档==============推荐使用
 ```
