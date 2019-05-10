@@ -34,6 +34,34 @@ https://www.cnblogs.com/jimoer/p/8799437.html
 由于Intellij idea不支持显示ascii颜色，grep-console插件能很好的解决这个问题， 可以设置不同级别log的字体颜色和背景色.
 ```
 
--[推荐几个IDEA插件，Java开发者撸码利器。](https://www.cnblogs.com/jimoer/p/8799437.html)
--[IntelliJ Idea 常用几款插件（提高开发效率）](https://blog.csdn.net/weixin_41846320/article/details/82697818)
--[]()
+- [推荐几个IDEA插件，Java开发者撸码利器。](https://www.cnblogs.com/jimoer/p/8799437.html)
+- [IntelliJ Idea 常用几款插件（提高开发效率）](https://blog.csdn.net/weixin_41846320/article/details/82697818)
+- []()
+
+### 3.Idea快捷键
+- [IntelliJ Idea 常用快捷键列表](http://www.cnblogs.com/kuoAT/p/7726626.html)
+- 常用快捷键
+```
+Alt+回车 导入包,自动修正
+Ctrl+N   查找类
+Ctrl+Shift+N 查找文件
+Ctrl+Alt+L  格式化代码
+Ctrl+Alt+O 优化导入的类和包
+Alt+Insert 生成代码(如get,set方法,构造函数等)
+Ctrl+E或者Alt+Shift+C  最近更改的代码
+Ctrl+R 替换文本
+Ctrl+F 查找文本
+Ctrl+Shift+Space 自动补全代码
+Ctrl+空格 代码提示
+Ctrl+Alt+Space 类名或接口名提示
+Ctrl+P 方法参数提示
+Ctrl+Shift+Alt+N 查找类中的方法或变量
+Alt+Shift+C 对比最近修改的代码
+Ctrl+”+/-”，当前方法展开、折叠
+Ctrl+Shift+”+/-”，全部展开、折叠
+Ctrl+J  自动代码
+Shift+F6，重构 – 重命名
+Alt+Insert，可以生成构造器/Getter/Setter等
+Ctrl+Alt+V，可以引入变量。例如：new String(); 自动导入变量定义
+Ctrl+Alt+T，可以把代码包在一个块内，例如：try/catch
+```
