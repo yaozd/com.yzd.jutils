@@ -19,3 +19,11 @@
     var obj4Str=JSON.stringify(jsonobj); //可以将json对象转换成字符串
     var obj = JSON.parse(str); //由JSON字符串转换为JSON对象
     ```
+### >1.jquery开源类库
+- [Linqa.js 这是一个帮助我们像 LINQ 一样操作数组的扩展库](https://www.oschina.net/p/linqa-js/related?lang=0&p=69&sort=time)
+- [javascript开源大全](https://www.cnblogs.com/yiliweichinasoft/p/3819699.html)
+- [javaScript字符串工具类StringUtils详解](https://www.jb51.net/article/130051.htm)
+- [javascript常用工具类和公共方法合集](http://www.htmleaf.com/ziliaoku/qianduanjiaocheng/201505311944.html)
+- [30个值得收藏的CSS代码片段](http://www.htmleaf.com/ziliaoku/qianduanjiaocheng/201506011951.html)
+- []()
+- []()
