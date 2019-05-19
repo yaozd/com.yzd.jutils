@@ -47,3 +47,14 @@ G - 移动到最后一行
 g - 移动到第一行
 q / ZZ - 退出 less 命令
 ```
+- [expect简介和使用例子](https://www.cnblogs.com/iops/p/expect-tutorial-and-example.html)
+```
+#!/usr/bin/expect
+set ip XX.XX.XX.XX
+set timeout 40
+spawn ssh -p XX XX@$ip
+send "/bin/bash /home/reload/reload_schedule.sh\r"
+expect "]*"
+send "exit\r"
+expect eof
+```
