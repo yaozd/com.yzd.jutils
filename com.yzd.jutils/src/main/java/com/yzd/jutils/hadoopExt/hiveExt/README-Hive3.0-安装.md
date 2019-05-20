@@ -1,3 +1,6 @@
+### 1.hive-可视化工具
+- [hive数据库连接可视化工具DBeaver使用](http://itxw.net/article/238.html)
+
 ### hive-安装参考
 - []()
 - []()

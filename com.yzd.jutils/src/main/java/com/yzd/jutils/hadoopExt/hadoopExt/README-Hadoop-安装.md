@@ -5,7 +5,7 @@
 - []()
 ### 2.HDFS集群搭建实战
 - [实战案例玩转Hadoop系列3--HDFS集群搭建实战之集群环境准备](https://zhuanlan.zhihu.com/p/49459293)
-- []()
+- [CentOS 7搭建Apache Hadoop 3.1.1集群](https://blog.csdn.net/sealir/article/details/81953727)
 - []()
 ### 3.HDFS客户端
 - [实战案例玩转Hadoop系列6--HDFS客户端JAVA API实战](https://zhuanlan.zhihu.com/p/49613653)

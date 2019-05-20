@@ -14,6 +14,10 @@
     --------------
     $('body').on('click', '.but', function() {});
     ```
+- [JavaScript或jQuery模拟点击超链接和按钮](https://www.cnblogs.com/freeweb/p/4797872.html)
+```
+document.getElementById("roleListLi").click();
+```
 - [jquery，字符串转json对象，json对象转字符串](https://www.cnblogs.com/alsf/p/7528104.html)
     ```
     var obj4Str=JSON.stringify(jsonobj); //可以将json对象转换成字符串
