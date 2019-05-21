@@ -36,3 +36,16 @@
     ```
 - []()
 - []()
+### 2.问题-hive beeline 连接 User: root is not allowed to impersonate root
+- [hive beeline 连接 User: root is not allowed to impersonate root](https://ask.csdn.net/questions/758059)
+- [beeline连接hiveserver2报错：User: root is not allowed to impersonate root](https://blog.csdn.net/qq_16633405/article/details/82190440)
+- []()
+### 3.[[Hive]那些年我们踩过的Hive坑](https://blog.csdn.net/sunnyyoona/article/details/51648871)
+- []()
+
+### 4.Hive database does not exist 排查
+- [Hive database does not exist 排查](https://segmentfault.com/a/1190000017271897?utm_source=tag-newest)
+```
+jar包：
+mysql-connector-java-5.1.47.jar
+```

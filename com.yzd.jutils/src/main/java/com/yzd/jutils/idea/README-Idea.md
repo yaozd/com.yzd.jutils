@@ -66,4 +66,5 @@ Ctrl+Alt+V，可以引入变量。例如：new String(); 自动导入变量定�
 Ctrl+Alt+T，可以把代码包在一个块内，例如：try/catch
 Ctrl+Shift+U，大小写转化
 Ctrl+Q 显示注释文档==============推荐使用
+Ctrl+Shift+F9 编译-试用于devtools 热部署==============推荐使用
 ```
