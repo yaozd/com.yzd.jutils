@@ -18,6 +18,7 @@ public class Optional_Test {
         //为null给默认值--推荐MoreObjects方法-byArvin
         String ret=null;
         String val= MoreObjects.firstNonNull(ret, "默认值");//使用MoreObjects.firstNonNull
+
         //返回默认值-orElse()和orElseGet() 的不同之处
         Double d1=null;
         //返回对应的非空值。orElse() 方法仍然创建了 User 对象
