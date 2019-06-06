@@ -10,6 +10,7 @@ https://blog.csdn.net/cry970795248/article/details/82693888#comments
 - [Hive的insert操作](https://blog.csdn.net/yeruby/article/details/23039009)
 - [第十二天 - Hive基本操作 - Hive导入数据、统计数据 - HiveJDBC操作Hive](https://blog.csdn.net/cry970795248/article/details/82668597)
 - [一文搞定hive之insert into 和 insert overwrite与数据分区](https://blog.csdn.net/su83362368/article/details/78502542)
+- [sqoop从hive到mysql,mysql到hive](https://wenku.baidu.com/view/0dfa662cf8c75fbfc67db2ad.html)
 - []()
 
 ### 使用insert插入大量数据的个人经验总结
