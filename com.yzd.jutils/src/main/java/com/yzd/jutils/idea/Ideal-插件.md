@@ -11,6 +11,8 @@
 - SonarLint
 - VisualVM Launcher
 - Vue.js
+- Key promoter X
+- 
 - 
 - 
 
