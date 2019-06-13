@@ -30,3 +30,5 @@ bejson中有许多工具：
 - [在线文件大小(bit,bytes,KB,MB,GB,TB)转换换算](http://www.bejson.com/convert/filesize/)
 
 - [TCP/IP子网掩码计算换算](https://www.sojson.com/convert/subnetmask.html)
+
+- [汉字拼音在线转换](https://www.qqxiuzi.cn/zh/pinyin/)
