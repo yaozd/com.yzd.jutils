@@ -1,6 +1,12 @@
 
-> mall项目是一套电商系统，包括前台商城系统及后台管理系统
+> mall项目是一套电商系统，包括前台商城系统及后台管理系统（特别推荐参考byArvin-2019-06-14）
 - [https://github.com/macrozheng/mall](https://github.com/macrozheng/mall)
+- 商品管理：[功能结构图-商品.jpg](https://github.com/macrozheng/mall/blob/master/document/resource/mind_product.jpg)
+- 订单管理：[功能结构图-订单.jpg](https://github.com/macrozheng/mall/blob/master/document/resource/mind_order.jpg)
+- 促销管理：[功能结构图-促销.jpg](https://github.com/macrozheng/mall/blob/master/document/resource/mind_sale.jpg)
+- 内容管理：[功能结构图-内容.jpg](https://github.com/macrozheng/mall/blob/master/document/resource/mind_content.jpg)
+- 用户管理：[功能结构图-用户.jpg](https://github.com/macrozheng/mall/blob/master/document/resource/mind_member.jpg)
+
 ```
 备份：软件开发-JAVA=》J-H-互联网电商=》mall项目是一套电商系统-2019-04-01-1528.zip
 ```
