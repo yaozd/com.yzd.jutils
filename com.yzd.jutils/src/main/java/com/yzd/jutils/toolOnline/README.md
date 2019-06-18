@@ -25,3 +25,7 @@
 - [在线字数统计工具-汉字+数字+字母](http://www.mb5u.com/tool/zishutongji/)
 - [在线计算字符串长度-所有字符](http://tool.sufeinet.com/creater/ExeStringLen.aspx)
 - 
+
+### 3.格式转换工具
+- [格式工厂](http://www.pcfreetime.com/formatfactory/CN/index.html)
+- [怎么把mp4转换成mp3](https://jingyan.baidu.com/article/3f16e003a9c9292591c103f1.html)

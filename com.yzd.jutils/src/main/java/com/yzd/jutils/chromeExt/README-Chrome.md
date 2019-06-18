@@ -27,3 +27,8 @@ ctrl+shift+delete
 - [Save Page WE](https://chrome.google.com/webstore/detail/save-page-we/dhhpefjklgkmgeafimnjhojgjamoafof)-保存完整个html页面-方便日后查看-提供方：DW-dev
 - [Magnifying Glass (Hover Zoom)](https://chrome.google.com/webstore/detail/magnifying-glass-hover-zo/gfcbebjdigncefnokoncehghgfndjcgn)-放大镜-提供方：Yubi
 - [Fatkun图片批量下载](https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf)-提供方：aituxiu
+
+### - [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)-提供方：tampermonkey.net
+- [Download Youtube videos and subtitles](https://greasyfork.org/zh-CN/scripts/8426-download-youtube-videos-and-subtitles)-提供方：Find
+- []()
+- []()
