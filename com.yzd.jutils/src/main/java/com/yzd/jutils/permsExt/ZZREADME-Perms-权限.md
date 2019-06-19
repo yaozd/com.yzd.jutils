@@ -20,3 +20,6 @@
  ### 通过js做权限控制-参考：
  - [js在html中的加载执行顺序](https://www.cnblogs.com/lindaWei/archive/2012/04/05/2433454.html)
  - [jQuery Ajax 设置请求头](https://blog.csdn.net/WRian_Ban/article/details/70257261)
+ 
+ ### 非登录情况下的TOKEN设置问题
+ - [token-nolgin.html](http://localhost:1222/html/token-nolgin.html)-非登录情况下的TOKEN设置问题
