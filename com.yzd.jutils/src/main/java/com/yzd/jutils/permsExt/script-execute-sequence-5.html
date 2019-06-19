@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js在html中的加载执行顺序-最先加载当前用户权限</title>
+    <script src="/content/js/lib/jquery.js"></script>
+    <!--最先执行脚本的是/script/perms-->
+    <!--PS:</script>起到一个缓冲的作用，必须带上-->
+    <script type="text/javascript" src="/content/script/perms/load.js"></script>
+    <script>
+        alert(permission.data);
+        alert("1-最先执行");
+    </script>
+</head>
+<body onload="alert('3-最后执行');">
+<h1>Js在html中的加载执行顺序-使用ajax同步请求的方式，保证脚本执行的顺序</h1>
+</body>
+<script>
+    alert("2-接着执行");
+</script>
+</html>
