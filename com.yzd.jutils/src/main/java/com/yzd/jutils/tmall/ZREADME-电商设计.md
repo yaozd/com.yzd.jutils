@@ -8,6 +8,7 @@
 - 用户管理：[功能结构图-用户.jpg](https://github.com/macrozheng/mall/blob/master/document/resource/mind_member.jpg)
 
 ```
+备份：软件开发-JAVA=》J-H-互联网电商=》mall-2019-06-25-0929-[完整的电商产品发布与订单设计参考].zip
 备份：软件开发-JAVA=》J-H-互联网电商=》mall项目是一套电商系统-2019-04-01-1528.zip
 ```
 
