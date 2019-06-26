@@ -1,4 +1,6 @@
 ## [https://github.com/looly/hutool](https://github.com/looly/hutool)
+###　中文文档
+- [https://www.hutool.cn/docs/#/](https://www.hutool.cn/docs/#/)
 ###　hutool工具类推荐-byArvin-2019-06-11-1004
 - 工具类比较多，也比较实用
 - 验证码的功能不错，比之前的好
@@ -28,3 +30,136 @@ hutool-poi 针对POI中Excel的封装
 方法集中在一个类中，配合IDE查找使用起来是十分便利的。
 于是Hutool将JDK中许多的类总结抽象为一个方法，这一原则使用最多的就是流的相关方法，这些方法很好的隐藏了XXXInputStream、XXXReader等的复杂性。
 ```
+
+### Maven
+```
+hutool-all
+hutool-aop
+hutool-bloomFilter
+hutool-cache
+hutool-captcha
+hutool-core
+hutool-cron
+hutool-crypto
+hutool-db
+hutool-dfa
+hutool-extra
+hutool-http
+hutool-json
+hutool-log
+hutool-parent
+hutool-poi
+hutool-script
+hutool-setting
+hutool-socket
+hutool-system
+
+-----------------------------
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-all</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-core</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-aop</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-bloomFilter</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-cache</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-captcha</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-core</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-cron</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-crypto</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-db</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-dfa</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-extra</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-http</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-json</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-log</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-parent</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-poi</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-script</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-setting</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-socket</artifactId>
+    <version>4.5.15</version>
+</dependency>
+<dependency>
+    <groupId>cn.hutool</groupId>
+    <artifactId>hutool-system</artifactId>
+    <version>4.5.15</version>
+</dependency>
+
+```
+		

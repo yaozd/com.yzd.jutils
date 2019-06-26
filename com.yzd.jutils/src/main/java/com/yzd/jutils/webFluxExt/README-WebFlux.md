@@ -1,6 +1,13 @@
 ### webflux实现socket-通过心跳，保持客户端与服务器端长链接
 - [https://github.com/yaozd/com.yzd.webflux.root](https://github.com/yaozd/com.yzd.webflux.root)-byArvin
-
+## 使用思路--heart
+1. 通过心跳，保持客户端与服务器端长链接
+2. 通过 sock.send("Hello-World");每3秒发送一次请求，获取到用户想要的信息-（此处是轮训方式）
+3. 使用场景：
+    - 可用于活动通知与订单通知。
+    - 在线人数与在线时长（用于智能分析）
+    - 活动推送等
+    
 #### WebFlux
 - [Spring Boot 实践折腾记（13）：使用WebFlux构建响应式「推送API 」](https://blog.csdn.net/mickjoust/article/details/80241104)
 - [springboot2学习-webflux与websocke](https://blog.csdn.net/j903829182/article/details/80545876)
@@ -9,6 +16,9 @@
 使用weblux实现了websocket的异步通信，底层用到了reactor技术
 源码地址：https://github.com/wj903829182/springcloud5/tree/master/webflux_websocket
 ```
+> **Jmeter之五：websocket性能测试实践**
+
+- Jmeter之五：websocket测试
 
 > **性能测试实践**
 
