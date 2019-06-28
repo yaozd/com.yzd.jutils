@@ -25,7 +25,12 @@
  - influxdb+grafana-Test237-河边走用户分析
  - RabbitMQ[https://github.com/yaozd/rabbitmq/tree/dev-yzd](https://github.com/yaozd/rabbitmq/tree/dev-yzd)
  
-    1.公平调试
+    1.公平调度
     2.补偿机制
     3.幂等处理
  - Kettle-数据转换同步
+ - 长连接webflux[https://github.com/yaozd/com.yzd.webflux.root](https://github.com/yaozd/com.yzd.webflux.root)
+    - 在线统计
+    - 消息推送
+ - CicadasCms-云众和十
+ 
