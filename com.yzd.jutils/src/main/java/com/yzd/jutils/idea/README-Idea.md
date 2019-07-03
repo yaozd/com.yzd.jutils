@@ -68,3 +68,5 @@ Ctrl+Shift+U，大小写转化
 Ctrl+Q 显示注释文档==============推荐使用
 Ctrl+Shift+F9 编译-试用于devtools 热部署==============推荐使用
 ```
+
+## Endpoints查看当前URL地址

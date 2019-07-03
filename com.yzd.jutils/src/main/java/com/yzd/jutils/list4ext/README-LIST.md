@@ -9,3 +9,14 @@ public static Object deserialize(String cacheDataInRedis,Class returnType,  Clas
         }
     }
 ```
+
+## String数据转List
+```
+//准备一个String数组
+String[] strs = {"aa","bb","cc"};
+//String数组转List
+List<String> strsToList1= Arrays.asList(strs);
+for(String s:strsToList1){
+ System.out.println(s);
+}
+```
