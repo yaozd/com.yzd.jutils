@@ -1,5 +1,7 @@
 ### consul官网
 -[https://www.consul.io/downloads.html](https://www.consul.io/downloads.html)
+### 下载备份
+> 百度云=》开发工个=》C-Counsul服务发现
 
 ### consul参考
 -  [rickfast/consul-client](https://github.com/rickfast/consul-client)
