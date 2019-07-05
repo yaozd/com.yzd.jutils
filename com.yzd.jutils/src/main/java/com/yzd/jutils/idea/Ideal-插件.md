@@ -9,10 +9,17 @@
 - GenerateAllSetter
 - Lombok Plugin
 - SonarLint
-- VisualVM Launcher
+- VisualVM Launcher 
 - Vue.js
 - Key promoter X
-- 
+- InnerBuilder (Idea 类builder模式插件安装方法)
+     ```
+     https://soberchina.iteye.com/blog/2330167
+     ---
+     public static Builder newBuilder() {
+             return new Builder();
+         }
+     ```
 - 
 - 
 
