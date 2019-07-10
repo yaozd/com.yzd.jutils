@@ -37,7 +37,8 @@
  - [com.yzd.machinelearninginaction.root](https://github.com/yaozd/com.yzd.machinelearninginaction.root)-机器学习
  - [com.yzd.prometheus.influxdb.root](https://github.com/yaozd/com.yzd.prometheus.influxdb.root)-Grafana+Prometheus打造springboot监控平台
  - [com.yzd.shiro.root](https://github.com/yaozd/com.yzd.shiro.root)-shiro权限
- - []()
- - []()
+ - 订单与产品设计思路
+    - 订单流量控制-通过令牌桶控制同一时间请求的数，保证订单正常完成
+    - 产品列表，统一缓存，然后再通过状态修改实时数据
 
  
