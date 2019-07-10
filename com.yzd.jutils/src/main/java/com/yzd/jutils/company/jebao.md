@@ -33,4 +33,11 @@
     - 在线统计
     - 消息推送
  - CicadasCms-云众和十
+ - [com.yzd.influxdb.root](https://github.com/yaozd/com.yzd.influxdb.root)-解决-InfluxDB 插入数据 “数据丢失”
+ - [com.yzd.machinelearninginaction.root](https://github.com/yaozd/com.yzd.machinelearninginaction.root)-机器学习
+ - [com.yzd.prometheus.influxdb.root](https://github.com/yaozd/com.yzd.prometheus.influxdb.root)-Grafana+Prometheus打造springboot监控平台
+ - [com.yzd.shiro.root](https://github.com/yaozd/com.yzd.shiro.root)-shiro权限
+ - []()
+ - []()
+
  
