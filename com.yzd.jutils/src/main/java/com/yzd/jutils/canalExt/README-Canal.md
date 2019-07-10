@@ -1,13 +1,55 @@
 # CANAL
 - [官网](https://github.com/alibaba/canal)
 - [QuickStart](https://github.com/alibaba/canal/wiki/QuickStart)
+- [aliyun RDS QuickStart-阿里云](https://github.com/alibaba/canal/wiki/aliyun-RDS-QuickStart)
 - [ClientAdapter](https://github.com/alibaba/canal/wiki/ClientAdapter)
     - canal 1.1.1版本之后, 增加客户端数据落地的适配及启动功能, 目前支持功能:
     - ES
     - HBASE
     - MYSQL
  - [Canal Kafka RocketMQ QuickStart](https://github.com/alibaba/canal/wiki/Canal-Kafka-RocketMQ-QuickStart)  
+ 
+ ## instance.properties参数列表
+- [instance.properties参数列表](https://github.com/alibaba/canal/wiki/AdminGuide)
+- canal.instance.filter.regex
+    ```
+    PS:白名单规则
+    订阅实例中所有的数据库和表
+    mysql 数据解析关注的表，Perl正则表达式. 
+    多个正则之间以逗号(,)分隔，转义符需要双斜杠(\\)
+    常见例子：
+    1.  所有表：.*   or  .*\\..*
+    2.  canal schema下所有表： canal\\..*
+    3.  canal下的以canal打头的表：canal\\.canal.*
+    4.  canal schema下的一张表：canal\\.test1
+    5.  多个规则组合使用：canal\\..*,mysql.test1,mysql.test2 (逗号分隔)
+    ```
+- canal.instance.filter.black.regex
+    ```
+     PS:黑名单规则
+     订阅实例中所有的数据库和表	
+     mysql 数据解析表的黑名单，表达式规则见白名单的规则
+    ```
 
+## canal.properties文件-部分参数说明
+```
+#设置要监听的mysql服务器的地址和端口
+canal.instance.master.address = 127.0.0.1:3306
+#设置一个可访问mysql的用户名和密码并具有相应的权限，本示例用户名、密码都为canal
+canal.instance.dbUsername = canal
+canal.instance.dbPassword = canal
+#连接的数据库
+canal.instance.defaultDatabaseName =test
+#订阅实例中所有的数据库和表
+canal.instance.filter.regex = .*\\..* 
+#连接canal的端口
+canal.port= 11111
+#监听到的数据变更发送的队列
+canal.destinations= example
+#连接模式
+# tcp, kafka, RocketMQ
+canal.serverMode = tcp
+```
 ## 准备工作
 ```
 准备
