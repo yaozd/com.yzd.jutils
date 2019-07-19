@@ -11,12 +11,12 @@ import java.util.function.Predicate;
 
 @Service
 public class UserService {
-    @RedisCache(key = "getUser")
+    @RedisCache(key = CacheKeyConstant.UserService_getUser)
     public Integer get(Integer id) {
         PrintUtil.outLn("UserService.get()=step 01");
         return 1;
     }
-    @RedisCache(key = "getEmpty")
+    @RedisCache(key = CacheKeyConstant.UserService_getEmpty)
     public void empty(){
 
     }
