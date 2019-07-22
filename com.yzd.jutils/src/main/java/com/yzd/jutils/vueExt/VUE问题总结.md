@@ -38,3 +38,10 @@ v-show：元素是真实存在单不显示。
 使用的是v-if的时候，aaa这个div是不存在的，这就导致bbb这个div就变成了第一个，最终first-child对bbb这个div生效
 如果是用v-show，则aaa这个div只是隐藏，实际是存在的，所以first-child是对aaa这个div生效，所以看不到
 ```
+3.vue-解决首页轮播图抖动问题
+- [vue项目中导入swiper插件的方法](https://www.zhangshengrong.com/p/bYXxZY2naZ/)
+
+4.vue移动端裁剪图片
+- [vue移动端裁剪图片结合插件Cropper的使用实例代码](https://www.zhangshengrong.com/p/yOXD7YVNBk/)
+- [vue实现移动端图片裁剪上传功能](https://www.zhangshengrong.com/p/nDa939PXjb/)
+- []()
