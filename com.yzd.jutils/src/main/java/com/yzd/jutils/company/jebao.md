@@ -42,4 +42,7 @@
     - 产品列表，统一缓存，然后再通过状态修改实时数据
 - 应急中心数据推送
     - 通过data-monitor表实现系统隔离，作用：易于维护与系统隔离。
+- 实现Nginx动态配置（nginx动态负载均衡）：Nginx+Upsync+Consul
+- 流量控制方案-阿里云Sentinel
+    - sentinel控制台监控数据持久化【InfluxDB】
  
