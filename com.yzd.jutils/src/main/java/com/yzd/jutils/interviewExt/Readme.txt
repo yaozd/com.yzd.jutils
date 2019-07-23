@@ -163,3 +163,40 @@ https://blog.csdn.net/chang_ge/article/details/80262115
  而CyclicBarrierton通过工作线程调用await从而阻塞工作线程，直到所有工作线程达到屏障。
 
  https://www.cnblogs.com/leeSmall/p/8439263.html
+
+ 问题14：多线程callable和runnable的区别
+
+Thread、Runnable、Callable接口实现多线程的区别
+观察以上三种实现方式和输出的结果可得
+1.继承Thread方式，每次new Thread都是独立的，资源不共享,而Runnable资源共享；
+2.实现Callable接口方式，只能运行一次FutureTask
+Thread类与Runnable接口实现多线程的区别
+1.Thread类是Runnable接口的子类，使用runnable接口实现多线程可以避免单继承局限；
+2.Runnable接口实现的多线程可以比Thread类实现的多线程更加清楚的描述数据共享的概念。
+如何理解：
+因为一个线程只能启动一次，通过Thread实现线程时，线程和线程所要执行的任务是捆绑在一起的。也就使得一个任务只能启动一个线程，不同的线程执行的任务是不相同的，所以没有必要，也不能让两个线程共享彼此任务中的资源。
+通过Runnable方式实现的线程，实际是开辟一个线程，将任务传递进去，由此线程执行。可以实例化多个 Thread对象，将同一任务传递进去，也就是一个任务可以启动多个线程来执行它。这些线程执行的是同一个任务，所以他们的资源是共享。
+Calleble接口
+1.最大的特点就是可以通过FutureTask获得线程核心处理方法的返回值(run方法是无返回值的
+2.get方法会阻塞主线程来等待任务完成。FutureTask非常适合用于耗时的计算，主线程可以在完成自己的任务后，再去获取结果
+FutureTask被多次调用，依然只会执行一次Runnable任务
+参考：
+https://www.cnblogs.com/qiutianyou/p/10056465.html
+
+问题15：创建线程池每个参数有什么作用
+corePoolSize：
+默认线程数量（核心线程数量），在创建线程池之后，线程池里没有任何线程，等到有任务进来时才创建线程去执行任务（懒加载）。当线程池中的线程数达到corePoolSize的值后，就会把到达的任务放到缓存队列里；
+maximumPoolSize：
+最大线程数量，表明线程中最多能创建的线程数量。当核心线程+非核心线程达到这个数值后，后续任务将会根据RejectedExecutionHandler处理器来进行饱和策略处理；
+keepAliveTime：
+非核心线程闲置时的存活时间，超过该时长，非核心线程就会被回收；
+TimeUnit：
+keepAliveTime时长对应的单位（天、小时、分钟、秒、毫秒、微妙、纳秒）；
+BlockingQueue：
+阻塞队列，存储等待执行的任务；
+ThreadFactory：
+线程工厂，用来创建线程；
+RejectedExecutionHandler：
+队列已满，而且任务量大于最大线程数量的异常处理策略
+---------------------
+原文：https://blog.csdn.net/sinat_40880767/article/details/93890900

@@ -1,4 +1,13 @@
 ###A.问题
+- [mysql sleep连接过多的完美解决办法](https://www.cnblogs.com/centos-python/articles/8522127.html)
+```
+当然，更根本的方法，还是从以上三点排查之：
+1.　程序中，不使用持久链接，即使用mysql_connect而不是pconnect。
+2.   程序执行完毕，应该显式调用mysql_close
+3.　只能逐步分析系统的SQL查询，找到查询过慢的SQL,优化之
+```
+
+###A.问题
 
 JDBC中The server time zone value '???ú±ê×??±??' is ............. 的错误
 出现这个的原因是因为 mysql返回的时间总是有问题，比实际时间要早8小时--问题解决
