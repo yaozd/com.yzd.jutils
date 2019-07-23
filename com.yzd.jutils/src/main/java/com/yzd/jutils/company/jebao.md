@@ -45,4 +45,7 @@
 - 实现Nginx动态配置（nginx动态负载均衡）：Nginx+Upsync+Consul
 - 流量控制方案-阿里云Sentinel
     - sentinel控制台监控数据持久化【InfluxDB】
+- Nginx-服务自动发现
+    - [https://github.com/yaozd/nginx.ha.example](https://github.com/yaozd/nginx.ha.example)
+
  

@@ -1,4 +1,5 @@
 ## Nginx-服务自动发现
+- [https://github.com/yaozd/nginx.ha.example](https://github.com/yaozd/nginx.ha.example)
 
 ### 设计思路
 - 实现Nginx动态配置（nginx动态负载均衡）：Nginx+Upsync+Consul
