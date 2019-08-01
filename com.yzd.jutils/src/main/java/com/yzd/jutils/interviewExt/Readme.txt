@@ -200,3 +200,11 @@ RejectedExecutionHandler：
 队列已满，而且任务量大于最大线程数量的异常处理策略
 ---------------------
 原文：https://blog.csdn.net/sinat_40880767/article/details/93890900
+
+问题16：Java中sleep方法和wait方法的区别---线程
+最主要是sleep方法没有释放锁，而wait方法释放了锁，使得其他线程可以使用同步控制块或者方法(锁代码块和方法锁)。
+sleep方法属于Thread类中方法，表示让一个线程进入睡眠状态，等待一定的时间之后，自动醒来进入到可运行状态，不会马上进入运行状态
+wait属于Object的成员方法，一旦一个对象调用了wait方法，必须要采用notify()和notifyAll()方法唤醒该进程
+---------------------
+原文：https://blog.csdn.net/krismile__qh/article/details/89024378
+
