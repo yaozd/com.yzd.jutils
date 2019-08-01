@@ -14,11 +14,18 @@
     - 百度云=》电子书=》S-数据库=》mysql36条军规.pdf
 - [单表60亿记录等大数据场景的MySQL优化和运维之道 | 高可用架构](https://mp.weixin.qq.com/s/-TRiWDYFhaO7wqjMPTNGBA)-阅读二
 - [mysql数据库知识面试准备-优化篇](https://blog.csdn.net/qq_42815122/article/details/85953238)
+- [MySQL 性能优化神器 Explain 使用分析](https://segmentfault.com/a/1190000008131735)
 
 > SPRING面试
 - [Spring Bean的生命周期](https://www.cnblogs.com/redcool/p/6397398.html)
 - [IOC容器中bean的生命周期](https://www.cnblogs.com/xujian2014/p/5049483.html)
 - [JAVA IO中的设计模式](https://www.cnblogs.com/wxgblogs/p/5649933.html)
+- []()
+
+> RPC面试
+- [dubbo实现原理简单介绍](https://www.cnblogs.com/steven520213/p/7606598.html)
+- []()
+- []()
 - []()
 
 > JVM面试
