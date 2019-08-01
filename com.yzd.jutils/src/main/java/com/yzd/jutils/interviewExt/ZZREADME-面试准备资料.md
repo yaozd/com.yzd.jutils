@@ -1,3 +1,11 @@
+## 面试重要参资料
+- [ 技术面试需要掌握的基础知识整理](https://github.com/CL0610/Interview-Notebook)
+- [Java并发知识点总结](https://github.com/CL0610/Java-concurrency)
+- [后端架构师技术图谱](https://github.com/CL0610/architect-awesome)
+- [MySQL-learning](https://github.com/CL0610/MySQL-learning)
+- [com.yzd.document.xmind.root](https://github.com/yaozd/com.yzd.document.xmind.root)-YZD总结的面试知识点byArvin
+
+
 ## 面试准备资料
 
 > JVM面试
@@ -28,8 +36,8 @@
 - []()
 - []()
 
-> JVM面试
-- []()
+> Java 并发知识合集面试
+- [Java 并发知识合集](https://github.com/CL0610/Java-concurrency)
 - []()
 - []()
 - []()
