@@ -208,3 +208,13 @@ wait属于Object的成员方法，一旦一个对象调用了wait方法，必须
 ---------------------
 原文：https://blog.csdn.net/krismile__qh/article/details/89024378
 
+问题16：synchronized(this) 与synchronized(class) 之间的区别
+1、对于静态方法，由于此时对象还未生成，所以只能采用类锁；
+
+2、只要采用类锁，就会拦截所有线程，只能让一个线程访问。
+
+3、对于对象锁（this），如果是同一个实例，就会按顺序访问，但是如果是不同实例，就可以同时访问。
+
+4、如果对象锁跟访问的对象没有关系，那么就会都同时访问。
+---------------------
+原文：https://www.cnblogs.com/huansky/p/8869888.html
