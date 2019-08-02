@@ -208,7 +208,7 @@ wait属于Object的成员方法，一旦一个对象调用了wait方法，必须
 ---------------------
 原文：https://blog.csdn.net/krismile__qh/article/details/89024378
 
-问题16：synchronized(this) 与synchronized(class) 之间的区别
+问题17：synchronized(this) 与synchronized(class) 之间的区别
 1、对于静态方法，由于此时对象还未生成，所以只能采用类锁；
 
 2、只要采用类锁，就会拦截所有线程，只能让一个线程访问。
@@ -218,3 +218,8 @@ wait属于Object的成员方法，一旦一个对象调用了wait方法，必须
 4、如果对象锁跟访问的对象没有关系，那么就会都同时访问。
 ---------------------
 原文：https://www.cnblogs.com/huansky/p/8869888.html
+
+问题18：ThreadLocal内存泄漏原因以及避免方案
+但如果是在线程池中，线程执行完后不被回收，而是返回线程池中，Thread有个强引用指向ThreadLocalMap,ThreadLocalMap有强引用指向Entry,导致value无法被回收，一直存在内存中。在执行了ThreadLocal.set()方法之后一定要记得使用ThreadLocal.remove(),将不要的数据移除掉，避免内存泄漏。
+---------------------
+原文：https://blog.csdn.net/wy1404081737/article/details/81489080
