@@ -7,6 +7,19 @@
 - 内容管理：[功能结构图-内容.jpg](https://github.com/macrozheng/mall/blob/master/document/resource/mind_content.jpg)
 - 用户管理：[功能结构图-用户.jpg](https://github.com/macrozheng/mall/blob/master/document/resource/mind_member.jpg)
 
+> zheng：提供整套公共微服务服务模块：集中权限管理（单点登录）、内容管理、支付中心、用户管理（支持第三方登录）、微信平台、存储系统、配置中心、日志分析、任务和通知等，支持服务治理、监控和追踪，努力为中小型企业打造全方位J2EE企业级开发解决方案
+- [https://github.com/shuzheng/zheng](https://github.com/shuzheng/zheng)
+    - 集中权限管理（单点登录）
+    - 内容管理
+    - 支付中心
+    - 用户管理（支持第三方登录）
+    - 微信平台
+    - 存储系统
+    - 配置中心
+    - 架构图示例参考
+
+
+
 ```
 备份：软件开发-JAVA=》J-H-互联网电商=》mall-2019-06-25-0929-[完整的电商产品发布与订单设计参考].zip
 备份：软件开发-JAVA=》J-H-互联网电商=》mall项目是一套电商系统-2019-04-01-1528.zip

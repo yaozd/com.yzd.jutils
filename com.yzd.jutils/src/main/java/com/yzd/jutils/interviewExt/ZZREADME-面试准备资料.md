@@ -1,4 +1,6 @@
 ## 面试重要参资料
+- [互联网 Java 工程师进阶知识完全扫盲](https://github.com/doocs/advanced-java)-阅读一
+- [后端架构师技术图谱](https://github.com/xingshaocheng/architect-awesome)-阅读二
 - [ 技术面试需要掌握的基础知识整理](https://github.com/CL0610/Interview-Notebook)
 - [Java并发知识点总结](https://github.com/CL0610/Java-concurrency)
 - [后端架构师技术图谱](https://github.com/CL0610/architect-awesome)
@@ -38,6 +40,18 @@
 
 > Java 并发知识合集面试
 - [Java 并发知识合集](https://github.com/CL0610/Java-concurrency)
+- [40个Java多线程问题总结](http://www.sohu.com/a/198614776_115128)
+- []()
+- []()
+
+> 源码面试
+- [HashMap其实就那么一回事儿之源码浅析](https://www.cnblogs.com/dongying/p/4022795.html)
+    - 为什么此处会用链表来实现？
+    ```
+    其实此处用链表是为了解决hash一致的时候的冲突,当两个或者多个hash一致的时候，
+    那么就将这两个或者多个元素存储在一个位置，用next来保存对下个元素的引用
+    ```
+- []()
 - []()
 - []()
 - []()
