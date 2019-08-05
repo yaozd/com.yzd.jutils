@@ -6,7 +6,7 @@
 - [后端架构师技术图谱](https://github.com/CL0610/architect-awesome)
 - [MySQL-learning](https://github.com/CL0610/MySQL-learning)
 - [com.yzd.document.xmind.root](https://github.com/yaozd/com.yzd.document.xmind.root)-YZD总结的面试知识点byArvin
-
+- JAVA面试_中华石杉老师_突击第一季（百度-》电子书-》F-分布式）
 
 ## 面试准备资料
 
