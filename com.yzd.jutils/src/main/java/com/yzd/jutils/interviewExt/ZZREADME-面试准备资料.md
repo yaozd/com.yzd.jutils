@@ -7,6 +7,7 @@
 - [MySQL-learning](https://github.com/CL0610/MySQL-learning)
 - [com.yzd.document.xmind.root](https://github.com/yaozd/com.yzd.document.xmind.root)-YZD总结的面试知识点byArvin
 - JAVA面试_中华石杉老师_突击第一季（百度-》电子书-》F-分布式）
+- JAVA核心面试知识整理.pdf(百度云=》我的文档=》M-面试=》JAVA核心面试知识整理.pdf)-平时没事就可以阅读。
 
 ## 面试准备资料
 
@@ -34,7 +35,7 @@
 
 > RPC面试
 - [dubbo实现原理简单介绍](https://www.cnblogs.com/steven520213/p/7606598.html)
-- []()
+- [dubbo面试题！会这些，说明你真正看懂了dubbo源码](https://www.jianshu.com/p/cd7e17d26450)
 - []()
 - []()
 
