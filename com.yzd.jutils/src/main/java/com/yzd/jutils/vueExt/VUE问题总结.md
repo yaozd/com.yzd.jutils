@@ -45,3 +45,7 @@ v-show：元素是真实存在单不显示。
 - [vue移动端裁剪图片结合插件Cropper的使用实例代码](https://www.zhangshengrong.com/p/yOXD7YVNBk/)
 - [vue实现移动端图片裁剪上传功能](https://www.zhangshengrong.com/p/nDa939PXjb/)
 - []()
+
+5.vue页面闪烁[解决]
+- [vue页面闪烁[解决]](https://blog.csdn.net/museions/article/details/78549481)
+- [vue -- v-cloak解决刷新或者加载出现闪烁（显示变量）](https://blog.csdn.net/bobobocai/article/details/70676951)
