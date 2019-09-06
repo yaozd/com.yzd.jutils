@@ -25,3 +25,7 @@
  rsyslog-mmkubernetes.x86_64                 8.24.0-34.el7              base     
 
 ```
+> grep
+```
+grep "ServiceExecutor.invoke "  wechat-service-86f6f4c7c4-wqfpf_application.2019-09-06.log | grep "cost:" | grep "userAuthorization"
+```

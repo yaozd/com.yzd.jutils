@@ -4,9 +4,7 @@ import com.yzd.jutils.print.PrintUtil;
 import org.junit.Test;
 
 import java.util.Date;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 /**
  * Created by zd.yao on 2017/9/14.
@@ -52,5 +50,29 @@ public class _MainTest {
         //endregion
         PrintUtil.outLn("End currentTimeMillis=" + System.currentTimeMillis());
         PrintUtil.outLn("End currentTimeMillis=" + new Date());
+    }
+
+    @Test
+    public void thread_await() throws InterruptedException {
+        ExecutorService executor = new ThreadPoolExecutor(10000, 10000, 5L, TimeUnit.SECONDS, new LinkedBlockingDeque<>());
+        Object ob=new Object();
+        for (int i = 0; i < 1000; i++) {
+            executor.execute(new Runnable() {
+                @Override
+                public void run() {
+                    synchronized (ob) {
+                        PrintUtil.outLn(1);
+                        try {
+                            //TimeUnit.SECONDS.sleep(500);
+                            TimeUnit.SECONDS.sleep(5);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            });
+        }
+
+        executor.awaitTermination(500,TimeUnit.MINUTES);
     }
 }
