@@ -52,15 +52,61 @@ public class _MainTest {
         PrintUtil.outLn("End currentTimeMillis=" + new Date());
     }
 
+    /**
+     * 模拟-Java 线程状态之 BLOCKED
+     * https://my.oschina.net/goldenshaw/blog/706663
+     * java.lang.Thread.State: WAITING
+     * java.lang.Thread.State: BLOCKED
+     * @throws InterruptedException
+     */
     @Test
-    public void thread_await() throws InterruptedException {
+    public void thread_blocked() throws InterruptedException {
         ExecutorService executor = new ThreadPoolExecutor(10000, 10000, 5L, TimeUnit.SECONDS, new LinkedBlockingDeque<>());
         Object ob=new Object();
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 10; i++) {
             executor.execute(new Runnable() {
                 @Override
                 public void run() {
                     synchronized (ob) {
+                        PrintUtil.outLn(1);
+                        try {
+                            //TimeUnit.SECONDS.sleep(500);
+                            TimeUnit.SECONDS.sleep(2000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            });
+        }
+
+        executor.awaitTermination(500,TimeUnit.MINUTES);
+    }
+
+    /**
+     * Java 线程状态之 TIMED_WAITING
+     *
+     * @throws InterruptedException
+     */
+    //Java 线程状态之 WAITING
+    //https://my.oschina.net/goldenshaw/blog/802620
+    @Test
+    public void thread_await() throws InterruptedException {
+        ExecutorService executor = new ThreadPoolExecutor(10000, 10000, 5L, TimeUnit.SECONDS, new LinkedBlockingDeque<>());
+        Object ob=new Object();
+        for (int i = 0; i < 10; i++) {
+            executor.execute(new Runnable() {
+                @Override
+                public void run() {
+                    synchronized (ob) {
+                        try {
+                            if(System.currentTimeMillis()>1000){
+                                ob.wait();
+                            }
+
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                         PrintUtil.outLn(1);
                         try {
                             //TimeUnit.SECONDS.sleep(500);
