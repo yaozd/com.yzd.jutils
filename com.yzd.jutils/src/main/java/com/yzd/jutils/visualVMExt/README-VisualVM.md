@@ -13,4 +13,5 @@ visualvm新访问地址：https://visualvm.github.io/index.html
 ###　Visual插件
 - Threads Inspector 插件
     - 方便thread dump的调试
--GC 插件
+    
+- GC 插件
