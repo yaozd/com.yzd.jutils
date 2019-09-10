@@ -15,3 +15,6 @@ visualvm新访问地址：https://visualvm.github.io/index.html
     - 方便thread dump的调试
     
 - GC 插件
+
+- VisualVM-BufferMonitor 插件
+ - 方便调试netty的堆外内存

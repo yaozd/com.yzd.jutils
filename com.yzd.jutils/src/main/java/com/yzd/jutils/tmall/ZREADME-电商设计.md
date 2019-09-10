@@ -18,7 +18,8 @@
     - 配置中心
     - 架构图示例参考
 
-
+> spring cloud + vue + oAuth2.0全家桶实战，前后端分离模拟商城，完整的购物流程、后端运营平台，可以实现快速搭建企业级微服务项目。支持微信登录等三方登录
+- [paascloud-master](https://github.com/paascloud/paascloud-master)
 
 ```
 备份：软件开发-JAVA=》J-H-互联网电商=》mall-2019-06-25-0929-[完整的电商产品发布与订单设计参考].zip

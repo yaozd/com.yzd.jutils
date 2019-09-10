@@ -1,4 +1,5 @@
 ## 面试重要参资料
+- [To Be Top Javaer - Java工程师成神之路](https://github.com/hollischuang/toBeTopJavaer)
 - [互联网 Java 工程师进阶知识完全扫盲](https://github.com/doocs/advanced-java)-阅读一
 - [后端架构师技术图谱](https://github.com/xingshaocheng/architect-awesome)-阅读二
 - [ 技术面试需要掌握的基础知识整理](https://github.com/CL0610/Interview-Notebook)
