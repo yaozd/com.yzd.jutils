@@ -10,6 +10,14 @@ rabbitmq-springboot
 https://github.com/AAA-AA/rabbitmq-springboot
 
 ```
+### [springboot整合rabbitmq的五种模式,开启的消息确认机制](https://github.com/a870368162/SpringBoot-RabbitMQ)
+```
+SpringBoot-RabbitMQ
+https://github.com/a870368162/SpringBoot-RabbitMQ
+springboot整合rabbitmq的五种模式,
+开启的消息确认机制,持久化了交换机,队列以及消息,保证非极端情况下消息的可靠性,新增了死信队列,用于处理定时任务,
+如订单超时未支付自动取消
+```
 
 > MQ对比选型
 - [Redis与RabbitMQ作为消息队列的比较](https://blog.csdn.net/jordandandan/article/details/68946839)

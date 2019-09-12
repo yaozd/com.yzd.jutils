@@ -1,6 +1,15 @@
 > Spring-boot-RabbitMQ参考代码-byArvin
 - [https://github.com/yaozd/rabbitmq/tree/dev-yzd](https://github.com/yaozd/rabbitmq/tree/dev-yzd)
 
+### [springboot整合rabbitmq的五种模式,开启的消息确认机制](https://github.com/a870368162/SpringBoot-RabbitMQ)
+```
+SpringBoot-RabbitMQ
+https://github.com/a870368162/SpringBoot-RabbitMQ
+springboot整合rabbitmq的五种模式,
+开启的消息确认机制,持久化了交换机,队列以及消息,保证非极端情况下消息的可靠性,新增了死信队列,用于处理定时任务,
+如订单超时未支付自动取消
+```
+
 >  RabbitMQ-Install
 - [windows10环境下的RabbitMQ安装步骤（图文）](https://blog.csdn.net/weixin_39735923/article/details/79288578)
 ```
