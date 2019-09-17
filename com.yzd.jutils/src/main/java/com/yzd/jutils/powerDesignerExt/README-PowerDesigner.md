@@ -1,3 +1,30 @@
+> PowerDesigner中SQL文件、数据库表反向生成PDM
+- [PowerDesigner中SQL文件、数据库表反向生成PDM](https://blog.csdn.net/duanchangqing90/article/details/38089557)
+    ```
+    1.导入前需要先删除navicat生成的头信息
+    /*
+    Navicat MySQL Data Transfer
+    
+    Source Server         : dohko.mysql.002.master.hualala.com
+    Source Server Version : 50723
+    Source Host           : dohko.mysql.002.master.hualala.com:3306
+    Source Database       : hyperspace
+    
+    Target Server Type    : MYSQL
+    Target Server Version : 50723
+    File Encoding         : 65001
+    
+    Date: 2019-09-16 18:10:07
+    */
+    
+    SET FOREIGN_KEY_CHECKS=0;
+    
+    -- ----------------------------
+    -- Table structure for container_config
+    -- ----------------------------
+    ```
+- [PowerDesigner16.5快速入门显示，注释comment配置方法，以及创建sql文件过程中需要注意的一些问题](https://blog.csdn.net/qq496013218/article/details/70267611)
+
 > 方案一
 - 通过Excel生成PowerDesigner表结构设计
 - [通过Excel生成PowerDesigner表结构设计](https://www.cnblogs.com/xianhan/p/7364324.html)
