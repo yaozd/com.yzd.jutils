@@ -24,3 +24,9 @@ sql中数据的错误大多都是字段的默认值写错了造成的。
 --------
 高级—》取消勾选记录选项。—》取消“插入记录”
 ```
+
+### 6.[Navicat cannot create file xxx.sql.bak 解决办法](https://blog.csdn.net/jaray/article/details/72531947)
+```
+1、右键所健的链接：
+2、选择编辑连接后：
+```

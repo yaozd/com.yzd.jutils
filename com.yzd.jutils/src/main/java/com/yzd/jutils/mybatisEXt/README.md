@@ -1,4 +1,5 @@
 ### Mybatis的示例
+- hyperspace-2019-09-18-0942-[hyperspace-console-mybatis示例模板].zip-2019-09-18-0943（最新byArvin）
 - SpringBoot整合Mybatis完整详细版-[SpringBoot-1.5.17.RELEASE版本-包含API代码模板]-2019-01-19-1149.zip(推荐参考byArvin-2019-01-21-1029)
 - Jebao-Mybatis-Generator-示例四-[独立代码生成无包含依赖包].zip
 - Jebao-Mybatis-Generator-示例三-[独立代码生成包含依赖包].zip
