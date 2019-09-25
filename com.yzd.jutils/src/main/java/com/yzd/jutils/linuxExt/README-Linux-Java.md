@@ -2,6 +2,8 @@
 ```
 nohup java -jar -Xms256M -Xmx256M hyperspace-console-0.0.1-SNAPSHOT.jar &
 
+nohup java -jar -Xms256M -Xmx256M hyperspace-console-0.0.1-SNAPSHOT.jar --spring.profiles.active=test &
+
 ps -ef|grep hyperspace-console|grep -v 'grep'|grep hll|head -1|awk -F" " '{print $2}'
 
 kill 26701
@@ -18,7 +20,16 @@ mv /tmp/hyperspace-console-0.0.1-SNAPSHOT.jar .
 
 cd deploy
 
-cat 
+cat filename.txt| grep 'console'
+
+1、tail -f filename
+说明：监视filename文件的尾部内容（默认10行，相当于增加参数 -n 10），刷新显示在屏幕上。退出，按下CTRL+C。
+
+2、tail -n 20 filename
+说明：显示filename最后20行。
+
+3、tail -r -n 10 filename
+说明：逆序显示filename最后10行。
 ```
 ###  命令组合
 ```
