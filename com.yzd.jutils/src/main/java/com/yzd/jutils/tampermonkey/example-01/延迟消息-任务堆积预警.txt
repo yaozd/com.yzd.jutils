@@ -1,0 +1,36 @@
+// ==UserScript==
+// @name         延迟消息-任务堆积预警
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        http://*/*
+// @grant        none
+// @require https://cdn.bootcss.com/jquery/3.4.1/jquery.js
+// @require https://cdn.bootcss.com/axios/0.19.0/axios.js
+// ==/UserScript==
+
+(function() {
+    'use strict';
+    //alert(1);
+    // Your code here...
+    function check(){
+        $.get("http://*/api/stats",function(data,status){
+            //console.log(data);
+            var topicStats=data.topicStats;
+            for(var i=0;i<topicStats.length;i++){
+                var item=topicStats[i];
+                //console.log(item);
+                var count =item.delayQueueCount;
+                if(count>10000){
+                    var message="TOPIC="+item.topic+"，数量="+count+",消息堆积已经超过预警阀值1万。PS:这个延迟消息数量如果已经万级别并且持续增长速度很快 就得赶紧预警了";
+                    console.log(message);
+                    alert(message);
+                }
+            }
+            //alert("Data: " + data + "\nStatus: " + status);
+        });
+    }
+    //5s 循环一次
+    window.setInterval(check,5000);
+})();
