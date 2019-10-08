@@ -1,8 +1,9 @@
 
 ### Ideal-常用插件-特别推荐byArvin
+- 时序图生成工具：SequenceDiagram 推荐安装
 - Batch Scripts Support
 - CMD Support
-- CodeGlance
+- CodeGlance 推荐安装
 - codehelper.generator
 - FindBugs-IDEA
 - Free Mybatis plugin
@@ -12,6 +13,7 @@
 - VisualVM Launcher 
 - Vue.js
 - Key promoter X
+- BashSupport（shell）
 - InnerBuilder (Idea 类builder模式插件安装方法)
      ```
      https://soberchina.iteye.com/blog/2330167
