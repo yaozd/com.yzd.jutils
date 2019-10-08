@@ -108,3 +108,6 @@ isNull      [值是否为null]
 
 value       [具体的内容，注意为string文本]  
 ```
+
+## 案例
+- [缓存一致性和跨服务器查询的数据异构解决方案canal](https://www.cnblogs.com/Leo_wl/p/7456892.html)
