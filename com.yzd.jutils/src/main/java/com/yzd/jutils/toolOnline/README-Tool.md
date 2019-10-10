@@ -32,3 +32,11 @@ bejson中有许多工具：
 - [TCP/IP子网掩码计算换算](https://www.sojson.com/convert/subnetmask.html)
 
 - [汉字拼音在线转换](https://www.qqxiuzi.cn/zh/pinyin/)
+
+- [在线工具 form格式参数解析](http://coolaf.com/zh/tool/formdatatokv)
+
+- [在线生成二维码(QR码)-采用ZXing与d-project](http://tool.oschina.net/qr)
+
+- [Unix时间戳（Unix timestamp）](http://tool.chinaz.com/Tools/unixtime.aspx)
+- []()
+- []()
