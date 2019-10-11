@@ -8,6 +8,7 @@ java.util.Comparator,
 java.util.concurrent.Callable
 java.util.function包下的接口，如Consumer、Predicate、Supplier等
 ```
+- [Java8之Consumer、Supplier、Predicate和Function攻略](https://segmentfault.com/a/1190000019953045?utm_source=tag-newest)
 
 ### 函数式接口@FunctionalInterface
 - 将一个方法做为参数进行传递-Callable或Function

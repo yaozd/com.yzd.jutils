@@ -9,3 +9,9 @@ B.把  /tmp/heap.hprof  下载到本地，使用  MAT 进行分析
 --------------------- 
 原文：https://blog.csdn.net/tianpeng341204/article/details/78953445 
 ```
+
+## system.gc--FULL GC
+- [记一次每隔一小时 Full GC (System.gc())问题的解决过程](https://www.jianshu.com/p/6a2f14067f50?tdsourcetag=s_pctim_aiomsg)
+- [JVM菜鸟进阶高手之路六:JVM每隔一小时执行一次Full GC（详细篇）](https://alpha-ss.sohu.com/infonews/article/6346133922451030016?tdsourcetag=s_pctim_aiomsg&qq-pf-to=pcqq.group)
+- []()
+- []()
