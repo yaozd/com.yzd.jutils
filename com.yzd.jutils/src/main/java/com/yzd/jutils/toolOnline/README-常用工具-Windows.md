@@ -5,6 +5,13 @@
 - [格式工厂]()
 - 屏幕截图软件
     - [FastStone Capture v8.6](http://www.onlinedown.net/soft/44264.htm)
+    ```
+    FastStone Capture(FSCapture) 注册码
+    https://blog.csdn.net/moxiaoya1314/article/details/79952787
+    企业版序列号：
+    name：bluman
+    serial/序列号/注册码：VPISCJULXUFGDDXYAUYF
+    ```
     - picpick
 - UML
     - StarUML
