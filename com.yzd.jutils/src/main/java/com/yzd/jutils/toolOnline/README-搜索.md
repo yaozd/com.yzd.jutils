@@ -1,0 +1,1 @@
+# 1.[快搜 - 搜索快人一步](https://search.chongbuluo.com)
