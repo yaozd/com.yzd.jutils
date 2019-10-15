@@ -60,3 +60,5 @@ show create table table_name;
 ```
 数据库->数据传输
 ```
+
+- [mysql实现分布式锁](https://www.jianshu.com/p/b76f409b2db2)
