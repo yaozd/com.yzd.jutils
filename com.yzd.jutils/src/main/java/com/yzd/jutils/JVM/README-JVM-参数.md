@@ -11,3 +11,5 @@ jvm参数
 
 ##　参数说明：
 - [【JAVA学习】“-Xmx1024m -Xms1024m -Xmn512m -Xss256k”——Java运行参数(转)](https://blog.csdn.net/a503921892/article/details/39048889)
+
+- [JVM调优总结 -Xms -Xmx -Xmn -Xss等参考详解](https://www.cnblogs.com/likehua/p/3369823.html)-推荐参考-byArvin
