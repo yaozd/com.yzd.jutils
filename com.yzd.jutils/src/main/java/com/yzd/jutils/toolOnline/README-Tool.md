@@ -38,5 +38,6 @@ bejson中有许多工具：
 - [在线生成二维码(QR码)-采用ZXing与d-project](http://tool.oschina.net/qr)
 
 - [Unix时间戳（Unix timestamp）](http://tool.chinaz.com/Tools/unixtime.aspx)
-- []()
+
+- [在线正则表达式-对匹配结果着色](http://tool.chinaz.com/regex/)-推荐使用byArvin
 - []()
