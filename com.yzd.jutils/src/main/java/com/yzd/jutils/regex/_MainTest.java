@@ -2,6 +2,7 @@ package com.yzd.jutils.regex;
 
 import org.junit.Test;
 
+import java.util.List;
 import java.util.regex.Matcher;
 
 public class _MainTest {
@@ -18,6 +19,21 @@ public class _MainTest {
         //使用group时一定要使用mat.find()方法才可以读取到
         if(mat.find()){
             System.out.println(mat.group(1));
+        }
+    }
+    @Test
+    public void t11(){
+        String regEx = "([^{]+)\\{([^}]+)}[\\s]+([\\d\\\\.E]+)$";
+        String str = "hyperspace_request_seconds_count{service=\"172.20.60.45:8888\",endpoint_type=\"target\",} 18.0";
+        List<String> matcherList=RegExUtil.regMatchAll2list(regEx,str);
+        Matcher mat = RegExUtil.getMatcher(regEx, str);
+        //使用group时一定要使用mat.find()方法才可以读取到
+        if(mat.find()){
+            System.out.println(mat.groupCount());
+            System.out.println(mat.group(1));
+            System.out.println(mat.group(0));
+            System.out.println(mat.group(2));
+            System.out.println(mat.group(3));
         }
     }
     @Test

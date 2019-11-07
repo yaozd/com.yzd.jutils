@@ -31,8 +31,8 @@
         1. yzd-toEnum.txt
         1. yzd-entityEnum.txt
         1. yzd-testMethod.txt
-- []()
-- []()
+- [GZS-数据同步，通过GRPC的双向连接-从客户推送上来，PS:类似websocket]()
+- 动态调整-项目日志输出级别（LogController.changeLevel）
 - []()
 - []()
 - []()
