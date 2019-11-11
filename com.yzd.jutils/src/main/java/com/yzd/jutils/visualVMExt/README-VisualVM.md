@@ -7,8 +7,14 @@
 
 visualvm新访问地址：https://visualvm.github.io/index.html
 
+http://visualvm.github.io/pluginscenters.html
+
+https://visualvm.github.io/archive/uc/8u40/updates.xml.gz
+
 ```
 - [visualvm新访问地址](https://visualvm.github.io/index.html)
+- [http://visualvm.github.io/pluginscenters.html](http://visualvm.github.io/pluginscenters.html)
+- [https://visualvm.github.io/archive/uc/8u40/updates.xml.gz](https://visualvm.github.io/archive/uc/8u40/updates.xml.gz)
 
 ###　Visual插件
 - Threads Inspector 插件

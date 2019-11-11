@@ -2,17 +2,12 @@ package com.yzd.jutils.httpExt;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.LoggerContext;
+import com.yzd.jutils.httpExt.OkHttpClientExt.OkHttpUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
-import org.apache.http.StatusLine;
 import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpResponseException;
 import org.apache.http.client.ResponseHandler;
-import org.apache.http.client.fluent.Executor;
 import org.apache.http.client.fluent.Request;
-import org.apache.http.entity.ContentType;
-import org.apache.http.util.EntityUtils;
 import org.databene.contiperf.PerfTest;
 import org.databene.contiperf.junit.ContiPerfRule;
 import org.junit.BeforeClass;
@@ -21,17 +16,13 @@ import org.junit.Test;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.nio.charset.Charset;
-import java.util.Collections;
 
 /**
  * @author: yaozhendong
- * @create: 2019-11-08 10:01
+ * @create: 2019-11-08 15:14
  **/
 
-public class HttpTest {
-    String requestUrl = "http://target:5555/hello";
-
+public class HyperspaceTest {
     @Rule
     public ContiPerfRule i = new ContiPerfRule();
 
@@ -53,8 +44,23 @@ public class HttpTest {
      * @throws IOException
      */
     @Test
-    @PerfTest(threads = 200, duration = 150000000)
-    public void gateway_Test() throws IOException {
+    @PerfTest(threads = 100, duration = 150000000)
+    public void proxy1_Test() throws IOException {
+        String requestUrl="http://dohko.online.h5api.hualala.com:6666";
+        Request.Get(requestUrl)
+                .connectTimeout(3000)
+                .socketTimeout(30000)
+                .execute().handleResponse(new ResponseHandler<String>() {
+            @Override
+            public String handleResponse(HttpResponse httpResponse) throws ClientProtocolException, IOException {
+                return null;
+            }
+        });
+    }
+    @Test
+    @PerfTest(threads = 100, duration = 150000000)
+    public void proxy2_Test() throws IOException {
+        String requestUrl="http://172.20.60.45:5555/";
         Request.Get(requestUrl)
                 .connectTimeout(3000)
                 .socketTimeout(30000)
@@ -67,43 +73,35 @@ public class HttpTest {
     }
 
     /**
-     * 每次都重新建立连接，进行3次握手
+     * 不推荐使用OKHttp
      * @throws IOException
      */
     @Test
-    @PerfTest(threads = 1, duration = 150000000)
-    public void gateway2_Test() throws IOException {
-
-        HttpUtil.sendGet(requestUrl, Collections.emptyMap());
+    //@PerfTest(threads = 100, duration = 600)
+    @PerfTest(threads = 10, invocations=10000)
+    public void proxy3_okHttp_Test() throws IOException {
+        String requestUrl="http://172.20.60.45:5555/";
+        OkHttpUtils.getInstance().get(requestUrl);
     }
 
+    /**
+     * 推荐使用fluent-hc
+     * @throws IOException
+     */
     @Test
-    public void handleResponse_Test() throws IOException {
-
+    //@PerfTest(threads = 100, duration = 150000000)
+    @PerfTest(threads = 100, invocations=100000)
+    public void proxy3_fluentRequest_Test() throws IOException {
+        //String requestUrl="http://172.20.60.45:5555/";
+        String requestUrl="http://172.20.60.45:8081/";
         Request.Get(requestUrl)
                 .connectTimeout(3000)
-                .socketTimeout(3000)
+                .socketTimeout(30000)
                 .execute().handleResponse(new ResponseHandler<String>() {
             @Override
-            public String handleResponse(final HttpResponse response) throws IOException {
-                StatusLine statusLine = response.getStatusLine();
-                HttpEntity entity = response.getEntity();
-                if (statusLine.getStatusCode() >= 300) {
-                    throw new HttpResponseException(
-                            statusLine.getStatusCode(),
-                            statusLine.getReasonPhrase());
-                }
-                if (entity == null) {
-                    throw new ClientProtocolException("Response contains no content");
-                }
-                ContentType contentType = ContentType.getOrDefault(entity);
-                Charset charset = contentType.getCharset();
-                //String  result = EntityUtils.toString(entity, StandardCharsets.UTF_8);
-                String result = EntityUtils.toString(entity, charset.name());
-                return result;
-
+            public String handleResponse(HttpResponse httpResponse) throws ClientProtocolException, IOException {
+                return null;
             }
         });
     }
-
 }

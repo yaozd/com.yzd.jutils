@@ -1,7 +1,16 @@
+## HttpClient连接池复用推荐使用组件
+- fluent-hc 可能比OKHttp更好一点
+
 ## 流式组件fluent-hc使用：
 - [Apache下基于HttpClient的流式组件fluent-hc](https://blog.csdn.net/tengxing007/article/details/99826391)-推荐byArvin
 - [HttpClient4.2 Fluent API学习](https://blog.csdn.net/vector_yi/article/details/24298629)
 - [小技巧：利用HC fluent API 优雅地使用Apache HttpClient](https://blog.csdn.net/flysqrlboy/article/details/88706049)
+- [Apache HttpClient 4.5 长连接池及 Fluent API 介绍](https://blog.csdn.net/vipshop_fin_dev/article/details/80561976)
+- [Http fluent API引发的线程未能结束](https://www.cnblogs.com/tecfans/p/3626827.html)
+    ```
+    关键锁在了标红的语句，进去看了下是Http内部缓存池拿光了连接数。
+    问题出在当时认为这个请求我不关心返回，就直接没有加上return方法。这样导致了InputStream一直没能释放。
+    ```
 - []()
 
 ## [fluent-hc连接池的大小](https://blog.csdn.net/tengxing007/article/details/99826391)
