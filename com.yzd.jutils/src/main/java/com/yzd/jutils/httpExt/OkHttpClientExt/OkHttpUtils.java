@@ -13,11 +13,12 @@ public class OkHttpUtils {
     private OkHttpClient client;
 
     private OkHttpUtils() {
+        ConnectionPool pool = new ConnectionPool(5, 10, TimeUnit.MINUTES);
         client = new OkHttpClient.Builder()
                 .connectTimeout(5000, TimeUnit.MILLISECONDS)
                 .readTimeout(5000, TimeUnit.MILLISECONDS)
                 .writeTimeout(5000, TimeUnit.MILLISECONDS)
-                .connectionPool(new ConnectionPool())
+                .connectionPool(pool)
                 .build();
     }
 

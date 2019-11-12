@@ -30,7 +30,7 @@ import java.util.Collections;
  **/
 
 public class HttpTest {
-    String requestUrl = "http://target:5555/hello";
+    String requestUrl = "http://hello.hualala.com:5555/hello";
 
     @Rule
     public ContiPerfRule i = new ContiPerfRule();
@@ -53,7 +53,7 @@ public class HttpTest {
      * @throws IOException
      */
     @Test
-    @PerfTest(threads = 200, duration = 150000000)
+    @PerfTest(threads = 1, duration = 150000000)
     public void gateway_Test() throws IOException {
         Request.Get(requestUrl)
                 .connectTimeout(3000)

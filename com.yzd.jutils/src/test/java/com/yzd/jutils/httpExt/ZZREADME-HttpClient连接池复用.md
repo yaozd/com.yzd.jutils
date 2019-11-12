@@ -27,6 +27,18 @@ Registry<ConnectionSocketFactory> sfr = RegistryBuilder.create().register("http"
 ————————————————
 ```
 
+## HttpClient连接池复用-问题参考
+- [HttpClient连接池设置引发的一次雪崩](https://cloud.tencent.com/developer/article/1466604)
+    ```
+    到此这次雪崩事件的根本问题已彻底定位，让我们再次精炼的总结一下这个案件的全过程:
+    
+    连接池设置错参数，导致最大连接数为2
+    大量请求线程需要等待连接池释放连接，出现排队堆积
+    夯住的线程变多，接口平响升高，占用了更多的系统资源，会加剧接口的耗时增加和线程堆积
+    最后直至线程超限，实例被虚拟化平台kill
+    部分实例挂死，导致流量转移到其他存活实例。其他实例流量压力变大，容易引发雪崩。
+    ```
+
 ## HttpClient连接池复用
 - [HttpClient连接池](https://jianpage.com/2019/06/05/httpclientspool/);
 - [不想自己实现的话可以使用现成的带连接池的工具包，比如：fluent-hc](https://jianpage.com/2019/06/05/httpclientspool/);
