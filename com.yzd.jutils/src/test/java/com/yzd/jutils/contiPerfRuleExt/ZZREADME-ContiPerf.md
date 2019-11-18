@@ -3,6 +3,8 @@
 - [使用contiperf进行压测](https://blog.csdn.net/linsongbin1/article/details/51304349)
 - [SpringBoot 使用ContiPerf测试工具](https://blog.csdn.net/lx1309244704/article/details/83781955)
 
+> 在junit执行完毕，会在target/contiperf-report中有相关的执行结果，可以使用浏览器打开查看
+
 ###　主要参数介绍
 ```
 3、主要参数介绍
