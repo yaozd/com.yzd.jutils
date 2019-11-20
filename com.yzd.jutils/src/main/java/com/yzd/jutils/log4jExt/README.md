@@ -1,6 +1,18 @@
 ##　Logback日志扩展
 - [https://github.com/yaozd/com.yzd.logback.extend.root](https://github.com/yaozd/com.yzd.logback.extend.root)
 
+## 日志级别
+```
+"levels": [
+    "OFF",
+    "ERROR",
+    "WARN",
+    "INFO",
+    "DEBUG",
+    "TRACE"
+  ]
+```
+
 #### log4j自定义appender
 ```
 log4j2自定义Appender（输出到文件/RPC服务中）
