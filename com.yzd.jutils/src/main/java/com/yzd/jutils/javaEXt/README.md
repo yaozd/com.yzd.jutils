@@ -29,3 +29,5 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
 > java  --server.port=9090 -jar app.jar
 
 > java -Djava.security.egd=file:/dev/./urandom -jar test.jar
+
+
