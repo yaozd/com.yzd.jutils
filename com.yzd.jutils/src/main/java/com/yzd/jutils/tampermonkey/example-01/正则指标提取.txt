@@ -1,0 +1,30 @@
+// ==UserScript==
+// @name         正则指标提取
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        http://你的域名/*
+// @grant        none
+// @require https://cdn.bootcss.com/jquery/3.4.1/jquery.js
+// @require https://cdn.bootcss.com/axios/0.19.0/axios.js
+// ==/UserScript==
+
+(function() {
+    'use strict';
+    //alert(1);
+    // Your code here...
+    function check(){
+
+    }
+        console.log("执行检查"+new Date());
+        $.get("http://你的域名/",function(data,status){
+            //console.log(data);
+            var pattern = /hyperspace_connections{service="0.0.0.0:80[^\r\n]+/,str = '';
+            //console.log("Metrics:"+pattern.test(data));
+            console.log("模拟建立大量连接然后中断");
+            console.log("Metrics:"+data.match(pattern));
+        });
+    }
+    window.setInterval(check,3000);
+})();
