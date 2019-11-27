@@ -1,5 +1,38 @@
 ##　软件下载地址
 - [华军软件园](http://search.onlinedown.net/search_list.php?searchsid=1&searchname=pdf&button=)
+- [异次元软件下载](http://search.onlinedown.net/search_list.php?searchsid=1&searchname=pdf&button=)
+- [胡萝卜周博客](http://www.carrotchou.blog/)
+- [腾讯软件管家 3.1.1442 独立版](http://www.carrotchou.blog/27791.html)
+
+
+
+##　电子书下载地址
+- [ePUBw.COM-免费优质电子书下载](https://epubw.com)
+- []()
+- []()
+
+##　搜索地址
+- [快搜 - 搜索快人一步](https://search.chongbuluo.com)
+- [https://www.dogedoge.com](https://www.dogedoge.com)
+- []()
+
+## 壁纸-卡通艺术插画设计图片下载网站
+- [https://mixkit.co/art/](https://mixkit.co/art/)
+- [「免费可商用」图片素材网站值得你收藏](https://www.iplaysoft.com/free-images.html)
+
+## 网站推荐
+- [国外 BT 种子离线下载网站推荐 - 那些好用免费的迅雷离线远程下载替代品](https://www.iplaysoft.com/bt-cloud-download.html)
+- [pCloud 是一款来自保加利亚的个人网盘+离线下载的服务，提供 10GB 的免费空间](https://www.iplaysoft.com/bt-cloud-download.html)
+- []()
+
+## Linux 操作系统发行版
+- [Linux Mint 19.1 - 公认比 Ubuntu 更好用的个人桌面](https://www.iplaysoft.com/linux-mint.html)
+- [Portable VirtualBox - 免费绿色版虚拟机软件 / 制作免安装的便携U盘系统](https://www.iplaysoft.com/portable-virtualbox.html)
+- []()
+
+## 数据文件恢复软件
+- [6款那些年救过我的数据文件恢复软件](https://www.iplaysoft.com/data-recovery-tools.html)
+
 ## 常用工具-window
 - [360桌面助手](http://www.360.cn/desktop/)
 - [格式工厂]()
@@ -21,9 +54,32 @@
     - DockerToolbox
         - Kitematic (Alpha)
         - VirtualBox-6.0.12-133076-Win
-- []()
-- []()
-- []()
-- []()
+- [v2rayN-翻墙-科学上网](https://github.com/2dust/v2rayN/releases)
+    - [https://view.freev2ray.org](https://view.freev2ray.org)
+    -
+- [Sandboxie 沙盘工具](https://www.iplaysoft.com/sandboxie.html)
+- [多媒体：]()
+    - [Movavi Video Suite](http://www.carrotchou.blog/7517.html)
+- [USB启动盘制作工具 Rufus 3.8 中文绿色版](http://www.carrotchou.blog/184.html)
+- [Defender Control v1.5 一键开启/关闭WD](http://www.carrotchou.blog/27785.html)
+- [系统禁用更新工具 Windows Update Blocker v1.5 汉化版](http://www.carrotchou.blog/15212.html)
+- [看图软件:]()
+    - [FastStone Image Viewer](http://www.carrotchou.blog/14935.html)
+    - [阿香婆照片管理软件 Ashampoo Photo Commander 16.0.4 中文破解版](http://www.carrotchou.blog/10478.html)
+    - []()
+- [系统增强软件:]()
+    - [阿香婆系统优化软件 Ashampoo WinOptimizer v17.0.24 中文破解版](http://www.carrotchou.blog/22843.html)
+    - []()
+    - []()
+- [文件搜索：]()
+    - [Everything 是一款极速电脑文件搜索神器](http://www.carrotchou.blog/1100.html)
+- [浏览器:]()
+    - [百分浏览器](http://www.carrotchou.blog/22166.html)
+    - []()
+    - []()
+- [软件管理：]()
+    - [腾讯软件管家 3.1.1442 独立版](http://www.carrotchou.blog/27791.html)
+- [快捷启动工具:]()
+    - [Lily v5.0 好用的桌面图标管理工具](http://www.carrotchou.blog/14794.html)
 - []()
 - []()
