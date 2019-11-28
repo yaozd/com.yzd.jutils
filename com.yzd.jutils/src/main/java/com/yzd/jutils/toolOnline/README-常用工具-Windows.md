@@ -54,6 +54,8 @@
     - DockerToolbox
         - Kitematic (Alpha)
         - VirtualBox-6.0.12-133076-Win
+- 虚拟机软件：
+    - VirtualBox-6.0.12-133076-Win
 - [v2rayN-翻墙-科学上网](https://github.com/2dust/v2rayN/releases)
     - [https://view.freev2ray.org](https://view.freev2ray.org)
     -
