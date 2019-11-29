@@ -6,7 +6,7 @@
 - 方法三：环形队列法
 
 ### github-环形队列实现代码
-- [RingQueue](https://github.com/a870368162/RingQueue/tree/master/RingQueue)-58到家
+- [RingQueue](https://github.com/a870368162/RingQueue/tree/master/RingQueue) -58到家
 - [Dubbo/Netty中时间轮算法的原理-HashedWheelTimer](https://blog.csdn.net/dbqb007/article/details/90740839)
 
 ### 大环-通过两个环组成一个大环（分钟环+秒环）=小时环
