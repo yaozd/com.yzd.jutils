@@ -3,7 +3,10 @@
 - JAVA面试_中华石杉老师_突击第一季（百度-》电子书-》F-分布式）
 - [https://github.com/xingshaocheng/architect-awesome后端架构师技术图谱](https://github.com/xingshaocheng/architect-awesome)
 - [advanced-java-互联网Java工程师进阶知识完全扫盲](https://github.com/doocs/advanced-java)<br>
+- [Java并发知识点总结](https://github.com/CL0610/Java-concurrency)<br>
 - [https://github.com/yaozd/advanced-java](https://github.com/yaozd/advanced-java)
+- [Java学习+面试指南](https://github.com/Snailclimb/JavaGuide)
+- [2019年最新总结，阿里，腾讯，百度，美团，头条等技术面试题目，以及答案，专家出题人分析汇总](https://github.com/0voice/interview_internal_reference)
 - [Java 技术书籍大全](https://github.com/sorenduan/awesome-java-books)
 - [史上最全Java面试题整理（附参考答案）](https://blog.csdn.net/qq_41701956/article/details/88572728)-JAVA基础-byArvin
 ```
