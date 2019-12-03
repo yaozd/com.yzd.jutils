@@ -6,7 +6,8 @@
   - [Netty 源码分析之 零 磨刀不误砍柴工 源码分析环境搭建](https://github.com/yongshun/learn_netty_source_code/blob/f129f37978e29746f07ea6a8baef2479ee3b0593/Netty%20源码分析之%20零%20磨刀不误砍柴工%20源码分析环境搭建/Netty%20源码分析之%20零%20磨刀不误砍柴工%20源码分析环境搭建.md)
   - [Netty 实战精髓篇](https://www.w3cschool.cn/essential_netty_in_action/)
   - [Netty 4.x 用户指南](https://www.w3cschool.cn/netty4userguide/)
-  
+- netty-HttpProxy
+    - []
 - netty-HttpClient
     - [netty实现 http 长连接](https://blog.csdn.net/u014284000/article/details/94995198)
         - 源代码在https://github.com/zhwaaaaaa/rpollingc
