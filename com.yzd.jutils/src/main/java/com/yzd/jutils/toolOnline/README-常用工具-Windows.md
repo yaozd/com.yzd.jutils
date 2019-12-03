@@ -62,11 +62,16 @@
 - [Sandboxie 沙盘工具](https://www.iplaysoft.com/sandboxie.html)
 - [多媒体：]()
     - [Movavi Video Suite](http://www.carrotchou.blog/7517.html)
-- [USB启动盘制作工具 Rufus 3.8 中文绿色版](http://www.carrotchou.blog/184.html)
+- USB启动盘制作工具:
+    - [软碟通 UltraISO v9.7.2 中文注册版](http://www.carrotchou.blog/5291.html)
+    - [USB启动盘制作工具 Rufus 3.8 中文绿色版](http://www.carrotchou.blog/184.html)
 - [Defender Control v1.5 一键开启/关闭WD](http://www.carrotchou.blog/27785.html)
 - [系统禁用更新工具 Windows Update Blocker v1.5 汉化版](http://www.carrotchou.blog/15212.html)
 - [看图软件:]()
     - [FastStone Image Viewer](http://www.carrotchou.blog/14935.html)
+        ```
+        全屏模式->设置->取消“全屏模式下显示文件名-文字颜色”
+        ```
     - [阿香婆照片管理软件 Ashampoo Photo Commander 16.0.4 中文破解版](http://www.carrotchou.blog/10478.html)
     - []()
 - [系统增强软件:]()
@@ -83,5 +88,14 @@
     - [腾讯软件管家 3.1.1442 独立版](http://www.carrotchou.blog/27791.html)
 - [快捷启动工具:]()
     - [Lily v5.0 好用的桌面图标管理工具](http://www.carrotchou.blog/14794.html)
+- 图像处理软件：
+    - [图像处理软件 Serif Affinity Photo v1.7.1.404 中文破解版](http://www.carrotchou.blog/8622.html)
+- 虚拟文件打包工具:
+    - [虚拟文件打包工具 Enigma Virtual Box 9.40 绿色便携版](https://enigmaprotector.com/cn/aboutvb.html)
+        - [中文说明](http://www.carrotchou.blog/14335.html)
+- BT下载：
+    - [uTorrent](https://www.utorrent.com/intl/zh_cn/)
+- []()
+- []()
 - []()
 - []()

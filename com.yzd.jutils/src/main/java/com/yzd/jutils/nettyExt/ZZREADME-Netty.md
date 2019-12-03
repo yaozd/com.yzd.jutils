@@ -15,5 +15,9 @@
         比如nginx，默认一个连接只处理100个请求，处理完毕后会强制关闭这个连接，
         当然可以通过设置keepalive_requests 这个参数取修改它的数量。
         ```
+    - [netty实战-netty client连接池设计](https://www.jianshu.com/p/7132d84c2461?from=singlemessage)
+    - [netty实战-自定义解码器处理半包消息](https://blog.csdn.net/linsongbin1/article/details/77915686)
+    - []()
+- netty-故障案例参考：
     - [Netty使用案例 -发送队列积压导致内存泄漏](https://blog.csdn.net/u013642886/article/details/86632752)
     - []()
