@@ -67,3 +67,25 @@ B.把  /tmp/heap.hprof  下载到本地，使用  MAT 进行分析
 --------------------- 
 原文：https://blog.csdn.net/tianpeng341204/article/details/78953445 
 ```
+- 显示当前进程的资源限制
+- [Linux /proc/$pid部分内容详解](https://www.cnblogs.com/likui360/p/6181927.html) 
+```
+ulimit -n
+jps -l
+cat /proc/12370/limits 
+```
+- 显示当前建立的连接数
+
+```
+netstat -an | grep ES
+netstat -an | grep ESTABLISHED | wc -l
+```
+## MD5
+```
+WINDOWS:
+certutil -hashfile .\hyperspace-container-0.0.1-SNAPSHOT.jar  MD5
+
+LINUX:
+md5sum hyperspace-container-0.0.1-SNAPSHOT.jar
+
+```
