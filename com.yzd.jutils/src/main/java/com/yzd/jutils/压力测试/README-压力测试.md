@@ -3,8 +3,8 @@
 
 ##　参考案例：
 - [压测介绍-go实现的压测工具【单台机器100w连接压测实战】](https://blog.csdn.net/link_km/article/details/100130784)-推荐参考
-- []()
-- []()
+- [如何生成每秒百万级别的 HTTP 请求？](https://my.oschina.net/qiangzigege/blog/519340)
+- [几乎所有的WEB压力测试工具 WEB压力测试工具大全](https://www.iamle.com/archives/2173.html)
 
 ##　 压测名词解释:
 ```
