@@ -12,3 +12,17 @@
     最后 删除符号链接，有创建就有删除
     rm -rf   symbolic_name   注意不是rm -rf   symbolic_name/ 
     ```
+-  TCP 连接数查看
+    ```
+    netstat -nt|grep ES  |wc -l
+    netstat -nt|grep ES | grep 172.20.227.113:80 |wc -l
+    netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'
+    ==================
+    PS:回收连接
+    cat /etc/sysctl.conf
+    //
+    net.ipv4.tcp_keepalive_time = 60
+    net.ipv4.tcp_fin_timeout = 30
+    //
+    apply：sysctl -p
+    ```
