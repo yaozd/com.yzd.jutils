@@ -1,5 +1,10 @@
 # Nginx-官网
 - [http://nginx.org/en/docs/](http://nginx.org/en/docs/)
+- [Nginx中文文档](http://www.nginx.cn/doc/)
+# Nginx 配置详解
+- [Nginx 配置详解](https://www.runoob.com/w3cnote/nginx-setup-intro.html)
+- [Nginx 使用及配置](https://www.jianshu.com/p/849343f679aa)
+- []()
 # Nginx-
 - [http://localhost:8080/](http://localhost:8080/html/vue-css.html)
 
