@@ -34,6 +34,7 @@
 - [GZS-数据同步，通过GRPC的双向连接-从客户推送上来，PS:类似websocket]()
 - 动态调整-项目日志输出级别（LogController.changeLevel）
 - 单元测试自动化-hyperspace-test
+- httpDNS -高可用
 - []()
 - []()
 - []()
