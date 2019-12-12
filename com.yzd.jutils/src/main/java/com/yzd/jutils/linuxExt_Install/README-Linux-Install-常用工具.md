@@ -22,7 +22,18 @@ yum -y install  wget net-tools vim tree htop iftop iotop lrzsz sl unzip telnet n
     pstree 树型显示当前运行的进程。
     ```
 - lrzsz（Linux服务器和window互传文件工具）
-- []
+- [nmon](https://www.cnblogs.com/lijiaman/p/9466614.html)  -生哥推荐
+    ```
+    nmon是以一个用来做linux服务器监控的工具，通过nmon，可以实现对以下参数的监控：
+      --CPU使用率
+      --内存、交换空间使用率
+      --网络使用情况
+      --磁盘I/O，读写速度
+      --网络I/O速度，传输和读写速度
+      --顶级进程，查看哪些应用程序占用的CPU较多
+      --网络文件系统NFS
+      --文件系统使用情况（类似df -h）
+    ```
 - []
 - []
 

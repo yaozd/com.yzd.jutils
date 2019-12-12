@@ -1,4 +1,7 @@
 ### SourceTree
+- sourceTree 添加 ssh key 方法
+    - [sourceTree 添加 ssh key 方法](https://blog.csdn.net/u013123046/article/details/80566159)
+    
 - [windows 下 sourceTree 乱码问题](https://blog.csdn.net/u011526234/article/details/72667620)
 
 已测试，可通过-byArvin
