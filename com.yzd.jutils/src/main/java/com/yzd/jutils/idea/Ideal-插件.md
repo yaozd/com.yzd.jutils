@@ -15,6 +15,7 @@
 - Key promoter X
 - BashSupport（shell）
 - Grep Console (日志)
+- Maven Dependency Helper（解决Maven的依赖关系-Dependency Analyzer）
 - InnerBuilder (Idea 类builder模式插件安装方法)
      ```
      https://soberchina.iteye.com/blog/2330167
