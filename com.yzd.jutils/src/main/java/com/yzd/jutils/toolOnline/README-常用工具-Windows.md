@@ -104,6 +104,9 @@
         - [中文说明](http://www.carrotchou.blog/14335.html)
 - BT下载：
     - [uTorrent](https://www.utorrent.com/intl/zh_cn/)
+- [jar包反编译，查看源代码](https://blog.csdn.net/neverstopforcode/article/details/80913324)
+    - [http://java-decompiler.github.io/](http://java-decompiler.github.io/) jd-gui-windows-1.6.5.zip
+- []()
 - []()
 - []()
 - []()

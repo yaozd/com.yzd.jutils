@@ -1,3 +1,4 @@
+# 基于centos7.4 support 50K+ connections
 
 - 文件打开数调优
 ```
@@ -30,7 +31,9 @@ apply: relogin
 
 #The maximum number of file handles for the entire system
 fs.file-max = 99999999
- 
+
+kernel.pid_max = 65535
+
 #Enable reuse of TIME-WAIT sockets for new connections when it is safe from protocol viewpoint
 net.ipv4.tcp_tw_reuse = 1
 #Maximal number of timewait sockets held by system simultaneously
@@ -59,6 +62,7 @@ net.core.somaxconn = 16384
 #The default setting in bytes of the socket receive buffer
 net.core.rmem_default = 6291456
 #The default setting in bytes of the socket send buffer
+#The default setting in bytes of the socket send buffer
 net.core.wmem_default = 6291456
 #The maximum socket receive buffer size which may be set by using the SO_RCVBUF socket option
 net.core.rmem_max = 12582912
@@ -68,3 +72,15 @@ net.core.wmem_max = 12582912
  
 apply：sysctl -p
 ```
+- 修改linux最大进程数
+```
+sudo root user
+/etc/security/limits.d/20-nproc.conf
+
+*          soft    nproc     65535
+root       soft    nproc     unlimited
+
+apply：reboot （重新启动）
+```
+- 参考：
+    - []()

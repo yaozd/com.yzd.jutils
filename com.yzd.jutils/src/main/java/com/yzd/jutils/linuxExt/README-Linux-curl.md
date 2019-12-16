@@ -1,3 +1,13 @@
+- 通过chrome的调试器获取curl
+    ```
+    chrome 浏览器生成 curl文件，打开开发者模式(快捷键F12)=>Network=>Copy=>Copy as cURL 
+    生成 curl 在终端执行命令
+    ```
+    - [压测介绍-go实现的压测工具【单台机器100w连接压测实战】](https://blog.csdn.net/link_km/article/details/100130784) go-stress-testing go语言实现的压测工具
+- 查看请求信息
+    ```
+    curl -v http://127.0.0.1/hello
+    ```
 - FULL DEMO
     ```
     curl 'http://127.0.0.1/hello'  
