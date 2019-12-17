@@ -35,6 +35,7 @@
 - 动态调整-项目日志输出级别（LogController.changeLevel）
 - 单元测试自动化-hyperspace-test
 - httpDNS -高可用
+- Linux内核调优+Nginx内核调优
 - []()
 - []()
 - []()

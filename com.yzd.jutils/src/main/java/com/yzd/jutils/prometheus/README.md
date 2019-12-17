@@ -1,3 +1,11 @@
+## 监控神器-普罗米修斯Prometheus
+- [监控神器-普罗米修斯Prometheus的安装](https://blog.csdn.net/csolo/article/details/82460539)
+- [监控神器普罗米修斯Prometheus安装配置](https://blog.csdn.net/ywd1992/article/details/85989259)
+
+## Prometheus架构图
+- [使用Prometheus+grafana打造高逼格监控平台](https://blog.csdn.net/weixin_33738982/article/details/89903432)
+- []()
+
 ### 目标
 - 读取Prometheus采集的数据，然后把数据放在influxdb中，再通过grafana进行数据展示
 

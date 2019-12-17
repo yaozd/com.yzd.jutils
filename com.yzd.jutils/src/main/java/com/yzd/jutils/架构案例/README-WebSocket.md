@@ -1,0 +1,10 @@
+- WebSocket 框架的性能比较
+    - [八种 WebSocket 框架的性能比较](https://cloud.tencent.com/developer/article/1376872)
+- SpringBoot 整合 WebSocket 方案
+    - [三分钟构建高性能 WebSocket 服务 | 超优雅的 SpringBoot 整合 Netty 方案](https://cloud.tencent.com/developer/article/1370821)
+- WebSocket-bench测试WebSocket
+    - [WebSocket-bench测试WebSocket](https://www.cnblogs.com/yecao8888/p/7100397.html) 推荐参考byArvin
+    - [WebSocket 的性能与压力测试](https://blog.csdn.net/dl425134845/article/details/52102995) 推荐参考byArvin
+    - [websocket-bench压力测试](https://my.oschina.net/u/1024107/blog/747490)
+    - []()
+    - []()
