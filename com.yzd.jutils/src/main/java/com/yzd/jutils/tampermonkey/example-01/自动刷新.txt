@@ -1,0 +1,19 @@
+// ==UserScript==
+// @name         yzd-monitor-refresh
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        http://demo.yzd.com/monitor
+// @grant        none
+// @require https://cdn.bootcss.com/jquery/3.4.1/jquery.js
+// ==/UserScript==
+
+(function() {
+    'use strict';
+    function check(){
+        console.log("5s/Refresh");
+        $('.btn-refresh').trigger("click");
+    }
+    window.setInterval(check,5000);
+})();
