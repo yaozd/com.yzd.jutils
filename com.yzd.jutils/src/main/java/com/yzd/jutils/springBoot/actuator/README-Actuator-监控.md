@@ -1,3 +1,5 @@
+- 访问地址
+    - [http://localhost:8080/actuator](http://localhost:8080/actuator)
 - [Spring boot 2.0 Actuator 的健康检查](https://www.jianshu.com/p/1aadc4c85f51)
 - [Spring Boot Actuator:健康检查、审计、统计和监控](https://www.jianshu.com/p/d5943e303a1f)
 
