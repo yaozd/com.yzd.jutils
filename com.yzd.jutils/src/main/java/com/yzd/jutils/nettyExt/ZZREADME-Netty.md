@@ -7,7 +7,11 @@
   - [Netty 实战精髓篇](https://www.w3cschool.cn/essential_netty_in_action/)
   - [Netty 4.x 用户指南](https://www.w3cschool.cn/netty4userguide/)
 - netty-HttpProxy
-    - []
+    - support http/https proxy.类似于finddler,由java编写，代码简单便于理解。支持http/https代理！
+        - [https://github.com/puhaiyang/easyHttpProxy](https://github.com/puhaiyang/easyHttpProxy)
+        - [https://github.com/yaozd/easyHttpProxy](https://github.com/yaozd/easyHttpProxy)
+    - [java实现http/https抓包拦截](https://blog.csdn.net/puhaiyang/article/details/102649498)
+    - []()
 - netty-HttpClient
     - [netty实现 http 长连接](https://blog.csdn.net/u014284000/article/details/94995198)
         - 源代码在https://github.com/zhwaaaaaa/rpollingc
