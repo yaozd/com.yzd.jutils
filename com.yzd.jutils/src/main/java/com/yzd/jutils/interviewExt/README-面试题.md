@@ -14,7 +14,8 @@
 
 一点小建议：学习本系列知识之前，如果你完全没接触过 MQ、ES、Redis、Dubbo、Hystrix 等，那么我建议你可以先在网上搜一下每一块知识的快速入门，跟着入门 Demo 玩一下，然后再开始每一块知识的学习，这样效果更好
 ```
-
+## Redis
+- [面试还搞不懂redis，快看看这40道面试题（含答案和思维导图](https://blog.csdn.net/weixin_45932995/article/details/103321053)
 ## 秒杀系统设计与实现.互联网工程师进阶与分析
 >
 [miaosha](https://github.com/qiurunze123/miaosha)<br>

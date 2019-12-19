@@ -62,3 +62,6 @@ show create table table_name;
 ```
 
 - [mysql实现分布式锁](https://www.jianshu.com/p/b76f409b2db2)
+
+## mysql-基础理论
+- [一千行 MySQL 详细学习笔记](https://blog.csdn.net/weixin_45932995/article/details/103489060)
