@@ -19,6 +19,7 @@ ctrl+shift+delete
 - [google-translate](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)-暂不推荐使用byArvin-提供方：translate.google.com
 - [Right Click Translate](https://chrome.google.com/webstore/detail/right-click-translate/piojkjkndneggfaibepkmabjnkjlhlmk)-暂不推荐使用byArvin-提供方：https://ericvan76.github.io
 - [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall)-提供方：one-tab.com
+- [OneTab Pro: Tab Management for Chrome](https://chrome.google.com/webstore/detail/onetab-pro-tab-management/ocpclficanihhomiibpglblkmniocoll)-推荐使用byArvin -提供方：getonetab.com
 - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)-提供方：Raymond Hill (gorhill)
 - [EditThisCookie](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg)-提供方：editthiscookie.com
 - [The QR Code Extension](https://chrome.google.com/webstore/detail/the-qr-code-extension/oijdcdmnjjgnnhgljmhkjlablaejfeeb)-提供方：Manuel Braun
@@ -27,7 +28,11 @@ ctrl+shift+delete
 - [Save Page WE](https://chrome.google.com/webstore/detail/save-page-we/dhhpefjklgkmgeafimnjhojgjamoafof)-保存完整个html页面-方便日后查看-提供方：DW-dev
 - [Magnifying Glass (Hover Zoom)](https://chrome.google.com/webstore/detail/magnifying-glass-hover-zo/gfcbebjdigncefnokoncehghgfndjcgn)-放大镜-提供方：Yubi
 - [Fatkun图片批量下载](https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf)-提供方：aituxiu
-
+- [The New Tab - Customize Your Start Page](https://chrome.google.com/webstore/detail/the-new-tab-customize-you/ddjdamcnphfdljlojajeoiogkanilahc) -定制自己的首页-推荐使用byArvin
+- [Talend API Tester - Free Edition](https://chrome.google.com/webstore/detail/talend-api-tester-free-ed/aejoelaoggembcahagimdiliamlcdmfm?utm_source=chrome-ntp-icon) -REST API接口测试-推荐byArvin -提供方：Talend
+- [JSON Viewer Awesome](https://chrome.google.com/webstore/detail/json-viewer-awesome/iemadiahhbebdklepanmkjenfdebfpfe?utm_source=chrome-ntp-icon) -提供方：Rahul Baruri
+- []()
+- []()
 ### - [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)-提供方：tampermonkey.net
 - [Download Youtube videos and subtitles](https://greasyfork.org/zh-CN/scripts/8426-download-youtube-videos-and-subtitles)-提供方：Find
 - []()

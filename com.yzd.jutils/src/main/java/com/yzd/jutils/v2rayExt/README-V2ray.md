@@ -1,3 +1,8 @@
+### V2ray-Free
+- [v2ray免费账号]
+    - [https://github.com/Alvin9999/new-pac/wiki/v2ray%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7](https://github.com/Alvin9999/new-pac/wiki/v2ray%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7)
+- [https://view.freev2ray.org/](https://view.freev2ray.org/)
+
 ### V2ray-Openshife
 > [https://www.openshift.com](https://www.openshift.com)
 
