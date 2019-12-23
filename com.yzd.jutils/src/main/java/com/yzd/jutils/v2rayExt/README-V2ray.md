@@ -2,6 +2,21 @@
 - [v2ray免费账号]
     - [https://github.com/Alvin9999/new-pac/wiki/v2ray%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7](https://github.com/Alvin9999/new-pac/wiki/v2ray%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7)
 - [https://view.freev2ray.org/](https://view.freev2ray.org/)
+- Alvin9999/new-pac
+    - [https://github.com/Alvin9999/new-pac/wiki](https://github.com/Alvin9999/new-pac/wiki) -推荐参考byArvin
+    - [谷歌镜像](https://github.com/Alvin9999/new-pac/wiki/%E8%B0%B7%E6%AD%8C%E9%95%9C%E5%83%8F)
+        - [https://ac.scmor.com/](https://ac.scmor.com/) -谷歌镜像
+        - []()
+    - 实用网络小知识
+        - [实用网络小知识](https://github.com/Alvin9999/new-pac/wiki/%E5%AE%9E%E7%94%A8%E7%BD%91%E7%BB%9C%E5%B0%8F%E7%9F%A5%E8%AF%86)
+        ```
+        Cloudflare 推出 1.1.1.1 公共 DNS 服务，
+        号称任何人都可以使用它可以加快互联网访问速度并保持连接私密性。
+        Cloudflare 与 APNIC 合作通过以下两个 IP 提供 DNS 服务：1.1.1.1 和 1.0.0.1
+        因此，建议将自己的电脑ipv4 DNS设置为这两个来翻墙。
+        ```
+        - 可以用一个被封的国外网站来查询ip，比如这个http://allinfa.com/check-online-ip-address.html
+        - []()
 
 ### V2ray-Openshife
 > [https://www.openshift.com](https://www.openshift.com)
