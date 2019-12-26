@@ -1,6 +1,6 @@
 ### V2ray-Free
 - [v2ray免费账号]
-    - [https://github.com/Alvin9999/new-pac/wiki/v2ray%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7](https://github.com/Alvin9999/new-pac/wiki/v2ray%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7)
+    - [https://github.com/Alvin9999/new-pac/wiki/v2ray%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7](https://github.com/Alvin9999/new-pac/wiki/v2ray%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7)--推荐参考byArvin (速度比较快)
 - [https://view.freev2ray.org/](https://view.freev2ray.org/)
 - Alvin9999/new-pac
     - [https://github.com/Alvin9999/new-pac/wiki](https://github.com/Alvin9999/new-pac/wiki) -推荐参考byArvin
@@ -17,6 +17,11 @@
         ```
         - 可以用一个被封的国外网站来查询ip，比如这个http://allinfa.com/check-online-ip-address.html
         - []()
+    - DNSCrypt
+        - [DNSCrypt-这本书能让你连接互联网 ](https://hoodiearon.github.io/fq-book/#/dns&hosts/dnscrypt)
+        - [使用DNSCrypt选择最佳的DoH Resolver，解决DNS污染问题](https://www.uedbox.com/post/56205/)
+        - [Simple DNSCrypt](https://simplednscrypt.org/)
+    - []()
 
 ### V2ray-Openshife
 > [https://www.openshift.com](https://www.openshift.com)
