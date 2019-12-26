@@ -106,7 +106,8 @@
     - [uTorrent](https://www.utorrent.com/intl/zh_cn/)
 - [jar包反编译，查看源代码](https://blog.csdn.net/neverstopforcode/article/details/80913324)
     - [http://java-decompiler.github.io/](http://java-decompiler.github.io/) jd-gui-windows-1.6.5.zip
-- []()
+- WPS
+    - [正确关掉wps弹出广告的方法-不用插件不用卸载可解决](https://baijiahao.baidu.com/s?id=1627231822074106266&wfr=spider&for=pc)
 - []()
 - []()
 - []()
