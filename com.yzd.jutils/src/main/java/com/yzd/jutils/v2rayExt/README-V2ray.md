@@ -4,7 +4,7 @@
 - [https://view.freev2ray.org/](https://view.freev2ray.org/)
 - Alvin9999/new-pac
     - [https://github.com/Alvin9999/new-pac/wiki](https://github.com/Alvin9999/new-pac/wiki) -推荐参考byArvin
-    - [谷歌镜像](https://github.com/Alvin9999/new-pac/wiki/%E8%B0%B7%E6%AD%8C%E9%95%9C%E5%83%8F)
+    - [谷歌镜像](https://github.com/Alvin9999/new-pac/wiki/%E8%B0%B7%E6%AD%8C%E9%95%9C%E5%83%8F) -点击访问
         - [https://ac.scmor.com/](https://ac.scmor.com/) -谷歌镜像
         - []()
     - 实用网络小知识

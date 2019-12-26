@@ -17,6 +17,9 @@
     netstat -nt|grep ES  |wc -l
     netstat -nt|grep ES | grep 172.20.227.113:80 |wc -l
     netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'
+    每隔1s显示连接数的变量：
+    watch -n 1 -d 'netstat -nt|grep ES|wc -l'
+    watch -n 1 -d 'curl http://127.0.0.1:9311 |grep "0.0.0.0"'
     ==================
     PS:回收连接
     cat /etc/sysctl.conf
