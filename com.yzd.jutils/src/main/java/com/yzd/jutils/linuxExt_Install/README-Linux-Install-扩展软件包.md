@@ -1,4 +1,31 @@
 ##　１．Linux-Install-扩展软件包
+- [Linux 安装 EPEL YUM源](https://www.cnblogs.com/lfxiao/p/9297912.html)
+- [Centos7安装yum及EPEL扩展源*](https://www.jianshu.com/p/dbed88288153)
+
+```
+
+cd /etc/yum.repos.d/
+mkdir repo_bak
+mv *.repo repo_bak/
+wget http://mirrors.aliyun.com/repo/Centos-7.repo
+wget http://mirrors.163.com/.help/CentOS7-Base-163.repo
+yum clean all
+yum makecache
+yum install -y epel-release
+wget -O /etc/yum.repos.d/epel-7.repo http://mirrors.aliyun.com/repo/epel-7.repo
+yum clean all
+yum makecache
+```
+- [CentOS 7笔记yum install epel-release](https://blog.csdn.net/liuqun69/article/details/101461788)
+
+```
+
+sudo yum install epel-release
+sudo yum repolist
+sudo yum check-update
+```
+
+##　１．Linux-Install-扩展软件包
 - [yum安装htop报错解决过程](https://blog.51cto.com/2617796/2057834)　－No package htop available.
 
 ```
