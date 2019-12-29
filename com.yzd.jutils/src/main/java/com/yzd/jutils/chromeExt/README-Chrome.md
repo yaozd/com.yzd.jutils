@@ -20,6 +20,9 @@ ctrl+shift+delete
 - [Right Click Translate](https://chrome.google.com/webstore/detail/right-click-translate/piojkjkndneggfaibepkmabjnkjlhlmk)-暂不推荐使用byArvin-提供方：https://ericvan76.github.io
 - [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall)-提供方：one-tab.com
 - [OneTab Pro: Tab Management for Chrome](https://chrome.google.com/webstore/detail/onetab-pro-tab-management/ocpclficanihhomiibpglblkmniocoll)-推荐使用byArvin -提供方：getonetab.com
+- [书签侧边栏](https://chrome.google.com/webstore/detail/bookmark-sidebar/jdbnofccmhefkmjbkkdkfiicjkgofkdh) -提供方：Philipp König
+- [Google 类似网页](https://chrome.google.com/webstore/detail/google-similar-pages/pjnfggphgdjblhfjaphkjhfpiiekbbej) -提供方：google.com
+- []()
 - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)-提供方：Raymond Hill (gorhill)
 - [EditThisCookie](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg)-提供方：editthiscookie.com
 - [The QR Code Extension](https://chrome.google.com/webstore/detail/the-qr-code-extension/oijdcdmnjjgnnhgljmhkjlablaejfeeb)-提供方：Manuel Braun
@@ -33,6 +36,16 @@ ctrl+shift+delete
 - [JSON Viewer Awesome](https://chrome.google.com/webstore/detail/json-viewer-awesome/iemadiahhbebdklepanmkjenfdebfpfe?utm_source=chrome-ntp-icon) -提供方：Rahul Baruri
 - []()
 - []()
+
+### - 免费的VPN
+- [Unlimited VPN proxy – Unblock Sites](https://chrome.google.com/webstore/detail/unlimited-vpn-proxy-%E2%80%93-unb/nkmghlbiclohebhhoapdhcflibiibeak) -推荐byArvin
+- [Free VPN - 房子裡最快的VPN服務](https://chrome.google.com/webstore/detail/free-vpn-the-fastest-vpn/nkomfibbgccdjcahcpleidblgknecfhh)
+- [https://www.myip.com/](https://www.myip.com/) -测试验证地址：myip
+-  DNSCrypt-解决DNS污染问题
+   - [DNSCrypt-这本书能让你连接互联网 ](https://hoodiearon.github.io/fq-book/#/dns&hosts/dnscrypt)
+   - [使用DNSCrypt选择最佳的DoH Resolver，解决DNS污染问题](https://www.uedbox.com/post/56205/)
+   - [Simple DNSCrypt](https://simplednscrypt.org/)-推荐安装
+
 ### - [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)-提供方：tampermonkey.net
 - [Download Youtube videos and subtitles](https://greasyfork.org/zh-CN/scripts/8426-download-youtube-videos-and-subtitles)-提供方：Find
 - []()

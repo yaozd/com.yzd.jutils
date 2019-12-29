@@ -20,9 +20,17 @@
     - DNSCrypt
         - [DNSCrypt-这本书能让你连接互联网 ](https://hoodiearon.github.io/fq-book/#/dns&hosts/dnscrypt)
         - [使用DNSCrypt选择最佳的DoH Resolver，解决DNS污染问题](https://www.uedbox.com/post/56205/)
-        - [Simple DNSCrypt](https://simplednscrypt.org/)
+        - [Simple DNSCrypt](https://simplednscrypt.org/)-推荐安装
     - []()
-
+### - 免费的VPN
+- [Unlimited VPN proxy – Unblock Sites](https://chrome.google.com/webstore/detail/unlimited-vpn-proxy-%E2%80%93-unb/nkmghlbiclohebhhoapdhcflibiibeak) -推荐byArvin
+- [Free VPN - 房子裡最快的VPN服務](https://chrome.google.com/webstore/detail/free-vpn-the-fastest-vpn/nkomfibbgccdjcahcpleidblgknecfhh)
+- [https://www.myip.com/](https://www.myip.com/) -测试验证地址：myip
+-  DNSCrypt-解决DNS污染问题
+   - [DNSCrypt-这本书能让你连接互联网 ](https://hoodiearon.github.io/fq-book/#/dns&hosts/dnscrypt)
+   - [使用DNSCrypt选择最佳的DoH Resolver，解决DNS污染问题](https://www.uedbox.com/post/56205/)
+   - [Simple DNSCrypt](https://simplednscrypt.org/)-推荐安装
+   
 ### V2ray-Openshife
 > [https://www.openshift.com](https://www.openshift.com)
 
