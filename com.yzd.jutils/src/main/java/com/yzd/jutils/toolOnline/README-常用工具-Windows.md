@@ -90,7 +90,6 @@
 - [文件搜索：]()
     - [Everything 是一款极速电脑文件搜索神器](http://www.carrotchou.blog/1100.html)
 - [浏览器:]()
-    - [百分浏览器](http://www.carrotchou.blog/22166.html)
     - []()
     - []()
 - [软件管理：]()
@@ -103,6 +102,7 @@
     - [虚拟文件打包工具 Enigma Virtual Box 9.40 绿色便携版](https://enigmaprotector.com/cn/aboutvb.html)
         - [中文说明](http://www.carrotchou.blog/14335.html)
 - BT下载：
+    - [qBittorrent](https://www.qbittorrent.org/index.php) -推荐byArvin
     - [uTorrent](https://www.utorrent.com/intl/zh_cn/)
 - [jar包反编译，查看源代码](https://blog.csdn.net/neverstopforcode/article/details/80913324)
     - [http://java-decompiler.github.io/](http://java-decompiler.github.io/) jd-gui-windows-1.6.5.zip

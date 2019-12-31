@@ -12,6 +12,7 @@
 - SonarLint
 - VisualVM Launcher 
 - Vue.js
+- protobuf support
 - Key promoter X
 - BashSupport（shell）
 - Grep Console (日志)
