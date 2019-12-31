@@ -1,7 +1,8 @@
 ##　１．Linux-Install-扩展软件包
 - [Linux 安装 EPEL YUM源](https://www.cnblogs.com/lfxiao/p/9297912.html)
 - [Centos7安装yum及EPEL扩展源*](https://www.jianshu.com/p/dbed88288153)
-
+- redis的所有版本下载
+    - [http://download.redis.io/releases/](http://download.redis.io/releases/)
 ```
 
 cd /etc/yum.repos.d/

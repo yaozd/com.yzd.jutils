@@ -12,8 +12,12 @@
     最后 删除符号链接，有创建就有删除
     rm -rf   symbolic_name   注意不是rm -rf   symbolic_name/ 
     ```
+-  查看当前文件夹大小
+    > du -sh
 -  TCP 连接数查看
     ```
+    ==PID:1454
+    netstat -ntp|grep ES|grep 1454
     netstat -nt|grep ES  |wc -l
     netstat -nt|grep ES | grep 172.20.227.113:80 |wc -l
     netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'
