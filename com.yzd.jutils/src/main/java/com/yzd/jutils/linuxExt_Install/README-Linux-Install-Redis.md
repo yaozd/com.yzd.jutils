@@ -56,4 +56,6 @@ cd ..
     # service redis start
     7.停止 Redis 服务
     # service redis stop
+    8.以上配置操作完成后，便可将 Redis 注册成为服务： 
+    # chkconfig --add redis 
     ```

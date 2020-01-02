@@ -34,7 +34,7 @@ ctrl+shift+delete
 - [The New Tab - Customize Your Start Page](https://chrome.google.com/webstore/detail/the-new-tab-customize-you/ddjdamcnphfdljlojajeoiogkanilahc) -定制自己的首页-推荐使用byArvin
 - [Talend API Tester - Free Edition](https://chrome.google.com/webstore/detail/talend-api-tester-free-ed/aejoelaoggembcahagimdiliamlcdmfm?utm_source=chrome-ntp-icon) -REST API接口测试-推荐byArvin -提供方：Talend
 - [JSON Viewer Awesome](https://chrome.google.com/webstore/detail/json-viewer-awesome/iemadiahhbebdklepanmkjenfdebfpfe?utm_source=chrome-ntp-icon) -提供方：Rahul Baruri
-- []()
+- [Modify-http-headers](https://ext.chrome.360.cn/webstore/search/Modify-http-headers) -调整header -推荐byArvin
 - []()
 
 ### - 免费的VPN
