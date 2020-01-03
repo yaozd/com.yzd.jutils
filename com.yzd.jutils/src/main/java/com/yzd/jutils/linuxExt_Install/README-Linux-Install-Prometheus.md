@@ -13,8 +13,13 @@
 - []()
 ### Prometheus 配置
 - [Prometheus 配置采集目标](https://www.cnblogs.com/xiangsikai/p/11288858.html)
+- [https://prometheus.io/docs/prometheus/latest/configuration/configuration/](https://prometheus.io/docs/prometheus/latest/configuration/configuration/) -官方配置文档
+### Prometheus 重新标签
+- [Prometheus 重新标签](https://www.cnblogs.com/xiangsikai/p/11288927.html)
 - []()
-- []()
+ 
+### Prometheus 监控K8S集群资源监控
+- [Prometheus 监控K8S集群资源监控](https://www.cnblogs.com/xiangsikai/p/11432919.html)
 ### 安装方法：
 - [https://prometheus.io/download/](https://prometheus.io/download/)
 ```

@@ -113,5 +113,10 @@
 - 桌面整理工具
     - Fences
     - 腾讯桌面整理    -推荐使用byArvin
+- XFTP
+    - [xftp自定义文本编辑器](https://www.landui.com/help/show-7775)
+    ```
+    选项=》高级=》编辑器路径
+    ```
 - []()
 - []()

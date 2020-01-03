@@ -3,7 +3,8 @@
 ```
 root:
 cd /etc/sysconfig/network-scripts/
-vim ifcfg-enp0s3
+vim ifcfg-enp0s3 
+PS:ifcfg-enp0s3的名称需要通过ifconfig查看。
 //
 BOOTPROTO=static
 IPADDR=192.168.56.111
