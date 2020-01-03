@@ -1,8 +1,8 @@
 ## 安装Prometheus
 - [prometheus + influxdb + grafana + mysql](https://www.cnblogs.com/cheyunhua/p/11376756.html)
 ### Prometheus查询执行界面：
-- [http://192.168.56.101:9090/targets](http://192.168.56.101:9090/targets)
-- [http://192.168.56.101:9090/graph](http://192.168.56.101:9090/graph)
+- [http://192.168.56.111:9090/targets](http://192.168.56.111:9090/targets)
+- [http://192.168.56.111:9090/graph](http://192.168.56.111:9090/graph)
   ```
   1.instance维度连接数查看：
   sum by (instance) (hyperspace_connections{endpoint_type="gateway"})

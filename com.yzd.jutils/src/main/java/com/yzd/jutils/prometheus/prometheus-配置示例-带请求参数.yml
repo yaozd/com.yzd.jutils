@@ -1,0 +1,36 @@
+# 2020-01-02-1728 静态配置文件
+# Prometheus从入门到跑路
+# https://blog.csdn.net/qq_17545293/article/details/89466902
+# my global config
+global:
+  scrape_interval:     5s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+# - "first_rules.yml"
+# - "second_rules.yml"
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: '172.20.134.79'
+    static_configs:
+      - targets: ['169.254.105.147:8080']
+    metrics_path: "/monitor/getGatewayOriginMetrics"
+    params:
+      target: ["172.20.134.79:9311"]
+remote_write:
+  - url: "http://127.0.0.1:8086/api/v1/prom/write?db=prometheus"
+remote_read:
+  - url: "http://127.0.0.1:8086/api/v1/prom/read?db=prometheus"
+
