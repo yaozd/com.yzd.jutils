@@ -1,5 +1,9 @@
 # 制作window的U盘启动盘
--  rufus 制作的 U 盘-推荐byArvin
+-  rufus 制作的 U 盘
+- [软碟通 UltraISO v9.7.2 中文注册版](http://www.carrotchou.blog/5291.html)-推荐byArvin
+
+# 微软 Windows 10 1909 十月更新官方 ISO 镜像--正版镜像
+- [微软 Windows 10 1909 十月更新官方 ISO 镜像](http://www.carrotchou.blog/9653.html)
 ```
 
 ```
