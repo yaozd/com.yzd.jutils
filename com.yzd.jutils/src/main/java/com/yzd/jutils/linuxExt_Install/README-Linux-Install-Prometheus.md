@@ -1,5 +1,8 @@
 ## 安装Prometheus
 - [prometheus + influxdb + grafana + mysql](https://www.cnblogs.com/cheyunhua/p/11376756.html)
+## Spring boot Prometheus
+- [https://github.com/yaozd/com.yzd.prometheus.demo](https://github.com/yaozd/com.yzd.prometheus.demo
+
 ### Prometheus查询执行界面：
 - [http://192.168.56.111:9090/targets](http://192.168.56.111:9090/targets)
 - [http://192.168.56.111:9090/graph](http://192.168.56.111:9090/graph)
@@ -63,6 +66,10 @@ rule_files:
 # Here it's Prometheus itself.
 scrape_configs:
   # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: 'spring-boot'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['localhost:8080']
   - job_name: '1722013479'
     # metrics_path defaults to '/metrics'
     # scheme defaults to 'http'.
@@ -71,8 +78,58 @@ scrape_configs:
   - job_name: '172206045'
     static_configs:
       - targets: ['172.20.60.45:9311']
+  - job_name: 'mysql-monitor'
+    static_configs:
+      - targets: ['localhost:9104']
+        labels:
+            alias: db1
+    params:
+      collect[]:
+        - perf_schema.tableiowaits
+        - perf_schema.indexiowaits
+        - perf_schema.tablelocks
 remote_write:
   - url: "http://127.0.0.1:8086/api/v1/prom/write?db=prometheus"
 remote_read:
   - url: "http://127.0.0.1:8086/api/v1/prom/read?db=prometheus"
+```
+### 将prometheus写成系统服务
+```
+cat>/lib/systemd/system/prometheus.service<<EOF
+[Service]
+Restart=on-failure
+WorkingDirectory=/usr/local/prometheus/
+ExecStart=/usr/local/prometheus/prometheus --config.file=/usr/local/prometheus/prometheus.yml
+[Install]
+WantedBy=multi-user.target
+EOF
+
+
+chown 644 /lib/systemd/system/prometheus.service
+systemctl daemon-reload
+systemctl enable prometheus
+//
+systemctl start prometheus
+systemctl stop prometheus
+systemctl status prometheus
+systemctl restart prometheus
+```
+### 将agent写成系统服务
+```
+cat>/lib/systemd/system/node_exporter.service<<EOF
+[Service]
+Restart=on-failure
+WorkingDirectory=/root/node_exporter-0.17.0.linux-amd64
+ExecStart=/root/node_exporter-0.17.0.linux-amd64/node_exporter
+[Install]
+WantedBy=multi-user.target
+EOF
+
+
+chown 644 /lib/systemd/system/node_exporter.service
+systemctl daemon-reload
+systemctl enable node_exporter
+systemctl start node_exporter
+systemctl stop node_exporter
+systemctl status node_exporter
 ```

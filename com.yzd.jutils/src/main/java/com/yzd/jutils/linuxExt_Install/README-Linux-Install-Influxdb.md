@@ -1,9 +1,21 @@
 ## Influxdb
 ### 下载地址
 - [https://portal.influxdata.com/downloads/](https://portal.influxdata.com/downloads/)
+- [https://github.com/CymaticLabs/InfluxDBStudio/releases](https://github.com/CymaticLabs/InfluxDBStudio/releases) -InfluxDBStudio
 ### 安装方法
 - [Centos 7 安装InfluxDB](https://blog.csdn.net/qq_34158117/article/details/90597304) -主要参考：byArvin
 - [在Linux系统部署InfluxDB](https://blog.csdn.net/qian_feifei/article/details/75139652) 
+### Influxdb修改数据保留策略
+- [Influxdb修改数据保留策略](https://www.jianshu.com/p/25754f52514d)
+```
+ps:Influxdb默认的数据保留策略的duration是0s，即长期保留。如果业务上无需长期保留，可以修改数据保留策略。
+查看数据库当前策略。
+show retention policies on LeeMan_db;
+修改数据策略。
+alter retention policy "autogen" on "LeeMan_db" duration 4320h replication 1 default;
+确认策略修改结果。
+show retention policies on LeeMan_db;
+```
 
 ```
 wget https://dl.influxdata.com/influxdb/releases/influxdb-1.7.6.x86_64.rpm
