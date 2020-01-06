@@ -7,3 +7,12 @@ windows客户端
 
 PS:测试可用-byArvin
 ```
+
+### windows如何统计端口的连接数
+- [windows如何统计端口的连接数](https://www.cnblogs.com/XYDsoft/p/10099110.html)
+- [Windows netstat命令查看连接数](https://blog.csdn.net/dodod2012/article/details/84029843)
+```
+netstat -an|find "9091" /C
+netstat -an|find "ES"|find "9091" 
+netstat -an|find "9091" 
+```
