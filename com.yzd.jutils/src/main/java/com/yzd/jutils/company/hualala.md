@@ -36,6 +36,7 @@
 - 单元测试自动化-hyperspace-test
 - httpDNS -高可用
 - Linux内核调优+Nginx内核调优
+- Multidatasource-动态数据源（实例级别：一个实例上多个数据库共享一组连接池）
 - []()
 - []()
 - []()
