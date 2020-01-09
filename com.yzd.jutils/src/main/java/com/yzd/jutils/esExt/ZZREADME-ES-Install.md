@@ -7,7 +7,7 @@
     filter 配置参考：https://www.elastic.co/guide/en/logstash/6.4/filter-plugins.html
     Logstash Reference：https://www.elastic.co/guide/en/logstash/6.4/index.html
     ```
-- []()
+- [logstash-best-practice-cn](https://doc.yonyoucloud.com/doc/logstash-best-practice-cn/get_start/hello_world.html)
 
 ## Logstash解析嵌套Json
 - [Logstash解析嵌套Json](https://www.jianshu.com/p/de06284e1484) -首要参考
@@ -46,3 +46,16 @@
             stdout { codec => rubydebug }
     }
     ```
+
+##　统一日志字段
+```
+idc
+host.name
+ip
+startTime
+responseCost
+responseStatus
+log.level
+traceId
+
+```
