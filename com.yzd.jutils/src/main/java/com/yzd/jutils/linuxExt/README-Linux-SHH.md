@@ -1,3 +1,9 @@
+### Java执行linux命令
+- [SSH-2实现java连接远程服务器并执行脚本命令](https://blog.csdn.net/chuanxincui/article/details/80916205)
+- 使用场景
+    ```
+    T1:对Linux进行集群管理
+    ```
 
 ### [解决ssh执行脚本无法使用环境变量](https://blog.csdn.net/u014449046/article/details/79979640)
 

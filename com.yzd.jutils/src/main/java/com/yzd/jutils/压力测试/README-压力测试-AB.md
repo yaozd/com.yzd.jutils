@@ -1,3 +1,10 @@
+## AB 安装
+- [linux 下ab压力测试](https://www.cnblogs.com/myvic/p/7703973.html)
+```
+yum -y install httpd-tools
+which ab
+```
+
 ##　AB压力测试
 
 - 示例 （开启KEEP ALIVE可以提高性能：HTTP建立连接是特别消耗资源）

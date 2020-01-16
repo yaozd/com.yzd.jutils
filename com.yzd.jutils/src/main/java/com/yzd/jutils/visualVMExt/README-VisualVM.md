@@ -24,3 +24,28 @@ https://visualvm.github.io/archive/uc/8u40/updates.xml.gz
 
 - VisualVM-BufferMonitor 插件
  - 方便调试netty的堆外内存
+
+### jvisualVM 监控远程 spring boot程序
+- [jconsole 和jvisualVM 监控远程 spring boot程序](https://www.cnblogs.com/shengs/p/10796518.html)
+```
+java -Djava.rmi.server.hostname=192.168.56.112 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -jar http-demo-1.0-SNAPSHOT.jar
+//
+监控java 程序 增加启动参数 
+java  \
+-Djava.rmi.server.hostname=192.168.2.39 \
+-Dcom.sun.management.jmxremote \
+-Dcom.sun.management.jmxremote.port=1099 \
+-Dcom.sun.management.jmxremote.authenticate=false \
+-Dcom.sun.management.jmxremote.ssl=false \
+-jar /root/app/data-test-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev  >nohup 2>&1 & 
+
+//
+由于启动参数过长，我们可以定义系统环境变量来表示 在/etc/profile 最后一行增加 
+export JAVA_OPTS='-Djava.rmi.server.hostname=192.168.2.39 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false'
+然后 source /etc/profile 是文件生效。
+启动时我们就可以用  nohup java $JAVA_OPTS -jar /root/app/data-center-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev  >nohup 2>&1 & 这个脚本。 
+PS:
+JMX端口为1099 ；
+如果不设置服务器主机名 -Djava.rmi.server.hostname 到时候可能连不上。
+
+```
