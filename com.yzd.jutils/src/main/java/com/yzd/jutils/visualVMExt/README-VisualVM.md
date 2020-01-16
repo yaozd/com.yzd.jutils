@@ -24,6 +24,12 @@ https://visualvm.github.io/archive/uc/8u40/updates.xml.gz
 
 - VisualVM-BufferMonitor 插件
  - 方便调试netty的堆外内存
+- Startup Profiler
+- KillApplication
+- Tracer-Jvmstat Probes
+- Tracer-Monitor Probes (PS:方便查看是否会发生内存溢出) heap=堆、PermGen=永久代
+- 抽样器=》内存 (PS:方便查看实例个数)
+
 
 ### jvisualVM 监控远程 spring boot程序
 - [jconsole 和jvisualVM 监控远程 spring boot程序](https://www.cnblogs.com/shengs/p/10796518.html)
