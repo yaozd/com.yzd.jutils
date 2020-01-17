@@ -26,8 +26,9 @@ public class SimpleHttpClient {
 
     public static void main(String[] args) {
         //URI uri = UriUtil.create("http://www.baidu.com");
-        URI uri = UriUtil.create("http://192.168.56.112:8888/");
+        //URI uri = UriUtil.create("http://192.168.56.112:8888/");
         //URI uri = UriUtil.create("http://localhost:8888");
+        URI uri = UriUtil.create("http://localhost:9876");
         StringBuffer content = new StringBuffer();
         content.append("GET / HTTP/1.1\r\n");
         content.append("Host: www.baidu.com\r\n");
@@ -97,7 +98,10 @@ public class SimpleHttpClient {
         } else {
             do {
                 readByte = (byte) is.read();
-                //如果客户端发送的是一个不完整的非法请求包时，服务端会在1分钟后发送一个ACK的确认包
+                //如果客户端发送的是一个不完整的非法请求包时，服务端会在1分钟后发送一个FIN的关闭的包 netstat状态：FIN_WAIT_2
+                //网络的FIN_WAIT_2状态解释和分析
+                //解决Linux服务器 FIN_WAIT2 连接过多的问题
+                //===
                 //byte类型的-1转化为char，由ascii码表，-1是不在表范围之内
                 if (readByte == -1) {
                     continue;

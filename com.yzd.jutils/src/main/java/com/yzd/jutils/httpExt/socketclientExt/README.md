@@ -13,4 +13,6 @@
     第二部：byte类型的-1转化为char，由ascii码表，-1是不在表范围之内，因为默认char占2个字节，即8个bit，所能存的最大值是65536个，所以char的数字范围是0-65535，把-1转为char，会倒着找，就是最大值65535，
     第三步：char类型的65535转换为int还是65535
     ```
+    - [网络的FIN_WAIT_2状态解释和分析](https://www.cnblogs.com/langtianya/p/6648100.html)
+    - [解决Linux服务器 FIN_WAIT2 连接过多的问题](https://blog.csdn.net/weixin_34356138/article/details/92308473)
 - SocketHttpClient
