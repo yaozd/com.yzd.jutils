@@ -20,7 +20,8 @@ https://visualvm.github.io/archive/uc/8u40/updates.xml.gz
 - Threads Inspector 插件
     - 方便thread dump的调试
     
-- GC 插件
+- GC 插件 PS:[visualvm 插件 visual gc 使用介绍](https://www.cnblogs.com/reycg-blog/p/7805075.html)
+    - [jvisualvm远程监控 visualgc插件 不受此jvm支持问题](https://www.cnblogs.com/rgqancy/p/10104886.html)
 
 - VisualVM-BufferMonitor 插件
  - 方便调试netty的堆外内存

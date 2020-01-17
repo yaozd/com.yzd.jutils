@@ -60,3 +60,30 @@
     ######################################### 100.0%
     选项 -o 将下载数据写入到指定名称的文件中，并使用 –progress 显示进度条。
     ```
+- [Curl追踪请求延时问题](https://www.cnblogs.com/shiyiwen/p/7216189.html)
+    ```
+     curl -o /dev/null -s -w %{time_namelookup}---%{time_connect}---%{time_starttransfer}---%{time_total}---%{speed_download}"\n" www.36nu.com
+     -o：把curl 返回的html、js 写到垃圾回收站[ /dev/null]
+     -s：去掉所有状态
+     -w：按照后面的格式写出rt
+     time_namelookup：DNS 解析域名www.36nu.com的时间
+     time_commect：client和server端建立TCP 连接的时间
+     time_starttransfer：从client发出请求；到web的server 响应第一个字节的时间
+     time_total：client发出请求；到web的server发送会所有的相应数据的时间
+     speed_download：下周速度 单位 byte/s
+     =====================================
+     #vim  curl-time.txt
+     \n
+                   http: %{http_code}\n
+                    dns: %{time_namelookup}s\n
+               redirect: %{time_redirect}s\n
+           time_connect: %{time_connect}s\n
+        time_appconnect: %{time_appconnect}s\n
+       time_pretransfer: %{time_pretransfer}s\n
+     time_starttransfer: %{time_starttransfer}s\n
+          size_download: %{size_download}bytes\n
+         speed_download: %{speed_download}B/s\n
+                       ----------\n
+             time_total: %{time_total}s\n
+     \n
+       ```
