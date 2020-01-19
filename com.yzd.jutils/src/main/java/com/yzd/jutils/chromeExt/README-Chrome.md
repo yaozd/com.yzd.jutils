@@ -21,6 +21,7 @@ ctrl+shift+delete
 - [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall)-提供方：one-tab.com
 - [OneTab Pro: Tab Management for Chrome](https://chrome.google.com/webstore/detail/onetab-pro-tab-management/ocpclficanihhomiibpglblkmniocoll)-推荐使用byArvin -提供方：getonetab.com
 - [书签侧边栏](https://chrome.google.com/webstore/detail/bookmark-sidebar/jdbnofccmhefkmjbkkdkfiicjkgofkdh) -提供方：Philipp König
+- 
 - [Google 类似网页](https://chrome.google.com/webstore/detail/google-similar-pages/pjnfggphgdjblhfjaphkjhfpiiekbbej) -提供方：google.com
 - []()
 - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)-提供方：Raymond Hill (gorhill)
@@ -35,7 +36,7 @@ ctrl+shift+delete
 - [Talend API Tester - Free Edition](https://chrome.google.com/webstore/detail/talend-api-tester-free-ed/aejoelaoggembcahagimdiliamlcdmfm?utm_source=chrome-ntp-icon) -REST API接口测试-推荐byArvin -提供方：Talend
 - [JSON Viewer Awesome](https://chrome.google.com/webstore/detail/json-viewer-awesome/iemadiahhbebdklepanmkjenfdebfpfe?utm_source=chrome-ntp-icon) -提供方：Rahul Baruri
 - [Modify-http-headers](https://ext.chrome.360.cn/webstore/search/Modify-http-headers) -调整header -推荐byArvin
-- []()
+- [Speed Dial](https://chrome.google.com/webstore/detail/ejbjamhkdedinncaeiackcdehpccoejm)  -作用：快速拨号-提供方：Speed Dial Dev
 
 ### - 免费的VPN
 - [Unlimited VPN proxy – Unblock Sites](https://chrome.google.com/webstore/detail/unlimited-vpn-proxy-%E2%80%93-unb/nkmghlbiclohebhhoapdhcflibiibeak) -推荐byArvin
