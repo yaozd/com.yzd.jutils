@@ -13,3 +13,17 @@ jvm参数
 - [【JAVA学习】“-Xmx1024m -Xms1024m -Xmn512m -Xss256k”——Java运行参数(转)](https://blog.csdn.net/a503921892/article/details/39048889)
 
 - [JVM调优总结 -Xms -Xmx -Xmn -Xss等参考详解](https://www.cnblogs.com/likehua/p/3369823.html)-推荐参考-byArvin
+
+- [命令java -server什么意思](https://zhidao.baidu.com/question/454583244.html)
+    ```
+    JVM的参数配置
+    分别是 服务器模式 和客户端模式
+    因为JVM里面很多机制，在这两种模式下是不同的，
+    比如垃圾回收机制，客户端模式下，要求的是用户体验流程，无明显滞留感（就是没有卡的现象）
+    而服务端，要求的是吞吐量，就是单位时间内执行的代码要求越多越好，
+    ```
+- JVM参数调优001
+    - [JVM参数调优001](https://blog.csdn.net/iteye_254/article/details/82519144)
+    - [JVM参数](https://www.oracle.com/technetwork/java/javase/tech/vmoptions-jsp-140102.html)
+    - [JVM系列三:JVM参数设置、分析](https://www.cnblogs.com/redcreen/archive/2011/05/04/2037057.html) -首要参考byArvin 参数说明比较详细
+    - [快速上手jvm调优：GC调优思路及参数设置](https://blog.csdn.net/wk52525/article/details/94899432)

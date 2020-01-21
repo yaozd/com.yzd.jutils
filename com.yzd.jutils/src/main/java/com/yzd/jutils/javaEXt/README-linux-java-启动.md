@@ -76,11 +76,24 @@ tar -xfv xx.tar (不推荐使用，PS:tar: v: Cannot open: No such file or direc
 nohup java -jar -Xms256M -Xmx256M -Dlog4j2.contextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector -Dlogging.config=/home/hll/deploy/container/log4j2-spring.xml -Dspring.config.location=file:/home/hll/deploy/container/application.yaml ./yzd-demo-container-0.0.1-SNAPSHOT.jar & 
 ```
 
-- lds-demo-CONTAINER示例-推荐参考-byArvin 
-
+- 开发环境-demo-CONTAINER示例-推荐参考-byArvin 
+    - netty调试模式，内存检测，对性能有一定影响，对应配置：PS:-Dio.netty.leakDetection.level=PARANOID -Dio.netty.leakDetection.targetRecords=15
 ```
 #!/bin/sh
 nohup java -server -Xms1G -Xmx1G -XX:+UseConcMarkSweepGC -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/data/local/apirouter/java_pid%p.hprof -Dio.netty.leakDetection.level=PARANOID -Dio.netty.leakDetection.targetRecords=15 -Dlogging.config=/data/local/apirouter/config/log4j2-spring.xml  -Dspring.config.location=file:/data/local/apirouter/config/application.yaml  -jar /data/local/apirouter/yzd-demo-container-0.0.1-SNAPSHOT.jar >/data/local/apirouter/yzd-demo.out 2>&1 &
+```
+- 生产环境-demo-CONTAINER示例-推荐参考-byArvin 
+```
+#!/bin/sh
+nohup \
+java -server -Xms4G -Xmx4G -XX:+UseConcMarkSweepGC \
+-Dlogging.config=/home/apirouter/config/log4j2-spring.xml \
+-Dlog4j2.contextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector \
+-XX:+HeapDumpOnOutOfMemoryError \
+-XX:HeapDumpPath=./java_pid%p.hprof \
+-Dspring.config.location=file:/home/apirouter/config/application.yaml  \
+-jar  /home//apirouter/yzd-container-0.0.1-SNAPSHOT.jar &
+
 ```
 - HTTP-DEMO示例
 - 

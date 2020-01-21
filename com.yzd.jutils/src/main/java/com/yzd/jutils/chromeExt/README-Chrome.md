@@ -37,6 +37,7 @@ ctrl+shift+delete
 - [JSON Viewer Awesome](https://chrome.google.com/webstore/detail/json-viewer-awesome/iemadiahhbebdklepanmkjenfdebfpfe?utm_source=chrome-ntp-icon) -提供方：Rahul Baruri
 - [Modify-http-headers](https://ext.chrome.360.cn/webstore/search/Modify-http-headers) -调整header -推荐byArvin
 - [Speed Dial](https://chrome.google.com/webstore/detail/ejbjamhkdedinncaeiackcdehpccoejm)  -作用：快速拨号-提供方：Speed Dial Dev
+- [Super_preloaderPlus]() -自动翻页
 
 ### - 免费的VPN
 - [Unlimited VPN proxy – Unblock Sites](https://chrome.google.com/webstore/detail/unlimited-vpn-proxy-%E2%80%93-unb/nkmghlbiclohebhhoapdhcflibiibeak) -推荐byArvin

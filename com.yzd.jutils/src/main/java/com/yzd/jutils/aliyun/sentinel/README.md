@@ -119,3 +119,7 @@ java -jar -Dcsp.sentinel.api.port=8720 -Dcsp.sentinel.dashboard.server=localhost
 [cdfive/Sentinel-数据持久化InfluxDB](https://github.com/cdfive/Sentinel/tree/winxuan_develop/sentinel-dashboard)<br>
 [cdfive/Sentinel-数据持久化InfluxDB-备份yzd](https://github.com/yaozd/Sentinel)<br>
 
+- 参考使用案例
+    - [阿里 sentinel 在项目中的使用](https://blog.csdn.net/tang_jian_dong/article/details/86759714)
+    - [阿里开源Sentinel流控框架基本介绍与简单使用](https://blog.csdn.net/wk52525/article/details/103729703)
+

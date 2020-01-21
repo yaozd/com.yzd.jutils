@@ -31,3 +31,7 @@ fastjson比gson快大约6倍，测试结果上这里：性能测试对比。gson
 ```
 
 ## [fastjson数据格式转换 SerializerFeature属性详解](https://www.cnblogs.com/xiang--liu/p/9710194.html)
+
+##　java 对json 格式做参数格式校验
+- [java 对json 格式做参数格式校验](https://blog.csdn.net/Dream_bin/article/details/92656876)
+- [Java后台实现json字符串格式验证工具类](http://www.zuidaima.com/code/file/3605601447003136.htm?dir=/3605601447003136.java)
