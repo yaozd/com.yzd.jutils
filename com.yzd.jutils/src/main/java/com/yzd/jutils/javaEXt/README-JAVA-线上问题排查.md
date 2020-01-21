@@ -9,3 +9,23 @@
 
 ## *visualVMExt* 
 > PS:下面的也可以参考：
+>
+
+- 常用 使用--help，查看命令具体使用
+```
+ jps -v
+ 
+ jstat -gc 118694 500 5 
+ 
+ jmap -dump:live,format=b,file=dump.hprof 29170
+ 
+ jmap -heap 29170
+ 
+ jmap -histo:live 29170 | more
+ 
+ jmap -permstat 29170
+ 
+ jstack -l 29170 |more
+```
+
+ 

@@ -1,7 +1,30 @@
 ## 参考（HAla）
 jvm参数
 ```
--Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=1899 -Dcom.sun.management.jmxremote.ssl=false  -Duser.timezone=GMT+08  -Xms2048m -Xmx8192m -Xmn1024m -Xss512K -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=512m  -XX:+UseCompressedOops  -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -XX:MaxTenuringThreshold=6 -XX:+ExplicitGCInvokesConcurrent -XX:+ParallelRefProcEnabled -Xloggc:/home/logs/HeapDump_Gc/${HOSTNAME}-gc.log -XX:+PrintGCDateStamps -XX:+PrintGCDetails -XX:+PrintGCApplicationStoppedTime -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/home/logs/HeapDump_Gc/${HOSTNAME}.hprof -Dfile.encoding=UTF-8
+-Dcom.sun.management.jmxremote.authenticate=false 
+-Dcom.sun.management.jmxremote.port=1899 
+-Dcom.sun.management.jmxremote.ssl=false  
+-Duser.timezone=GMT+08  
+-Xms2048m 
+-Xmx8192m 
+-Xmn1024m 
+-Xss512K 
+-XX:MetaspaceSize=128m 
+-XX:MaxMetaspaceSize=512m  
+-XX:+UseCompressedOops  
+-XX:+UseConcMarkSweepGC 
+-XX:CMSInitiatingOccupancyFraction=75 
+-XX:+UseCMSInitiatingOccupancyOnly 
+-XX:MaxTenuringThreshold=6 
+-XX:+ExplicitGCInvokesConcurrent 
+-XX:+ParallelRefProcEnabled 
+-Xloggc:/home/logs/HeapDump_Gc/${HOSTNAME}-gc.log 
+-XX:+PrintGCDateStamps 
+-XX:+PrintGCDetails 
+-XX:+PrintGCApplicationStoppedTime 
+-XX:+HeapDumpOnOutOfMemoryError 
+-XX:HeapDumpPath=/home/logs/HeapDump_Gc/${HOSTNAME}.hprof 
+-Dfile.encoding=UTF-8
 
 ```
 ### [-Xms和-Xmx的值设置成一样 Java不断地吃内存](https://blog.csdn.net/Truong/article/details/71126868)

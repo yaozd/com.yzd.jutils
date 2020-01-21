@@ -45,6 +45,13 @@ tt -t com.example.UserServiceImpl findUser
 2.tt --play可以重放请求
 tt --play -i 1000
 ```
+## 快速安装
+- [快速安装](https://alibaba.github.io/arthas/install-detail.html)
+```
+下载arthas-boot.jar，然后用java -jar的方式启动：
+curl -O https://alibaba.github.io/arthas/arthas-boot.jar
+java -jar arthas-boot.jar
+```
 
 ### [手动安装Arthas](https://alibaba.github.io/arthas/manual-install.html)
 
@@ -60,3 +67,5 @@ Arthas使用重点，必须先启动Arthas，然后再启动jar程序。
 ```
 java -jar -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005 out-of-memory-web-demo-0.0.1-SNAPSHOT.jar 
 ```
+
+### [一图掌握Arthas—常用命令汇总](https://github.com/alibaba/arthas/issues/1003)
