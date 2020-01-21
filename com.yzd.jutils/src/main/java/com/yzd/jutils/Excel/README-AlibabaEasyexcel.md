@@ -7,3 +7,5 @@
 ```
 快速、简单避免OOM的java处理Excel工具
 ```
+
+- [easyexcel-encapsulation](https://github.com/HowieYuan/easyexcel-encapsulation) -推荐参考byArvin
