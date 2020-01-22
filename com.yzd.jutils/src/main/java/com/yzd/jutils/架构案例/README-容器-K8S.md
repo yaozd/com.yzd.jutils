@@ -1,0 +1,17 @@
+## K8S关注点
+- pod部署到指定的node(机器上)
+    - [深入玩转K8S之利用Label控制Pod位置](https://blog.51cto.com/devingeng/2134064)
+- []()
+- 外网访问
+    - [深入玩转K8S之外网如何访问业务应用](https://blog.51cto.com/devingeng/2135508)
+- []()
+- 弹性伸缩和滚动更新
+    - [深入玩转K8S之简单的业务弹性伸缩和滚动更新操作](https://blog.51cto.com/devingeng/2135955)
+- []()
+- []()
+- 存储
+    - [深入玩转K8S之存储资源管理](https://blog.51cto.com/devingeng/2151028)
+- 调度
+    - [深入玩转K8S之最懂实际应用场景的调度神器DaemonSet](https://blog.51cto.com/devingeng/2134114)
+- []()
+- []()

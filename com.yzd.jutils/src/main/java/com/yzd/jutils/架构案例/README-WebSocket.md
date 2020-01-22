@@ -1,3 +1,7 @@
+- 数据推送方案参考：
+    - [千万级WebSocket消息推送服务技术分析](https://blog.csdn.net/Wing_93/article/details/81587809) -推荐参考byArvin
+    - []()
+    - []()
 - WebSocket 框架的性能比较
     - [八种 WebSocket 框架的性能比较](https://cloud.tencent.com/developer/article/1376872)
 - SpringBoot 整合 WebSocket 方案

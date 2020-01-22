@@ -1,3 +1,3 @@
 - [大型科技团队的管理](https://my.oschina.net/u/4007037/blog/3133756)
-- []()
+- [去TMD低效会议](https://mp.weixin.qq.com/s?__biz=MzIxMzEzMjM5NQ==&mid=2651035247&idx=1&sn=327a5358cc0150d3c2016488f45a580f)
 - []()
