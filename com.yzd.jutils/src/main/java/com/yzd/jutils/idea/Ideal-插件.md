@@ -10,7 +10,7 @@
 - GenerateAllSetter
 - Lombok Plugin
 - SonarLint
-- VisualVM Launcher 
+- VisualVM Launcher
 - Vue.js
 - protobuf support
 - Key promoter X
@@ -25,9 +25,14 @@
              return new Builder();
          }
      ```
+- Builder Generator (PS:builder模式插件,推荐使用byArvin)
+    ```
+    Alt+Insert 
+    https://plugins.jetbrains.com/plugin/6585-builder-generator/
+    ```
 - String Manipulation
     - [String Manipulation](https://blog.csdn.net/j3T9Z7H/article/details/78684055)
-- 
+- Markdown Navigator
 - 
 - 
 
