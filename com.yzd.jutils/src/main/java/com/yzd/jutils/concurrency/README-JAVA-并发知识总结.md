@@ -1,4 +1,5 @@
 ## Java并发知识点
+- [Java并发编程之美](https://emacsist.github.io/2019/10/09/java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E%E7%AC%94%E8%AE%B0/)
 - [Java并发知识点总结](https://github.com/CL0610/Java-concurrency)
 
 > 努力的意义，就是，在以后的日子里，放眼望去全是自己喜欢的人和事！
