@@ -78,3 +78,7 @@ RFM客户类型
 
 ——“↑”表示大于均值，“↓”表示小于均值
 ```
+
+## 提高用户转化率
+- [如何通过有效的线索管理提高用户转化率](https://blog.csdn.net/Tybyqi/article/details/102895052)
+- [如何通过优化转化漏斗来提高用户转化率？](https://blog.csdn.net/yiguanfangzhou/article/details/91981651)
