@@ -52,4 +52,8 @@ enter password:（直接输入新密码即可，然后回车）
 ## 参考：
 - [CentOS 7.0下使用yum安装MySQL](https://segmentfault.com/a/1190000015216149)
 - [Linux重置MySQL密码](https://blog.csdn.net/fmwind/article/details/81941790)
-- []()
+- [【mysql】linux下mysql报Failed to restart mysqld.service: Unit not found](https://blog.csdn.net/qq_31083947/article/details/90248565)
+    ```
+    查看服务列表：
+    chkconfig --list  查询服务列表
+    ```

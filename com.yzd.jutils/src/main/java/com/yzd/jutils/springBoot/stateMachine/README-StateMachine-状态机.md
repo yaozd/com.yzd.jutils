@@ -1,3 +1,8 @@
+- 首要参考byArvin
+    - [Spring StateMachine详解](https://blog.csdn.net/u012129558/article/details/90519577) 有例子可参考-推荐参考byArvin
+    - [Spring Statemachine 概念及应用](https://www.jianshu.com/p/9ee887e045dd) 理论
+    - [StateMachine 状态机机制深入解析](https://www.jb51.net/article/168174.htm) 例子比较简单
+
 - 思路：
     ```
     为了将状态变更的操作都统一管理起来，我们会考虑在项目中引入状态机，
