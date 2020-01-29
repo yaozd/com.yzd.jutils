@@ -16,3 +16,5 @@ Synchronized用于线程间的数据共享，而ThreadLocal则用于线程间的
 -----------------
 
 ```
+
+- [ThreadLocal真会内存泄露？](https://my.oschina.net/ij5IYLKW/blog/539228)
