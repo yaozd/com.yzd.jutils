@@ -38,6 +38,7 @@ ctrl+shift+delete
 - [Modify-http-headers](https://ext.chrome.360.cn/webstore/search/Modify-http-headers) -调整header -推荐byArvin
 - [Speed Dial](https://chrome.google.com/webstore/detail/ejbjamhkdedinncaeiackcdehpccoejm)  -作用：快速拨号-提供方：Speed Dial Dev
 - [Super_preloaderPlus]() -自动翻页
+- [bilibili哔哩哔哩下载助手](https://chrome.google.com/webstore/detail/bilibili%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/bfcbfobhcjbkilcbehlnlchiinokiijp)
 
 ### - 免费的VPN
 - [Unlimited VPN proxy – Unblock Sites](https://chrome.google.com/webstore/detail/unlimited-vpn-proxy-%E2%80%93-unb/nkmghlbiclohebhhoapdhcflibiibeak) -推荐byArvin
