@@ -15,7 +15,9 @@
 ##　搜索地址
 - [快搜 - 搜索快人一步](https://search.chongbuluo.com)
 - [https://www.dogedoge.com](https://www.dogedoge.com)
-- []()
+- [香当网（年终总结，个人简历，事迹材料，租赁合同，演讲稿）：https://www.xiangdang.net/](https://www.xiangdang.net/)
+- 熵数（图表制作，数据可视化）：https://dydata.io/appv2/#/pages/index/home
+- [130 个相见恨晚的超实用网站，一次性分享出来](https://blog.csdn.net/qq_43901693/article/details/100606828)
 
 ## 壁纸-卡通艺术插画设计图片下载网站
 - [https://mixkit.co/art/](https://mixkit.co/art/)
