@@ -51,6 +51,20 @@
                             	${project.build.finalName} 打包名称
                             todir: 目标服务器ip地址和文件路径
                         -->
+                        <checksum algorithm="SHA1" fileext=".sha1">
+                               <fileset dir="${project.build.directory}">
+                               <include name="${distAssemblyName}.zip"/>
+                               <include name="${distAssemblyName}.tar.bz2"/>
+                               <include name="${distAssemblyName}.tar.gz"/>
+                               </fileset>
+                               </checksum>
+                               <checksum algorithm="MD5" fileext=".md5">
+                               <fileset dir="${project.build.directory}">
+                               <include name="${distAssemblyName}.zip"/>
+                               <include name="${distAssemblyName}.tar.bz2"/>
+                               <include name="${distAssemblyName}.tar.gz"/>
+                               </fileset>
+                        </checksum>
                         <scp file="${project.build.directory}\${project.build.finalName}.jar"
                              todir="username:password@ip:/root/jar_project" trust="true"/>
                         <!--连接虚拟机
