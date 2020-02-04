@@ -35,7 +35,8 @@ ctrl+shift+delete
 - [The New Tab - Customize Your Start Page](https://chrome.google.com/webstore/detail/the-new-tab-customize-you/ddjdamcnphfdljlojajeoiogkanilahc) -定制自己的首页-推荐使用byArvin
 - [Talend API Tester - Free Edition](https://chrome.google.com/webstore/detail/talend-api-tester-free-ed/aejoelaoggembcahagimdiliamlcdmfm?utm_source=chrome-ntp-icon) -REST API接口测试-推荐byArvin -提供方：Talend
 - [JSON Viewer Awesome](https://chrome.google.com/webstore/detail/json-viewer-awesome/iemadiahhbebdklepanmkjenfdebfpfe?utm_source=chrome-ntp-icon) -提供方：Rahul Baruri
-- [Modify-http-headers](https://ext.chrome.360.cn/webstore/search/Modify-http-headers) -调整header -推荐byArvin
+- [Modify-http-headers](https://ext.chrome.360.cn/webstore/search/Modify-http-headers)
+- [Modify Header Value (HTTP Headers)](https://chrome.google.com/webstore/detail/modify-header-value-http/cbdibdfhahmknbkkojljfncpnhmacdek?utm_source=chrome-ntp-icon) 提供方：Grephy -调整header -推荐byArvin
 - [Speed Dial](https://chrome.google.com/webstore/detail/ejbjamhkdedinncaeiackcdehpccoejm)  -作用：快速拨号-提供方：Speed Dial Dev
 - [Super_preloaderPlus]() -自动翻页
 - [bilibili哔哩哔哩下载助手](https://chrome.google.com/webstore/detail/bilibili%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/bfcbfobhcjbkilcbehlnlchiinokiijp)

@@ -25,7 +25,7 @@
     - [squirrel-foundation有限状态机快速入门](https://zhuanlan.zhihu.com/p/91482662)
 
 ## spring statemachine
-- [spring statemachine 多个状态机实践](https://blog.csdn.net/chenpei1990/article/details/81636897) -解决单实例不能够被多线程共享
+- [spring statemachine 多个状态机实践](https://blog.csdn.net/chenpei1990/article/details/81636897) -解决单实例不能够被多线程共享-解决线程安全问题-使用工厂模式（需要进行代码测试验证byArvin）
 - [Spring Statemachine Using Distributed States](https://blog.csdn.net/xichenguan/article/details/89978165) -分布式状态机
 
 

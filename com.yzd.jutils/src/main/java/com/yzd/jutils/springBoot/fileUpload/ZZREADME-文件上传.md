@@ -28,6 +28,7 @@ public class FileUploadConfig {
 
 }
 --------------
+    //配置静态文件下载
     @Value("${file.uploadFolder}")
     private String rootPath4UploadFolder;
     @Override
@@ -40,5 +41,63 @@ public class FileUploadConfig {
         }
     }
 --------------
+@Configuration
+public class FileDownloadConfig extends WebMvcConfigurationSupport {
+    @Value("${xdja.upload.file.path}")
+    private String decryptFilePath;
+    
+    //配置静态文件下载
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        File file = new File(decryptFilePath);
+        String fullFilePath="file:" + file.getAbsolutePath()+ File.separator;
+        registry.addResourceHandler("/file/**").addResourceLocations(fullFilePath);
+        //registry.addResourceHandler("/file/**").addResourceLocations("file:" + file+ File.separator);
+        registry.addResourceHandler("/**").addResourceLocations("classpath:/static/");
+    }
+}
 
+```
+## [Spring boot 下载文件 优雅实现](https://blog.csdn.net/q1009020096/article/details/89952141)
+```
+@GetMapping("/downloadCacheFile/{fileName:.*}")
+public ResponseEntity<Resource> downloadCacheFile(@PathVariable("fileName") String fileName) {
+    try {
+        String savePath = "/home/download/"
+        // 获取文件名称，中文可能被URL编码
+        fileName = URLDecoder.decode(fileName, "UTF-8");
+        // 获取本地文件系统中的文件资源
+        FileSystemResource resource = new FileSystemResource(savePath + fileName);
+
+        // 解析文件的 mime 类型
+        String mediaTypeStr = URLConnection.getFileNameMap().getContentTypeFor(fileName);
+        // 无法判断MIME类型时，作为流类型
+        mediaTypeStr = (mediaTypeStr == null) ? MediaType.APPLICATION_OCTET_STREAM_VALUE : mediaTypeStr;
+        // 实例化MIME
+        MediaType mediaType = MediaType.parseMediaType(mediaTypeStr);
+
+
+        /*
+         * 构造响应的头
+         */
+        HttpHeaders headers = new HttpHeaders();
+        // 下载之后需要在请求头中放置文件名，该文件名按照ISO_8859_1编码。
+        String filenames = new String(fileName.getBytes(StandardCharsets.UTF_8), StandardCharsets.ISO_8859_1);
+        headers.setContentDispositionFormData("attachment", filenames);
+        headers.setContentType(mediaType);
+
+        /*
+         * 返还资源
+         */
+        return ResponseEntity.ok()
+                .headers(headers)
+                .contentLength(resource.getInputStream().available())
+                .body(resource);
+    } catch (IOException e) {
+        logger.error("文件读写错误", e);
+        return null;
+    }
+}
+————————————————
+https://blog.csdn.net/q1009020096/article/details/89952141
 ```
