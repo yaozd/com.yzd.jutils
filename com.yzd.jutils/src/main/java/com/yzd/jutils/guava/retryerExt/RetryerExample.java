@@ -29,11 +29,12 @@ public class RetryerExample {
 
         Callable<Boolean> task = new Callable<Boolean>() {
             int i = 0;
+
             @Override
             public Boolean call() throws Exception {
                 i++;
                 log.info("第{}次执行！", i);
-                if (i<3) {
+                if (i < 3) {
                     log.info("模拟执行失败");
                     throw new IOException("异常");
                 }

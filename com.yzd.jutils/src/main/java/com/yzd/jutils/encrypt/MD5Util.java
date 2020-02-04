@@ -12,15 +12,15 @@ public class MD5Util {
 
     protected final static String SHA_KEY = "SHA1";
 
-    public static String getMd5(String value,String encoding) {
-        return encrypt(value, MD5_KEY,encoding);
+    public static String getMd5(String value, String encoding) {
+        return encrypt(value, MD5_KEY, encoding);
     }
 
-    public static String getSHA(String value,String encoding) {
-        return encrypt(value, SHA_KEY,encoding);
+    public static String getSHA(String value, String encoding) {
+        return encrypt(value, SHA_KEY, encoding);
     }
 
-    private static String encrypt(String value, String key,String encoding) {
+    private static String encrypt(String value, String key, String encoding) {
         try {
             // 拿到一个MD5转换器（如果想要SHA1参数换成”SHA1”）
             MessageDigest messageDigest = MessageDigest.getInstance(key);

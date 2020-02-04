@@ -8,10 +8,11 @@ public class DiscountComponentForGoods extends DiscountComponent {
      *
      * @param price 商品价格
      */
-    public DiscountComponentForGoods(double price){
-        name="商品打折策略";
-        this.price=price;
+    public DiscountComponentForGoods(double price) {
+        name = "商品打折策略";
+        this.price = price;
     }
+
     @Override
     public double calculateDiscount() {
         return price;

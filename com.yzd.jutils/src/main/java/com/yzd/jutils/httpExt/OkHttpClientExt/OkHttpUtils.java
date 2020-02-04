@@ -67,7 +67,8 @@ public class OkHttpUtils {
             e.printStackTrace();
         }
     }
-    public void getForAsynchronous(String url){
+
+    public void getForAsynchronous(String url) {
         final Request request = new Request.Builder()
                 .get()
                 .url(url)
@@ -76,7 +77,7 @@ public class OkHttpUtils {
         call.enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                log.error("onFailure: ",e.getMessage());
+                log.error("onFailure: ", e.getMessage());
             }
 
             @Override

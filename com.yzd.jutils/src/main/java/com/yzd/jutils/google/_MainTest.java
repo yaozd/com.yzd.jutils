@@ -17,6 +17,7 @@ public class _MainTest {
      * 使用谷歌身份验证器（Google Authenticator）保护你的后台
      * https://blog.csdn.net/m0_37202351/article/details/88841969
      * https://github.com/wstrange/GoogleAuth
+     *
      * @param args
      */
     public static void main(String[] args) {
@@ -27,7 +28,7 @@ public class _MainTest {
         String secret = key.getKey();
         System.out.println(secret);
         //生成 Google Authenticator 二维码
-        String qrcode =createGoogleAuthQRCodeData(secret,"yzd","nihao");
+        String qrcode = createGoogleAuthQRCodeData(secret, "yzd", "nihao");
         System.out.println(qrcode);
         // 用户登录时使用
         // 根据用户密钥和用户输入的密码，验证是否一致。（近3个密码都有效：前一个，当前，下一个）
@@ -38,10 +39,12 @@ public class _MainTest {
         int code = gAuth.getTotpPassword("TAP7SQKJRXO4NWEW");
         System.out.println(code);
     }
+
     /**
      * 生成 Google Authenticator 二维码所需信息
      * Google Authenticator 约定的二维码信息格式 : otpauth://totp/{issuer}:{account}?secret={secret}&issuer={issuer}
      * 参数需要 url 编码 + 号需要替换成 %20
+     *
      * @param secret  密钥 使用 createSecretKey 方法生成
      * @param account 用户账户 如: example@domain.com 138XXXXXXXX
      * @param issuer  服务名称 如: Google Github 印象笔记

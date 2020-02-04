@@ -9,9 +9,9 @@ import org.junit.Test;
  */
 public class _MainTest {
     @Test
-    public void Example(){
-        Person person=new Person(1,"address","name",12);
-        int size =ClassSize.calcSize(person);
-        PrintUtil.outLn("类实例大小"+size);
+    public void Example() {
+        Person person = new Person(1, "address", "name", 12);
+        int size = ClassSize.calcSize(person);
+        PrintUtil.outLn("类实例大小" + size);
     }
 }

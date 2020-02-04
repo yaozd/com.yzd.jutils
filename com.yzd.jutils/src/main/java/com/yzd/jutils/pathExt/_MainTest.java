@@ -7,9 +7,10 @@ import java.io.IOException;
 
 public class _MainTest {
     @Test
-    public void t1(){
+    public void t1() {
         System.out.println(PathUtil2.getRootPath());
     }
+
     //java中File类的getPath(),getAbsolutePath(),getCanonicalPath()区别
     //https://www.cnblogs.com/newcaoguo/p/6224071.html
     //getPath():

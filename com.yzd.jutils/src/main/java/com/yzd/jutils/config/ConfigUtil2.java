@@ -140,16 +140,17 @@ public class ConfigUtil2 {
         }
         return publickey;
     }
+
     //读取当前Resource（资源文件夹下）的配置文件
     static class Resource {
         public String readFile(String path) {
-            InputStream in =null;
-            try{
+            InputStream in = null;
+            try {
 
-                in=getClass().getResourceAsStream(path);
+                in = getClass().getResourceAsStream(path);
                 return inputStream2String(in);
-            }finally {
-                if(in!=null){
+            } finally {
+                if (in != null) {
                     try {
                         in.close();
                     } catch (IOException e) {
@@ -159,6 +160,7 @@ public class ConfigUtil2 {
             }
 
         }
+
         private String inputStream2String(InputStream in) {
             try {
                 StringBuffer out = new StringBuffer();

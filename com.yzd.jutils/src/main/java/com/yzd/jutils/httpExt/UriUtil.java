@@ -26,25 +26,26 @@ public class UriUtil {
     }
 
     public static int getPort(URI uri) {
-        if(uri.getPort()!=-1){
+        if (uri.getPort() != -1) {
             return uri.getPort();
         }
-        if(Protocol.http.name.equals(uri.getScheme())){
+        if (Protocol.http.name.equals(uri.getScheme())) {
             return 80;
         }
-        if(Protocol.https.name.equals(uri.getScheme())){
+        if (Protocol.https.name.equals(uri.getScheme())) {
             return 443;
         }
         throw new RuntimeException("port= -1");
     }
-    enum Protocol{
+
+    enum Protocol {
         http("http"),
         https("https");
 
         private final String name;
 
         Protocol(String name) {
-            this.name=name;
+            this.name = name;
         }
     }
 }

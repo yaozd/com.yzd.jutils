@@ -16,6 +16,7 @@ public class FileUtil {
 
     /**
      * 读取当前应用的根目录文件
+     *
      * @param path
      * @param encoding
      * @return
@@ -31,6 +32,7 @@ public class FileUtil {
         }
         return null;
     }
+
     public static List<String> readLine(File file, String encoding, int index, int num) {
         List<String> pins = Lists.newArrayList();
         LineNumberReader reader = null;
@@ -59,21 +61,23 @@ public class FileUtil {
         }
         return pins;
     }
+
     /**
      * 读取根目录文件
      * 读取json格式文件
+     *
      * @param jsonPath
      * @return
      */
     public static String readJson(String jsonPath) {
         String json = "";
-        InputStream stream=null;
+        InputStream stream = null;
         try {
             stream = FileUtil.class.getClassLoader().getResourceAsStream(jsonPath);
-            if(stream==null){
+            if (stream == null) {
                 return "FILE NOT FOUND!";
             }
-            json = IOUtils.toString(stream,"utf-8");
+            json = IOUtils.toString(stream, "utf-8");
         } catch (IOException e) {
             log.error("Exception:", e);
         } finally {
@@ -81,6 +85,7 @@ public class FileUtil {
         }
         return json;
     }
+
     /**
      * @param args
      */

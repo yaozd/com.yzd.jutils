@@ -2,6 +2,7 @@ package com.yzd.jutils.springBoot.conditionExt;
 
 
 //条件注解接口类，复写metches
+
 import org.springframework.context.annotation.Condition;
 import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.type.AnnotatedTypeMetadata;

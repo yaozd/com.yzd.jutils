@@ -8,6 +8,7 @@ import java.text.NumberFormat;
  * Version 1.0
  * 处理金额的工具类MoneyUtil
  * http://www.wangminli.com/?p=1107
+ *
  * @author wangminli
  * 2016-08-12
  */

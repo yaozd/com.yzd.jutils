@@ -24,7 +24,7 @@ public class _MainTest {
         h2.setSuccessor(h3);
         h3.setSuccessor(h4);
 
-        BusinessData businessData=new BusinessData(BusinessStatus.提交,"当前业务阶段");
+        BusinessData businessData = new BusinessData(BusinessStatus.提交, "当前业务阶段");
         h1.handlerRequest(businessData);
     }
 }

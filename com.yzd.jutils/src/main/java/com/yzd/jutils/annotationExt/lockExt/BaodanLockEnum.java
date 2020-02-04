@@ -6,9 +6,11 @@ package com.yzd.jutils.annotationExt.lockExt;
  */
 public enum BaodanLockEnum {
     HK("描述信息");
-    BaodanLockEnum(String desc){
-        this.desc=desc;
+
+    BaodanLockEnum(String desc) {
+        this.desc = desc;
     }
+
     private String desc;
 
     public String getDesc() {

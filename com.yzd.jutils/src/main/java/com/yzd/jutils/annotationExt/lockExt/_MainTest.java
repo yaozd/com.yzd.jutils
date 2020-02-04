@@ -1,14 +1,10 @@
 package com.yzd.jutils.annotationExt.lockExt;
 
-import com.google.common.collect.Maps;
-import com.yzd.jutils.print.PrintUtil;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
-
-import java.util.Map;
 
 @SpringBootApplication
 @ComponentScan("com.yzd.jutils.annotationExt.lockExt")
@@ -22,14 +18,14 @@ public class _MainTest {
     //https://www.cnblogs.com/cqc8/p/6869562.html
     //ProceedingJoinPoint获取当前方法
     //http://blog.csdn.net/meiyang1990/article/details/50562046
-    public static void main(String[] args){
+    public static void main(String[] args) {
         SpringApplication app = new SpringApplication(com.yzd.jutils.annotationExt.lockExt._MainTest.class);
         app.setBannerMode(Banner.Mode.OFF);
         ApplicationContext ctx = app.run(args);
         com.yzd.jutils.annotationExt.lockExt.UserService userService = ctx.getBean(UserService.class);
-        Integer val= userService.get(new IdForBaodanLock("12345678"),1);
-        System.out.println("redis cache val="+val);
+        Integer val = userService.get(new IdForBaodanLock("12345678"), 1);
+        System.out.println("redis cache val=" + val);
         System.out.println("empty val");
-        throw  new BaodanLockException("测试异常");
+        throw new BaodanLockException("测试异常");
     }
 }

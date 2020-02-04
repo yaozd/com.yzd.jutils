@@ -2,8 +2,6 @@ package com.yzd.jutils.enumExt;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -159,16 +157,17 @@ public class EnumHelper {
         }
         return result;
     }
-    public static <T extends Enum<T>>   Map<Integer,String> getNameMap(Class<T> clazz, String getNameMethodName, String getValueMethodName){
-        Map<Integer,String> resultMap=new HashMap<>();
+
+    public static <T extends Enum<T>> Map<Integer, String> getNameMap(Class<T> clazz, String getNameMethodName, String getValueMethodName) {
+        Map<Integer, String> resultMap = new HashMap<>();
         try {
             T[] arr = clazz.getEnumConstants();
             Method getNameMethod = clazz.getDeclaredMethod(getNameMethodName);
             Method getValueMethod = clazz.getDeclaredMethod(getValueMethodName);
             for (T entity : arr) {
-                String name=getNameMethod.invoke(entity).toString();
-                Integer value=Integer.parseInt(getValueMethod.invoke(entity).toString()) ;
-                resultMap.put(value,name);
+                String name = getNameMethod.invoke(entity).toString();
+                Integer value = Integer.parseInt(getValueMethod.invoke(entity).toString());
+                resultMap.put(value, name);
             }
         } catch (IllegalAccessException e) {
             e.printStackTrace();

@@ -37,11 +37,9 @@ public class Readme {
      @EnableScheduling
 
      //
-     @Component
-     public class Starter {
+     @Component public class Starter {
      //用于验证当前的类是否回载到spring的上下文当中
-     @PostConstruct
-     public void init(){
+     @PostConstruct public void init(){
      System.out.println("initializing");
      }
      }
@@ -51,8 +49,7 @@ public class Readme {
 
      public class SimpleTest {
      //通过模拟bean使其不加载到spring上下文中
-     @MockBean
-     private Starter myTestBean;
+     @MockBean private Starter myTestBean;
      ...
      }
 
@@ -64,8 +61,7 @@ public class Readme {
      public class SimpleTestConfig {
      private static final Logger logger = LoggerFactory.getLogger(SimpleTestConfig.class);
 
-     @Bean
-     public CountDownLatch closeLatch() {
+     @Bean public CountDownLatch closeLatch() {
      return new CountDownLatch(1);
      }
 

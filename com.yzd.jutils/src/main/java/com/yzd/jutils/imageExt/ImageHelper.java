@@ -1,7 +1,8 @@
 package com.yzd.jutils.imageExt;
 
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
+
+
+import com.yzd.jutils.rsaExt.Base64;
 
 import java.io.*;
 
@@ -18,10 +19,9 @@ public class ImageHelper {
         if (imgStr == null) {
             return false;
         }
-        BASE64Decoder decoder = new BASE64Decoder();
         try {
             // 解密
-            byte[] b = decoder.decodeBuffer(imgStr);
+            byte[] b = Base64.decode(imgStr);
             // 处理数据
             for (int i = 0; i < b.length; ++i) {
                 if (b[i] < 0) {
@@ -37,11 +37,12 @@ public class ImageHelper {
             return false;
         }
     }
+
     /**
+     * @return
      * @Description: 根据图片地址转换为base64编码字符串
      * @Author:
      * @CreateTime:
-     * @return
      */
     public static String imageToBase64(String imgFile) {
         InputStream inputStream = null;
@@ -55,9 +56,9 @@ public class ImageHelper {
             e.printStackTrace();
         }
         // 加密
-        BASE64Encoder encoder = new BASE64Encoder();
-        return encoder.encode(data);
+        return Base64.encode(data);
     }
+
     /**
      * 示例
      * Java 处理图片 base64 编码的相互转换

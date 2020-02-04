@@ -11,8 +11,8 @@ import java.util.Objects;
 public class _MainTest {
 
     @Test
-    public void t0(){
-        Integer val=0;
+    public void t0() {
+        Integer val = 0;
         //必须不能为NULL
         Objects.requireNonNull(val);
         //是否为NULL
@@ -20,15 +20,16 @@ public class _MainTest {
         //是否不为NULL
         Objects.nonNull(val);
     }
+
     @Test
-    public void t1()
-    {
-        List<String> stringList=null;
-        stringList= ObjectUtils.defaultIfNull(stringList, new ArrayList<String>());
+    public void t1() {
+        List<String> stringList = null;
+        stringList = ObjectUtils.defaultIfNull(stringList, new ArrayList<String>());
         System.out.println(stringList.isEmpty());
         t2(null);
     }
-    private void t2(@NotNull String notNull){
+
+    private void t2(@NotNull String notNull) {
         System.out.println(notNull);
     }
 }

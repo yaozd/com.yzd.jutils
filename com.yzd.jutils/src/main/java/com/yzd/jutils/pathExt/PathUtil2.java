@@ -8,10 +8,12 @@ import java.io.IOException;
  * http://www.360doc.com/content/13/0809/13/1542811_305831037.shtml
  */
 public class PathUtil2 {
-    private static final String rootPath=getRootPathNotTomcat();
-    public static String getRootPath(){
+    private static final String rootPath = getRootPathNotTomcat();
+
+    public static String getRootPath() {
         return rootPath;
     }
+
     //Java桌面程序中，可以通过(new File("")).getAbsolutePath()获取项目根目录(非Tomcat下)。
     //在Tomcat下运行的类中，(new File("")).getAbsolutePath()获得的路径是Tomcat安装路径下的bin文件夹下，将获得的路径字符串去掉最后的"bin"再添上"webapps\\项目文件夹名"即可。
     //参考：
@@ -24,15 +26,15 @@ public class PathUtil2 {
     private static String getRootPathNotTomcat() {
         //系统分割符
         //windows和linux上的兼容性问题的解决办法
-        String line= File.separator;
-        File t=new File("");
+        String line = File.separator;
+        File t = new File("");
 
         //输出结果：
         // F:\Github-Me\com.yzd.jutils\com.yzd.jutils [在IDE中执行的输出结果]
         // G:\6 [单独部署的输出结果]
-        String path= null;
+        String path = null;
         try {
-            path = t.getCanonicalPath()+line;
+            path = t.getCanonicalPath() + line;
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -41,12 +43,12 @@ public class PathUtil2 {
         //jar:file:\G:\6\com.hb.insure.pay.backend.schedule.consumer-1.0-SNAPSHOT-exec.jar!\ [单独部署的输出结果]
         //String path=Thread.currentThread().getContextClassLoader().getResource("").toString();    //此方法不推荐
         //windows下
-        if("\\".equals(line)){//
+        if ("\\".equals(line)) {//
             path = path.replace("/", "\\");  // 将/换成\\
             return path;
         }
         //linux下
-        if("/".equals(line)){
+        if ("/".equals(line)) {
             path = path.replace("\\", "/");
             return path;
         }
@@ -55,18 +57,18 @@ public class PathUtil2 {
     }
 
     /**
-     *  转为系统分割符 解决兼容性问题
+     * 转为系统分割符 解决兼容性问题
      */
-    public static String convertSeparator(String filePath){
+    public static String convertSeparator(String filePath) {
         //系统分割符
         //windows和linux上的兼容性问题的解决办法
-        String line= File.separator;
-        if("\\".equals(line)){
+        String line = File.separator;
+        if ("\\".equals(line)) {
             filePath = filePath.replace("/", "\\");  // 将/换成\\
             return filePath;
         }
         //linux下
-        if("/".equals(line)){
+        if ("/".equals(line)) {
             filePath = filePath.replace("\\", "/");
             return filePath;
         }

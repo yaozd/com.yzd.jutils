@@ -10,11 +10,11 @@ public class EnumUtil {
      * @param val
      * @return
      */
-    public static Integer checkCode(String field,Set<Integer> codes, Integer val) {
+    public static Integer checkCode(String field, Set<Integer> codes, Integer val) {
         if (codes.contains(val)) {
             return val;
         }
         //throw new CustomException("：当前值"+val+"没有找到对应的枚举。");
-        throw new IllegalStateException(field+"：当前值[" + val + "],没有找到对应的枚举。");
+        throw new IllegalStateException(field + "：当前值[" + val + "],没有找到对应的枚举。");
     }
 }

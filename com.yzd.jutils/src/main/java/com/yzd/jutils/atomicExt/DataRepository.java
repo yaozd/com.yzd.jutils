@@ -68,11 +68,12 @@ public enum DataRepository {
 
     /**
      * 批量读取数据-通过阻塞队列
+     *
      * @param maxSize
      * @param sleep
      * @return
      */
-    public List<String> batchData(int maxSize,int sleep) {
+    public List<String> batchData(int maxSize, int sleep) {
         List<String> data = new ArrayList<>();
         boolean firstEmpty = true;
         for (int i = 0; i < maxSize; i++) {
@@ -82,7 +83,8 @@ public enum DataRepository {
                 try {
                     //通过休眠，代表等待1秒，执行时间最大为1秒。
                     TimeUnit.SECONDS.sleep(sleep);
-                } catch (InterruptedException e) { }
+                } catch (InterruptedException e) {
+                }
                 firstEmpty = false;
                 continue;
             }
@@ -94,35 +96,39 @@ public enum DataRepository {
         }
         return data;
     }
+
     //region Pkg的作用主要是用于防止influxdb,批量导入数据丢失问题
     //Pkg的作用主要是用于防止influxdb,批量导入数据丢失问题
     AtomicInteger pkgId = new AtomicInteger(0);
     //目前暂定1万的pkg
-    int maxPkgId=10000;
+    int maxPkgId = 10000;
+
     /**
      * pkgId到达最大值maxPkgId后重置pkgId为零。
      * synchronized作用：AtomicInteger实现边界值控制
-     *      * 解决：
-     *      * 最佳实践：AtomicInteger实现边界值控制
-     *      * 使用synchronized 保证顺序，对性能基本没有影响
+     * * 解决：
+     * * 最佳实践：AtomicInteger实现边界值控制
+     * * 使用synchronized 保证顺序，对性能基本没有影响
+     *
      * @return
      */
     public synchronized int incrementAndGet() {
-        int value= pkgId.incrementAndGet();
-        if(value>maxPkgId){
+        int value = pkgId.incrementAndGet();
+        if (value > maxPkgId) {
             pkgId.set(0);
-            value=pkgId.incrementAndGet();
+            value = pkgId.incrementAndGet();
             //pkgIdResetCount.incrementAndGet();
         }
         return value;
     }
+
     //pkg重置的次数。
     AtomicInteger pkgIdResetCount = new AtomicInteger(0);
 
     /**
      * 此方法是验证incrementAndGet的
      */
-    public void printTest(){
+    public void printTest() {
         System.out.println(pkgIdResetCount.get());
     }
     //end

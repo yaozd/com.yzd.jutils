@@ -1,6 +1,5 @@
 package com.yzd.jutils.springBoot.mockBeanTest;
 
-import com.yzd.jutils.springBoot.banner.Test;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

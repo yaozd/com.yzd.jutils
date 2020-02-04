@@ -12,7 +12,8 @@ import java.util.concurrent.atomic.AtomicLong;
  */
 public class RoundRobin2 {
 
-    static AtomicLong count=new AtomicLong(0);
+    static AtomicLong count = new AtomicLong(0);
+
     public static String getServer() {
         // 重建一个Map，避免服务器的上下线导致的并发问题
         Map<String, Integer> serverMap =
@@ -23,12 +24,12 @@ public class RoundRobin2 {
         ArrayList<String> keyList = new ArrayList<String>();
         keyList.addAll(keySet);
         String server = null;
-        int num=(int)count.incrementAndGet();
-        if(num>10000){
-            num=0;
-            count=new AtomicLong(0);
+        int num = (int) count.incrementAndGet();
+        if (num > 10000) {
+            num = 0;
+            count = new AtomicLong(0);
         }
-        server = keyList.get(num%keyList.size());
+        server = keyList.get(num % keyList.size());
         return server;
     }
 }

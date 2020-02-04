@@ -11,31 +11,38 @@ public class _MainTest {
     //int a=110;
     //static int b=112;
     //
-    public static void main(String[] args){
+    public static void main(String[] args) {
         staticFunction();
     }
+
     //位置不同输出的结果也不相同
-    static _MainTest st=new _MainTest();
+    static _MainTest st = new _MainTest();
+
     //
     static {
         System.out.println("1");
     }
+
     //
     //static _MainTest st=new _MainTest();
     {
         System.out.println("2");
     }
-    _MainTest(){
+
+    _MainTest() {
         System.out.println("3");
-        System.out.println("a="+a+",b="+b);
+        System.out.println("a=" + a + ",b=" + b);
     }
+
     //此代码块的执行会优于构造函数（_MainTest）的执行
     {
         System.out.println("5");
     }
-    public static void staticFunction(){
+
+    public static void staticFunction() {
         System.out.println("4");
     }
+
     //输出结果
     /*
     2
@@ -43,6 +50,6 @@ public class _MainTest {
     a=110,b=0
     1
     */
-    int a=110;
-    static int b=112;
+    int a = 110;
+    static int b = 112;
 }

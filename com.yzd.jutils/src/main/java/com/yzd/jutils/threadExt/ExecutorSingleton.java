@@ -17,6 +17,7 @@ public class ExecutorSingleton {
 
     private ExecutorSingleton() {
     }
+
     //线程池最大10000；
     private ExecutorService threadPoolExecutor = new ThreadPoolExecutor(0, 10000, 5L, TimeUnit.SECONDS, new SynchronousQueue<Runnable>());
 

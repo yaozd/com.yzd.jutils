@@ -16,11 +16,14 @@ public class Singleton {
     private static class SingletonHolder {
         private static final Singleton INSTANCE = new Singleton();
     }
+
     public static final Singleton getInstance() {
         return SingletonHolder.INSTANCE;
     }
+
     public LoadingCache<Long, AtomicLong> keyBase;
-    private Singleton (){
+
+    private Singleton() {
         PrintUtil.outLn("singleton cache init");
         //缓存KEY的基数
         LoadingCache<Long, AtomicLong> cache = CacheBuilder.newBuilder()
@@ -31,7 +34,7 @@ public class Singleton {
                         return new AtomicLong(1);
                     }
                 });
-        keyBase=cache;
+        keyBase = cache;
     }
 }
 

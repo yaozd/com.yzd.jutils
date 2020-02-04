@@ -7,12 +7,13 @@ public enum FruitsEnum {
     香蕉("香蕉");
     private final String desc;
 
-    FruitsEnum(String desc){
-        this.desc=desc;
+    FruitsEnum(String desc) {
+        this.desc = desc;
     }
-    public static Boolean isFruits(String name){
-        for (FruitsEnum item:FruitsEnum.values()){
-            if(item.desc.equalsIgnoreCase(name)){
+
+    public static Boolean isFruits(String name) {
+        for (FruitsEnum item : FruitsEnum.values()) {
+            if (item.desc.equalsIgnoreCase(name)) {
                 return true;
             }
         }

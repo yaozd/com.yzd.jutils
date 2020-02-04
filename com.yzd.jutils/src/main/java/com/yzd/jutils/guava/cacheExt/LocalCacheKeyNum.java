@@ -15,12 +15,15 @@ public class LocalCacheKeyNum {
     private static class SingletonHolder {
         private static final LocalCacheKeyNum INSTANCE = new LocalCacheKeyNum();
     }
+
     public static final LocalCacheKeyNum getInstance() {
         return SingletonHolder.INSTANCE;
     }
+
     //缓存KEY的编号数量
     public LoadingCache<String, Long> keyNumber;
-    private LocalCacheKeyNum (){
+
+    private LocalCacheKeyNum() {
         PrintUtil.outLn("LocalCacheKeyNum=step 01");
         LoadingCache<String, Long> cache;
         cache = CacheBuilder.newBuilder()
@@ -33,6 +36,6 @@ public class LocalCacheKeyNum {
                         return 1L;
                     }
                 });
-        keyNumber=cache;
+        keyNumber = cache;
     }
 }

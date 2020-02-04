@@ -2,7 +2,6 @@ package com.yzd.jutils.annotationExt.redisCacheExt;
 
 import com.google.common.collect.Maps;
 import com.yzd.jutils.print.PrintUtil;
-import com.yzd.jutils.springBoot.aop.Person;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,18 +24,18 @@ public class _MainTest {
     //http://blog.csdn.net/meiyang1990/article/details/50562046
     //java aop redis缓存
     //http://blog.csdn.net/u014695188/article/details/51499947/
-    public static void main(String[] args){
+    public static void main(String[] args) {
         SpringApplication app = new SpringApplication(_MainTest.class);
         app.setBannerMode(Banner.Mode.OFF);
         ApplicationContext ctx = app.run(args);
         UserService userService = ctx.getBean(UserService.class);
-        Integer val= userService.get(1);
-        System.out.println("redis cache val="+val);
+        Integer val = userService.get(1);
+        System.out.println("redis cache val=" + val);
         //目前缓存方法只接受一个请求参数,如果是多个参数的话，可以通过MAP做中间层进行传递
         Map<String, Object> whereMap = Maps.newHashMap();
-        whereMap.put("k1",1);
-        whereMap.put("k2","String");
-        String returnOfWhereIsMap= userService.whereIsMap(whereMap);
+        whereMap.put("k1", 1);
+        whereMap.put("k2", "String");
+        String returnOfWhereIsMap = userService.whereIsMap(whereMap);
         PrintUtil.outLn(returnOfWhereIsMap);
         //
         //userService.empty();

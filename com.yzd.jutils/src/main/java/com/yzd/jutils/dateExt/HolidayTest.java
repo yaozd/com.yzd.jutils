@@ -25,10 +25,10 @@ public class HolidayTest {
     private static List<Calendar> holidayList = new ArrayList<Calendar>();
     //周末为工作日
     private static List<Calendar> weekendList = new ArrayList<Calendar>();
+
     /**
-     * @param args
-     * return void    返回类型
-     * throws
+     * @param args return void    返回类型
+     *             throws
      */
     public static void main(String[] args) {
         try {
@@ -48,7 +48,7 @@ public class HolidayTest {
             boolean k = checkHoliday(ca);
             System.out.println(k);
 
-        } catch ( Exception e) {
+        } catch (Exception e) {
             // TODO: handle exception
             System.out.println(e.getClass());
             e.printStackTrace();
@@ -57,27 +57,24 @@ public class HolidayTest {
     }
 
 
-
-
     /**
-     *
      * 验证日期是否是节假日
-     * @param calendar  传入需要验证的日期
-     * @return
-     * return boolean    返回类型  返回true是节假日，返回false不是节假日
+     *
+     * @param calendar 传入需要验证的日期
+     * @return return boolean    返回类型  返回true是节假日，返回false不是节假日
      * throws
      */
-    public static boolean checkHoliday(Calendar calendar) throws Exception{
+    public static boolean checkHoliday(Calendar calendar) throws Exception {
 
         //判断日期是否是周六周日
-        if(calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY ||
-                calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY){
+        if (calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY ||
+                calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY) {
 
             //判断日期是否是节假日
             for (Calendar ca : weekendList) {
-                if(ca.get(Calendar.MONTH) == calendar.get(Calendar.MONTH) &&
-                        ca.get(Calendar.DAY_OF_MONTH) == calendar.get(Calendar.DAY_OF_MONTH)&&
-                        ca.get(Calendar.YEAR) == calendar.get(Calendar.YEAR)){
+                if (ca.get(Calendar.MONTH) == calendar.get(Calendar.MONTH) &&
+                        ca.get(Calendar.DAY_OF_MONTH) == calendar.get(Calendar.DAY_OF_MONTH) &&
+                        ca.get(Calendar.YEAR) == calendar.get(Calendar.YEAR)) {
                     return false;
                 }
             }
@@ -86,9 +83,9 @@ public class HolidayTest {
         }
         //判断日期是否是节假日
         for (Calendar ca : holidayList) {
-            if(ca.get(Calendar.MONTH) == calendar.get(Calendar.MONTH) &&
-                    ca.get(Calendar.DAY_OF_MONTH) == calendar.get(Calendar.DAY_OF_MONTH)&&
-                    ca.get(Calendar.YEAR) == calendar.get(Calendar.YEAR)){
+            if (ca.get(Calendar.MONTH) == calendar.get(Calendar.MONTH) &&
+                    ca.get(Calendar.DAY_OF_MONTH) == calendar.get(Calendar.DAY_OF_MONTH) &&
+                    ca.get(Calendar.YEAR) == calendar.get(Calendar.YEAR)) {
                 return true;
             }
         }
@@ -97,19 +94,19 @@ public class HolidayTest {
     }
 
     /**
-     *
      * 把所有节假日放入list
-     * @param date  从数据库查 查出来的格式2016-05-09
-     * return void    返回类型
-     * throws
+     *
+     * @param date 从数据库查 查出来的格式2016-05-09
+     *             return void    返回类型
+     *             throws
      */
-    public void initHolidayList(String date){
+    public void initHolidayList(String date) {
 
-        String [] da = date.split("-");
+        String[] da = date.split("-");
 
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.YEAR, Integer.parseInt(da[0]));
-        calendar.set(Calendar.MONTH, Integer.parseInt(da[1])-1);//月份比正常小1,0代表一月
+        calendar.set(Calendar.MONTH, Integer.parseInt(da[1]) - 1);//月份比正常小1,0代表一月
         calendar.set(Calendar.DAY_OF_MONTH, Integer.parseInt(da[2]));
         holidayList.add(calendar);
     }

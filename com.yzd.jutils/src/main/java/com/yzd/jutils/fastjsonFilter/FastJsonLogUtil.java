@@ -10,6 +10,7 @@ import java.lang.reflect.Field;
 /**
  * 日志敏感信息脱敏工具
  * 通过fastJson对日志中的敏感信息(如：密码、身份证、电话、银行卡等)，进行日志字段脱敏处理
+ *
  * @author worstEzreal
  * @version V1.0.0
  * @date 2017/7/19
@@ -29,17 +30,17 @@ public class FastJsonLogUtil {
         if (StringUtils.isBlank(cardNum)) {
             return "";
         }
-        int cardNumLength=cardNum.length();
-        StringBuilder sb=new StringBuilder();
+        int cardNumLength = cardNum.length();
+        StringBuilder sb = new StringBuilder();
         //规则一：前3位+********（8个星）+后4位
-        if(cardNumLength>15){
+        if (cardNumLength > 15) {
             sb.append(StringUtils.left(cardNum, 3));
             sb.append("********");
             sb.append(StringUtils.right(cardNum, 4));
             return sb.toString();
         }
         //规则二：前3位+****（4个星）+后4位
-        if(cardNumLength>10){
+        if (cardNumLength > 10) {
             sb.append(StringUtils.left(cardNum, 3));
             sb.append("****");
             sb.append(StringUtils.right(cardNum, 4));
@@ -59,10 +60,10 @@ public class FastJsonLogUtil {
         if (StringUtils.isBlank(cardNum)) {
             return "";
         }
-        int cardNumLength=cardNum.length();
-        StringBuilder sb=new StringBuilder();
+        int cardNumLength = cardNum.length();
+        StringBuilder sb = new StringBuilder();
         //规则一：前4位+********（8个星）+后4位
-        if(cardNumLength>10){
+        if (cardNumLength > 10) {
             sb.append(StringUtils.left(cardNum, 4));
             sb.append("********");
             sb.append(StringUtils.right(cardNum, 4));

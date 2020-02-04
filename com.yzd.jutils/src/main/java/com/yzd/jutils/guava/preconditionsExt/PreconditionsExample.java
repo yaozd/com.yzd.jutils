@@ -32,7 +32,7 @@ public class PreconditionsExample {
         Preconditions.checkArgument(projectId > 0, "输入projectId必须大于0", projectId);
     }
 
-    class UserInfo{
+    class UserInfo {
         private String name;
     }
 }

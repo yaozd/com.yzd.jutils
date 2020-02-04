@@ -15,19 +15,24 @@ public class SpringContextUtil {
     private static class SingletonHolder {
         private static final SpringContextUtil INSTANCE = new SpringContextUtil();
     }
+
     public static final SpringContextUtil getInstance() {
         return SingletonHolder.INSTANCE;
     }
-    private SpringContextUtil (){
+
+    private SpringContextUtil() {
     }
+
     private ApplicationContext ctx;
+
     public void setCtx(ApplicationContext ctx) {
-        if(this.ctx!=null){
+        if (this.ctx != null) {
             throw new IllegalStateException("当前上下文已存在！");
         }
         this.ctx = ctx;
     }
-    public  <T> T getBean(Class<T> var1){
+
+    public <T> T getBean(Class<T> var1) {
         return ctx.getBean(var1);
     }
 }

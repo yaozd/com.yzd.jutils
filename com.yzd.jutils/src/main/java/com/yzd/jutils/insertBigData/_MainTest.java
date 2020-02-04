@@ -19,7 +19,7 @@ public class _MainTest {
     // 示例代码如下：
     //=====================================================
     private long begin = 33112001;//起始id
-    private long end = begin+100000;//每次循环插入的数据量
+    private long end = begin + 100000;//每次循环插入的数据量
     //private long end = begin+1000;//每次循环插入的数据量
     private String url = "jdbc:mysql://192.168.3.30:3306/bigdata?useServerPrepStmts=false&rewriteBatchedStatements=true&useUnicode=true&amp;characterEncoding=UTF-8";
     private String user = "canal";
@@ -47,7 +47,7 @@ public class _MainTest {
             long bTime1 = System.currentTimeMillis();
 
             //循环10次，每次十万数据，一共1000万
-            for(int i=0;i<10;i++) {
+            for (int i = 0; i < 10; i++) {
 
                 //开启分段计时，计1W数据耗时
                 long bTime = System.currentTimeMillis();
@@ -74,12 +74,12 @@ public class _MainTest {
                 //关闭分段计时
                 long eTime = System.currentTimeMillis();
                 //输出
-                System.out.println("成功插入10W条数据耗时："+(eTime-bTime));
+                System.out.println("成功插入10W条数据耗时：" + (eTime - bTime));
             }
             //关闭总计时
             long eTime1 = System.currentTimeMillis();
             //输出
-            System.out.println("插入100W数据共耗时："+(eTime1-bTime1));
+            System.out.println("插入100W数据共耗时：" + (eTime1 - bTime1));
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e1) {

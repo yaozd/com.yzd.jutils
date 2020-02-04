@@ -15,16 +15,13 @@ public class NoMvc_UnitTest {
      @SpringBootTest(webEnvironment= SpringBootTest.WebEnvironment.NONE, classes = Application.class)
      public class ParseTool_UnitTest {
 
-     @Autowired
-     CrawlerServiceImpl_iShadow crawlerServiceImplIShadow;
+     @Autowired CrawlerServiceImpl_iShadow crawlerServiceImplIShadow;
 
-     @Test
-     public void parseLink_Test() throws Exception {
+     @Test public void parseLink_Test() throws Exception {
      String linkTxt="";
      crawlerServiceImplIShadow.parseLink(linkTxt);
      }
-     @Test
-     public void parseURL() throws IOException, NotFoundException {
+     @Test public void parseURL() throws IOException, NotFoundException {
      String url = "https://free.yitianjianss.com/img/qrcode_image/293/c797e96ed6969ab4bc24726104fe12ea.png";
      crawlerServiceImplIShadow.parseURL(url);
      }

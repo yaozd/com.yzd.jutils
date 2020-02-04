@@ -19,6 +19,7 @@ public enum ColorEnum {
         this.name = name;
         this.index = index;
     }
+
     // 普通方法
     public static String getName(int index) {
         for (ColorEnum c : ColorEnum.values()) {
@@ -28,16 +29,20 @@ public enum ColorEnum {
         }
         return null;
     }
+
     // get set 方法
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public int getValue() {
         return index;
     }
+
     public void setValue(int index) {
         this.index = index;
     }

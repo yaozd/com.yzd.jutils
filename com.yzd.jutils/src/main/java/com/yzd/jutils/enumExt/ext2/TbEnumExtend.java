@@ -8,13 +8,14 @@ import java.util.Set;
 public class TbEnumExtend {
     /**
      * 通过反射的方式获得CODE值的集合
+     *
      * @param clazz
      * @param fieldName
      * @param <T>
      * @return
      */
     public static <T extends Enum<T>> Set<Integer> getCodeList(Class<T> clazz, String fieldName) {
-        Set<Integer> codeSet=new HashSet<>();
+        Set<Integer> codeSet = new HashSet<>();
         try {
             T[] arr = clazz.getEnumConstants();
             Field field = clazz.getDeclaredField(fieldName);
@@ -34,7 +35,8 @@ public class TbEnumExtend {
         //不可变集合
         return Collections.unmodifiableSet(codeSet);
     }
-    public static <T extends Enum<T>> Set<Integer> getCodeList(Class<T> clazz){
-        return getCodeList(clazz,"CODE");
+
+    public static <T extends Enum<T>> Set<Integer> getCodeList(Class<T> clazz) {
+        return getCodeList(clazz, "CODE");
     }
 }

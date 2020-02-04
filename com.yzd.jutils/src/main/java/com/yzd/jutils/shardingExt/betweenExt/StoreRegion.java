@@ -5,13 +5,14 @@ package com.yzd.jutils.shardingExt.betweenExt;
  * Created by zd.yao on 2017/11/2.
  */
 public class StoreRegion {
-    StoreRegion (Long begin,Long end){
-        if(begin>end){
+    StoreRegion(Long begin, Long end) {
+        if (begin > end) {
             throw new IllegalStateException("begin>end");
         }
-        this.begin=begin;
-        this.end=end;
+        this.begin = begin;
+        this.end = end;
     }
+
     Long begin;
     Long end;
 }

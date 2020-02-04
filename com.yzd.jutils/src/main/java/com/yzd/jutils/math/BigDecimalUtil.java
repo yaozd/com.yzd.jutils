@@ -7,35 +7,36 @@ import java.math.BigDecimal;
  */
 public class BigDecimalUtil {
     /**
-     *最近数字舍入(5进)。这是我们最经典的四舍五入。
+     * 最近数字舍入(5进)。这是我们最经典的四舍五入。
      */
     private static int DEFAULT_ROUND = BigDecimal.ROUND_HALF_UP;
 
-    public static String add(String d1, String d2)
-    {        // 进行加法运算
+    public static String add(String d1, String d2) {        // 进行加法运算
         BigDecimal b1 = new BigDecimal(d1);
         BigDecimal b2 = new BigDecimal(d2);
         return b1.add(b2).toString();
     }
-    public static String sub(String d1, String d2)
-    {        // 进行减法运算
+
+    public static String sub(String d1, String d2) {        // 进行减法运算
         BigDecimal b1 = new BigDecimal(d1);
         BigDecimal b2 = new BigDecimal(d2);
         return b1.subtract(b2).toString();
     }
-    public static String mul(String d1, String d2)
-    {
+
+    public static String mul(String d1, String d2) {
         // 进行乘法运算
         BigDecimal b1 = new BigDecimal(d1);
         BigDecimal b2 = new BigDecimal(d2);
         return b1.multiply(b2).toString();
     }
-    public static String div(String d1, String d2,int len) {
+
+    public static String div(String d1, String d2, int len) {
         // 进行除法运算
         BigDecimal b1 = new BigDecimal(d1);
         BigDecimal b2 = new BigDecimal(d2);
-        return b1.divide(b2,len,DEFAULT_ROUND).toString();
+        return b1.divide(b2, len, DEFAULT_ROUND).toString();
     }
+
     //最近数字舍入(5进)。这是我们最经典的四舍五入。
     public static String round(String d, int len) {
         // 进行四舍五入操作
@@ -46,23 +47,24 @@ public class BigDecimalUtil {
         //表示进行四舍五入的操作
         return b1.divide(b2, len, DEFAULT_ROUND).toString();
     }
+
     //在JAVA中怎么比较Double类型数据的大小？
     //非整型数，运算由于精度问题，可能会有误差，建议使用BigDecimal类型！
     public static int compareTo(String d1, String d2) {
         //当此 BigDecimal 在数字上小于、等于或大于 val 时，返回 -1、0 或 1。
         BigDecimal data1 = new BigDecimal(d1);
         BigDecimal data2 = new BigDecimal(d2);
-        int copareResult= data1.compareTo(data2);
+        int copareResult = data1.compareTo(data2);
         return copareResult;
     }
 
     public static void main(String[] args) {
-        System.out.println(4.015*100);
-        String v2= BigDecimalUtil.mul("4.015", "100");
-        String v1= BigDecimalUtil.div("200000", "0.002",2);
+        System.out.println(4.015 * 100);
+        String v2 = BigDecimalUtil.mul("4.015", "100");
+        String v1 = BigDecimalUtil.div("200000", "0.002", 2);
         System.out.println(v2);
         //删除小数点后面的数据
-        Object obj= new Double(v2).intValue();
+        Object obj = new Double(v2).intValue();
         System.out.println(obj.toString());
         //
         System.out.println(v1);

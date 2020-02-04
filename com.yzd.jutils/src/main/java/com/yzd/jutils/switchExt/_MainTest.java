@@ -16,6 +16,7 @@ public class _MainTest {
 
         log.info("1个接口对应多个实现类");
     }
+
     //switch-代替if(或的条件
     @Test
     public void t2() {

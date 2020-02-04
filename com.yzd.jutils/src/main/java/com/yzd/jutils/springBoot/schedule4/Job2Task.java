@@ -11,18 +11,20 @@ import java.util.concurrent.TimeUnit;
 public class Job2Task extends AbstractTask {
     //队列消息指令
     String cmd;
-    public Job2Task(ArrayBlockingQueue<Integer> tokenBucket,String cmd) {
+
+    public Job2Task(ArrayBlockingQueue<Integer> tokenBucket, String cmd) {
         super(tokenBucket);
-        this.cmd=cmd;
+        this.cmd = cmd;
     }
+
     @Override
-    protected void doWork(){
+    protected void doWork() {
         //具体的业务逻辑代码
         try {
             TimeUnit.SECONDS.sleep(10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("schedule4-Job2Task-cmd="+cmd);
+        System.out.println("schedule4-Job2Task-cmd=" + cmd);
     }
 }

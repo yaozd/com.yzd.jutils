@@ -15,7 +15,8 @@ public interface TbPermissionEnum {
         visibleStatus(int code, String desc) {
             this.CODE = code;
         }
-        public static final Set<Integer> CODES=TbEnumExtend.getCodeList(visibleStatus.class);
+
+        public static final Set<Integer> CODES = TbEnumExtend.getCodeList(visibleStatus.class);
 
     }
 }

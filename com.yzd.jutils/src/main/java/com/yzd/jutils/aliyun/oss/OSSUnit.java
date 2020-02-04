@@ -13,8 +13,8 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 
 /**
- *  java操作阿里云的对象存储OSS
- *  http://blog.csdn.net/typa01_kk/article/details/50929829
+ * java操作阿里云的对象存储OSS
+ * http://blog.csdn.net/typa01_kk/article/details/50929829
  * Created by zd.yao on 2017/7/24.
  */
 public class OSSUnit {
@@ -30,46 +30,49 @@ public class OSSUnit {
     private static String ACCESS_KEY_SECRET;
 
     //init static datas
-    static{
+    static {
         ENDPOINT = "oss-cn-beijing.aliyuncs.com";
-        ACCESS_KEY_ID ="阿里云-对象存储OSS-ACCESS_KEY_ID";
+        ACCESS_KEY_ID = "阿里云-对象存储OSS-ACCESS_KEY_ID";
         ACCESS_KEY_SECRET = "阿里云-对象存储OSS-ACCESS_KEY_SECRET";
     }
 
     /**
      * 获取阿里云OSS客户端对象
-     * */
-    public static final OSSClient getOSSClient(){
-        return new OSSClient(ENDPOINT,ACCESS_KEY_ID, ACCESS_KEY_SECRET);
+     */
+    public static final OSSClient getOSSClient() {
+        return new OSSClient(ENDPOINT, ACCESS_KEY_ID, ACCESS_KEY_SECRET);
     }
 
     /**
      * 新建Bucket  --Bucket权限:私有
+     *
      * @param bucketName bucket名称
      * @return true 新建Bucket成功
-     * */
-    public static final boolean createBucket(OSSClient client, String bucketName){
+     */
+    public static final boolean createBucket(OSSClient client, String bucketName) {
         Bucket bucket = client.createBucket(bucketName);
         return bucketName.equals(bucket.getName());
     }
 
     /**
      * 删除Bucket
+     *
      * @param bucketName bucket名称
-     * */
-    public static final void deleteBucket(OSSClient client, String bucketName){
+     */
+    public static final void deleteBucket(OSSClient client, String bucketName) {
         client.deleteBucket(bucketName);
         LOG.info("删除" + bucketName + "Bucket成功");
     }
 
     /**
      * 向阿里云的OSS存储中存储文件  --file也可以用InputStream替代
-     * @param client OSS客户端
-     * @param file 上传文件
+     *
+     * @param client     OSS客户端
+     * @param file       上传文件
      * @param bucketName bucket名称
-     * @param diskName 上传文件的目录  --bucket下文件的路径
+     * @param diskName   上传文件的目录  --bucket下文件的路径
      * @return String 唯一MD5数字签名
-     * */
+     */
     public static final String uploadObject2OSS(OSSClient client, File file, String bucketName, String diskName) {
         String resultStr = null;
         try {
@@ -93,7 +96,8 @@ public class OSSUnit {
         }
         return resultStr;
     }
-    public static final String uploadObject2OSS(OSSClient client, String fileName,InputStream fileInputStream, String bucketName, String diskName) {
+
+    public static final String uploadObject2OSS(OSSClient client, String fileName, InputStream fileInputStream, String bucketName, String diskName) {
         String resultStr = null;
         try {
             InputStream is = fileInputStream;
@@ -114,49 +118,56 @@ public class OSSUnit {
         }
         return resultStr;
     }
+
     /**
      * 根据key获取OSS服务器上的文件输入流
-     * @param client OSS客户端
+     *
+     * @param client     OSS客户端
      * @param bucketName bucket名称
-     * @param diskName 文件路径
-     * @param key Bucket下的文件的路径名+文件名
+     * @param diskName   文件路径
+     * @param key        Bucket下的文件的路径名+文件名
      */
-    public static final InputStream getOSS2InputStream(OSSClient client, String bucketName, String diskName, String key){
+    public static final InputStream getOSS2InputStream(OSSClient client, String bucketName, String diskName, String key) {
         OSSObject ossObj = client.getObject(bucketName, diskName + key);
         return ossObj.getObjectContent();
     }
 
     /**
      * 根据key删除OSS服务器上的文件
-     * @param client OSS客户端
+     *
+     * @param client     OSS客户端
      * @param bucketName bucket名称
-     * @param diskName 文件路径
-     * @param key Bucket下的文件的路径名+文件名
+     * @param diskName   文件路径
+     * @param key        Bucket下的文件的路径名+文件名
      */
-    public static void deleteFile(OSSClient client, String bucketName, String diskName, String key){
+    public static void deleteFile(OSSClient client, String bucketName, String diskName, String key) {
         client.deleteObject(bucketName, diskName + key);
         LOG.info("删除" + bucketName + "下的文件" + diskName + key + "成功");
     }
 
     /**
      * 通过文件名判断并获取OSS服务文件上传时文件的contentType
+     *
      * @param fileName 文件名
      * @return 文件的contentType
      */
-    public static final String getContentType(String fileName){
+    public static final String getContentType(String fileName) {
         String fileExtension = fileName.substring(fileName.lastIndexOf("."));
-        fileExtension=fileExtension.replace(".","");
-        if("bmp".equalsIgnoreCase(fileExtension)) return "image/bmp";
-        if("gif".equalsIgnoreCase(fileExtension)) return "image/gif";
-        if("jpeg".equalsIgnoreCase(fileExtension) || "jpg".equalsIgnoreCase(fileExtension)  || "png".equalsIgnoreCase(fileExtension) ) return "image/jpeg";
-        if("html".equalsIgnoreCase(fileExtension)) return "text/html";
-        if("txt".equalsIgnoreCase(fileExtension)) return "text/plain";
-        if("vsd".equalsIgnoreCase(fileExtension)) return "application/vnd.visio";
-        if("ppt".equalsIgnoreCase(fileExtension) || "pptx".equalsIgnoreCase(fileExtension)) return "application/vnd.ms-powerpoint";
-        if("doc".equalsIgnoreCase(fileExtension) || "docx".equalsIgnoreCase(fileExtension)) return "application/msword";
-        if("xml".equalsIgnoreCase(fileExtension)) return "text/xml";
+        fileExtension = fileExtension.replace(".", "");
+        if ("bmp".equalsIgnoreCase(fileExtension)) return "image/bmp";
+        if ("gif".equalsIgnoreCase(fileExtension)) return "image/gif";
+        if ("jpeg".equalsIgnoreCase(fileExtension) || "jpg".equalsIgnoreCase(fileExtension) || "png".equalsIgnoreCase(fileExtension))
+            return "image/jpeg";
+        if ("html".equalsIgnoreCase(fileExtension)) return "text/html";
+        if ("txt".equalsIgnoreCase(fileExtension)) return "text/plain";
+        if ("vsd".equalsIgnoreCase(fileExtension)) return "application/vnd.visio";
+        if ("ppt".equalsIgnoreCase(fileExtension) || "pptx".equalsIgnoreCase(fileExtension))
+            return "application/vnd.ms-powerpoint";
+        if ("doc".equalsIgnoreCase(fileExtension) || "docx".equalsIgnoreCase(fileExtension))
+            return "application/msword";
+        if ("xml".equalsIgnoreCase(fileExtension)) return "text/xml";
         //if("pdf".equalsIgnoreCase(fileExtension)) return "application/pdf";
-        if("pdf".equalsIgnoreCase(fileExtension)) return "application/octet-stream";
+        if ("pdf".equalsIgnoreCase(fileExtension)) return "application/octet-stream";
         //默认为下载标识
         return "application/octet-stream";
     }

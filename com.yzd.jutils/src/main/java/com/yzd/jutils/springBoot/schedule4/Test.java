@@ -12,15 +12,16 @@ import java.util.concurrent.CountDownLatch;
 
 /**
  * 计划任务建议使用同步的线程池
- *
+ * <p>
  * 消息队列版的任务调度--版本v2
- *
+ * <p>
  * Created by zd.yao on 2017/7/7.
  */
 @SpringBootApplication
 @ComponentScan("com.yzd.jutils.springBoot.schedule4")
 public class Test {
     private static final Logger logger = LoggerFactory.getLogger(Test.class);
+
     @Bean
     public CountDownLatch closeLatch() {
         return new CountDownLatch(1);

@@ -11,7 +11,7 @@ import com.yzd.jutils.fastjson.FastJsonUtil;
 public class ConcreteHandler1 extends Handler {
     @Override
     public void handlerRequest(BusinessData request) {
-        if (request.getStatus()==BusinessStatus.保存) {
+        if (request.getStatus() == BusinessStatus.保存) {
             //处理“保存”状态下的业务逻辑
             System.out.println("ConcreteHandler1处理请求" + FastJsonUtil.serialize(request));
             //调整状态为下一个继承者的状态，与业务请求数据

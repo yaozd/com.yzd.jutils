@@ -59,11 +59,12 @@ public class FastJsonUtil {
 
     /**
      * json与map之间的转换
+     *
      * @param json
      * @return
      */
     @SuppressWarnings("unchecked")
-    public static Map<String,Object> json2Map(String json){
+    public static Map<String, Object> json2Map(String json) {
         return JSON.parseObject(json, Map.class);
     }
 

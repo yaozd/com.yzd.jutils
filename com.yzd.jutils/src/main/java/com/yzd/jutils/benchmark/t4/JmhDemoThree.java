@@ -9,8 +9,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 /**
  * - [使用JMH进行基准性能测试](https://blog.csdn.net/cndmss/article/details/93771981)
+ *
  * @ Description：jmh使用第三个例子
  * 测试常用序列化json库fastJson、gson、jackson的性能（均为截止2019.06最新版本）
  * @ Date       ：Created in 2019-06-19
@@ -23,12 +25,13 @@ import java.util.concurrent.TimeUnit;
 @State(Scope.Benchmark)
 @Fork(1)
 public class JmhDemoThree {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         Options options = new OptionsBuilder()
                 .include(JmhDemoThree.class.getName())
                 .build();
         new Runner(options).run();
     }
+
     /**
      * 序列化次数
      */
@@ -38,65 +41,72 @@ public class JmhDemoThree {
     private String fastjson_jsonStr;
     private String gson_jsonStr;
     private String jackson_jsonStr;
+
     /**
-     *  fastjson bean2Json
+     * fastjson bean2Json
      */
     @Benchmark
-    public void fastjson_bean2Json(){
-        for (int i=0;i<number;i++){
+    public void fastjson_bean2Json() {
+        for (int i = 0; i < number; i++) {
             JsonUtil.fastjson_bean2Json(userinfo);
         }
     }
+
     /**
-     *  gson bean2Json
+     * gson bean2Json
      */
     @Benchmark
-    public void gson_bean2Json(){
-        for (int i=0;i<number;i++){
+    public void gson_bean2Json() {
+        for (int i = 0; i < number; i++) {
             JsonUtil.gson_bean2Json(userinfo);
         }
     }
+
     /**
-     *  jackson bean2Json
+     * jackson bean2Json
      */
     @Benchmark
-    public void jackson_bean2Json(){
-        for (int i=0;i<number;i++){
+    public void jackson_bean2Json() {
+        for (int i = 0; i < number; i++) {
             JsonUtil.jackson_bean2Json(userinfo);
         }
     }
+
     /**
-     *  fastjson json2Bean
+     * fastjson json2Bean
      */
     @Benchmark
-    public void fastjson_json2Bean(){
-        for (int i=0;i<number;i++){
-            JsonUtil.fastjson_json2Bean(fastjson_jsonStr,Userinfo.class);
+    public void fastjson_json2Bean() {
+        for (int i = 0; i < number; i++) {
+            JsonUtil.fastjson_json2Bean(fastjson_jsonStr, Userinfo.class);
         }
     }
+
     /**
-     *  gson json2Bean
+     * gson json2Bean
      */
     @Benchmark
-    public void gson_json2Bean(){
-        for (int i=0;i<number;i++){
-            JsonUtil.gson_json2Bean(gson_jsonStr,Userinfo.class);
+    public void gson_json2Bean() {
+        for (int i = 0; i < number; i++) {
+            JsonUtil.gson_json2Bean(gson_jsonStr, Userinfo.class);
         }
     }
+
     /**
-     *  jackson json2Bean
+     * jackson json2Bean
      */
     @Benchmark
-    public void jackson_json2Bean(){
-        for (int i=0;i<number;i++){
-            JsonUtil.jackson_json2Bean(jackson_jsonStr,Userinfo.class);
+    public void jackson_json2Bean() {
+        for (int i = 0; i < number; i++) {
+            JsonUtil.jackson_json2Bean(jackson_jsonStr, Userinfo.class);
         }
     }
+
     /**
      * 初始化参数
      */
     @Setup
-    public void init(){
+    public void init() {
         userinfo = new Userinfo();
         userinfo.setUsername("张三");
         userinfo.setGender("男");

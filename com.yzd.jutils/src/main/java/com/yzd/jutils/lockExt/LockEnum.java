@@ -6,7 +6,8 @@ package com.yzd.jutils.lockExt;
 public enum LockEnum {
     Product("productLock");
     private String name;
-    LockEnum(String name){
-        this.name=name;
+
+    LockEnum(String name) {
+        this.name = name;
     }
 }

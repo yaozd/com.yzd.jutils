@@ -15,11 +15,11 @@ public class RoundRobinSimple {
 
     private AtomicInteger currentCount = new AtomicInteger(0);
 
-    public String doSelect(List<String> nodeList){
+    public String doSelect(List<String> nodeList) {
         if (CollectionUtils.isEmpty(nodeList)) {
             return null;
         }
-        int nodeSize=nodeList.size();
+        int nodeSize = nodeList.size();
         if (nodeSize == 1) {
             return nodeList.get(0);
         }
@@ -28,6 +28,6 @@ public class RoundRobinSimple {
             index = 0;
             currentCount.set(index);
         }
-        return nodeList.get(index%nodeSize);
+        return nodeList.get(index % nodeSize);
     }
 }

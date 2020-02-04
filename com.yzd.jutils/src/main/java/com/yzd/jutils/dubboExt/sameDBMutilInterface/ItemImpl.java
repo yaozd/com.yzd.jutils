@@ -6,7 +6,7 @@ package com.yzd.jutils.dubboExt.sameDBMutilInterface;
  * @date 2018/11/21
  **/
 
-public class ItemImpl implements SubInf1,SubInf2 {
+public class ItemImpl implements SubInf1, SubInf2 {
     @Override
     public void a() {
 

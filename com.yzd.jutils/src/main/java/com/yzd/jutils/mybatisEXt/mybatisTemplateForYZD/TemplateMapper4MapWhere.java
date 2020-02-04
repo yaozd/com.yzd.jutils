@@ -1,8 +1,5 @@
 package com.yzd.jutils.mybatisEXt.mybatisTemplateForYZD;
 
-import java.util.List;
-import java.util.Map;
-
 public interface TemplateMapper4MapWhere {
    /* int insert(TbIfcertPushLog record);
 

@@ -34,6 +34,7 @@ public class MapTest {
             System.out.println("Value = " + value);
         }
     }
+
     // region t3 与 t4是同一种类型 不推荐
     @Test
     public void t3() {
@@ -51,11 +52,12 @@ public class MapTest {
         Iterator entries = map.entrySet().iterator();
         while (entries.hasNext()) {
             Map.Entry entry = (Map.Entry) entries.next();
-            Integer key = (Integer)entry.getKey();
-            Integer value = (Integer)entry.getValue();
+            Integer key = (Integer) entry.getKey();
+            Integer value = (Integer) entry.getValue();
             System.out.println("Key = " + key + ", Value = " + value);
         }
     }
+
     //endregion
     //===
     //通过键找值遍历（效率低）不推荐

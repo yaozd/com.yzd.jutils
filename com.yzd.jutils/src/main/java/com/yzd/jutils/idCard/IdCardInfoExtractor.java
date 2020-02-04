@@ -66,7 +66,7 @@ public class IdCardInfoExtractor {
 
     public IdCardInfoExtractor(String idCard) {
         try {
-            if(idCard.length()!=18){
+            if (idCard.length() != 18) {
                 throw new IllegalArgumentException("当前身份证长度不等于18位");
             }
             // 获取省份

@@ -14,8 +14,7 @@ public class IpMap {
     public static HashMap<String, Integer> serverWeightMap =
             new HashMap<String, Integer>();
 
-    static
-    {
+    static {
         serverWeightMap.put("192.168.1.100", 1);
         serverWeightMap.put("192.168.1.101", 1);
         // 权重为4

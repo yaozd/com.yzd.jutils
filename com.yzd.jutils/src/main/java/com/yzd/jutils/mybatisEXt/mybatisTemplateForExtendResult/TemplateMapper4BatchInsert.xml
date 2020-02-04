@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.jebao.jebaodb.entity.ifcert.TbIfcertPushLogDao">
 
-<!--auto generated Code-->
+    <!--auto generated Code-->
     <resultMap id="AllColumnMap" type="com.jebao.jebaodb.entity.ifcert.TbIfcertPushLog">
         <result column="id" property="id"/>
         <result column="batch_num" property="batchNum"/>
@@ -19,7 +19,7 @@
         <result column="gmt_is_deleted" property="gmtIsDeleted"/>
     </resultMap>
 
-<!--auto generated Code-->
+    <!--auto generated Code-->
     <sql id="all_column">
         id,
         batch_num,
@@ -36,43 +36,43 @@
         gmt_is_deleted
     </sql>
 
-<!--auto generated Code-->
+    <!--auto generated Code-->
     <insert id="insert">
         INSERT INTO tb_ifcert_push_log
         <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="pojo.id != null"> id, </if>
-            <if test="pojo.batchNum != null"> batch_num, </if>
-            <if test="pojo.interfaceType != null"> interface_type, </if>
-            <if test="pojo.sendDate != null"> send_date, </if>
-            <if test="pojo.sendTime != null"> send_time, </if>
-            <if test="pojo.checkCode != null"> check_code, </if>
-            <if test="pojo.totalNum != null"> total_num, </if>
-            <if test="pojo.pushStatus != null"> push_status, </if>
-            <if test="pojo.balanceStatus != null"> balance_status, </if>
-            <if test="pojo.balanceTime != null"> balance_time, </if>
-            <if test="pojo.storageStatus != null"> storage_status, </if>
-            <if test="pojo.gmtCreateTime != null"> gmt_create_time, </if>
-            <if test="pojo.gmtIsDeleted != null"> gmt_is_deleted, </if>
+            <if test="pojo.id != null">id,</if>
+            <if test="pojo.batchNum != null">batch_num,</if>
+            <if test="pojo.interfaceType != null">interface_type,</if>
+            <if test="pojo.sendDate != null">send_date,</if>
+            <if test="pojo.sendTime != null">send_time,</if>
+            <if test="pojo.checkCode != null">check_code,</if>
+            <if test="pojo.totalNum != null">total_num,</if>
+            <if test="pojo.pushStatus != null">push_status,</if>
+            <if test="pojo.balanceStatus != null">balance_status,</if>
+            <if test="pojo.balanceTime != null">balance_time,</if>
+            <if test="pojo.storageStatus != null">storage_status,</if>
+            <if test="pojo.gmtCreateTime != null">gmt_create_time,</if>
+            <if test="pojo.gmtIsDeleted != null">gmt_is_deleted,</if>
         </trim>
         VALUES
         <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="pojo.id != null"> #{pojo.id}, </if>
-            <if test="pojo.batchNum != null"> #{pojo.batchNum}, </if>
-            <if test="pojo.interfaceType != null"> #{pojo.interfaceType}, </if>
-            <if test="pojo.sendDate != null"> #{pojo.sendDate}, </if>
-            <if test="pojo.sendTime != null"> #{pojo.sendTime}, </if>
-            <if test="pojo.checkCode != null"> #{pojo.checkCode}, </if>
-            <if test="pojo.totalNum != null"> #{pojo.totalNum}, </if>
-            <if test="pojo.pushStatus != null"> #{pojo.pushStatus}, </if>
-            <if test="pojo.balanceStatus != null"> #{pojo.balanceStatus}, </if>
-            <if test="pojo.balanceTime != null"> #{pojo.balanceTime}, </if>
-            <if test="pojo.storageStatus != null"> #{pojo.storageStatus}, </if>
-            <if test="pojo.gmtCreateTime != null"> #{pojo.gmtCreateTime}, </if>
-            <if test="pojo.gmtIsDeleted != null"> #{pojo.gmtIsDeleted}, </if>
+            <if test="pojo.id != null">#{pojo.id},</if>
+            <if test="pojo.batchNum != null">#{pojo.batchNum},</if>
+            <if test="pojo.interfaceType != null">#{pojo.interfaceType},</if>
+            <if test="pojo.sendDate != null">#{pojo.sendDate},</if>
+            <if test="pojo.sendTime != null">#{pojo.sendTime},</if>
+            <if test="pojo.checkCode != null">#{pojo.checkCode},</if>
+            <if test="pojo.totalNum != null">#{pojo.totalNum},</if>
+            <if test="pojo.pushStatus != null">#{pojo.pushStatus},</if>
+            <if test="pojo.balanceStatus != null">#{pojo.balanceStatus},</if>
+            <if test="pojo.balanceTime != null">#{pojo.balanceTime},</if>
+            <if test="pojo.storageStatus != null">#{pojo.storageStatus},</if>
+            <if test="pojo.gmtCreateTime != null">#{pojo.gmtCreateTime},</if>
+            <if test="pojo.gmtIsDeleted != null">#{pojo.gmtIsDeleted},</if>
         </trim>
     </insert>
 
-<!--auto generated Code-->
+    <!--auto generated Code-->
     <insert id="insertList">
         INSERT INTO tb_ifcert_push_log(
         <include refid="all_column"/>
@@ -96,50 +96,51 @@
         </foreach>
     </insert>
 
-<!--auto generated Code-->
+    <!--auto generated Code-->
     <update id="update">
         UPDATE tb_ifcert_push_log
         <set>
-            <if test="pojo.id != null"> id = #{pojo.id}, </if>
-            <if test="pojo.batchNum != null"> batch_num = #{pojo.batchNum}, </if>
-            <if test="pojo.interfaceType != null"> interface_type = #{pojo.interfaceType}, </if>
-            <if test="pojo.sendDate != null"> send_date = #{pojo.sendDate}, </if>
-            <if test="pojo.sendTime != null"> send_time = #{pojo.sendTime}, </if>
-            <if test="pojo.checkCode != null"> check_code = #{pojo.checkCode}, </if>
-            <if test="pojo.totalNum != null"> total_num = #{pojo.totalNum}, </if>
-            <if test="pojo.pushStatus != null"> push_status = #{pojo.pushStatus}, </if>
-            <if test="pojo.balanceStatus != null"> balance_status = #{pojo.balanceStatus}, </if>
-            <if test="pojo.balanceTime != null"> balance_time = #{pojo.balanceTime}, </if>
-            <if test="pojo.storageStatus != null"> storage_status = #{pojo.storageStatus}, </if>
-            <if test="pojo.gmtCreateTime != null"> gmt_create_time = #{pojo.gmtCreateTime}, </if>
-            <if test="pojo.gmtIsDeleted != null"> gmt_is_deleted = #{pojo.gmtIsDeleted} </if>
+            <if test="pojo.id != null">id = #{pojo.id},</if>
+            <if test="pojo.batchNum != null">batch_num = #{pojo.batchNum},</if>
+            <if test="pojo.interfaceType != null">interface_type = #{pojo.interfaceType},</if>
+            <if test="pojo.sendDate != null">send_date = #{pojo.sendDate},</if>
+            <if test="pojo.sendTime != null">send_time = #{pojo.sendTime},</if>
+            <if test="pojo.checkCode != null">check_code = #{pojo.checkCode},</if>
+            <if test="pojo.totalNum != null">total_num = #{pojo.totalNum},</if>
+            <if test="pojo.pushStatus != null">push_status = #{pojo.pushStatus},</if>
+            <if test="pojo.balanceStatus != null">balance_status = #{pojo.balanceStatus},</if>
+            <if test="pojo.balanceTime != null">balance_time = #{pojo.balanceTime},</if>
+            <if test="pojo.storageStatus != null">storage_status = #{pojo.storageStatus},</if>
+            <if test="pojo.gmtCreateTime != null">gmt_create_time = #{pojo.gmtCreateTime},</if>
+            <if test="pojo.gmtIsDeleted != null">gmt_is_deleted = #{pojo.gmtIsDeleted}</if>
         </set>
-         WHERE id = #{pojo.id}
+        WHERE id = #{pojo.id}
     </update>
 
-<!--auto generated Code-->
+    <!--auto generated Code-->
     <select id="select" resultMap="AllColumnMap">
-        SELECT <include refid="all_column"/>
+        SELECT
+        <include refid="all_column"/>
         FROM tb_ifcert_push_log
         <where>
-            <if test="pojo.id != null"> AND id = #{pojo.id} </if>
-            <if test="pojo.batchNum != null"> AND batch_num = #{pojo.batchNum} </if>
-            <if test="pojo.interfaceType != null"> AND interface_type = #{pojo.interfaceType} </if>
-            <if test="pojo.sendDate != null"> AND send_date = #{pojo.sendDate} </if>
-            <if test="pojo.sendTime != null"> AND send_time = #{pojo.sendTime} </if>
-            <if test="pojo.checkCode != null"> AND check_code = #{pojo.checkCode} </if>
-            <if test="pojo.totalNum != null"> AND total_num = #{pojo.totalNum} </if>
-            <if test="pojo.pushStatus != null"> AND push_status = #{pojo.pushStatus} </if>
-            <if test="pojo.balanceStatus != null"> AND balance_status = #{pojo.balanceStatus} </if>
-            <if test="pojo.balanceTime != null"> AND balance_time = #{pojo.balanceTime} </if>
-            <if test="pojo.storageStatus != null"> AND storage_status = #{pojo.storageStatus} </if>
-            <if test="pojo.gmtCreateTime != null"> AND gmt_create_time = #{pojo.gmtCreateTime} </if>
-            <if test="pojo.gmtIsDeleted != null"> AND gmt_is_deleted = #{pojo.gmtIsDeleted} </if>
+            <if test="pojo.id != null">AND id = #{pojo.id}</if>
+            <if test="pojo.batchNum != null">AND batch_num = #{pojo.batchNum}</if>
+            <if test="pojo.interfaceType != null">AND interface_type = #{pojo.interfaceType}</if>
+            <if test="pojo.sendDate != null">AND send_date = #{pojo.sendDate}</if>
+            <if test="pojo.sendTime != null">AND send_time = #{pojo.sendTime}</if>
+            <if test="pojo.checkCode != null">AND check_code = #{pojo.checkCode}</if>
+            <if test="pojo.totalNum != null">AND total_num = #{pojo.totalNum}</if>
+            <if test="pojo.pushStatus != null">AND push_status = #{pojo.pushStatus}</if>
+            <if test="pojo.balanceStatus != null">AND balance_status = #{pojo.balanceStatus}</if>
+            <if test="pojo.balanceTime != null">AND balance_time = #{pojo.balanceTime}</if>
+            <if test="pojo.storageStatus != null">AND storage_status = #{pojo.storageStatus}</if>
+            <if test="pojo.gmtCreateTime != null">AND gmt_create_time = #{pojo.gmtCreateTime}</if>
+            <if test="pojo.gmtIsDeleted != null">AND gmt_is_deleted = #{pojo.gmtIsDeleted}</if>
         </where>
-        LIMIT 1000 
+        LIMIT 1000
     </select>
 
-<!--auto generated Code-->
+    <!--auto generated Code-->
     <delete id="delete">
         DELETE FROM tb_ifcert_push_log where id = #{id}
     </delete>

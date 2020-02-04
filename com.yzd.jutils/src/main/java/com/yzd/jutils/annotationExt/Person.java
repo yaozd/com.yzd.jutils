@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Person {
     @Value("yzd")
-    private String	name;
-    private String	age;
+    private String name;
+    private String age;
 }

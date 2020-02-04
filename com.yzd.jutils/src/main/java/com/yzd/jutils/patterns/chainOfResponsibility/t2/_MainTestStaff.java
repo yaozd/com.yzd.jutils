@@ -22,11 +22,11 @@ public class _MainTestStaff {
         branchManager.setSuperior(cho);
         cho.setSuperior(generalManager);
 
-        director.raisesRequest("加薪",100);
-        director.raisesRequest("加薪",300);
-        director.raisesRequest("加薪",600);
-        director.raisesRequest("加薪",1000);
-        director.raisesRequest("加薪",1500);
+        director.raisesRequest("加薪", 100);
+        director.raisesRequest("加薪", 300);
+        director.raisesRequest("加薪", 600);
+        director.raisesRequest("加薪", 1000);
+        director.raisesRequest("加薪", 1500);
 
     }
 }

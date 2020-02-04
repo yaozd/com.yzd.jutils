@@ -3,6 +3,7 @@ package com.yzd.jutils.config;
 /**
  * Created by zd.yao on 2017/6/5.
  */
+
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
 
@@ -21,16 +22,18 @@ public class ConfigUtil {
 
     private static Map<String, PropertiesConfiguration> configMap = new HashMap<String, PropertiesConfiguration>();
 
-    private ConfigUtil() {}
+    private ConfigUtil() {
+    }
 
     /**
      * 获取内容
+     *
      * @param configFile
      * @param property
      * @return
      */
     public static String get(String configFile, String property) {
-        if(!configMap.containsKey(configFile)) {
+        if (!configMap.containsKey(configFile)) {
             initor.initConfig(configFile);
         }
         PropertiesConfiguration config = configMap.get(configFile);
@@ -41,6 +44,7 @@ public class ConfigUtil {
 
     /**
      * 载入配置文件，初始化后加入map
+     *
      * @param configFile
      */
     private synchronized void initConfig(String configFile) {

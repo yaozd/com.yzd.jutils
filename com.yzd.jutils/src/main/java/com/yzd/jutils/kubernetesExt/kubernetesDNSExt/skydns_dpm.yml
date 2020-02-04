@@ -17,33 +17,33 @@ spec:
         kubernetes.io/cluster-service: "true"
     spec:
       containers:
-      - name: kube2sky
-        image: docker.gaoxiaobang.com/kubernetes/kube2sky:1.14
-        resources:
-          limits:
-            cpu: 100m
-            memory: 50Mi
-        args:
-        - --domain=sky
-        - --kube-master-url=http://192.168.1.226:8080
-        - --etcd-server=http://192.168.1.226:2379
-      - name: skydns
-        image: docker.gaoxiaobang.com/kubernetes/skydns:2015-10-13-8c72f8c
-        resources:
-          limits:
-            cpu: 100m
-            memory: 50Mi
-        args:
-        # command = "/skydns"
-        - -machines=http://192.168.1.226:4001
-        - -addr=0.0.0.0:53
-        - -ns-rotate=false
-        - -domain=sky
-        ports:
-        - containerPort: 53
-          name: dns
-          protocol: UDP
-        - containerPort: 53
-          name: dns-tcp
-          protocol: TCP
+        - name: kube2sky
+          image: docker.gaoxiaobang.com/kubernetes/kube2sky:1.14
+          resources:
+            limits:
+              cpu: 100m
+              memory: 50Mi
+          args:
+            - --domain=sky
+            - --kube-master-url=http://192.168.1.226:8080
+            - --etcd-server=http://192.168.1.226:2379
+        - name: skydns
+          image: docker.gaoxiaobang.com/kubernetes/skydns:2015-10-13-8c72f8c
+          resources:
+            limits:
+              cpu: 100m
+              memory: 50Mi
+          args:
+            # command = "/skydns"
+            - -machines=http://192.168.1.226:4001
+            - -addr=0.0.0.0:53
+            - -ns-rotate=false
+            - -domain=sky
+          ports:
+            - containerPort: 53
+              name: dns
+              protocol: UDP
+            - containerPort: 53
+              name: dns-tcp
+              protocol: TCP
       dnsPolicy: Default  # Don't use cluster DNS.

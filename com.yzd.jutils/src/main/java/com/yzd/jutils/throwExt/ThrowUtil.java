@@ -14,8 +14,8 @@ public class ThrowUtil {
 
     /**
      * 模拟异常
-     *eg:
-     *if(System.currentTimeMillis()>100000000L) throw new IllegalStateException("模拟异常");
+     * eg:
+     * if(System.currentTimeMillis()>100000000L) throw new IllegalStateException("模拟异常");
      */
     public static void mockExceptionByTime() {
         if (System.currentTimeMillis() > 100000000L) {

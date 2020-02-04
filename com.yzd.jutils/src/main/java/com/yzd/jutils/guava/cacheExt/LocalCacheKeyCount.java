@@ -16,12 +16,15 @@ public class LocalCacheKeyCount {
     private static class SingletonHolder {
         private static final LocalCacheKeyCount INSTANCE = new LocalCacheKeyCount();
     }
+
     public static final LocalCacheKeyCount getInstance() {
         return SingletonHolder.INSTANCE;
     }
+
     public LoadingCache<String, AtomicLong> keyAccessCount;
     private Thread invalidateAllThread;
-    private LocalCacheKeyCount (){
+
+    private LocalCacheKeyCount() {
         PrintUtil.outLn("LocalCacheKeyCount=step 01");
         LoadingCache<String, AtomicLong> cache;
         cache = CacheBuilder.newBuilder()
@@ -57,17 +60,19 @@ public class LocalCacheKeyCount {
                         return new AtomicLong(1);
                     }
                 });
-        keyAccessCount=cache;
-        invalidateAllThread=new Thread(new Runnable() {
+        keyAccessCount = cache;
+        invalidateAllThread = new Thread(new Runnable() {
             @Override
             public void run() {
-                while (true){
-                    if(LocalCacheKeyUtil.isIsShutdown()){break;}
-                    try{
+                while (true) {
+                    if (LocalCacheKeyUtil.isIsShutdown()) {
+                        break;
+                    }
+                    try {
                         TimeUnit.SECONDS.sleep(11);
                         //不要使用keyAccessCount.invalidateAll清除所有，keyAccessCount.invalidateAll在运行20分钟后会自动停止
                         Iterator<String> iterator = keyAccessCount.asMap().keySet().iterator();
-                        while(iterator.hasNext()){
+                        while (iterator.hasNext()) {
                             String key = iterator.next();
                             if (key.lastIndexOf(LocalCacheKeyUtil.getIntervalTimeStr()) > 0) {
                                 continue;
@@ -75,7 +80,8 @@ public class LocalCacheKeyCount {
                             keyAccessCount.invalidate(key);
                         }
                         PrintUtil.outLn("ExecutorService=step 01");
-                    }catch (Exception e){}
+                    } catch (Exception e) {
+                    }
                 }
             }
         });

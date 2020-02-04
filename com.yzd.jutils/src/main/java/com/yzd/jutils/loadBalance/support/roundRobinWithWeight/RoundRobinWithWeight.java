@@ -11,7 +11,7 @@ import java.util.List;
 
 public class RoundRobinWithWeight {
 
-    public  Node doSelect(List<Node> nodeList){
+    public Node doSelect(List<Node> nodeList) {
         if (CollectionUtils.isEmpty(nodeList)) {
             return null;
         }
@@ -19,17 +19,17 @@ public class RoundRobinWithWeight {
             return nodeList.get(0);
         }
         int totalWeight = 0;
-        Integer maxWeight=null;
-        Node bestNode=null;
+        Integer maxWeight = null;
+        Node bestNode = null;
         for (Node node : nodeList) {
-            node.setCurrentWeight(node.getWeight()+node.getCurrentWeight());
-            if(maxWeight==null||node.getCurrentWeight()>maxWeight){
-                maxWeight=node.getCurrentWeight();
-                bestNode=node;
+            node.setCurrentWeight(node.getWeight() + node.getCurrentWeight());
+            if (maxWeight == null || node.getCurrentWeight() > maxWeight) {
+                maxWeight = node.getCurrentWeight();
+                bestNode = node;
             }
-            totalWeight+=node.getWeight();
+            totalWeight += node.getWeight();
         }
-        bestNode.setCurrentWeight(maxWeight-totalWeight);
+        bestNode.setCurrentWeight(maxWeight - totalWeight);
         return bestNode;
     }
 }

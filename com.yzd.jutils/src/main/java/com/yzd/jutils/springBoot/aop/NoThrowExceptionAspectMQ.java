@@ -13,13 +13,14 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class NoThrowExceptionAspectMQ {
     @Pointcut("@annotation(com.yzd.jutils.springBoot.aop.NoThrowExceptionAnnMQ)")
-    public  void NoThrowExceptionAspect() {
+    public void NoThrowExceptionAspect() {
     }
+
     @Around("NoThrowExceptionAspect()")
-    public void around(ProceedingJoinPoint pjp) throws Throwable{
-        try{
+    public void around(ProceedingJoinPoint pjp) throws Throwable {
+        try {
             pjp.proceed();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

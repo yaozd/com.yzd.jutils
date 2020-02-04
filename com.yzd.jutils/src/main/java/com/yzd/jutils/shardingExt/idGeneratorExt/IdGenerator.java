@@ -31,11 +31,11 @@ public class IdGenerator {
 
     static void initWorkerId() {
         String workerId = System.getProperty("sjdbc.self.id.generator.worker.id");
-        if(!Strings.isNullOrEmpty(workerId)) {
+        if (!Strings.isNullOrEmpty(workerId)) {
             setWorkerId(Long.valueOf(workerId));
         } else {
             workerId = System.getenv("SJDBC_SELF_ID_GENERATOR_WORKER_ID");
-            if(!Strings.isNullOrEmpty(workerId)) {
+            if (!Strings.isNullOrEmpty(workerId)) {
                 setWorkerId(Long.valueOf(workerId));
             }
         }
@@ -53,8 +53,8 @@ public class IdGenerator {
     public synchronized Number generateId() {
         long time = clock.millis();
         Preconditions.checkState(this.lastTime <= time, "Clock is moving backwards, last time is %d milliseconds, current time is %d milliseconds", new Object[]{Long.valueOf(this.lastTime), Long.valueOf(time)});
-        if(this.lastTime == time) {
-            if(0L == (++this.sequence & 4095L)) {
+        if (this.lastTime == time) {
+            if (0L == (++this.sequence & 4095L)) {
                 time = this.waitUntilNextTime(time);
             }
         } else {
@@ -62,11 +62,11 @@ public class IdGenerator {
         }
 
         this.lastTime = time;
-        if(log.isDebugEnabled()||true) {
+        if (log.isDebugEnabled() || true) {
             log.debug("{}-{}-{}", new Object[]{(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS")).format(new Date(this.lastTime)), Long.valueOf(workerId), Long.valueOf(this.sequence)});
-            log.debug("{}-{}-{}-{}",time,SJDBC_EPOCH,workerId,sequence);
-            log.debug("{}-{}-{}-{}",time - SJDBC_EPOCH ,SJDBC_EPOCH << 22,workerId,sequence);
-            log.debug("{}-{}-{}-{}",time - SJDBC_EPOCH << 22,SJDBC_EPOCH << 22,workerId,sequence);
+            log.debug("{}-{}-{}-{}", time, SJDBC_EPOCH, workerId, sequence);
+            log.debug("{}-{}-{}-{}", time - SJDBC_EPOCH, SJDBC_EPOCH << 22, workerId, sequence);
+            log.debug("{}-{}-{}-{}", time - SJDBC_EPOCH << 22, SJDBC_EPOCH << 22, workerId, sequence);
         }
 
         return Long.valueOf(time - SJDBC_EPOCH << 22 | workerId << 12 | this.sequence);
@@ -74,7 +74,7 @@ public class IdGenerator {
 
     private long waitUntilNextTime(long lastTime) {
         long time;
-        for(time = clock.millis(); time <= lastTime; time = clock.millis()) {
+        for (time = clock.millis(); time <= lastTime; time = clock.millis()) {
             ;
         }
 

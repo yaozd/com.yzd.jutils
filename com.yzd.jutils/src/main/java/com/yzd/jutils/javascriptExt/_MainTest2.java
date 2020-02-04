@@ -8,7 +8,6 @@ import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;
 
 /**
- *
  * Created by zd.yao on 2017/8/18.
  */
 public class _MainTest2 {

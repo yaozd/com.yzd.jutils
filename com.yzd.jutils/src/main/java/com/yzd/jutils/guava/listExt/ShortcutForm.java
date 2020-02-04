@@ -13,8 +13,9 @@ public class ShortcutForm {
     private String name;
     private String filePath;
     private String color;
-    public static ShortcutForm toForm(Shortcut entity){
-        ShortcutForm form=new ShortcutForm();
+
+    public static ShortcutForm toForm(Shortcut entity) {
+        ShortcutForm form = new ShortcutForm();
         form.setId(entity.getId());
         form.setName(entity.getName());
         return form;

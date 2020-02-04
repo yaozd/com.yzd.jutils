@@ -1,9 +1,11 @@
 package com.yzd.jutils.blockingQueue;
+
 import java.util.concurrent.*;
+
 /**
  * 同步队列
  * 似懂非懂的SynchronousQueue和长度为1的BlockingQueue
- *  http://blog.csdn.net/aitangyong/article/details/38684831
+ * http://blog.csdn.net/aitangyong/article/details/38684831
  * Created by zd.yao on 2017/7/6.
  */
 public class SyncQueueTester2 {
@@ -14,12 +16,13 @@ public class SyncQueueTester2 {
     //通过ArrayBlockingQueue阻塞队列来控制线程的数量，相当于令牌桶算法，但这里的线程的数量就是阻塞队列的大小，但并不是严格的
     //在一些极端的情况下会比阻塞队列的大小多出5到10的线程。大家可以试情况选择
     private static ArrayBlockingQueue<Integer> queue = new ArrayBlockingQueue<Integer>(10);
+
     public static void main(String[] args) throws InterruptedException {
         for (int i = 0; i < 20099; i++) {
             queue.put(1);
             kickOffEntry(i);
-            if(i==100){
-                int t=0;
+            if (i == 100) {
+                int t = 0;
             }
             //Thread.sleep(200);
         }

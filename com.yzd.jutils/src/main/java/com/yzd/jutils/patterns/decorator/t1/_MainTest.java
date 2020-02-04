@@ -19,39 +19,41 @@ public class _MainTest {
         t1();
         t2();
     }
+
     private static void t1() {
         //通用参数有两种：
         //1.Map<String,Object> param （缺点参数值验证困难）
         // 2.Json格式的字符串，然后再通过注解来验证
         //通过枚举配置策略
-        DiscountComponent discountComponent=new DiscountComponentForGoods(100);
+        DiscountComponent discountComponent = new DiscountComponentForGoods(100);
         //
-        Map<String,Object> paramForPercentage=new HashMap<>();
-        paramForPercentage.put("percent",0.5);
-        discountComponent=DiscountStrategyEnumForGoods.getEnumMap("percentage").getDiscountDecorator(discountComponent,paramForPercentage);
+        Map<String, Object> paramForPercentage = new HashMap<>();
+        paramForPercentage.put("percent", 0.5);
+        discountComponent = DiscountStrategyEnumForGoods.getEnumMap("percentage").getDiscountDecorator(discountComponent, paramForPercentage);
         //
-        Map<String,Object> paramForFullSubtract=new HashMap<>();
-        paramForFullSubtract.put("mixPrice",5);
-        paramForFullSubtract.put("subtractPrice",1);
-        discountComponent=DiscountStrategyEnumForGoods.getEnumMap("fullSubtract").getDiscountDecorator(discountComponent,paramForFullSubtract);
+        Map<String, Object> paramForFullSubtract = new HashMap<>();
+        paramForFullSubtract.put("mixPrice", 5);
+        paramForFullSubtract.put("subtractPrice", 1);
+        discountComponent = DiscountStrategyEnumForGoods.getEnumMap("fullSubtract").getDiscountDecorator(discountComponent, paramForFullSubtract);
         //
-        double finalPrice=discountComponent.calculateDiscount();
+        double finalPrice = discountComponent.calculateDiscount();
         System.out.println(finalPrice);
     }
+
     private static void t2() {
         //直接使用装饰模式添加策略
-        DiscountComponent discountComponent=new DiscountComponentForGoods(100);
+        DiscountComponent discountComponent = new DiscountComponentForGoods(100);
         //
-        Map<String,Object> paramForPercentage=new HashMap<>();
-        paramForPercentage.put("percent",0.5);
-        discountComponent=new DiscountStrategyForPercentage(discountComponent,paramForPercentage);
+        Map<String, Object> paramForPercentage = new HashMap<>();
+        paramForPercentage.put("percent", 0.5);
+        discountComponent = new DiscountStrategyForPercentage(discountComponent, paramForPercentage);
         //
-        Map<String,Object> paramForFullSubtract=new HashMap<>();
-        paramForFullSubtract.put("mixPrice",5);
-        paramForFullSubtract.put("subtractPrice",1);
-        discountComponent=new DiscountStrategyForFullSubtract(discountComponent,paramForFullSubtract);
+        Map<String, Object> paramForFullSubtract = new HashMap<>();
+        paramForFullSubtract.put("mixPrice", 5);
+        paramForFullSubtract.put("subtractPrice", 1);
+        discountComponent = new DiscountStrategyForFullSubtract(discountComponent, paramForFullSubtract);
         //
-        double finalPrice=discountComponent.calculateDiscount();
+        double finalPrice = discountComponent.calculateDiscount();
         System.out.println(finalPrice);
     }
 }

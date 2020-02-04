@@ -11,10 +11,12 @@ public class Singleton {
     private static class SingletonHolder {
         private static final Singleton INSTANCE = new Singleton();
     }
+
     public static final Singleton getInstance() {
         return SingletonHolder.INSTANCE;
     }
-    private Singleton (){
+
+    private Singleton() {
         //todo do something
         PrintUtil.outLn("init");
     }

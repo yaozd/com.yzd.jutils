@@ -14,12 +14,14 @@ public class TempServiceRepository {
     @Autowired
     ITempServiceInf t2TempServiceImp;
 
-    public ITempServiceInf getITempServiceInf(Integer code){
-        switch (code){
-            case 1:return t1TempServiceImp;
-            case 2:return t2TempServiceImp;
+    public ITempServiceInf getITempServiceInf(Integer code) {
+        switch (code) {
+            case 1:
+                return t1TempServiceImp;
+            case 2:
+                return t2TempServiceImp;
         }
-        throw new IllegalArgumentException("没有找到对应ITempServiceInf实现;CODE="+code);
+        throw new IllegalArgumentException("没有找到对应ITempServiceInf实现;CODE=" + code);
     }
 
 }

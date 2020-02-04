@@ -12,8 +12,8 @@ public class CallableAndFuture {
         //异步调用
         //多用于添加消息队列任务-使用消息及时消费
         ExecutorService threadPool = Executors.newCachedThreadPool();//线程池里面的线程数会动态变化，并可在线程线被移除前重用
-        for (int i = 1; i <= 300; i ++) {
-            final  int task = i;   //10个任务
+        for (int i = 1; i <= 300; i++) {
+            final int task = i;   //10个任务
             //TimeUnit.SECONDS.sleep(1);
             threadPool.execute(new Runnable() {    //接受一个Runnable实例
                 @Override
@@ -23,7 +23,7 @@ public class CallableAndFuture {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    System.out.println("线程名字： " + Thread.currentThread().getName() +  "  任务名为： "+task);
+                    System.out.println("线程名字： " + Thread.currentThread().getName() + "  任务名为： " + task);
                 }
             });
         }
@@ -38,18 +38,19 @@ public class CallableAndFuture {
                 return "MOBIN";
             }
         });
-        String returnVal=future.get();
+        String returnVal = future.get();
         executor.shutdownNow();
-        System.out.println("任务的执行结果："+returnVal);
+        System.out.println("任务的执行结果：" + returnVal);
         System.out.println("任务的执行结果End");
     }
+
     //使用CompletionService实现任务
     //ExecutorCompletionService:实现了CompletionService，将执行完成的任务放到阻塞队列中，通过take或poll方法来获得执行结果
-    static void  t1(){
+    static void t1() {
         ExecutorService executor = Executors.newFixedThreadPool(10);        //创建含10.条线程的线程池
         CompletionService completionService = new ExecutorCompletionService(executor);
-        for (int i =1; i <=10; i ++) {
-            final  int result = i;
+        for (int i = 1; i <= 10; i++) {
+            final int result = i;
             completionService.submit(new Callable() {
                 @Override
                 public Object call() throws Exception {
@@ -60,7 +61,7 @@ public class CallableAndFuture {
         }
         try {
             System.out.println(completionService.take().get());   //获取执行结果
-        }catch (Exception ex){
+        } catch (Exception ex) {
 
         }
     }

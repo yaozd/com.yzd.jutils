@@ -15,6 +15,7 @@ public class ExecutorBlockingQueueTest {
      * http://blog.csdn.net/s464036801/article/details/8253826
      * ThreadPoolExecutor使用介绍
      * http://blog.csdn.net/wangwenhui11/article/details/6760474
+     *
      * @param args
      * @throws IOException
      * @throws InterruptedException
@@ -27,25 +28,25 @@ public class ExecutorBlockingQueueTest {
 
         for (int i = 0; i < 100; i++) {
             final int index = i;
-            System.out.println("task: " + (index+1));
+            System.out.println("task: " + (index + 1));
             Runnable run = new Runnable() {
                 @Override
                 public void run() {
-                    System.out.println("thread start--------" + (index+1));
+                    System.out.println("thread start--------" + (index + 1));
                     try {
                         //Thread.sleep(Long.MAX_VALUE);
                         Thread.sleep(50);//测试休眠50秒
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    System.out.println("thread end==================" + (index+1));
+                    System.out.println("thread end==================" + (index + 1));
                 }
             };
             executor.execute(run);
             //executor.shutdown();
             //executor.awaitTermination(10,TimeUnit.SECONDS);
-           int size= executor.getQueue().size();
-            if(size==1){
+            int size = executor.getQueue().size();
+            if (size == 1) {
                 System.out.println("////////////////////////////////////");
             }
         }

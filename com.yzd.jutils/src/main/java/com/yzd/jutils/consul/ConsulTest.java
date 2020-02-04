@@ -5,7 +5,6 @@ import com.orbitz.consul.Consul;
 import com.orbitz.consul.HealthClient;
 import com.orbitz.consul.NotRegisteredException;
 import com.orbitz.consul.model.State;
-import com.orbitz.consul.model.agent.Check;
 import com.orbitz.consul.model.agent.ImmutableRegistration;
 import com.orbitz.consul.model.agent.Registration;
 import com.orbitz.consul.model.health.HealthCheck;
@@ -70,24 +69,25 @@ public class ConsulTest {
     public void testDelete_CheakCleanService() {
         log.info("***********************consul上无效服务清理开始*******************************************");
         //获取所有的services检查信息
-        Map<String, HealthCheck> serviceMap= client.agentClient().getChecks();
-        for (Map.Entry<String,HealthCheck> entry : serviceMap.entrySet()){
-            HealthCheck item4HealthCheck=entry.getValue();
-            String serviceName=item4HealthCheck.getServiceName().get();
-            String serviceId=item4HealthCheck.getServiceId().get();
-            String status=item4HealthCheck.getStatus();
+        Map<String, HealthCheck> serviceMap = client.agentClient().getChecks();
+        for (Map.Entry<String, HealthCheck> entry : serviceMap.entrySet()) {
+            HealthCheck item4HealthCheck = entry.getValue();
+            String serviceName = item4HealthCheck.getServiceName().get();
+            String serviceId = item4HealthCheck.getServiceId().get();
+            String status = item4HealthCheck.getStatus();
             //通过标签可以设置灰度识别，是否需要监控，监控的类型：M-JVM,M-REDIS,M-MYSQL
-            String tags=item4HealthCheck.getServiceTags().toString();
-            log.info("服务名称 :{}/服务ID:{}", serviceName,serviceId);
+            String tags = item4HealthCheck.getServiceTags().toString();
+            log.info("服务名称 :{}/服务ID:{}", serviceName, serviceId);
             log.info("服务 :{}的标签值：{}", serviceId, tags);
             //获取健康状态值  PASSING：正常  WARNING  CRITICAL  UNKNOWN：不正常
             log.info("服务 :{}的健康状态值：{}", serviceId, status);
-            if ( State.FAIL.getName().equals(item4HealthCheck.getStatus())) {
-                log.info("服务名称 :{}/服务ID:{},健康状态值：{},为无效服务，准备清理...................", serviceName,serviceId,status);
+            if (State.FAIL.getName().equals(item4HealthCheck.getStatus())) {
+                log.info("服务名称 :{}/服务ID:{},健康状态值：{},为无效服务，准备清理...................", serviceName, serviceId, status);
                 client.agentClient().deregister(serviceId);
             }
         }
     }
+
     /***
      * 最终确定的写法通过tcp方式来进行检查
      * //如果在服务注册的时候使用的是http方式，则getResponse中会带有大量的响应信息-output。使用传输的数据变大
@@ -139,6 +139,7 @@ public class ConsulTest {
                 .build();
         client.agentClient().register(reg);
     }
+
     @Test
     public void testAdd2() {
         String serviceName = "prometheus-etcd";
@@ -154,6 +155,7 @@ public class ConsulTest {
                 .build();
         client.agentClient().register(reg);
     }
+
     @Test
     public void testAdd3() {
         String serviceName = "prometheus-etcd";
@@ -171,6 +173,7 @@ public class ConsulTest {
                 .build();
         client.agentClient().register(service);
     }
+
     @Test
     public void testAdd4() {
         String serviceName = "prometheus-etcd";
@@ -203,11 +206,12 @@ public class ConsulTest {
         String serviceId = "etcd4";
         //client.agentClient().pass(serviceId);
     }
+
     /***
      * 寻找有效的健康服务
      */
     @Test
-    public void findAvailableHealthyServices(){
+    public void findAvailableHealthyServices() {
         HealthClient healthClient = client.healthClient();
         // Discover only "passing" nodes
         //List<ServiceHealth> nodes = healthClient.getHealthyServiceInstances("prometheus-etcd").getResponse();
@@ -217,13 +221,11 @@ public class ConsulTest {
         //https://github.com/prometheus/jmx_exporter
         String serviceName = "prometheus-etcd";
         List<ServiceHealth> nodes = healthClient.getHealthyServiceInstances(serviceName).getResponse();
-        for (ServiceHealth item:nodes) {
+        for (ServiceHealth item : nodes) {
             System.out.println(item.getService());
             System.out.println(item);
         }
     }
-
-
 
 
 }

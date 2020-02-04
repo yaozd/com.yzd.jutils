@@ -5,11 +5,9 @@ import com.auth0.jwt.JWTCreator;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTVerificationException;
-import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.yzd.jutils.fastjson.FastJsonUtil;
-import org.apache.commons.lang.time.DateUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.UnsupportedEncodingException;
@@ -29,9 +27,9 @@ public class JWTUtil3 {
     //用户信息JSON格式
     private static final String USER_JSON = "userJson";
     // 过期时间5分钟
-    private static final long EXPIRE_TIME = 5*60*1000;
+    private static final long EXPIRE_TIME = 5 * 60 * 1000;
     //可以多次使用的校验实例
-    private static final JWTVerifier jwtVerifier=getJWTVerifier();
+    private static final JWTVerifier jwtVerifier = getJWTVerifier();
 
     private static JWTVerifier getJWTVerifier() {
         return JWT.require(getAlgorithm())
@@ -42,13 +40,13 @@ public class JWTUtil3 {
     /**
      * 创建 token,当user为null时是未登录的访问token
      *
-     * @param user   用户信息
+     * @param user 用户信息
      * @return
      */
-    public static <T> String createToken(T user){
-        Long nowLong=System.currentTimeMillis();
-        Date issuedDate=new Date(nowLong);
-        Date expireDate=new Date(nowLong+EXPIRE_TIME);
+    public static <T> String createToken(T user) {
+        Long nowLong = System.currentTimeMillis();
+        Date issuedDate = new Date(nowLong);
+        Date expireDate = new Date(nowLong + EXPIRE_TIME);
         JWTCreator.Builder builder = JWT.create()
                 //签发者
                 .withIssuer(ISSUER)
@@ -58,7 +56,7 @@ public class JWTUtil3 {
                 .withExpiresAt(expireDate);
         //自定义数据
         if (user != null) {
-            String objJson=FastJsonUtil.serialize(user);
+            String objJson = FastJsonUtil.serialize(user);
             builder = builder.withClaim(USER_JSON, objJson);
         }
         String token = builder.sign(getAlgorithm());
@@ -71,16 +69,17 @@ public class JWTUtil3 {
      * @return
      */
     public static VerifyResultJWT verifyToken(String token) {
-        if(StringUtils.isBlank(token)){return VerifyResultJWT.fail("token is null");}
-        try{
+        if (StringUtils.isBlank(token)) {
+            return VerifyResultJWT.fail("token is null");
+        }
+        try {
             DecodedJWT jwt = jwtVerifier.verify(token);
             Claim userJsonClaim = jwt.getClaim(USER_JSON);
-            String userJson=userJsonClaim.asString();
+            String userJson = userJsonClaim.asString();
             //System.out.println(userJsonClaim);
             //System.out.println(userJsonClaim.asString());
             return VerifyResultJWT.success(userJson);
-        }
-        catch (JWTVerificationException ex){
+        } catch (JWTVerificationException ex) {
             //ex.printStackTrace();
             return VerifyResultJWT.fail(ex.getMessage());
         }
@@ -93,19 +92,20 @@ public class JWTUtil3 {
      * @param <T>
      * @return
      */
-    public static <T> RefreshResultJWT refreshToken(String oldToken, Class<T> clz){
+    public static <T> RefreshResultJWT refreshToken(String oldToken, Class<T> clz) {
         if (StringUtils.isBlank(oldToken)) {
             return RefreshResultJWT.fail("oldToken is Null");
         }
-        VerifyResultJWT verifyResultJWT=verifyToken(oldToken);
-        if(!verifyResultJWT.getIsOk()){
+        VerifyResultJWT verifyResultJWT = verifyToken(oldToken);
+        if (!verifyResultJWT.getIsOk()) {
             return RefreshResultJWT.fail(verifyResultJWT.getErrorMsg());
         }
-        T user=FastJsonUtil.deserialize(verifyResultJWT.getUserJson(),clz);
-        String token=createToken(user);
+        T user = FastJsonUtil.deserialize(verifyResultJWT.getUserJson(), clz);
+        String token = createToken(user);
         return RefreshResultJWT.success(token);
     }
-    private static Algorithm getAlgorithm(){
+
+    private static Algorithm getAlgorithm() {
         try {
             return Algorithm.HMAC256(SECRET);
         } catch (UnsupportedEncodingException e) {

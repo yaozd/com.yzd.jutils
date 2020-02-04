@@ -5,8 +5,6 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
@@ -21,10 +19,12 @@ public class BatchInsertTest {
     //通过PerfTest制定并发线程数和invocations指定调用的次数。
     //@PerfTest(threads = 1,invocations=10000)
     //@PerfTest(threads = 1,duration=1000000)
+
     /**
      * 批量插入
      * 目前推荐使用此方法-byArvin-20190321-1146
      * 解决批量插入中因使用阻塞队列take而产生大量线程驻留问题
+     *
      * @throws InterruptedException
      */
     @Test
@@ -35,8 +35,8 @@ public class BatchInsertTest {
             DataRepository.PRODUCT.putData(String.valueOf(i));
         }
         //读取数据
-        List<String> data = DataRepository.PRODUCT.batchData(100,1);
-        log.info("data size="+data.size());
+        List<String> data = DataRepository.PRODUCT.batchData(100, 1);
+        log.info("data size=" + data.size());
         //转换数据
 
         //批量插入到influxdb
@@ -50,7 +50,7 @@ public class BatchInsertTest {
      */
     private List<String> getBatchData() {
         List<String> data = new ArrayList<>();
-        boolean firstEmpty=true;
+        boolean firstEmpty = true;
         for (int i = 0; i < 250; i++) {
             String value = DataRepository.PRODUCT.takeData();
             //数据可以通过同步阻塞队列或者是Redis的消息队列等
@@ -63,11 +63,11 @@ public class BatchInsertTest {
                 } catch (InterruptedException e) {
                     //e.printStackTrace();
                 }
-                firstEmpty=false;
+                firstEmpty = false;
                 continue;
             }
             //第二次读取不到数据，则直接返回
-            if(value==null&&!firstEmpty){
+            if (value == null && !firstEmpty) {
                 break;
             }
             data.add(value);

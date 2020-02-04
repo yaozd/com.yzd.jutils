@@ -20,7 +20,7 @@ public class MapreduceTest {
      * @throws InterruptedException
      */
     public static void main(String[] args) throws InterruptedException {
-        for (int i = 0; i < 10000; i++){
+        for (int i = 0; i < 10000; i++) {
             T1();
         }
     }
@@ -28,11 +28,11 @@ public class MapreduceTest {
     private static void T1() throws InterruptedException {
         //生成测试数据
         List<Integer> userIdList = new ArrayList<>();
-        for (int i = 0; i < 101; i++){
+        for (int i = 0; i < 101; i++) {
             userIdList.add(i);
         }
         //任务分组--每2个做为一个任务
-        final int groupSize=2;
+        final int groupSize = 2;
         Multimap<Integer, Integer> multimap = ArrayListMultimap.create();
         Integer userIdListSize = userIdList.size();
         for (Integer i = 0; i < userIdListSize; i++) {
@@ -41,7 +41,7 @@ public class MapreduceTest {
         //并发执行任务
         int multimapMapSize = multimap.asMap().size();
         CountDownLatch latch = new CountDownLatch(multimapMapSize);
-        final int threadSize=13;
+        final int threadSize = 13;
         ExecutorService executor = Executors.newFixedThreadPool(threadSize);
         List<Future<Integer>> futureResult = Lists.newArrayList();
         for (Collection collection : multimap.asMap().values()) {
@@ -68,7 +68,7 @@ public class MapreduceTest {
         PrintUtil.outLn("multimapMapSize=" + multimapMapSize);
         PrintUtil.outLn("finalResult.size()=" + finalResult.size());
         if (finalResult.size() != multimapMapSize) {
-            String error="finalResult.size()=" + finalResult.size()+"multimapMapSize=" + multimapMapSize+"：finalResult.size()不等于multimapMapSize的大小，任务执行失败";
+            String error = "finalResult.size()=" + finalResult.size() + "multimapMapSize=" + multimapMapSize + "：finalResult.size()不等于multimapMapSize的大小，任务执行失败";
             throw new IllegalStateException(error);
         }
         //显示最终结果

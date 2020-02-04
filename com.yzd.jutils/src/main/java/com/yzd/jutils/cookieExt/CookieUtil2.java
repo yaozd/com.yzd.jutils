@@ -22,9 +22,10 @@ public class CookieUtil2 {
         cookies.setMaxAge(maxAge);
         response.addCookie(cookies);
     }
+
     public static String getCookieValue(HttpServletRequest request, String cookieName) {
         if (cookieName != null) {
-            Cookie cookie = getCookie(request,cookieName);
+            Cookie cookie = getCookie(request, cookieName);
             if (cookie != null) {
                 String cookieValue = cookie.getValue();
                 return EncryptDESUtil.toDecrypt(cookieValue);
@@ -52,9 +53,10 @@ public class CookieUtil2 {
         }
         return cookie;
     }
+
     public boolean deleteCookie(HttpServletRequest request, HttpServletResponse response, String cookieName) {
         if (cookieName != null) {
-            Cookie cookie = getCookie(request,cookieName);
+            Cookie cookie = getCookie(request, cookieName);
             if (cookie != null) {
                 cookie.setMaxAge(0);//如果0，就说明立即删除
                 cookie.setPath("/");//不要漏掉
@@ -64,13 +66,14 @@ public class CookieUtil2 {
         }
         return false;
     }
+
     public boolean deleteAllCookie(HttpServletRequest request, HttpServletResponse response) {
         Cookie[] cookies = request.getCookies();
         try {
             if (cookies != null && cookies.length > 0) {
                 for (int i = 0; i < cookies.length; i++) {
                     Cookie cookie = cookies[i];
-                    deleteCookie(request,response,cookie.getName());
+                    deleteCookie(request, response, cookie.getName());
                 }
             }
         } catch (Exception e) {

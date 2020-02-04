@@ -9,8 +9,9 @@ public class Job2TaskExt extends Job2Task {
     public Job2TaskExt(ArrayBlockingQueue<Integer> queue) {
         super(queue);
     }
+
     @Override
-    protected void doWork(){
+    protected void doWork() {
         //具体的业务逻辑代码
         System.out.println("Job2TaskExt");
     }

@@ -8,7 +8,6 @@ import java.net.URL;
  */
 public class ConfigUtilTest {
     /**
-     *
      * @param args
      */
     public static void main(String[] args) {
@@ -16,6 +15,7 @@ public class ConfigUtilTest {
         System.out.println(getPayWxHBInterfaceUrl("test/api"));
 
     }
+
     private static String getPayWxHBInterfaceUrl(String relativeUrl) {
         String baseUrl = getValueByProjectPropertiesFile("interface.url");
         try {

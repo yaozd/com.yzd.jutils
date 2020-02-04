@@ -104,7 +104,7 @@ public class DateFormatUtils {
         SimpleDateFormat inFmt = null;
         SimpleDateFormat outFmt = null;
         ParsePosition pos = new ParsePosition(0);
-        date = date.replace("-", "").replace(":", "").replace(" ","");
+        date = date.replace("-", "").replace(":", "").replace(" ", "");
         if ((date == null) || ("".equals(date.trim())))
             return "";
         try {

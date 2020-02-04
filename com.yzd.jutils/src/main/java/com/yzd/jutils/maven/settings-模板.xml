@@ -66,14 +66,14 @@
         site. The mirror site will be the preferred | server for that repository. 
         | -->
     <mirrors>
-	<!--
-		<mirror>
-            <id>username</id>
-            <name>username repo</name>
-            <mirrorOf>*,!username_snapshots,!username,!username_snapshots</mirrorOf>
-            <url>http://repo.username.com/repos/content/groups/public/</url>
-         </mirror>
-		 -->
+        <!--
+            <mirror>
+                <id>username</id>
+                <name>username repo</name>
+                <mirrorOf>*,!username_snapshots,!username,!username_snapshots</mirrorOf>
+                <url>http://repo.username.com/repos/content/groups/public/</url>
+             </mirror>
+             -->
         <mirror>
             <id>nexus.mirror</id>
             <mirrorOf>*</mirrorOf>

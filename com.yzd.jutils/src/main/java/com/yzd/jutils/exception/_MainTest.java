@@ -21,13 +21,14 @@ public class _MainTest {
      * ex.getMessage()--对性能的影响比较小
      */
     @Test
-    public void t1(){
+    public void t1() {
         doExTest_t1();
         doExTest_t1();
     }
+
     void doExTest_t1() {
         long start = System.nanoTime();
-        for (int i=0; i<100000; ++i) {
+        for (int i = 0; i < 100000; ++i) {
             try {
                 throw new RuntimeException("" + Math.random());
             } catch (Exception e) {
@@ -36,19 +37,22 @@ public class _MainTest {
         }
         System.out.println("time: " + (System.nanoTime() - start));
     }
+
     /**
      * catch 中输出异常到日志
      * logger.error("fuck", ex);把异常堆栈信息输出到日志对性能的影响特别严重
      */
     @Test
-    public void t2(){
+    public void t2() {
         doExTest_t2();
         doExTest_t2();
     }
+
     private static final Logger logger = LoggerFactory.getLogger(_MainTest.class);
+
     void doExTest_t2() {
         long start = System.nanoTime();
-        for (int i=0; i<100000; ++i) {
+        for (int i = 0; i < 100000; ++i) {
             try {
                 throw new RuntimeException("" + Math.random());
             } catch (Exception e) {
@@ -57,19 +61,21 @@ public class _MainTest {
         }
         System.out.println("time: " + (System.nanoTime() - start));
     }
+
     /**
      * catch 中获取异常栈
      * ex.printStackTrace();获取异常堆栈信息对性能的影响比较大
      */
     @Test
-    public void t3(){
+    public void t3() {
         doExTest_t3();
         doExTest_t3();
     }
+
     void doExTest_t3() {
         long start = System.nanoTime();
 
-        for (int i=0; i<100000; ++i) {
+        for (int i = 0; i < 100000; ++i) {
             try {
                 throw new RuntimeException("" + Math.random());
             } catch (Exception e) {

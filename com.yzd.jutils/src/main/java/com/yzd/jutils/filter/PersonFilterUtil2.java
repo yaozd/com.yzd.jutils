@@ -15,6 +15,7 @@ public class PersonFilterUtil2 {
     public static PersonFilter getFilter(Integer index) {
         return filterMap.get(index);
     }
+
     static {
         PrintUtil.outLn("PersonFilterUtil2 init");
         filterMap = Maps.newHashMap();

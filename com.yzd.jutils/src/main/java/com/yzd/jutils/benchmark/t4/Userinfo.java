@@ -2,6 +2,7 @@ package com.yzd.jutils.benchmark.t4;
 
 import java.util.Date;
 import java.util.List;
+
 /**
  * @ Description：用户信息
  * @ Author     ：xiaojiang

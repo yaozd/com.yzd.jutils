@@ -60,7 +60,6 @@ public class Murmurs {
     }
 
 
-
     /**
      * Long转换成无符号长整型（C中数据类型）
      */
@@ -77,6 +76,7 @@ public class Murmurs {
     public static BigDecimal hashUnsigned(String key) {
         return readUnsignedLong(hash(key));
     }
+
     public static BigDecimal hashUnsigned(byte[] key) {
         return readUnsignedLong(hash(key));
     }

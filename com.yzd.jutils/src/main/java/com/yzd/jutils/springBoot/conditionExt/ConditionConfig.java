@@ -1,11 +1,13 @@
 package com.yzd.jutils.springBoot.conditionExt;
 
 //配置类声明
-import org.springframework.context.annotation.Configuration;
-//bean声明
+
 import org.springframework.context.annotation.Bean;
-//条件限制
 import org.springframework.context.annotation.Conditional;
+import org.springframework.context.annotation.Configuration;
+
+//bean声明
+//条件限制
 
 //声明为配置类
 @Configuration
@@ -15,8 +17,7 @@ public class ConditionConfig {
     @Bean
     //注解条件判断
     @Conditional(WindowsCondition.class)
-    public IListServiceInf windowsListService()
-    {
+    public IListServiceInf windowsListService() {
         return new WindowsListService();
     }
 
@@ -24,8 +25,7 @@ public class ConditionConfig {
     @Bean
     //注解条件判断
     @Conditional(LinuxCondition.class)
-    public IListServiceInf linuxListService()
-    {
+    public IListServiceInf linuxListService() {
         return new LinuxListService();
     }
 }

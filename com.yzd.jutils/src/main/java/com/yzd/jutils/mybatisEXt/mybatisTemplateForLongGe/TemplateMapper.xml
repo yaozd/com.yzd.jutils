@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.kjj.commserver.sqlmaps.app.order.OrgOptionalCartMapper" >
-  <resultMap id="BaseResultMap" type="com.kjj.commserver.entity.app.order.OrgOptionalCart" >
-    <id column="cart_id" property="cartId" jdbcType="INTEGER" />
-    <result column="user_id" property="userId" jdbcType="INTEGER" />
-    <result column="goods_id" property="goodsId" jdbcType="INTEGER" />
-    <result column="goods_sn" property="goodsSn" jdbcType="VARCHAR" />
-    <result column="amount" property="amount" jdbcType="INTEGER" />
-    <result column="discount_id" property="discountId" jdbcType="INTEGER" />
-    <result column="status" property="status" jdbcType="TINYINT" />
-    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
-    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
-    <result column="box" property="box" jdbcType="TINYINT" />
-  </resultMap>
-  <sql id="Base_Column_List" >
+<mapper namespace="com.kjj.commserver.sqlmaps.app.order.OrgOptionalCartMapper">
+    <resultMap id="BaseResultMap" type="com.kjj.commserver.entity.app.order.OrgOptionalCart">
+        <id column="cart_id" property="cartId" jdbcType="INTEGER"/>
+        <result column="user_id" property="userId" jdbcType="INTEGER"/>
+        <result column="goods_id" property="goodsId" jdbcType="INTEGER"/>
+        <result column="goods_sn" property="goodsSn" jdbcType="VARCHAR"/>
+        <result column="amount" property="amount" jdbcType="INTEGER"/>
+        <result column="discount_id" property="discountId" jdbcType="INTEGER"/>
+        <result column="status" property="status" jdbcType="TINYINT"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="box" property="box" jdbcType="TINYINT"/>
+    </resultMap>
+    <sql id="Base_Column_List">
     cart_id, user_id, goods_id, goods_sn, amount, discount_id, status, create_time, update_time, 
     box
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
-    <include refid="Base_Column_List" />
-    from org_optional_cart
-    where cart_id = #{cartId,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from org_optional_cart
+        where cart_id = #{cartId,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from org_optional_cart
     where cart_id = #{cartId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.kjj.commserver.entity.app.order.OrgOptionalCart" useGeneratedKeys="true" keyColumn="cart_id" keyProperty="cartId" >
+    <insert id="insert" parameterType="com.kjj.commserver.entity.app.order.OrgOptionalCart" useGeneratedKeys="true"
+            keyColumn="cart_id" keyProperty="cartId">
     insert into org_optional_cart (user_id, goods_id, goods_sn, 
       amount, discount_id, status, 
       create_time, update_time, box
@@ -37,40 +38,40 @@
       #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{box,jdbcType=TINYINT}
       )
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.kjj.commserver.entity.app.order.OrgOptionalCart" >
-    update org_optional_cart
-    <set >
-      <if test="userId != null" >
-        user_id = #{userId,jdbcType=INTEGER},
-      </if>
-      <if test="goodsId != null" >
-        goods_id = #{goodsId,jdbcType=INTEGER},
-      </if>
-      <if test="goodsSn != null" >
-        goods_sn = #{goodsSn,jdbcType=VARCHAR},
-      </if>
-      <if test="amount != null" >
-        amount = #{amount,jdbcType=INTEGER},
-      </if>
-      <if test="discountId != null" >
-        discount_id = #{discountId,jdbcType=INTEGER},
-      </if>
-      <if test="status != null" >
-        status = #{status,jdbcType=TINYINT},
-      </if>
-      <if test="createTime != null" >
-        create_time = #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="updateTime != null" >
-        update_time = #{updateTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="box != null" >
-        box = #{box,jdbcType=TINYINT},
-      </if>
-    </set>
-    where cart_id = #{cartId,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.kjj.commserver.entity.app.order.OrgOptionalCart" >
+    <update id="updateByPrimaryKeySelective" parameterType="com.kjj.commserver.entity.app.order.OrgOptionalCart">
+        update org_optional_cart
+        <set>
+            <if test="userId != null">
+                user_id = #{userId,jdbcType=INTEGER},
+            </if>
+            <if test="goodsId != null">
+                goods_id = #{goodsId,jdbcType=INTEGER},
+            </if>
+            <if test="goodsSn != null">
+                goods_sn = #{goodsSn,jdbcType=VARCHAR},
+            </if>
+            <if test="amount != null">
+                amount = #{amount,jdbcType=INTEGER},
+            </if>
+            <if test="discountId != null">
+                discount_id = #{discountId,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=TINYINT},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="box != null">
+                box = #{box,jdbcType=TINYINT},
+            </if>
+        </set>
+        where cart_id = #{cartId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.kjj.commserver.entity.app.order.OrgOptionalCart">
     update org_optional_cart
     set user_id = #{userId,jdbcType=INTEGER},
       goods_id = #{goodsId,jdbcType=INTEGER},
@@ -83,8 +84,9 @@
       box = #{box,jdbcType=TINYINT}
     where cart_id = #{cartId,jdbcType=INTEGER}
   </update>
-  <resultMap id="VoResultMap" type="com.kjj.commserver.entity.app.order.aide.OrgOptionalCartVo" extends="BaseResultMap" />
-  <sql id="Vo_Column_List" >
+    <resultMap id="VoResultMap" type="com.kjj.commserver.entity.app.order.aide.OrgOptionalCartVo"
+               extends="BaseResultMap"/>
+    <sql id="Vo_Column_List">
     t.cart_id, 
     t.user_id, 
     t.goods_id, 
@@ -96,112 +98,112 @@
     t.update_time, 
     t.box
   </sql>
-  <select id="selectVoByPrimaryKey" parameterType="java.util.Map" resultMap="VoResultMap" >
-    select 
-    <include refid="Vo_Column_List" />
-    from org_optional_cart t
-    where t.cart_id = #{cartId,jdbcType=INTEGER}
-  </select>
-  <sql id="Query_Where_Clause" >
-    <where >
-      <if test="cartId != null" >
-          and t.cart_id = #{cartId,jdbcType=INTEGER}
-      </if>
-      <if test="userId != null" >
-          and t.user_id = #{userId,jdbcType=INTEGER}
-      </if>
-      <if test="goodsId != null" >
-          and t.goods_id = #{goodsId,jdbcType=INTEGER}
-      </if>
-      <if test="goodsSn != null" >
-          and t.goods_sn = #{goodsSn,jdbcType=VARCHAR}
-      </if>
-      <if test="amount != null" >
-          and t.amount = #{amount,jdbcType=INTEGER}
-      </if>
-      <if test="discountId != null" >
-          and t.discount_id = #{discountId,jdbcType=INTEGER}
-      </if>
-      <if test="status != null" >
-          and t.status = #{status,jdbcType=TINYINT}
-      </if>
-      <if test="createTime != null" >
-          and t.create_time = #{createTime,jdbcType=TIMESTAMP}
-      </if>
-      <if test="updateTime != null" >
-          and t.update_time = #{updateTime,jdbcType=TIMESTAMP}
-      </if>
-      <if test="box != null" >
-          and t.box = #{box,jdbcType=TINYINT}
-      </if>
-      <if test="goodsIds != null" >
-          <if test="goodsIds.size() > 0" >
-          and t.goods_id in 
-          <foreach collection="goodsIds" index="index" item="item" open="(" separator="," close=")">
-          	#{item,jdbcType=INTEGER}
-          </foreach>
-      	  </if>
-          <if test="goodsIds.size() == 0" >
-          and 1 = 0
-      	  </if>
-      </if>
-    </where>
-    <if test="sorting != null" >
-      order by ${sorting},t.cart_id desc
-    </if>
-    <if test="select4Update != null and select4Update" >
-        for update
-    </if>
-  </sql>
-  <select id="selectCount" parameterType="java.util.Map" resultType="java.lang.Long" >
-    select count(t.cart_id) from org_optional_cart t
-    <include refid="Query_Where_Clause" />
-  </select>
-  <select id="select" parameterType="java.util.Map" resultMap="VoResultMap" >
-    select 
-    <include refid="Vo_Column_List" />
-    from org_optional_cart t
-    <include refid="Query_Where_Clause" />
-  </select>
-  <delete id="delete" parameterType="java.util.Map" >
-    delete from org_optional_cart where cart_id in (
-    select t.cart_id from (select * from org_optional_cart) t
-    <include refid="Query_Where_Clause" />
-    )
-  </delete>
-  <select id="updateByUserIdAndGoodsId" parameterType="java.util.Map" resultType="java.lang.Long" >
-    update org_optional_cart
-    <set >
-      <if test="amount != null" >
-        amount = #{amount,jdbcType=INTEGER},
-      </if>
-      <if test="discountId != null" >
-        discount_id = #{discountId,jdbcType=INTEGER},
-      </if>
-      <if test="status != null" >
-        status = #{status,jdbcType=TINYINT},
-      </if>
-      <if test="updateTime != null" >
-        update_time = #{updateTime,jdbcType=TIMESTAMP},
-      </if>
-    </set>
-    <where>
-      <if test="userId != null" >
-          and user_id = #{userId,jdbcType=INTEGER}
-      </if>
-      <if test="goodsId != null" >
-          and goods_id = #{goodsId,jdbcType=INTEGER}
-      </if>
-      <if test="box != null" >
-        and box = #{box,jdbcType=TINYINT}
-      </if>
-    </where>
-  </select>
-  <select id="selectGoodsCount" parameterType="java.util.Map" resultType="java.lang.Long" >
-    SELECT 	IFNULL(sum(t.amount),0) from org_optional_cart t  
-    <include refid="Query_Where_Clause" />
-  </select>
-  <delete id="truncate">
+    <select id="selectVoByPrimaryKey" parameterType="java.util.Map" resultMap="VoResultMap">
+        select
+        <include refid="Vo_Column_List"/>
+        from org_optional_cart t
+        where t.cart_id = #{cartId,jdbcType=INTEGER}
+    </select>
+    <sql id="Query_Where_Clause">
+        <where>
+            <if test="cartId != null">
+                and t.cart_id = #{cartId,jdbcType=INTEGER}
+            </if>
+            <if test="userId != null">
+                and t.user_id = #{userId,jdbcType=INTEGER}
+            </if>
+            <if test="goodsId != null">
+                and t.goods_id = #{goodsId,jdbcType=INTEGER}
+            </if>
+            <if test="goodsSn != null">
+                and t.goods_sn = #{goodsSn,jdbcType=VARCHAR}
+            </if>
+            <if test="amount != null">
+                and t.amount = #{amount,jdbcType=INTEGER}
+            </if>
+            <if test="discountId != null">
+                and t.discount_id = #{discountId,jdbcType=INTEGER}
+            </if>
+            <if test="status != null">
+                and t.status = #{status,jdbcType=TINYINT}
+            </if>
+            <if test="createTime != null">
+                and t.create_time = #{createTime,jdbcType=TIMESTAMP}
+            </if>
+            <if test="updateTime != null">
+                and t.update_time = #{updateTime,jdbcType=TIMESTAMP}
+            </if>
+            <if test="box != null">
+                and t.box = #{box,jdbcType=TINYINT}
+            </if>
+            <if test="goodsIds != null">
+                <if test="goodsIds.size() > 0">
+                    and t.goods_id in
+                    <foreach collection="goodsIds" index="index" item="item" open="(" separator="," close=")">
+                        #{item,jdbcType=INTEGER}
+                    </foreach>
+                </if>
+                <if test="goodsIds.size() == 0">
+                    and 1 = 0
+                </if>
+            </if>
+        </where>
+        <if test="sorting != null">
+            order by ${sorting},t.cart_id desc
+        </if>
+        <if test="select4Update != null and select4Update">
+            for update
+        </if>
+    </sql>
+    <select id="selectCount" parameterType="java.util.Map" resultType="java.lang.Long">
+        select count(t.cart_id) from org_optional_cart t
+        <include refid="Query_Where_Clause"/>
+    </select>
+    <select id="select" parameterType="java.util.Map" resultMap="VoResultMap">
+        select
+        <include refid="Vo_Column_List"/>
+        from org_optional_cart t
+        <include refid="Query_Where_Clause"/>
+    </select>
+    <delete id="delete" parameterType="java.util.Map">
+        delete from org_optional_cart where cart_id in (
+        select t.cart_id from (select * from org_optional_cart) t
+        <include refid="Query_Where_Clause"/>
+        )
+    </delete>
+    <select id="updateByUserIdAndGoodsId" parameterType="java.util.Map" resultType="java.lang.Long">
+        update org_optional_cart
+        <set>
+            <if test="amount != null">
+                amount = #{amount,jdbcType=INTEGER},
+            </if>
+            <if test="discountId != null">
+                discount_id = #{discountId,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=TINYINT},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        <where>
+            <if test="userId != null">
+                and user_id = #{userId,jdbcType=INTEGER}
+            </if>
+            <if test="goodsId != null">
+                and goods_id = #{goodsId,jdbcType=INTEGER}
+            </if>
+            <if test="box != null">
+                and box = #{box,jdbcType=TINYINT}
+            </if>
+        </where>
+    </select>
+    <select id="selectGoodsCount" parameterType="java.util.Map" resultType="java.lang.Long">
+        SELECT IFNULL(sum(t.amount),0) from org_optional_cart t
+        <include refid="Query_Where_Clause"/>
+    </select>
+    <delete id="truncate">
   	truncate table org_optional_cart
   </delete>
 </mapper>

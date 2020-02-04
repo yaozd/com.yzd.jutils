@@ -6,13 +6,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 
 import java.util.concurrent.CountDownLatch;
 
 @SpringBootApplication
 public class Application {
     private static final Logger logger = LoggerFactory.getLogger(com.yzd.jutils.springBoot.schedule3.Test.class);
+
     @Bean
     public CountDownLatch closeLatch() {
         return new CountDownLatch(1);

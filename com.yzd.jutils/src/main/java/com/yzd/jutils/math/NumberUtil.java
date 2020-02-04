@@ -13,14 +13,14 @@ public class NumberUtil {
     /// </summary>
     /// <param name="n">自然数（如果无效，则返回空字符串）。</param>
     /// <returns>26进制表示。</returns>
-    public static String ToNumberSystem26(int n){
+    public static String ToNumberSystem26(int n) {
         String s = "";
-        while (n > 0){
+        while (n > 0) {
             int m = n % 26;
             if (m == 0) {
                 m = 26;
             }
-            s = (char)(m + 64) + s;
+            s = (char) (m + 64) + s;
             n = (n - m) / 26;
         }
         return s;
@@ -31,17 +31,17 @@ public class NumberUtil {
     /// </summary>
     /// <param name="s">26进制表示（如果无效，则返回0）。</param>
     /// <returns>自然数。</returns>
-    public static int FromNumberSystem26(String s){
-        if (s==null||s.trim().length()==0){
+    public static int FromNumberSystem26(String s) {
+        if (s == null || s.trim().length() == 0) {
             return 0;
         }
         int n = 0;
-        for (int i = s.length() - 1, j = 1; i >= 0; i--, j *= 26){
-            char c =s.charAt(i);
+        for (int i = s.length() - 1, j = 1; i >= 0; i--, j *= 26) {
+            char c = s.charAt(i);
             if (c < 'A' || c > 'Z') {
                 return 0;
             }
-            n += ((int)c - 64) * j;
+            n += ((int) c - 64) * j;
         }
         return n;
     }

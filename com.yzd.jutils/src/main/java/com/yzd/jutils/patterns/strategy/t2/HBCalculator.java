@@ -1,7 +1,6 @@
 package com.yzd.jutils.patterns.strategy.t2;
 
 import com.yzd.jutils.patterns.strategy.t1.ICalculator;
-import com.yzd.jutils.patterns.strategy.t1.SalesChannel;
 
 import java.util.Map;
 

@@ -3,7 +3,6 @@ package com.yzd.jutils.assertExt;
 import com.aliyun.oss.ServiceException;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import org.assertj.core.internal.Dates;
 import org.joda.time.DateTime;
 import org.junit.Test;
 
@@ -13,15 +12,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import java.util.Date;
 import java.util.Map;
-import java.util.Objects;
-
 
 import static com.google.common.collect.Lists.newArrayList;
-import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
-import static org.assertj.core.api.AssertionsForClassTypes.tuple;
-import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
-import static org.assertj.core.api.Java6Assertions.catchThrowable;
 import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 import static org.assertj.core.util.DateUtil.parseDatetimeWithMs;
 
 public class AssertJTest {
@@ -48,6 +42,7 @@ public class AssertJTest {
         // 判断正则匹配
         assertThat("Frodo").matches("..o.o").doesNotMatch(".*d");
     }
+
     @Test
     public void testNumber() {
         Integer num = null;
@@ -66,6 +61,7 @@ public class AssertJTest {
         // 断言负数 非正数
         assertThat(-1).isNegative().isNotPositive();
     }
+
     @Test
     public void testList() {
         // 断言 列表是空的
@@ -80,6 +76,7 @@ public class AssertJTest {
         // 断言 存在唯一元素
         assertThat(Lists.newArrayList("a", "b", "2003-01-01c")).containsOnlyOnce("a");
     }
+
     @Test
     public void testMap() {
         Map<String, Object> foo = Maps.newHashMap();
@@ -96,6 +93,7 @@ public class AssertJTest {
         // 断言 map 包含value
         assertThat(foo).containsValue(3);
     }
+
     @Test
     public void testFail() {
         try {
@@ -109,6 +107,7 @@ public class AssertJTest {
             //logger.info("可以通过catch捕获该Error");
         }
     }
+
     //======================
     @Test
     public void testClass() {
@@ -130,11 +129,18 @@ public class AssertJTest {
     public enum Ring {
         oneRing, vilya, nenya, narya, dwarfRing, manRing;
     }
+
     @Target(ElementType.TYPE)
     @Retention(RetentionPolicy.RUNTIME)
-    public @interface Magical {}
-    public class Person {}
-    public class Employee extends Person {}
+    public @interface Magical {
+    }
+
+    public class Person {
+    }
+
+    public class Employee extends Person {
+    }
+
     //===========================================
     @Test
     public void testDate() {

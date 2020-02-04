@@ -18,6 +18,7 @@ import java.util.concurrent.CountDownLatch;
 @ComponentScan("com.yzd.jutils.springBoot.schedule2")
 public class Test {
     private static final Logger logger = LoggerFactory.getLogger(Test.class);
+
     @Bean
     public CountDownLatch closeLatch() {
         return new CountDownLatch(1);

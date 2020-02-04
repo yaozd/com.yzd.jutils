@@ -7,15 +7,16 @@ import java.util.concurrent.ArrayBlockingQueue;
  */
 public class Job2Task implements Runnable {
     ArrayBlockingQueue<Integer> queueThread;
-    public Job2Task(ArrayBlockingQueue<Integer> queue){
-        this.queueThread=queue;
+
+    public Job2Task(ArrayBlockingQueue<Integer> queue) {
+        this.queueThread = queue;
     }
 
 
     public void run() {
-        try{
+        try {
             doWork();
-        }finally {
+        } finally {
             try {
                 queueThread.take();
             } catch (InterruptedException e) {

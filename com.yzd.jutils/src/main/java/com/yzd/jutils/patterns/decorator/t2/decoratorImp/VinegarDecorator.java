@@ -14,7 +14,7 @@ public class VinegarDecorator extends DecoratorForDrinks {
         super(yp);
     }
 
-    public void addVinegar(){
+    public void addVinegar() {
         System.out.println("还要加醋,加完了");
     }
 

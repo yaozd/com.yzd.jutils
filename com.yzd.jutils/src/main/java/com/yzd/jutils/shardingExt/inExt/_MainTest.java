@@ -10,12 +10,12 @@ import java.util.List;
  */
 public class _MainTest {
     @Test
-    public void in_test(){
-        String name="1";
+    public void in_test() {
+        String name = "1";
         //获得除重后的name集合
-        List<String> nameList=new ArrayList<>();
-        boolean isExist=nameList.contains(name);
-        if(isExist)return;
+        List<String> nameList = new ArrayList<>();
+        boolean isExist = nameList.contains(name);
+        if (isExist) return;
         nameList.add(name);
     }
 

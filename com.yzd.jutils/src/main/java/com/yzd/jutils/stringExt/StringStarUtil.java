@@ -63,6 +63,7 @@ public class StringStarUtil {
     /**
      * java中字符串变星号的方法
      * https://blog.csdn.net/wjc2013481273/article/details/80813731
+     *
      * @param args
      */
     public static void main(String[] args) {

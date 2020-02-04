@@ -11,11 +11,14 @@ public class LockUtil2 {
     private static class SingletonHolder {
         private static final LockUtil2 INSTANCE = new LockUtil2();
     }
+
     public static final LockUtil2 getInstance() {
         return SingletonHolder.INSTANCE;
     }
-    private LockUtil2 (){
+
+    private LockUtil2() {
     }
+
     // endregion
     final Lock lock = new ReentrantLock();
 

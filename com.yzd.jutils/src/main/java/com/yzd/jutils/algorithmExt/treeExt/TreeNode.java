@@ -49,6 +49,7 @@ public class TreeNode {
     public void setChildren(List<TreeNode> children) {
         this.children = children;
     }
+
     //参考：递归输出树型
     //- [如何用 js 递归输出树型](https://www.cnblogs.com/yeminglong/p/4787533.html)
     public static void main(String[] args) {
@@ -63,17 +64,18 @@ public class TreeNode {
 
         List<TreeNode> treeList = new ArrayList<TreeNode>();
         //方法一、
-        treeList= toTree(list,0);
+        treeList = toTree(list, 0);
         System.out.println(FastJsonUtil.serialize(treeList));
     }
-    private static List<TreeNode> toTree(List<TreeNode> data, Integer pid){
+
+    private static List<TreeNode> toTree(List<TreeNode> data, Integer pid) {
         List<TreeNode> result = new ArrayList<TreeNode>();
         List<TreeNode> temp = new ArrayList<TreeNode>();
-        for(TreeNode item:data){
-            if(item.getPid()==pid){
+        for (TreeNode item : data) {
+            if (item.getPid() == pid) {
                 result.add(item);
-                temp= toTree(data,item.getId());
-                if(!temp.isEmpty()){
+                temp = toTree(data, item.getId());
+                if (!temp.isEmpty()) {
                     item.setChildren(temp);
                 }
             }

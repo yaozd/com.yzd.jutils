@@ -7,13 +7,15 @@ import java.io.UnsupportedEncodingException;
  * <p>Description:  </p>
  * <p>Copyright:  Copyright (c) 2007</p>
  * <p>Company:  </p>
- * @author:
+ *
  * @version 1.0
+ * @author:
  */
 public class CharUtil {
 
     /**
      * 转换编码 ISO-8859-1到GB2312
+     *
      * @param text
      * @return
      */
@@ -21,8 +23,7 @@ public class CharUtil {
         String result = "";
         try {
             result = new String(text.getBytes("ISO-8859-1"), "GB2312");
-        }
-        catch (UnsupportedEncodingException ex) {
+        } catch (UnsupportedEncodingException ex) {
             result = ex.toString();
         }
         return result;
@@ -30,6 +31,7 @@ public class CharUtil {
 
     /**
      * 转换编码 GB2312到ISO-8859-1
+     *
      * @param text
      * @return
      */
@@ -37,14 +39,15 @@ public class CharUtil {
         String result = "";
         try {
             result = new String(text.getBytes("GB2312"), "ISO-8859-1");
-        }
-        catch (UnsupportedEncodingException ex) {
+        } catch (UnsupportedEncodingException ex) {
             ex.printStackTrace();
         }
         return result;
     }
+
     /**
      * Utf8URL编码
+     *
      * @param s
      * @return
      */
@@ -56,12 +59,12 @@ public class CharUtil {
             char c = text.charAt(i);
             if (c >= 0 && c <= 255) {
                 result.append(c);
-            }else {
+            } else {
 
                 byte[] b = new byte[0];
                 try {
                     b = Character.toString(c).getBytes("UTF-8");
-                }catch (Exception ex) {
+                } catch (Exception ex) {
                 }
 
                 for (int j = 0; j < b.length; j++) {
@@ -78,6 +81,7 @@ public class CharUtil {
 
     /**
      * Utf8URL解码
+     *
      * @param text
      * @return
      */
@@ -85,7 +89,7 @@ public class CharUtil {
         String result = "";
         int p = 0;
 
-        if (text!=null && text.length()>0){
+        if (text != null && text.length() > 0) {
             text = text.toLowerCase();
             p = text.indexOf("%e");
             if (p == -1) return text;
@@ -107,6 +111,7 @@ public class CharUtil {
 
     /**
      * utf8URL编码转字符
+     *
      * @param text
      * @return
      */
@@ -120,11 +125,10 @@ public class CharUtil {
             code[2] = (byte) (Integer.parseInt(text.substring(7, 9), 16) - 256);
             try {
                 result = new String(code, "UTF-8");
-            }catch (UnsupportedEncodingException ex) {
+            } catch (UnsupportedEncodingException ex) {
                 result = null;
             }
-        }
-        else {
+        } else {
             result = text;
         }
 
@@ -133,10 +137,11 @@ public class CharUtil {
 
     /**
      * 编码是否有效
+     *
      * @param text
      * @return
      */
-    private static final boolean Utf8codeCheck(String text){
+    private static final boolean Utf8codeCheck(String text) {
         String sign = "";
         if (text.startsWith("%e"))
             for (int i = 0, p = 0; p != -1; i++) {
@@ -150,6 +155,7 @@ public class CharUtil {
 
     /**
      * 判断是否Utf8Url编码
+     *
      * @param text
      * @return
      */
@@ -164,6 +170,7 @@ public class CharUtil {
 
     /**
      * 测试
+     *
      * @param args
      */
     public static void main(String[] args) {
@@ -173,16 +180,16 @@ public class CharUtil {
         String url;
 
         url = "http://www.google.com/search?hl=zh-CN&newwindow=1&q=%E4%B8%AD%E5%9B%BD%E5%A4%A7%E7%99%BE%E7%A7%91%E5%9C%A8%E7%BA%BF%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2&btnG=%E6%90%9C%E7%B4%A2&lr=";
-        if(CharUtil.isUtf8Url(url)){
+        if (CharUtil.isUtf8Url(url)) {
             System.out.println(CharUtil.Utf8URLdecode(url));
-        }else{
+        } else {
             //System.out.println(URLDecoder.decode(url));
         }
 
         url = "http://www.baidu.com/baidu?word=%D6%D0%B9%FA%B4%F3%B0%D9%BF%C6%D4%DA%CF%DF%C8%AB%CE%C4%BC%EC%CB%F7&tn=myie2dg";
-        if(CharUtil.isUtf8Url(url)){
+        if (CharUtil.isUtf8Url(url)) {
             System.out.println(CharUtil.Utf8URLdecode(url));
-        }else{
+        } else {
             //System.out.println(URLDecoder.decode(url));
         }
 

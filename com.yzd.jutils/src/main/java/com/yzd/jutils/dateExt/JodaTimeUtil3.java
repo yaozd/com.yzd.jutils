@@ -60,8 +60,10 @@ public class JodaTimeUtil3 {
         System.out.println(dt.toString("yyyy-MM-dd HH:mm:ss"));
         return dt.toDate();
     }
+
     /**
-     *  获取今天的开始时间：比如：2014-06-19 00:00:00
+     * 获取今天的开始时间：比如：2014-06-19 00:00:00
+     *
      * @param dateStr
      * @return
      */
@@ -72,6 +74,7 @@ public class JodaTimeUtil3 {
 
     /**
      * 获取今天的结束时间：比如：2014-06-19 23:59:59
+     *
      * @param dateStr
      * @return
      */

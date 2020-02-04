@@ -16,7 +16,10 @@ import org.apache.http.util.EntityUtils;
 import java.io.IOException;
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by zd.yao on 2017/4/12.
@@ -46,9 +49,10 @@ public class HttpUtil {
         }
         return response;
     }
+
     public static boolean sendGetForCheckFileIsExist(String url) {
-        CloseableHttpClient httpClient=null;
-        CloseableHttpResponse httpResponse=null;
+        CloseableHttpClient httpClient = null;
+        CloseableHttpResponse httpResponse = null;
         try {
             URI uri = new URIBuilder(url).build();
             HttpGet httpGet = new HttpGet(uri);
@@ -56,20 +60,27 @@ public class HttpUtil {
             httpClient = HttpClients.createDefault();
             httpResponse = httpClient.execute(httpGet);
             httpResponse.close();
-            int httpStatus=httpResponse.getStatusLine().getStatusCode();
-            if(httpStatus==200){return true;}
+            int httpStatus = httpResponse.getStatusLine().getStatusCode();
+            if (httpStatus == 200) {
+                return true;
+            }
         } catch (Exception e) {
             throw new IllegalStateException(e);
-        }finally {
+        } finally {
             try {
-                if(httpResponse!=null){httpResponse.close();}
-                if(httpClient!=null){httpClient.close();}
+                if (httpResponse != null) {
+                    httpResponse.close();
+                }
+                if (httpClient != null) {
+                    httpClient.close();
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         return false;
     }
+
     public static String sendGet(String url, Map<String, String> params) {
         List<NameValuePair> urlParameters = new ArrayList<NameValuePair>(params.size());
         for (String key : params.keySet()) {
@@ -95,9 +106,10 @@ public class HttpUtil {
     /**
      * 场景：同时使用get与post方法
      * Get参数	sign=签名串
-                comId=渠道ID
-                如：http://www.xxxx.xxx/interfaceChannel?sign=xxx&comId=xxx
+     * comId=渠道ID
+     * 如：http://www.xxxx.xxx/interfaceChannel?sign=xxx&comId=xxx
      * POST参数	原始XML数据
+     *
      * @param url
      * @param getParamMap
      * @param postParamStr
@@ -105,7 +117,7 @@ public class HttpUtil {
      * @param outEncoding
      * @return
      */
-    public static String sendPostXML(String url,Map<String, String> getParamMap, String postParamStr,String inEncoding,String outEncoding) {
+    public static String sendPostXML(String url, Map<String, String> getParamMap, String postParamStr, String inEncoding, String outEncoding) {
         List<NameValuePair> urlParameters = new ArrayList<NameValuePair>(getParamMap.size());
         for (String key : getParamMap.keySet()) {
             urlParameters.add(new BasicNameValuePair(key, getParamMap.get(key)));
@@ -131,6 +143,7 @@ public class HttpUtil {
         }
         return response.toString();
     }
+
     public static String sendPostXML(String url, String xml) {
         CloseableHttpClient httpClient = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost(url);
@@ -150,6 +163,7 @@ public class HttpUtil {
         }
         return response.toString();
     }
+
     private static List<NameValuePair> getNameValuePairs(Map<String, String> params) {
         if (params == null) {
             return new ArrayList<NameValuePair>();
@@ -160,11 +174,12 @@ public class HttpUtil {
         }
         return urlParameters;
     }
-    public static String sendPost2(String url, String postBody, String inEncoding, String outEncoding,  Map<String, String> requestHeaders) {
+
+    public static String sendPost2(String url, String postBody, String inEncoding, String outEncoding, Map<String, String> requestHeaders) {
         CloseableHttpClient httpClient = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost(url);
-        if(requestHeaders==null){
-            requestHeaders=new HashMap<>();
+        if (requestHeaders == null) {
+            requestHeaders = new HashMap<>();
         }
         for (Map.Entry<String, String> entry : requestHeaders.entrySet()) {
             httpPost.addHeader(entry.getKey(), entry.getValue());
@@ -182,11 +197,12 @@ public class HttpUtil {
         }
         return response;
     }
-    public static String sendDelete2(String url, String postBody, String inEncoding, String outEncoding,  Map<String, String> requestHeaders) {
+
+    public static String sendDelete2(String url, String postBody, String inEncoding, String outEncoding, Map<String, String> requestHeaders) {
         CloseableHttpClient httpClient = HttpClients.createDefault();
-        HttpDeleteWithBody httpDelete=new HttpDeleteWithBody(url);
-        if(requestHeaders==null){
-            requestHeaders=new HashMap<>();
+        HttpDeleteWithBody httpDelete = new HttpDeleteWithBody(url);
+        if (requestHeaders == null) {
+            requestHeaders = new HashMap<>();
         }
         for (Map.Entry<String, String> entry : requestHeaders.entrySet()) {
             httpDelete.addHeader(entry.getKey(), entry.getValue());

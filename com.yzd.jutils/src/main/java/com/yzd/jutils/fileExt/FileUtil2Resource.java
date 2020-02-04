@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 public class FileUtil2Resource {
 
     public static void main(String[] args) throws IOException {
-        Resource resource=new Resource();
+        Resource resource = new Resource();
         resource.getInputStream();
     }
 
@@ -17,10 +17,8 @@ public class FileUtil2Resource {
      * java读取resources下的配置文件+文件相对路径小结
      * https://blog.csdn.net/C_envelope/article/details/82942836
      */
-    static class Resource
-    {
-        public void getInputStream()
-        {
+    static class Resource {
+        public void getInputStream() {
             String fileName = this.getClass().getClassLoader().getResource("rhino/t0.js").getPath();
             System.out.println(fileName);
             InputStream in = this.getClass().getClassLoader().getResourceAsStream("rhino/t0.js");
@@ -30,15 +28,15 @@ public class FileUtil2Resource {
                 output = reader.readLine();
             } catch (IOException e) {
                 e.printStackTrace();
-            }finally {
-                if(in!=null){
+            } finally {
+                if (in != null) {
                     try {
                         in.close();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                 }
-                if(reader!=null){
+                if (reader != null) {
                     try {
                         reader.close();
                     } catch (IOException e) {

@@ -21,11 +21,12 @@ public class ExceptionUtil {
             return "\r\n" + sw.toString() + "\r\n";
         } catch (Exception e2) {
             return "bad getErrorInfoFromException";
-        }finally {
+        } finally {
             pw.close();
         }
 
     }
+
     //方法取自：dubbo的StringUtils-目前暂时推荐使用此方法
     public static String exceptionToString(Throwable e) {
         UnsafeStringWriter w = new UnsafeStringWriter();
@@ -44,6 +45,7 @@ public class ExceptionUtil {
         }
         return var3;
     }
+
     //方法取自：dubbo的StringUtils-目前暂时推荐使用此方法
     public static String exceptionToString(String msg, Throwable e) {
         UnsafeStringWriter w = new UnsafeStringWriter();
@@ -60,24 +62,26 @@ public class ExceptionUtil {
 
         return var4;
     }
+
     public static void main(String[] args) {
-        for (int i = 0; i <10000000 ; i++) {
+        for (int i = 0; i < 10000000; i++) {
             t();
         }
 
     }
-    private static void  t(){
+
+    private static void t() {
         try {
             String[] arr = {"111", "222"};
             arr[2] = "fff";
             //java.lang.ArithmeticException: / by zero
-            int i=1-1;
-            int t= 10/i;
+            int i = 1 - 1;
+            int t = 10 / i;
             //
         } catch (Exception e) {
-            String v2=exceptionToString(e);
+            String v2 = exceptionToString(e);
             System.out.println(v2);
-            String v3=exceptionToString("XX操作异常",e);
+            String v3 = exceptionToString("XX操作异常", e);
             System.out.println(v3);
             String info = getErrorInfoFromException(e);
             System.out.println(info);

@@ -8,8 +8,8 @@ import java.util.Map;
 
 /**
  * 校验结果
- * @author wdmcygah
  *
+ * @author wdmcygah
  */
 public class ValidationResult {
 
@@ -17,7 +17,7 @@ public class ValidationResult {
     private boolean hasErrors;
 
     //校验错误信息
-    private Map<String,String> errorMsg;
+    private Map<String, String> errorMsg;
 
     public boolean isHasErrors() {
         return hasErrors;

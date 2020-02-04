@@ -12,12 +12,12 @@ public class _MainTest {
      * /计算字符串的大小（字节）
      */
     @Test
-    public void string_size_test()
-    {
+    public void string_size_test() {
         //计算字符串的大小（字节）
         PrintUtil.outLn(getLength("P01.S:SaveAllKeySet:2pe1x1in0mbk"));
         PrintUtil.outLn(getLength("测试"));
     }
+
     public static int getLength(String s) {
         int length = 0;
         for (int i = 0; i < s.length(); i++) {

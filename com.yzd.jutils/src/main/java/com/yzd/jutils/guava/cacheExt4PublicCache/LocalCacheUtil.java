@@ -1,7 +1,6 @@
 package com.yzd.jutils.guava.cacheExt4PublicCache;
 
 import com.google.common.cache.*;
-import com.yzd.jutils.print.PrintUtil;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;

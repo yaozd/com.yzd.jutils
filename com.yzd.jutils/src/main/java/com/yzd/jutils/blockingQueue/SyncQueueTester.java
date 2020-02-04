@@ -5,7 +5,7 @@ import java.util.concurrent.*;
 /**
  * 同步队列
  * 似懂非懂的SynchronousQueue和长度为1的BlockingQueue
- *  http://blog.csdn.net/aitangyong/article/details/38684831
+ * http://blog.csdn.net/aitangyong/article/details/38684831
  * Created by zd.yao on 2017/7/6.
  */
 public class SyncQueueTester {

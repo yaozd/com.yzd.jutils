@@ -10,6 +10,7 @@ public class OptionalUtil2 {
     public static String emptyToNull(String string) {
         return string == null || string.isEmpty() ? null : string;
     }
+
     public static List emptyToNull(List list) {
         return list == null || list.isEmpty() ? null : list;
     }

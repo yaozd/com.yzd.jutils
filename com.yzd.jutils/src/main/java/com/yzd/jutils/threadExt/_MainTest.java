@@ -22,6 +22,7 @@ public class _MainTest {
         }).start();
         int pause = 0;
     }
+
     //通过newFixedThreadPool实现任务执行超时后终止
     @Test
     public void ExecutorService_Test() throws InterruptedException {
@@ -57,12 +58,13 @@ public class _MainTest {
      * https://my.oschina.net/goldenshaw/blog/706663
      * java.lang.Thread.State: WAITING
      * java.lang.Thread.State: BLOCKED
+     *
      * @throws InterruptedException
      */
     @Test
     public void thread_blocked() throws InterruptedException {
         ExecutorService executor = new ThreadPoolExecutor(10000, 10000, 5L, TimeUnit.SECONDS, new LinkedBlockingDeque<>());
-        Object ob=new Object();
+        Object ob = new Object();
         for (int i = 0; i < 10; i++) {
             executor.execute(new Runnable() {
                 @Override
@@ -80,7 +82,7 @@ public class _MainTest {
             });
         }
 
-        executor.awaitTermination(500,TimeUnit.MINUTES);
+        executor.awaitTermination(500, TimeUnit.MINUTES);
     }
 
     /**
@@ -93,14 +95,14 @@ public class _MainTest {
     @Test
     public void thread_await() throws InterruptedException {
         ExecutorService executor = new ThreadPoolExecutor(10000, 10000, 5L, TimeUnit.SECONDS, new LinkedBlockingDeque<>());
-        Object ob=new Object();
+        Object ob = new Object();
         for (int i = 0; i < 10; i++) {
             executor.execute(new Runnable() {
                 @Override
                 public void run() {
                     synchronized (ob) {
                         try {
-                            if(System.currentTimeMillis()>1000){
+                            if (System.currentTimeMillis() > 1000) {
                                 ob.wait();
                             }
 
@@ -119,6 +121,6 @@ public class _MainTest {
             });
         }
 
-        executor.awaitTermination(500,TimeUnit.MINUTES);
+        executor.awaitTermination(500, TimeUnit.MINUTES);
     }
 }

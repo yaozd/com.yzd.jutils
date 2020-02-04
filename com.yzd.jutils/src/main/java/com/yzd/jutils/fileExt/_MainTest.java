@@ -13,10 +13,10 @@ public class _MainTest {
      * FileUtil.class.getClassLoader().getResourceAsStream(jsonPath);
      */
     @Test
-    public void fileUtil_Test(){
+    public void fileUtil_Test() {
         String insurerXmlStr = FileUtil.read("/project.properties", "utf-8");
         System.out.println(insurerXmlStr);
-        String strValue=FileUtil.readJson("project.properties");
+        String strValue = FileUtil.readJson("project.properties");
         System.out.println(strValue);
     }
 
@@ -29,6 +29,7 @@ public class _MainTest {
         System.out.println(getPayWxHBInterfaceUrl("test/api"));
 
     }
+
     private static String getPayWxHBInterfaceUrl(String relativeUrl) {
         String baseUrl = getValueByProjectPropertiesFile("interface.url");
         try {

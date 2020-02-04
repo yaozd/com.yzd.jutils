@@ -10,15 +10,16 @@ import java.util.Map;
 
 public class LombokUtil2 {
     //toString 转为 map
-    public static Map<String,String> stringToBean(String str){
-        Map<String,String> paraMap=new HashMap<String,String>();
-        String[] para=str.split(",");
-        for(int i=0,len=para.length;i<len;i++){
-            String[] temp=para[i].split("=");
+    public static Map<String, String> stringToBean(String str) {
+        Map<String, String> paraMap = new HashMap<String, String>();
+        String[] para = str.split(",");
+        for (int i = 0, len = para.length; i < len; i++) {
+            String[] temp = para[i].split("=");
             paraMap.put(temp[0].trim(), temp[1]);
         }
         return paraMap;
     }
+
     //map 转为bean
     public static Object convertMap(Class<?> type, Map<?, ?> map) {
 
@@ -35,7 +36,7 @@ public class LombokUtil2 {
         } catch (InstantiationException e) {
             //logger.error("实例化 JavaBean 失败");
             e.printStackTrace();
-        }catch (IllegalAccessException e) {
+        } catch (IllegalAccessException e) {
             //logger.error("实例化 JavaBean 失败");
             e.printStackTrace();
         }
@@ -55,7 +56,7 @@ public class LombokUtil2 {
 
                 try {
                     descriptor.getWriteMethod().invoke(obj, args);
-                } catch (IllegalAccessException  e) {
+                } catch (IllegalAccessException e) {
                     //logger.error("实例化 JavaBean 失败");
                     e.printStackTrace();
                 } catch (IllegalArgumentException e) {

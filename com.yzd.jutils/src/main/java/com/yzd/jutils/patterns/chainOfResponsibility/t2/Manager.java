@@ -22,6 +22,6 @@ public abstract class Manager {
     }
 
     // 处理加薪请求的方法
-    public abstract void raisesRequest(String requestName,int requestNumber);
+    public abstract void raisesRequest(String requestName, int requestNumber);
 
 }

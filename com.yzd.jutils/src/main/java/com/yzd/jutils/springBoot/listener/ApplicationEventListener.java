@@ -7,8 +7,7 @@ public class ApplicationEventListener {
     /***
      * //实现ApplicationListener接口：
      public class ApplicationEventListener implements ApplicationListener {
-    @Override
-    public void onApplicationEvent(ApplicationEvent event) {
+    @Override public void onApplicationEvent(ApplicationEvent event) {
     // 在这里可以监听到Spring Boot的生命周期
     eventHandler(event);
     }
@@ -64,8 +63,7 @@ public class ApplicationEventListener {
     }
      */
     /**
-     * @SpringBootApplication
-    public class ListenDemoApplication {
+     * @SpringBootApplication public class ListenDemoApplication {
 
     public static void main(String[] args) {
     SpringApplication app = new SpringApplication(ListenDemoApplication.class);
@@ -73,7 +71,7 @@ public class ApplicationEventListener {
     app.run(args);
     }
     }
-     //=================
+    //=================
     public static void main(String[] args) throws InterruptedException {
     logger.info("项目启动--BEGIN");
     SpringApplication app = new SpringApplication(Application.class);

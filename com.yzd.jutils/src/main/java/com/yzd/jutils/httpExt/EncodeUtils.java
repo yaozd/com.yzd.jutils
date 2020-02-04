@@ -11,10 +11,8 @@ import java.net.URLEncoder;
 
 /**
  * 各种格式的编码加码工具类.
- *
+ * <p>
  * 集成Commons-Codec,Commons-Lang及JDK提供的编解码方法.
- *
- *
  */
 public class EncodeUtils {
 

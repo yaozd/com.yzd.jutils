@@ -37,7 +37,7 @@ public class TestEnumDemo {
      * 版权声明：本文为博主原创文章，转载请附上博文链接！
      */
     @Test
-    public void t1(){
+    public void t1() {
         EnumDemo enumDemo = EnumUtils.getEnum(EnumDemo.class, "");
         System.out.println(enumDemo);
         System.out.println("-----");

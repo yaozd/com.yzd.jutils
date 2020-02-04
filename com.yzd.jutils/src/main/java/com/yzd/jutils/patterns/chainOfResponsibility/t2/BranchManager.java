@@ -6,7 +6,7 @@ package com.yzd.jutils.patterns.chainOfResponsibility.t2;
  * Created by yzd on 2018/9/11 17:51.
  */
 
-public class BranchManager extends Manager{
+public class BranchManager extends Manager {
 
     public BranchManager(String position) {
         super(position);

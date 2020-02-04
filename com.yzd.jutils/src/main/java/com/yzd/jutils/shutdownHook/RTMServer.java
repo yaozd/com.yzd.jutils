@@ -3,20 +3,18 @@ package com.yzd.jutils.shutdownHook;
 /**
  * Created by zd.yao on 2018/9/4.
  */
-public class RTMServer extends Thread{
+public class RTMServer extends Thread {
 
 
     //private MessageServer msg_server = null;
     //private ThriftServer thrift_server = null;
 
 
-    public RTMServer()
-    {
+    public RTMServer() {
         this.setName("RTMServer");
     }
 
-    public void start_server()
-    {
+    public void start_server() {
         // 添加程序关闭监听线程
         Runtime.getRuntime().addShutdownHook(this);
 
@@ -32,8 +30,7 @@ public class RTMServer extends Thread{
      * 用于在程序关闭时释放资源。
      * @see java.lang.Thread#run()
      */
-    public void run()
-    {
+    public void run() {
         System.out.println("shutdownHook close");
         System.out.println("监听获取程序退出事件（Linux、Windows、Java、C++）");
     }

@@ -6,7 +6,7 @@ package com.yzd.jutils.patterns.chainOfResponsibility.t2;
  * Created by yzd on 2018/9/11 17:52.
  */
 
-public class CHO extends Manager{
+public class CHO extends Manager {
 
     public CHO(String position) {
         super(position);

@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan("com.yzd.jutils.springBoot.aop")
 public class Test {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //关闭banner
         /*
         SpringApplication app = new SpringApplication(Test.class);

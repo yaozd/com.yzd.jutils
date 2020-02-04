@@ -5,7 +5,6 @@ package com.yzd.jutils.bankcard;
  */
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang3.ThreadUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -118,7 +117,7 @@ public class BankcardUtil {
         //String cardNumber = "6228 2017 0216 1025 019";
         // T2:北京-工商银行
         T2();
-        for (int i = 0; i <20 ; i++) {
+        for (int i = 0; i < 20; i++) {
             Thread.sleep(1000);
             T2();
         }

@@ -20,7 +20,7 @@ public class MyTansactionAspect {
 
     @Around(value = "setJoinPoint()")
     public Object aroundMethod(ProceedingJoinPoint proceedingJoinPoint) {
-        Method method= AspectUtil.getMethod(proceedingJoinPoint);
+        Method method = AspectUtil.getMethod(proceedingJoinPoint);
         MyTransaction myTransaction = AspectUtil.getAnnotation(method, MyTransaction.class);
         Object[] requestArgs = AspectUtil.getRequestArgs(proceedingJoinPoint);
         try {

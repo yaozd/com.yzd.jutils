@@ -3,6 +3,7 @@ package com.yzd.jutils.hashExt;
 /**
  * Created by zd.yao on 2017/6/13.
  */
+
 import java.util.Collection;
 import java.util.SortedMap;
 import java.util.TreeMap;
@@ -20,6 +21,7 @@ public class ConsistentHash<T> {
             add(node);
         }
     }
+
     public void add(T node) {
         for (int i = 0; i < numberOfReplicas; i++) {
             circle.put(hashFunction.hash(node.toString() + i), node);
@@ -34,6 +36,7 @@ public class ConsistentHash<T> {
 
     /**
      * 获得一个最近的顺时针节点
+     *
      * @param key 为给定键取Hash，取得顺时针方向上最近的一个虚拟节点对应的实际节点
      * @return
      */

@@ -21,12 +21,12 @@ public class _MainTest {
         nodeList.add(new Node().setName("1").setWeight(1));
         nodeList.add(new Node().setName("2").setWeight(2));
         nodeList.add(new Node().setName("3").setWeight(3));
-        RandomLoadBalance randomLoadBalance=new RandomLoadBalance();
+        RandomLoadBalance randomLoadBalance = new RandomLoadBalance();
         Multimap<String, String> countMap = LinkedListMultimap.create();
         for (int i = 0; i < 9; i++) {
-            Node node=randomLoadBalance.doSelect(nodeList);
+            Node node = randomLoadBalance.doSelect(nodeList);
             System.out.println(node.getName());
-            countMap.put(node.getName(),node.getName());
+            countMap.put(node.getName(), node.getName());
         }
         for (Map.Entry<String, Collection<String>> e : countMap.asMap().entrySet()) {
             System.out.printf(e.getKey() + "=");

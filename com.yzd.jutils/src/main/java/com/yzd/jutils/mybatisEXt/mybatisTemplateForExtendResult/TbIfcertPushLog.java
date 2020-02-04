@@ -1,7 +1,5 @@
 package com.yzd.jutils.mybatisEXt.mybatisTemplateForExtendResult;
 
-import java.util.Date;
-
 public class TbIfcertPushLog {
     private Long id;
 

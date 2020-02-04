@@ -1,6 +1,5 @@
 package com.yzd.jutils.timestampExt;
 
-import com.yzd.jutils.dateExt.DateUtil2;
 import org.joda.time.DateTime;
 
 import java.text.ParseException;
@@ -18,7 +17,7 @@ public class TimestampTest {
         DateTime dt7 = new DateTime(System.currentTimeMillis());
         System.out.println(dt7.toDate().getTime());
         System.out.println(dt7.plusMinutes(5).toDate().getTime());
-        System.out.println(dt7.plusMinutes(5).toDate().getTime()-dt7.toDate().getTime());
+        System.out.println(dt7.plusMinutes(5).toDate().getTime() - dt7.toDate().getTime());
         System.out.println("==========================");
         // 精确到毫秒
         // 获取当前时间戳

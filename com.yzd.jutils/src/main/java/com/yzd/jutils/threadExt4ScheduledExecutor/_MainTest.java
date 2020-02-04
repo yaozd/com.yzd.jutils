@@ -8,6 +8,7 @@ public class _MainTest {
     /**
      * 如果是在@Test测试状态下，下面程序是可以正常退出，
      * 但是在main的方法就不会正常退出。
+     *
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {

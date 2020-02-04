@@ -10,7 +10,7 @@ public class _MainTest {
     //自定义Json注解实现输出日志字段脱敏
     //https://blog.csdn.net/worstezreal/article/details/75453812
     @Test
-    public void t1(){
+    public void t1() {
         CardInfo cardInfo = new CardInfo();
         cardInfo.setUserId("11111111111111111");
         cardInfo.setCardId("6228480402564890018");
@@ -21,10 +21,11 @@ public class _MainTest {
         //
         System.out.println(FastJsonLogUtil.toJsonString(cardInfo));
     }
+
     //测试速度
     @Test
-    public void t2(){
-        for (int i = 0; i <1000000 ; i++) {
+    public void t2() {
+        for (int i = 0; i < 1000000; i++) {
             fastJsonLog();
         }
         fastJsonLog();

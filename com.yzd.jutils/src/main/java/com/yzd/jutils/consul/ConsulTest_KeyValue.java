@@ -43,7 +43,7 @@ public class ConsulTest_KeyValue {
     /**
      * KEY的组成：统一前缀（upstreams）/服务名（test2）/IP地址（192.168.1.239）：端口（2225）
      */
-    private static final String key="/upstreams/test2/192.168.1.239:2225";
+    private static final String key = "/upstreams/test2/192.168.1.239:2225";
 
     /**
      * 保存

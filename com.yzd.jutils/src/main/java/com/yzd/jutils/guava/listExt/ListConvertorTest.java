@@ -1,17 +1,13 @@
 package com.yzd.jutils.guava.listExt;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
+
 public class ListConvertorTest {
     /**
      * Java 集合转换(数组、List、Set、Map相互转换)
      * http://blog.csdn.net/top_code/article/details/10552827
+     *
      * @param args
      */
     public static void main(String[] args) {
@@ -35,11 +31,11 @@ public class ListConvertorTest {
 
         // 将Map Key 转化为List
         List<String> mapKeyList = new ArrayList<String>(map.keySet());
-        System.out.println("mapKeyList:"+mapKeyList);
+        System.out.println("mapKeyList:" + mapKeyList);
 
         // 将Map Key 转化为List
         List<String> mapValuesList = new ArrayList<String>(map.values());
-        System.out.println("mapValuesList:"+mapValuesList);
+        System.out.println("mapValuesList:" + mapValuesList);
 
     }
 
@@ -52,16 +48,16 @@ public class ListConvertorTest {
 
         // 将Map 的键转化为Set
         Set<String> mapKeySet = map.keySet();
-        System.out.println("mapKeySet:"+mapKeySet);
+        System.out.println("mapKeySet:" + mapKeySet);
 
         // 将Map 的值转化为Set
         Set<String> mapValuesSet = new HashSet<String>(map.values());
-        System.out.println("mapValuesSet:"+mapValuesSet);
+        System.out.println("mapValuesSet:" + mapValuesSet);
     }
 
     private static void testArray2Set() {
 
-        String[] arr = {"AA","BB","DD","CC","BB"};
+        String[] arr = {"AA", "BB", "DD", "CC", "BB"};
 
         //数组-->Set
         Set<String> set = new HashSet<String>(Arrays.asList(arr));
@@ -112,18 +108,18 @@ public class ListConvertorTest {
         list.add("BB");
         list.add("CC");
         Object[] objects = list.toArray();//返回Object数组
-        System.out.println("objects:"+Arrays.toString(objects));
+        System.out.println("objects:" + Arrays.toString(objects));
 
         String[] arr = new String[list.size()];
         list.toArray(arr);//将转化后的数组放入已经创建好的对象中
-        System.out.println("strings1:"+Arrays.toString(arr));
+        System.out.println("strings1:" + Arrays.toString(arr));
     }
 
     private static void testArray2List() {
         //数组-->List
-        String[] ss = {"JJ","KK"};
+        String[] ss = {"JJ", "KK"};
         List<String> list1 = Arrays.asList(ss);
-        List<String> list2 = Arrays.asList("AAA","BBB");
+        List<String> list2 = Arrays.asList("AAA", "BBB");
         System.out.println(list1);
         System.out.println(list2);
     }

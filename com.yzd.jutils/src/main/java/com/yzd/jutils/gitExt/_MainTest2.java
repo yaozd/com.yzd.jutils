@@ -22,15 +22,16 @@ public class _MainTest2 {
 
     /**
      * 新建一个分支并同步到远程仓库
+     *
      * @param branchName
      * @throws IOException
      * @throws GitAPIException
      */
     public static String newBranch(String branchName) throws IOException {
-        String newBranchIndex = "refs/heads/"+branchName;
+        String newBranchIndex = "refs/heads/" + branchName;
         String gitPathURI = "";
         //git仓库地址
-        Git git = new Git(new FileRepository(localRepoGitConfig+"/.git"));
+        Git git = new Git(new FileRepository(localRepoGitConfig + "/.git"));
         try {
 
             //检查新建的分支是否已经存在，如果存在则将已存在的分支强制删除并新建一个分支
@@ -56,9 +57,9 @@ public class _MainTest2 {
         return gitPathURI;
     }
 
-    public static void commitFiles() throws IOException, GitAPIException{
+    public static void commitFiles() throws IOException, GitAPIException {
         String filePath = "";
-        Git git = Git.open( new File(localRepoGitConfig) );
+        Git git = Git.open(new File(localRepoGitConfig));
         //创建用户文件的过程
         File myfile = new File(filePath);
         myfile.createNewFile();
@@ -69,19 +70,19 @@ public class _MainTest2 {
         git.push().call();
     }
 
-    public static boolean pullBranchToLocal(String cloneURL){
+    public static boolean pullBranchToLocal(String cloneURL) {
         boolean resultFlag = false;
         String[] splitURL = cloneURL.split(" ");
         String branchName = splitURL[1];
-        String fileDir = localCodeDir+"/"+branchName;
+        String fileDir = localCodeDir + "/" + branchName;
         //检查目标文件夹是否存在
         File file = new File(fileDir);
-        if(file.exists()){
+        if (file.exists()) {
             deleteFolder(file);
         }
         Git git;
         try {
-            git = Git.open( new File(localRepoGitConfig) );
+            git = Git.open(new File(localRepoGitConfig));
             git.cloneRepository().setURI(cloneURL).setDirectory(file).call();
             resultFlag = true;
         } catch (IOException e) {
@@ -94,19 +95,19 @@ public class _MainTest2 {
         return resultFlag;
     }
 
-    public static void deleteFolder(File file){
-        if(file.isFile() || file.list().length==0){
+    public static void deleteFolder(File file) {
+        if (file.isFile() || file.list().length == 0) {
             file.delete();
-        }else{
+        } else {
             File[] files = file.listFiles();
-            for(int i=0;i<files.length;i++){
+            for (int i = 0; i < files.length; i++) {
                 deleteFolder(files[i]);
                 files[i].delete();
             }
         }
     }
 
-    public static void setupRepo() throws GitAPIException{
+    public static void setupRepo() throws GitAPIException {
         //建立与远程仓库的联系，仅需要执行一次
         Git git = Git.cloneRepository().setURI(remoteRepoURI).setDirectory(new File(localRepoPath)).call();
     }

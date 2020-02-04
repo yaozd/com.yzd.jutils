@@ -5,16 +5,17 @@ import java.io.Serializable;
 /**
  * Created by zd.yao on 2017/4/28.
  */
-public class Person implements Serializable{
+public class Person implements Serializable {
 
-    public Person(){
+    public Person() {
 
     }
-    public Person(int id,String address,  String name,int age) {
+
+    public Person(int id, String address, String name, int age) {
         this.address = address;
         this.id = id;
         this.name = name;
-        this.age=age;
+        this.age = age;
     }
 
     private int id;

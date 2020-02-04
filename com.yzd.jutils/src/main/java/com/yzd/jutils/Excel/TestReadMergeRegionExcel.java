@@ -3,7 +3,44 @@ package com.yzd.jutils.Excel;
 /**
  * java poi 读取有合并单元格的EXCEL文件
  * https://blog.csdn.net/a919423654/article/details/68946507
- * */
+ *
+ * @author wcyong
+ * @date 2013-6-21
+ * <p>
+ * 读取excel数据
+ * @param path
+ * <p>
+ * 读取excel文件
+ * @param wb
+ * @param sheetIndex    sheet页下标：从0开始
+ * @param startReadLine 开始读取的行:从0开始
+ * @param tailLine      去除最后读取的行
+ * <p>
+ * 获取合并单元格的值
+ * @param sheet
+ * @param row
+ * @param column
+ * @return 判断合并了行
+ * @param sheet
+ * @param row
+ * @param column
+ * @return 判断指定的单元格是否是合并单元格
+ * @param sheet
+ * @param row    行下标
+ * @param column 列下标
+ * @return 判断sheet页中是否含有合并单元格
+ * @param sheet
+ * @return 合并单元格
+ * @param sheet
+ * @param firstRow 开始行
+ * @param lastRow  结束行
+ * @param firstCol 开始列
+ * @param lastCol  结束列
+ * <p>
+ * 获取单元格的值
+ * @param cell
+ * @return
+ */
 
 /*
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -29,10 +66,10 @@ public class TestReadMergeRegionExcel {
 
     */
 /**
-     * 读取excel数据
-     *
-     * @param path
-     *//*
+ * 读取excel数据
+ *
+ * @param path
+ *//*
 
     private void readExcelToObj(String path) {
 
@@ -49,13 +86,13 @@ public class TestReadMergeRegionExcel {
 
     */
 /**
-     * 读取excel文件
-     *
-     * @param wb
-     * @param sheetIndex    sheet页下标：从0开始
-     * @param startReadLine 开始读取的行:从0开始
-     * @param tailLine      去除最后读取的行
-     *//*
+ * 读取excel文件
+ *
+ * @param wb
+ * @param sheetIndex    sheet页下标：从0开始
+ * @param startReadLine 开始读取的行:从0开始
+ * @param tailLine      去除最后读取的行
+ *//*
 
     private void readExcel(Workbook wb, int sheetIndex, int startReadLine, int tailLine) {
         Sheet sheet = wb.getSheetAt(sheetIndex);
@@ -81,13 +118,13 @@ public class TestReadMergeRegionExcel {
 
     */
 /**
-     * 获取合并单元格的值
-     *
-     * @param sheet
-     * @param row
-     * @param column
-     * @return
-     *//*
+ * 获取合并单元格的值
+ *
+ * @param sheet
+ * @param row
+ * @param column
+ * @return
+ *//*
 
     public String getMergedRegionValue(Sheet sheet, int row, int column) {
         int sheetMergeCount = sheet.getNumMergedRegions();
@@ -114,13 +151,13 @@ public class TestReadMergeRegionExcel {
 
     */
 /**
-     * 判断合并了行
-     *
-     * @param sheet
-     * @param row
-     * @param column
-     * @return
-     *//*
+ * 判断合并了行
+ *
+ * @param sheet
+ * @param row
+ * @param column
+ * @return
+ *//*
 
     private boolean isMergedRow(Sheet sheet, int row, int column) {
         int sheetMergeCount = sheet.getNumMergedRegions();
@@ -141,13 +178,13 @@ public class TestReadMergeRegionExcel {
 
     */
 /**
-     * 判断指定的单元格是否是合并单元格
-     *
-     * @param sheet
-     * @param row    行下标
-     * @param column 列下标
-     * @return
-     *//*
+ * 判断指定的单元格是否是合并单元格
+ *
+ * @param sheet
+ * @param row    行下标
+ * @param column 列下标
+ * @return
+ *//*
 
     private boolean isMergedRegion(Sheet sheet, int row, int column) {
         int sheetMergeCount = sheet.getNumMergedRegions();
@@ -168,11 +205,11 @@ public class TestReadMergeRegionExcel {
 
     */
 /**
-     * 判断sheet页中是否含有合并单元格
-     *
-     * @param sheet
-     * @return
-     *//*
+ * 判断sheet页中是否含有合并单元格
+ *
+ * @param sheet
+ * @return
+ *//*
 
     private boolean hasMerged(Sheet sheet) {
         return sheet.getNumMergedRegions() > 0 ? true : false;
@@ -180,14 +217,14 @@ public class TestReadMergeRegionExcel {
 
     */
 /**
-     * 合并单元格
-     *
-     * @param sheet
-     * @param firstRow 开始行
-     * @param lastRow  结束行
-     * @param firstCol 开始列
-     * @param lastCol  结束列
-     *//*
+ * 合并单元格
+ *
+ * @param sheet
+ * @param firstRow 开始行
+ * @param lastRow  结束行
+ * @param firstCol 开始列
+ * @param lastCol  结束列
+ *//*
 
     private void mergeRegion(Sheet sheet, int firstRow, int lastRow, int firstCol, int lastCol) {
         sheet.addMergedRegion(new CellRangeAddress(firstRow, lastRow, firstCol, lastCol));
@@ -195,11 +232,11 @@ public class TestReadMergeRegionExcel {
 
     */
 /**
-     * 获取单元格的值
-     *
-     * @param cell
-     * @return
-     *//*
+ * 获取单元格的值
+ *
+ * @param cell
+ * @return
+ *//*
 
     public String getCellValue(Cell cell) {
 

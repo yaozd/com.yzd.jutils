@@ -66,20 +66,21 @@ public class LocalIpAddressUtil {
         if (ip.equals("255.255.255.255")) return true;
         return false;
     }
-    public static String getLocalIp(){
-        Set<String> addrs =LocalIpAddressUtil.resolveLocalIps();
-        for (String addr : addrs){
+
+    public static String getLocalIp() {
+        Set<String> addrs = LocalIpAddressUtil.resolveLocalIps();
+        for (String addr : addrs) {
             return addr;
         }
         throw new IllegalStateException("没有找到本地IP");
     }
+
     /**
-     *
      * @param args
      */
     public static void main(String[] args) {
-        Set<String> addrs =LocalIpAddressUtil.resolveLocalIps();
-        for (String addr : addrs){
+        Set<String> addrs = LocalIpAddressUtil.resolveLocalIps();
+        for (String addr : addrs) {
             System.out.println(addr);
         }
     }

@@ -19,6 +19,7 @@ public enum TaskEnum {
         this.tokenBucket = new ArrayBlockingQueue<Integer>(maxThreadSize - 1);
         this.data = new SynchronousQueue<String>(true);
     }
+
     //作用：控制线程数
     private ArrayBlockingQueue<Integer> tokenBucket;
     //作用：待处理数据传输
@@ -48,6 +49,7 @@ public enum TaskEnum {
 
     /**
      * 从本地任务队列中读取数据
+     *
      * @return
      */
     public String takeData() {
@@ -70,6 +72,7 @@ public enum TaskEnum {
 
     /**
      * 把数据放入到本地任务队列中,再添加一个令牌到本地的令牌桶中
+     *
      * @param data
      */
     public void sendData(String data) {
@@ -81,6 +84,7 @@ public enum TaskEnum {
 
     /**
      * 令牌桶的当前大小
+     *
      * @return
      */
     public int getTokenBucketSize() {

@@ -16,9 +16,9 @@ import java.util.Locale;
  * 吐槽java时间那点事儿 Joda Time-推荐
  * http://blog.csdn.net/54powerman/article/details/56292391
  * Joda-Time 用法
- http://blog.csdn.net/top_code/article/details/50374078
- joda-time的使用-推荐
- http://ylq365.iteye.com/blog/1769680
+ * http://blog.csdn.net/top_code/article/details/50374078
+ * joda-time的使用-推荐
+ * http://ylq365.iteye.com/blog/1769680
  */
 public class JodaTimeUtil2 {
 
@@ -26,9 +26,9 @@ public class JodaTimeUtil2 {
      *
      */
     @Test
-    public void exmaple(){
+    public void exmaple() {
         //初始化时间
-        DateTime dateTime=new DateTime(2012, 12, 13, 18, 23,55);
+        DateTime dateTime = new DateTime(2012, 12, 13, 18, 23, 55);
 
         // 年,月,日,时,分,秒,毫秒
         DateTime dt3 = new DateTime(2011, 2, 13, 10, 30, 50, 333);// 2010年2月13日10点30分50秒333毫秒
@@ -40,7 +40,7 @@ public class JodaTimeUtil2 {
         String str5 = dateTime.toString("MM/dd/yyyy HH:mm ZZZZ");
         String str6 = dateTime.toString("MM/dd/yyyy HH:mm Z");
 
-        DateTimeFormatter format = DateTimeFormat .forPattern("yyyy-MM-dd HH:mm:ss");
+        DateTimeFormatter format = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss");
         //时间解析
         DateTime dateTime2 = DateTime.parse("2012-12-21 23:22:45", format);
 
@@ -58,8 +58,8 @@ public class JodaTimeUtil2 {
         DateTime dt2 = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss").parseDateTime("2012-12-26 03:27:39");
 
         //计算两个日期间隔的天数
-        LocalDate start=new LocalDate(2012, 12,14);
-        LocalDate end=new LocalDate(2013, 01, 15);
+        LocalDate start = new LocalDate(2012, 12, 14);
+        LocalDate end = new LocalDate(2013, 01, 15);
         int days = Days.daysBetween(start, end).getDays();
 
         //计算两个日期间隔的小时数,分钟数,秒数
@@ -105,10 +105,10 @@ public class JodaTimeUtil2 {
     }
 
     /**
-     *计算间隔和区间
+     * 计算间隔和区间
      */
     @Test
-    public void timeInterval(){
+    public void timeInterval() {
         DateTime begin = new DateTime("2015-02-01");
         DateTime end = new DateTime("2016-05-01");
         //计算区间毫秒数
@@ -121,14 +121,15 @@ public class JodaTimeUtil2 {
         Interval interval = new Interval(begin, end);
         boolean contained = interval.contains(new DateTime("2015-03-01"));
     }
+
     /**
      * joda-time与date的转换
      */
     @Test
-    public void date2DateTime(){
+    public void date2DateTime() {
         DateTime dateTime1 = new DateTime();
         System.out.println(dateTime1); // out: 2016-02-26T16:02:57.582+08:00
-        DateTime dateTime2 = new DateTime(2016,2,14,0,0,0);
+        DateTime dateTime2 = new DateTime(2016, 2, 14, 0, 0, 0);
         System.out.println(dateTime2); // out: 2016-02-14T00:00:00.000+08:00
         DateTime dateTime3 = new DateTime(1456473917004L);
         System.out.println(dateTime3); // out: 2016-02-26T16:05:17.004+08:00
@@ -142,8 +143,8 @@ public class JodaTimeUtil2 {
         DateTime dateTime7 = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss").parseDateTime("2012-12-26 03:27:39");
         System.out.println(dateTime7);
         //
-        Date d3=new Date();
-        DateTime dateTime8=new DateTime(d3);
+        Date d3 = new Date();
+        DateTime dateTime8 = new DateTime(d3);
         PrintUtil.outLn(dateTime8.toString("yyyy-MM-dd HH:mm:ss"));
         //
         DateTime dt = new DateTime();
@@ -155,23 +156,24 @@ public class JodaTimeUtil2 {
     }
 
     /**
-     *计算两个日期的相隔天数
+     * 计算两个日期的相隔天数
      */
     @Test
-    public void getBetweenDay(){
+    public void getBetweenDay() {
         DateTime nowTime = new DateTime();
         DateTime futureTime = new DateTime(2018, 10, 1, 0, 0, 0);
         Integer days = Days.daysBetween(nowTime, futureTime).getDays();
         PrintUtil.outLn(days);
     }
+
     /**
-     *  获取今天的开始时间：比如：2014-06-19 00:00:00
+     * 获取今天的开始时间：比如：2014-06-19 00:00:00
      */
     @Test
-    public void withTimeAtStartOfDay(){
+    public void withTimeAtStartOfDay() {
         DateTime nowTime = new DateTime();
-        DateTime startOfDay =  nowTime.withTimeAtStartOfDay();
-        String val=startOfDay.toString("yyyy-MM-dd HH:mm:ss");
+        DateTime startOfDay = nowTime.withTimeAtStartOfDay();
+        String val = startOfDay.toString("yyyy-MM-dd HH:mm:ss");
         PrintUtil.outLn(val);
     }
 
@@ -179,10 +181,10 @@ public class JodaTimeUtil2 {
      * 获取今天的结束时间：比如：2014-06-19 23:59:59
      */
     @Test
-    public void withMaximumValue(){
+    public void withMaximumValue() {
         DateTime nowTime = new DateTime();
-        DateTime endOfDay =  nowTime.millisOfDay().withMaximumValue();
-        String val=endOfDay.toString("yyyy-MM-dd HH:mm:ss.SSS");
+        DateTime endOfDay = nowTime.millisOfDay().withMaximumValue();
+        String val = endOfDay.toString("yyyy-MM-dd HH:mm:ss.SSS");
         PrintUtil.outLn(val);
     }
 }

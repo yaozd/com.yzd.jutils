@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Person {
     @NoThrowExceptionAnnMQ
-    public void t1(){
-        Integer a=1/0;
+    public void t1() {
+        Integer a = 1 / 0;
     }
 }

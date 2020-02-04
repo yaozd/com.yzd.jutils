@@ -21,16 +21,18 @@ public class TestDemo {
         int[] val = iter.read(int[].class);
         System.out.println(val[3]);
     }
+
     @Test
-    public void t2() throws IOException{
-        Person person=new Person(1,"2","3",4);
-        String jsonStr= JsonStream.serialize(person);
-        Person jsonObj= JsonIterator.deserialize(jsonStr, Person.class);
+    public void t2() throws IOException {
+        Person person = new Person(1, "2", "3", 4);
+        String jsonStr = JsonStream.serialize(person);
+        Person jsonObj = JsonIterator.deserialize(jsonStr, Person.class);
     }
+
     @Test
-    public void t3() throws IOException{
-        Person person=new Person(1,"2","3",4);
-        String jsonStr= JsoniterHelper.serialize(person);
-        Person jsonObj= JsoniterHelper.deserialize(jsonStr, Person.class);
+    public void t3() throws IOException {
+        Person person = new Person(1, "2", "3", 4);
+        String jsonStr = JsoniterHelper.serialize(person);
+        Person jsonObj = JsoniterHelper.deserialize(jsonStr, Person.class);
     }
 }

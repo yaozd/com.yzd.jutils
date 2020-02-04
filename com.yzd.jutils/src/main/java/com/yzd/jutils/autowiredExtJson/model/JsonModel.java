@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @NoArgsConstructor
-public class  JsonModel  {
+public class JsonModel {
     private Long id;
     /**
      * 实体类型：

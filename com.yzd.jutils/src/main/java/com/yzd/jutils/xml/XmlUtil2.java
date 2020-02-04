@@ -10,7 +10,7 @@ import java.io.StringWriter;
  * Created by zd.yao on 2017/4/17.
  */
 public class XmlUtil2 {
-    public static String toXML(Object obj,String encoding) {
+    public static String toXML(Object obj, String encoding) {
         try {
             JAXBContext context = JAXBContext.newInstance(obj.getClass());
             Marshaller marshaller = context.createMarshaller();
@@ -25,6 +25,7 @@ public class XmlUtil2 {
             throw new RuntimeException(e);
         }
     }
+
     @SuppressWarnings("unchecked")
     public static <T> T fromXML(String xml, Class<T> valueType) {
         try {

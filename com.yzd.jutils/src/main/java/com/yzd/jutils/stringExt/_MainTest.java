@@ -8,13 +8,12 @@ import org.junit.Test;
  */
 public class _MainTest {
     @Test
-    public void equalsIgnoreCase()
-    {
+    public void equalsIgnoreCase() {
         //返回结果：成功是字符串时对比相等需要忽略大小写（特别是在对接回调接口中）
-        String val="Success";
-        if("success".equalsIgnoreCase(val)){
+        String val = "Success";
+        if ("success".equalsIgnoreCase(val)) {
             PrintUtil.outLn(true);
-        }else {
+        } else {
             PrintUtil.outLn(false);
         }
     }

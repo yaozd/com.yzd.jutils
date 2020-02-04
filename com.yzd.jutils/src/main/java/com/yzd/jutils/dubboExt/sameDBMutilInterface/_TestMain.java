@@ -15,12 +15,12 @@ public class _TestMain {
      * 解决方案：使用一个类可以实现多个接口的方式。
      */
     @Test
-    public void test1(){
-        ParentInf t1=new ItemImpl();
+    public void test1() {
+        ParentInf t1 = new ItemImpl();
         t1.a();
-        ParentInf t2=new ItemImpl();
+        ParentInf t2 = new ItemImpl();
         t2.a();
-        ParentInf t3=new ItemImpl();
+        ParentInf t3 = new ItemImpl();
         t3.a();
     }
 }

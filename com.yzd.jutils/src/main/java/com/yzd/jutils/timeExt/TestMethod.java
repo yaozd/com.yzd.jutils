@@ -5,5 +5,5 @@ package com.yzd.jutils.timeExt;
  */
 public interface TestMethod {
     //执行回调操作的方法
-    void  execute();
+    void execute();
 }

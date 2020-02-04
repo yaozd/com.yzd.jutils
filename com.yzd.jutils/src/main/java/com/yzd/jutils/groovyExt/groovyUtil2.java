@@ -16,16 +16,13 @@ public class groovyUtil2 {
         binding.setVariable("var", 5);
 
         GroovyShell gs = new GroovyShell(binding);
-        int i=0;
-        while (true){
+        int i = 0;
+        while (true) {
             Object value = gs.evaluate("abc=123;return var*10");//执行groovyshell脚本
-           // System.out.println(value.equals(50));
-            if(i>1000)break;
+            // System.out.println(value.equals(50));
+            if (i > 1000) break;
             i++;
         }
-
-
-
 
 
         System.out.println(binding.getVariable("abc").equals(123));

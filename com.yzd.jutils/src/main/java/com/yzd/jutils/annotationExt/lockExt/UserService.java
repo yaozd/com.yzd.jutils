@@ -1,7 +1,6 @@
 package com.yzd.jutils.annotationExt.lockExt;
 
 
-import com.yzd.jutils.annotationExt.redisCacheExt.RedisCache;
 import com.yzd.jutils.print.PrintUtil;
 import org.springframework.stereotype.Service;
 

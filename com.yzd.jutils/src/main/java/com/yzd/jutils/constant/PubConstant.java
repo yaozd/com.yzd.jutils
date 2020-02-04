@@ -32,21 +32,21 @@ public class PubConstant {
     /**
      * 上传图片大小限制，单位byte
      */
-    public final static  long MAX_UPLOAD_PIC_SIZE = 1000 * 1024 * 4;
+    public final static long MAX_UPLOAD_PIC_SIZE = 1000 * 1024 * 4;
     /**
      * 上传文件大小限制，单位byte
      */
-    public final static  long MAX_UPLOAD_FILE_SIZE = 10 * 1024 * 1024 * 8;
+    public final static long MAX_UPLOAD_FILE_SIZE = 10 * 1024 * 1024 * 8;
 
     /**
      * 上传软件大小限制，单位byte
      */
-    public final static  long MAX_UPLOAD_SOFT_SIZE = 100 * 1024 * 1024 * 8;
+    public final static long MAX_UPLOAD_SOFT_SIZE = 100 * 1024 * 1024 * 8;
 
     /**
      * 错误登录次数最多3次
      */
-    public final static  int MAX_LOGIN_TIMES = 3;
+    public final static int MAX_LOGIN_TIMES = 3;
     /**
      * 错误登录3次后用户被锁10分钟
      */

@@ -1,4 +1,5 @@
 package com.yzd.jutils.guava.stringExt;
+
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
@@ -17,11 +18,12 @@ import static org.junit.Assert.assertEquals;
 public class StringUtil2 {
 
     //guava处理字符串与List之间，字符串与map之间的转换
+
     /**
      * list转换为字符串
      */
     @Test
-    public void joinTest(){
+    public void joinTest() {
         List<String> names = Lists.newArrayList("John", "Jane", "Adam", "Tom");
         String result = Joiner.on(",").join(names);
 
@@ -124,8 +126,6 @@ public class StringUtil2 {
         assertEquals(4, result.size());
         System.out.println(result);
     }
-
-
 
 
 }

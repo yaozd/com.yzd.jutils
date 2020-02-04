@@ -14,10 +14,10 @@ public class _MainTest {
     //消息队列类型的任务，用于减少日志的输出-每5分钟打印一次日志
     @Test
     public void TimeLogUtil() throws InterruptedException {
-        for (int i=0;i<60;i++){
-            boolean isOk= TimeLogUtil.getInstance().isNext5Minutes(this.getClass(),"TimeLogUtil");
-            Date dt=new Date();
-            PrintUtil.outLn(dt+"="+isOk);
+        for (int i = 0; i < 60; i++) {
+            boolean isOk = TimeLogUtil.getInstance().isNext5Minutes(this.getClass(), "TimeLogUtil");
+            Date dt = new Date();
+            PrintUtil.outLn(dt + "=" + isOk);
             TimeUnit.MINUTES.sleep(2);
         }
 

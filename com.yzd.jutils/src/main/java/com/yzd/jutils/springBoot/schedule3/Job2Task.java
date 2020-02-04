@@ -12,8 +12,9 @@ public class Job2Task extends AbstractTask {
     public Job2Task(ArrayBlockingQueue<Integer> tokenBucket) {
         super(tokenBucket);
     }
+
     @Override
-    protected void doWork(){
+    protected void doWork() {
         //具体的业务逻辑代码
         try {
             TimeUnit.SECONDS.sleep(10);

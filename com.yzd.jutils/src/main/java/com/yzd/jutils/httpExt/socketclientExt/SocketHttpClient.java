@@ -1,13 +1,10 @@
 package com.yzd.jutils.httpExt.socketclientExt;
 
-import com.sun.jndi.toolkit.url.Uri;
 import com.yzd.jutils.httpExt.UriUtil;
 
 import java.io.*;
 import java.net.Socket;
 import java.net.URI;
-import java.net.UnknownHostException;
-import java.util.ArrayList;
 
 public class SocketHttpClient {
     public static String get(String url) throws IOException {

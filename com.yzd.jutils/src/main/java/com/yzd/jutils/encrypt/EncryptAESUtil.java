@@ -28,8 +28,8 @@ public class EncryptAESUtil {
 
     public static void main(String[] args) {
         String source = "www.com";
-        String t1= EncryptAESUtil.toEncrypt(source);
-        String t2= EncryptAESUtil.toDecrypt(t1);
+        String t1 = EncryptAESUtil.toEncrypt(source);
+        String t2 = EncryptAESUtil.toDecrypt(t1);
         System.out.println(t1);
         System.out.println(t2);
     }

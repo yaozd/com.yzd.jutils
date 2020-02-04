@@ -5,17 +5,18 @@ import java.util.concurrent.ArrayBlockingQueue;
 /**
  * Created by zd.yao on 2017/7/7.
  */
-public class AbstractTask  implements Runnable {
+public class AbstractTask implements Runnable {
     ArrayBlockingQueue<Integer> tokenBucket;
-    public AbstractTask(ArrayBlockingQueue<Integer> tokenBucket){
-        this.tokenBucket=tokenBucket;
+
+    public AbstractTask(ArrayBlockingQueue<Integer> tokenBucket) {
+        this.tokenBucket = tokenBucket;
     }
 
     @Override
     public void run() {
-        try{
+        try {
             doWork();
-        }finally {
+        } finally {
             try {
                 tokenBucket.take();
             } catch (InterruptedException e) {

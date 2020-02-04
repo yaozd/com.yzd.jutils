@@ -1,6 +1,3 @@
-
-
-
 //参考：
 //java二维码生成-谷歌（Google.zxing）开源二维码生成的实例及介绍
 //https://www.cnblogs.com/lanxiamo/p/6293580.html

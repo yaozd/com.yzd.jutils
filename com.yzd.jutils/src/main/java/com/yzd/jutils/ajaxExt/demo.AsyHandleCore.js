@@ -93,10 +93,10 @@ $(function () {
                 //不使用render，改用jquery文档操作呈现单元格
                 var edit = '<button type="button" class="btn btn-success btn-edit">编辑</button>';
                 var cancel = '<button type="button" class="btn btn-warning btn-cancel">作废</button>';
-                var $option = $('<div>'+edit+cancel+'</div>');
+                var $option = $('<div>' + edit + cancel + '</div>');
                 var btnPass = '<button type="button" class="btn btn-small btn-success btn-pass">通过</button>';
                 var reject = '<button type="button" class="btn btn-warning btn-reject">驳回</button>';
-                var $option2 = $('<div>'+btnPass+reject+'</div>');
+                var $option2 = $('<div>' + btnPass + reject + '</div>');
                 $('td', row).eq(-1).append($option2);
                 $('td', row).eq(-2).append($option);
 
@@ -201,7 +201,7 @@ var userManage = {
         //组装分页参数
         param.startIndex = data.start;
         param.pageSize = data.length;
-        param.draw= data.draw;
+        param.draw = data.draw;
         return param;
     },
     addItemInit: function () {
@@ -212,14 +212,14 @@ var userManage = {
         });
     },
     editItemInit: function (item, _table) {
-        if(!validateWithEdit(item)) {
+        if (!validateWithEdit(item)) {
             return;
         }
         $('#u_id').val(item.id);
         $('#u_taskName').val(item.taskName);
-        $('#u_bizType option[value='+item.bizType+']').attr("selected",true);
+        $('#u_bizType option[value=' + item.bizType + ']').attr("selected", true);
         $('#u_smsSendTime').val(new Date(item.smsSendTime).format('yyyy-MM-dd hh:mm:ss'));
-        $(".u-smsSourceType[value="+item.smsSourceType+"]").attr("checked",true)
+        $(".u-smsSourceType[value=" + item.smsSourceType + "]").attr("checked", true)
         $("#u_smsContent").val(item.smsContent);
         $("#editSmsTaskModel").modal();
         $('.u-update-info').click(function () {
@@ -229,56 +229,56 @@ var userManage = {
         });
     },
     deleteItem: function (item, _table) {
-        if(!validateWithCancel(item)) {
-            return ;
+        if (!validateWithCancel(item)) {
+            return;
         }
         if (confirm('确认作废么?')) {
-            $.post('/sms/cancel',{
+            $.post('/sms/cancel', {
                 'id': item.id
-            }, function(data){
-                if(typeof data ==='number' &&data){
+            }, function (data) {
+                if (typeof data === 'number' && data) {
                     alert("作废成功！")
                     _table.draw(false);
-                }else
+                } else
                     alert('操作失败！')
             });
         }
     },
-    passItem: function (item,_table) {
-        if(!validateWithPass(item)) {
-            return ;
+    passItem: function (item, _table) {
+        if (!validateWithPass(item)) {
+            return;
         }
-        if(confirm('确认通过吗？')) {
-            $.post('/sms/audit',{
-                'id': item.id,'operation':'pass'
-            },function (data) {
-                if(typeof data ==='number' && data == 1){
+        if (confirm('确认通过吗？')) {
+            $.post('/sms/audit', {
+                'id': item.id, 'operation': 'pass'
+            }, function (data) {
+                if (typeof data === 'number' && data == 1) {
                     alert('操作成功！')
                     _table.draw(false);
-                }else
+                } else
                     alert('操作失败！');
             })
         }
     },
-    rejectItem: function (item,_table) {
-        if(!validateWithReject(item)) {
-            return ;
+    rejectItem: function (item, _table) {
+        if (!validateWithReject(item)) {
+            return;
         }
-        if(confirm('确认驳回吗？')) {
-            $.post('/sms/audit',{
-                'id': item.id,'operation':'reject'
-            },function (data) {
-                if(typeof data ==='number' && data == 1){
+        if (confirm('确认驳回吗？')) {
+            $.post('/sms/audit', {
+                'id': item.id, 'operation': 'reject'
+            }, function (data) {
+                if (typeof data === 'number' && data == 1) {
                     alert('驳回成功！')
                     _table.draw(false);
-                }else
+                } else
                     alert('操作失败！')
             })
         }
     }
 };
 var addOptions = {
-    _table : null,
+    _table: null,
     url: '/sms/doCreate',
     beforeSubmit: validate,
     success: showResponse,
@@ -315,19 +315,19 @@ function validate(formData, jqForm, options) {
     smsTask.smsContent = $('#smsContent').val();
     smsTask.midsFile = $('#midsFile').val();
     smsTask.telsFile = $('#telsFile').val();
-    if(commonTools.isUnderfindOrEmpty(smsTask.taskName)) {
+    if (commonTools.isUnderfindOrEmpty(smsTask.taskName)) {
         alert("任务名称不能为空！")
         return false;
     }
-    if(commonTools.isUnderfindOrEmpty(smsTask.telsFile) && commonTools.isUnderfindOrEmpty(smsTask.midsFile)) {
+    if (commonTools.isUnderfindOrEmpty(smsTask.telsFile) && commonTools.isUnderfindOrEmpty(smsTask.midsFile)) {
         alert("至少上传一个文件！")
         return false;
     }
-    if(!commonTools.checkDateTime(smsTask.smsSendTime)) {
+    if (!commonTools.checkDateTime(smsTask.smsSendTime)) {
         alert("时间格式不符合规范！格式为yyyy-MM-dd HH:mm:ss")
         return false;
     }
-    if(!commonTools.checkLength(5,200,smsTask.smsContent)) {
+    if (!commonTools.checkLength(5, 200, smsTask.smsContent)) {
         alert("内容请在5至200以内！")
         return false;
     }
@@ -346,56 +346,59 @@ function validate2(formData, jqForm, options) {
     smsTask.smsContent = $('#u_smsContent').val();
     smsTask.midsFile = $('#u_midsFile').val();
     smsTask.telsFile = $('#u_telsFile').val();
-    if(commonTools.isUnderfindOrEmpty(smsTask.taskName)) {
+    if (commonTools.isUnderfindOrEmpty(smsTask.taskName)) {
         alert("任务名称不能为空！")
         return false;
     }
-    if(commonTools.isUnderfindOrEmpty(smsTask.telsFile) && commonTools.isUnderfindOrEmpty(smsTask.midsFile)) {
+    if (commonTools.isUnderfindOrEmpty(smsTask.telsFile) && commonTools.isUnderfindOrEmpty(smsTask.midsFile)) {
         alert("至少上传一个文件！")
         return false;
     }
-    if(!commonTools.checkDateTime(smsTask.smsSendTime)) {
+    if (!commonTools.checkDateTime(smsTask.smsSendTime)) {
         alert("时间格式不符合规范！格式为yyyy-MM-dd HH:mm:ss")
         return false;
     }
-    if(!commonTools.checkLength(5,200,smsTask.smsContent)) {
+    if (!commonTools.checkLength(5, 200, smsTask.smsContent)) {
         alert("内容请在5至200以内！")
         return false;
     }
 
     return true;
 }
+
 //
 function showResponse(data) {
-    if(typeof data === 'string' && data.indexOf("call admin") >= 0) {
+    if (typeof data === 'string' && data.indexOf("call admin") >= 0) {
         alert("创建失败！")
         $('#addSmsTaskModel').modal('hide');
-    }else {
+    } else {
         $('#addSmsTaskModel').modal('hide');
         alert("创建成功！")
         location.reload(true)
     }
 
 }
+
 function showResponse2(data) {
-    if(typeof data === 'string' && data.indexOf("call admin") >= 0) {
+    if (typeof data === 'string' && data.indexOf("call admin") >= 0) {
         alert("创建失败！")
         $('#editSmsTaskModel').modal('hide');
-    }else {
+    } else {
         alert("创建成功！")
         $('#editSmsTaskModel').modal('hide');
     }
 }
+
 function validateWithCancel(item) {
-    if(item.taskStatus==3) {
+    if (item.taskStatus == 3) {
         alert("任务已发送，不可再作废！")
         return false;
     }
-    if(item.taskStatus==-1) {
+    if (item.taskStatus == -1) {
         alert("任务已作废，无需再作废！")
         return false;
     }
-    if(item.auditStatus==2) {
+    if (item.auditStatus == 2) {
         alert("已处于驳回状态，无需再作废！")
         return false;
     }
@@ -404,30 +407,32 @@ function validateWithCancel(item) {
 }
 
 function validateWithPass(item) {
-    if(item.taskStatus==-1) {
+    if (item.taskStatus == -1) {
         alert("任务已作废，无需再执行通过操作！")
         return false;
     }
-    if(item.auditStatus==1) {
+    if (item.auditStatus == 1) {
         alert("已处于通过状态，无需重复执行通过操作！")
         return false;
     }
     return true;
 
 }
+
 function validateWithReject(item) {
-    if(item.taskStatus==-1) {
+    if (item.taskStatus == -1) {
         alert("任务已作废，无需再驳回！")
         return false;
     }
-    if(item.auditStatus==2) {
+    if (item.auditStatus == 2) {
         alert("已处于驳回状态，无需再驳回！")
         return false;
     }
     return true;
 }
+
 function validateWithEdit(item) {
-    if(item.auditStatus==1) {
+    if (item.auditStatus == 1) {
         alert("任务处于通过状态，不可再编辑！")
         return false;
     }

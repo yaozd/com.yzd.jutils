@@ -4,7 +4,6 @@ import org.junit.Test;
 
 import java.math.BigInteger;
 
-
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertThat;

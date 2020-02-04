@@ -13,15 +13,16 @@ import java.util.concurrent.TimeUnit;
 public class Worker4HandlerTask extends AbstractWorker {
     //待处理的数据
     private String data;
+
     /**
-     *
      * @param taskEnum 任务名
-     * @param data 待处理的数据
+     * @param data     待处理的数据
      */
     public Worker4HandlerTask(TaskEnum taskEnum, String data) {
         super(taskEnum);
-        this.data=data;
+        this.data = data;
     }
+
     @Override
     protected void doWork() {
         log.info(Thread.currentThread().getName());

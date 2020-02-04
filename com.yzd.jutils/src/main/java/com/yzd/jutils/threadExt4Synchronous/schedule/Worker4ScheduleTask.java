@@ -17,6 +17,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 public class Worker4ScheduleTask {
     /**
      * 拉取任务
+     *
      * @throws InterruptedException
      */
     @Scheduled(initialDelay = 3000, fixedDelay = 1000 * 5)
@@ -29,13 +30,14 @@ public class Worker4ScheduleTask {
 
     /**
      * 处理任务
+     *
      * @throws InterruptedException
      */
     @Scheduled(initialDelay = 3000, fixedDelay = 1000 * 5)
     public void task_readQueue() throws InterruptedException {
         SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
         log.info("处理任务: " + dateFormat.format(new Date()));
-        TaskEnum taskEnum=TaskEnum.PAY;
+        TaskEnum taskEnum = TaskEnum.PAY;
         ThreadPoolExecutor executor = TaskUtil.newThreadPoolExecutor(taskEnum.name());
         while (true) {
             if (TaskUtil.isShutdown()) {
@@ -47,7 +49,7 @@ public class Worker4ScheduleTask {
             if (data == null) {
                 continue;
             }
-            Worker4HandlerTask worker4ReadTask=new Worker4HandlerTask(taskEnum,data);
+            Worker4HandlerTask worker4ReadTask = new Worker4HandlerTask(taskEnum, data);
             executor.execute(worker4ReadTask);
         }
     }

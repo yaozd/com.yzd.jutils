@@ -26,15 +26,16 @@ public class TimeUtilForInfluxdbGrafana {
     //主要用于grafana在使用influxdb时的时间格式转换
     //java UTC时间和local时间相互转换
     @Test
-    public void t1(){
-        String localDate="2018-08-31 17:54:53";
-        Date utcDate=localToUTC(localDate);
+    public void t1() {
+        String localDate = "2018-08-31 17:54:53";
+        Date utcDate = localToUTC(localDate);
         //T代表后面跟着时间，Z代表UTC统一时间
         //格式化时间
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
         String time = sdf.format(utcDate);
         System.out.println(time);
     }
+
     @Test
     public void t2() throws ParseException {
         //T代表后面跟着时间，Z代表UTC统一时间
@@ -47,22 +48,24 @@ public class TimeUtilForInfluxdbGrafana {
         Date date = sdf.parse(time);
         System.out.println(date);
     }
+
     /**
      * local时间转换成UTC时间
+     *
      * @param localTime
      * @return
      */
     public static Date localToUTC(String localTime) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        Date localDate= null;
+        Date localDate = null;
         try {
             localDate = sdf.parse(localTime);
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        long localTimeInMillis=localDate.getTime();
+        long localTimeInMillis = localDate.getTime();
         /** long时间转换成Calendar */
-        Calendar calendar= Calendar.getInstance();
+        Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(localTimeInMillis);
         /** 取得时间偏移量 */
         int zoneOffset = calendar.get(java.util.Calendar.ZONE_OFFSET);
@@ -71,23 +74,26 @@ public class TimeUtilForInfluxdbGrafana {
         /** 从本地时间里扣除这些差量，即可以取得UTC时间*/
         calendar.add(java.util.Calendar.MILLISECOND, -(zoneOffset + dstOffset));
         /** 取得的时间就是UTC标准时间 */
-        Date utcDate=new Date(calendar.getTimeInMillis());
+        Date utcDate = new Date(calendar.getTimeInMillis());
         return utcDate;
     }
+
     @Test
-    public void t3(){
-        String utcDate="2018-08-31 17:54:53";
-        Date localDate=utcToLocal(utcDate);
+    public void t3() {
+        String utcDate = "2018-08-31 17:54:53";
+        Date localDate = utcToLocal(utcDate);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String time = sdf.format(localDate);
         System.out.println(time);
     }
+
     /**
      * utc时间转成local时间
+     *
      * @param utcTime
      * @return
      */
-    public static Date utcToLocal(String utcTime){
+    public static Date utcToLocal(String utcTime) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
         Date utcDate = null;

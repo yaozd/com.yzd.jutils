@@ -4,6 +4,7 @@ import org.junit.Test;
 
 public class _MainTest {
     //最佳实践：AtomicInteger实现边界值控制
+
     /**
      * 解决：
      * 最佳实践：AtomicInteger实现边界值控制
@@ -11,8 +12,8 @@ public class _MainTest {
      */
     @Test
     //@PerfTest(threads = 20, invocations = 100)
-    public void batchInsert_getPkg(){
-        for (int j = 0; j <1000000 ; j++) {
+    public void batchInsert_getPkg() {
+        for (int j = 0; j < 1000000; j++) {
             DataRepository.PRODUCT.incrementAndGet();
         }
         //DataRepository.PRODUCT.printTest();

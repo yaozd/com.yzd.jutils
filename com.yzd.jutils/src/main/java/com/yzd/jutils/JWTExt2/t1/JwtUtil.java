@@ -81,13 +81,15 @@ public class JwtUtil {
             Claim userJsonClaim = jwt.getClaim(USER_JSON);
             return userJsonClaim.asString();
         } catch (JWTVerificationException ex) {
-            throw new CustomJwtException("验证token失败："+ex.getMessage());
+            throw new CustomJwtException("验证token失败：" + ex.getMessage());
         }
     }
-    public static boolean isExpireTime(long timestamp){
-        return System.currentTimeMillis()>timestamp;
+
+    public static boolean isExpireTime(long timestamp) {
+        return System.currentTimeMillis() > timestamp;
     }
-    public static <T> T jsonToUser(String json,Class<T> clz){
+
+    public static <T> T jsonToUser(String json, Class<T> clz) {
         return FastJsonUtil.deserialize(json, clz);
     }
 
@@ -100,7 +102,7 @@ public class JwtUtil {
      */
     public static <T> String refreshToken(String oldToken, Class<T> clz) {
         if (StringUtils.isBlank(oldToken)) {
-            throw  new CustomJwtException("刷新token失败：oldToken is Null");
+            throw new CustomJwtException("刷新token失败：oldToken is Null");
         }
         try {
             DecodedJWT jwt = jwtVerifier.verify(oldToken);
@@ -108,8 +110,8 @@ public class JwtUtil {
             String userJson = userJsonClaim.asString();
             T user = FastJsonUtil.deserialize(userJson, clz);
             return createToken(user);
-        }catch (JWTVerificationException ex) {
-            throw new CustomJwtException("刷新token失败："+ex.getMessage());
+        } catch (JWTVerificationException ex) {
+            throw new CustomJwtException("刷新token失败：" + ex.getMessage());
         }
     }
 
@@ -122,28 +124,30 @@ public class JwtUtil {
     }
 
     /**
-     *  过期时间-毫秒
+     * 过期时间-毫秒
+     *
      * @return
      */
-    private static long getExpireTime(){
-        return EXPIRE_TIME+System.currentTimeMillis();
+    private static long getExpireTime() {
+        return EXPIRE_TIME + System.currentTimeMillis();
     }
 
     // region 创建TOKEN
 
     /**
      * 创建Token
-     * @param id 用户ID
-     * @param name  用户名
-     * @param expireTime    过期时间
-     * @param dataType T:数据类型（0=非登录情况下TOKEN、1=登录情况下TOKEN）
+     *
+     * @param id         用户ID
+     * @param name       用户名
+     * @param expireTime 过期时间
+     * @param dataType   T:数据类型（0=非登录情况下TOKEN、1=登录情况下TOKEN）
      * @return
      */
-    private static CurrentToken build(Long id,String name,Long expireTime,int dataType){
-        CurrentToken token=new CurrentToken();
+    private static CurrentToken build(Long id, String name, Long expireTime, int dataType) {
+        CurrentToken token = new CurrentToken();
         token.setId(id);
         token.setName(name);
-        token.setUuid(UUID.randomUUID().toString().replace("-",""));
+        token.setUuid(UUID.randomUUID().toString().replace("-", ""));
         token.setT(dataType);
         token.setE(expireTime);
         //数据结构版本
@@ -153,20 +157,22 @@ public class JwtUtil {
 
     /**
      * 非登录情况下用户TOKEN
+     *
      * @return
      */
-    public static CurrentToken build4NoLogin(){
-        return build(null,null,getExpireTime(),CurrentTokenEnum.DataType.noLogin.CODE);
+    public static CurrentToken build4NoLogin() {
+        return build(null, null, getExpireTime(), CurrentTokenEnum.DataType.noLogin.CODE);
     }
 
     /**
      * 登录情况下用户TOKEN
+     *
      * @param id
      * @param name
      * @return
      */
-    public static CurrentToken build4Login(Long id,String name){
-        return build(id,name,getExpireTime(),CurrentTokenEnum.DataType.login.CODE);
+    public static CurrentToken build4Login(Long id, String name) {
+        return build(id, name, getExpireTime(), CurrentTokenEnum.DataType.login.CODE);
     }
     // end
 }

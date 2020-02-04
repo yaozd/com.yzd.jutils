@@ -2,15 +2,15 @@ package com.yzd.jutils.springBoot.restAssuredTest;
 
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Response;
-import com.jayway.restassured.response.ResponseOptions;
 import com.jayway.restassured.response.ValidatableResponse;
-import static com.jayway.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.*;
-
 import com.yzd.jutils.print.PrintUtil;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import static com.jayway.restassured.RestAssured.get;
+import static com.jayway.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.notNullValue;
 
 public class RestfullApiTest {
 
@@ -29,8 +29,9 @@ public class RestfullApiTest {
         RestAssured.baseURI = "http://localhost:8080/";
         //RestAssured.port = 80;
     }
+
     @Test
-    public void t1(){
+    public void t1() {
         given().
                 param("x", "y").
                 expect().
@@ -40,6 +41,7 @@ public class RestfullApiTest {
                 get("/lotto");
         given().param("x", "y").and().header("z", "w").when().get("/something").then().assertThat().statusCode(200).and().body("x.y", equalTo("z"));
     }
+
     @Test
     //URL为http://api.douban.com/v2/book/1220562
     //判断Json中的返回信息title
@@ -51,10 +53,10 @@ public class RestfullApiTest {
         //比对内容
         get("/other01/doSelectById").then().body(notNullValue());
         //打印响应内容
-        String body=get("/other01/doSelectById").andReturn().body().asString();
+        String body = get("/other01/doSelectById").andReturn().body().asString();
         PrintUtil.outLn(body);
         //
-        Response responseOptions=get("/other01/doSelectById").thenReturn();
+        Response responseOptions = get("/other01/doSelectById").thenReturn();
         responseOptions.body();
         responseOptions.andReturn().body().asString();
         //

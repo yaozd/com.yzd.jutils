@@ -8,17 +8,18 @@ import java.util.concurrent.TimeUnit;
  */
 public class Job2Task implements Runnable {
     BlockingQueue<String> queue;
-    public Job2Task(BlockingQueue<String> queue){
-        this.queue=queue;
+
+    public Job2Task(BlockingQueue<String> queue) {
+        this.queue = queue;
     }
+
     @Override
     public void run() {
         System.out.println("【Job2Task】--开始");
-        while (true)
-        {
-            try{
+        while (true) {
+            try {
                 doWork();
-            }catch (Exception e){
+            } catch (Exception e) {
                 //这里应该使用log记录日志，而不应是e.printStackTrace();
                 e.printStackTrace();
                 try {
@@ -35,13 +36,13 @@ public class Job2Task implements Runnable {
     }
 
     private void doWork() {
-        String val= take();
-        System.out.println("JOB2TASK-DO-WORK="+val);
+        String val = take();
+        System.out.println("JOB2TASK-DO-WORK=" + val);
     }
 
     private String take() {
         try {
-             return queue.take();
+            return queue.take();
         } catch (InterruptedException e) {
             throw new IllegalStateException(e);
         }

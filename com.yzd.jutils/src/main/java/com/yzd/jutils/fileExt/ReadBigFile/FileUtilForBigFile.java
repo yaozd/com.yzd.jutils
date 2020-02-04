@@ -8,7 +8,6 @@ package com.yzd.jutils.fileExt.ReadBigFile;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.yzd.jutils.fileExt.ReadBigFile.BufferedRandomAccessFile;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 

@@ -29,8 +29,9 @@ public class _MainTest {
         ruleTest_DB_TB2();
         int pause = 0;
     }
+
     //分库分表的计算结果-整理版
-    private static void ruleTest_DB_TB2(){
+    private static void ruleTest_DB_TB2() {
         PrintUtil.outLn("分库分表的计算结果-整理版");
         Integer id = 0;
         //分库分表的计算结果
@@ -41,23 +42,23 @@ public class _MainTest {
         for (; id < 160; id++) {
             String dbVal = getDBInfoByUserId(id);
             String tbVal = getTableInfoByUserId(id);
-            boolean isExist= shardMap.get(dbVal).contains(tbVal);
-            if(isExist){
+            boolean isExist = shardMap.get(dbVal).contains(tbVal);
+            if (isExist) {
                 continue;
-            };
+            }
+            ;
             shardMap.put(dbVal, tbVal);
-            PrintUtil.outLn("dbVal="+dbVal+"|"+"tbVal="+tbVal);
+            PrintUtil.outLn("dbVal=" + dbVal + "|" + "tbVal=" + tbVal);
         }
         PrintUtil.outLn("输出分库分表的计算结果:");
-        for(Map.Entry<String, Collection<String>> e : shardMap.asMap().entrySet())
-        {
-            String dbVal= e.getKey();
-            System.out.print(dbVal+"= ");
-            List<String> itemList= Lists.newArrayList(e.getValue());
-            int n=0;
-            for(String i:itemList){
+        for (Map.Entry<String, Collection<String>> e : shardMap.asMap().entrySet()) {
+            String dbVal = e.getKey();
+            System.out.print(dbVal + "= ");
+            List<String> itemList = Lists.newArrayList(e.getValue());
+            int n = 0;
+            for (String i : itemList) {
                 System.out.print(i);
-                if(n==0){
+                if (n == 0) {
                     System.out.print(" | ");
                     n++;
                 }
@@ -66,8 +67,9 @@ public class _MainTest {
         }
         int pause = 0;
     }
+
     //分库分表的计算结果
-    private static void ruleTest_DB_TB(){
+    private static void ruleTest_DB_TB() {
         Integer id = 0;
         //分库分表的计算结果
         Multimap<String, String> shardMap = ArrayListMultimap.create();
@@ -76,10 +78,11 @@ public class _MainTest {
             String dbVal = getDBInfoByUserId(id);
             String tbVal = getTableInfoByUserId(id);
             shardMap.put(dbVal, tbVal);
-            PrintUtil.outLn("dbVal="+dbVal+"|"+"tbVal="+tbVal);
+            PrintUtil.outLn("dbVal=" + dbVal + "|" + "tbVal=" + tbVal);
         }
         int pause = 0;
     }
+
     private static void tbRuleTest() {
         Integer id = 0;
         Multimap<String, Integer> tbMap = ArrayListMultimap.create();
@@ -91,6 +94,7 @@ public class _MainTest {
         }
         int pause = 0;
     }
+
     //region 版本1-表分片计算规则
     //以用户id作为唯度
     private static String getTableInfoByUserId(int id) {
@@ -116,6 +120,7 @@ public class _MainTest {
         }
         throw new IllegalArgumentException("[tbRule]id out of range. id:" + id);
     }
+
     //endregion
     private static void dbRuleTest() {
         Integer id = 0;

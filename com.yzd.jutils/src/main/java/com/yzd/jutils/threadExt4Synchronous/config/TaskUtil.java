@@ -54,12 +54,14 @@ public class TaskUtil {
 
     /**
      * 通过任务名称创建一个线程池
+     *
      * @param name
      * @return
      */
-    public static ThreadPoolExecutor newThreadPoolExecutor(String name){
-        return new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60, TimeUnit.SECONDS, new SynchronousQueue<Runnable>(),new DefaultThreadFactory(name));
+    public static ThreadPoolExecutor newThreadPoolExecutor(String name) {
+        return new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60, TimeUnit.SECONDS, new SynchronousQueue<Runnable>(), new DefaultThreadFactory(name));
     }
+
     static class DefaultThreadFactory implements ThreadFactory {
         private final ThreadGroup group;
         private final AtomicInteger threadNumber = new AtomicInteger(1);

@@ -1,22 +1,16 @@
 package com.yzd.jutils.rsaExt3;
 
+
+
+import com.yzd.jutils.rsaExt.Base64;
+
 import java.security.Key;
-
 import java.security.KeyPair;
-
 import java.security.KeyPairGenerator;
-
 import java.security.interfaces.RSAPrivateKey;
-
 import java.security.interfaces.RSAPublicKey;
-
 import java.util.HashMap;
-
 import java.util.Map;
-
-import sun.misc.BASE64Decoder;
-
-import sun.misc.BASE64Encoder;
 
 
 @SuppressWarnings("unused")
@@ -87,14 +81,14 @@ public class RSA_KeyUtil {
 
     public static byte[] decryptBASE64(String key) throws Exception {
 
-        return (new BASE64Decoder()).decodeBuffer(key);
+        return Base64.decode(key);
 
     }
 
 
     public static String encryptBASE64(byte[] key) throws Exception {
 
-        return (new BASE64Encoder()).encodeBuffer(key);
+        return Base64.encode(key);
 
     }
 

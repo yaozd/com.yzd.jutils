@@ -31,8 +31,8 @@ public class Application {
     //String val= env.getProperty("project.isTest");
     public class ApplicationMonitorWeb {
         *//**
-         * Used when run as JAR
-         *//*
+     * Used when run as JAR
+     *//*
         public static void main(String[] args) {
             SpringApplication.run(ApplicationMonitorWeb.class, args);
         }

@@ -7,49 +7,52 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 /**
- *
  * Created by zd.yao on 2017/6/28.
  */
 public class StringUtil {
     //region string to byte 不要使用Utf-8，要使用ISO-8859-1编码，不然后fst 序列化时会所错
-    public static byte[] stringToByte(String str){
+    public static byte[] stringToByte(String str) {
         try {
             return str.getBytes("ISO-8859-1");
         } catch (UnsupportedEncodingException e) {
             throw new IllegalArgumentException(e);
         }
     }
-    public static String byteToString(byte[] bt){
+
+    public static String byteToString(byte[] bt) {
         try {
-            return new String(bt,"ISO-8859-1");
+            return new String(bt, "ISO-8859-1");
         } catch (UnsupportedEncodingException e) {
             throw new IllegalArgumentException(e);
         }
     }
-    public static void StringToList(){
-        String[] s={"1","2","3","5","6"};
+
+    public static void StringToList() {
+        String[] s = {"1", "2", "3", "5", "6"};
         List<String> listA = Arrays.asList(s);
         List<String> listB = new ArrayList<String>();
         listB.addAll(listA);
         listB.add("7");
-        String[]s2=listB.toArray(new String[]{});
+        String[] s2 = listB.toArray(new String[]{});
 
     }
+
     /***
      * 是否包含大写字母
      * @param str
      * @return
      */
     public boolean isContainUpperCase(String str) {
-        for(int i=0; i<str.length(); i++){
+        for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
-            if(c >= 65 && c <= 90) {
+            if (c >= 65 && c <= 90) {
                 return true;
             }
         }
         //str.charAt(index)
         return false;
     }
+
     private static final Pattern INT_PATTERN = Pattern.compile("^\\d+$");
 
     public static boolean isBlank(String str) {

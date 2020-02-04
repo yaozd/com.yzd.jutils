@@ -1,5 +1,7 @@
 package com.yzd.jutils.gitExt;
-import org.eclipse.jgit.api.*;
+
+import org.eclipse.jgit.api.CloneCommand;
+import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.api.errors.JGitInternalException;
 import org.eclipse.jgit.internal.storage.file.FileRepository;
@@ -10,6 +12,7 @@ import org.junit.Test;
 
 import java.io.File;
 import java.io.IOException;
+
 /**
  * Java 使用JGit获取Git代码
  * http://blog.csdn.net/gloomy_114/article/details/53129740
@@ -23,19 +26,20 @@ public class _MainTest {
 
     /**
      * 克隆远程库
+     *
      * @throws IOException
      * @throws GitAPIException
      */
     @Test
     public void testClone() throws IOException, GitAPIException {
         //设置远程服务器上的用户名和密码
-        UsernamePasswordCredentialsProvider usernamePasswordCredentialsProvider =new
-                UsernamePasswordCredentialsProvider("username","password");
+        UsernamePasswordCredentialsProvider usernamePasswordCredentialsProvider = new
+                UsernamePasswordCredentialsProvider("username", "password");
 
         //克隆代码库命令
         CloneCommand cloneCommand = Git.cloneRepository();
 
-        Git git= cloneCommand.setURI(remotePath) //设置远程URI
+        Git git = cloneCommand.setURI(remotePath) //设置远程URI
                 .setBranch("master") //设置clone下来的分支
                 .setDirectory(new File(localPath)) //设置下载存放路径
                 .setCredentialsProvider(usernamePasswordCredentialsProvider) //设置权限验证
@@ -62,7 +66,7 @@ public class _MainTest {
         File myfile = new File(localPath + "/myfile.txt");
         myfile.createNewFile();
         //git仓库地址
-        Git git = new Git(new FileRepository(localPath+"/.git"));
+        Git git = new Git(new FileRepository(localPath + "/.git"));
 
         //添加文件
         git.add().addFilepattern("myfile").call();
@@ -75,7 +79,7 @@ public class _MainTest {
     public void testCommit() throws IOException, GitAPIException,
             JGitInternalException {
         //git仓库地址
-        Git git = new Git(new FileRepository(localPath+"/.git"));
+        Git git = new Git(new FileRepository(localPath + "/.git"));
         //提交代码
         git.commit().setMessage("test jGit").call();
     }
@@ -87,10 +91,10 @@ public class _MainTest {
     @Test
     public void testPull() throws IOException, GitAPIException {
 
-        UsernamePasswordCredentialsProvider usernamePasswordCredentialsProvider =new
-                UsernamePasswordCredentialsProvider("username","password");
+        UsernamePasswordCredentialsProvider usernamePasswordCredentialsProvider = new
+                UsernamePasswordCredentialsProvider("username", "password");
         //git仓库地址
-        Git git = new Git(new FileRepository(localPath+"/.git"));
+        Git git = new Git(new FileRepository(localPath + "/.git"));
         git.pull().setRemoteBranchName("master").
                 setCredentialsProvider(usernamePasswordCredentialsProvider).call();
     }
@@ -102,10 +106,10 @@ public class _MainTest {
     public void testPush() throws IOException, JGitInternalException,
             GitAPIException {
 
-        UsernamePasswordCredentialsProvider usernamePasswordCredentialsProvider =new
-                UsernamePasswordCredentialsProvider("username","password");
+        UsernamePasswordCredentialsProvider usernamePasswordCredentialsProvider = new
+                UsernamePasswordCredentialsProvider("username", "password");
         //git仓库地址
-        Git git = new Git(new FileRepository(localPath+"/.git"));
+        Git git = new Git(new FileRepository(localPath + "/.git"));
         git.push().setRemote("origin").setCredentialsProvider(usernamePasswordCredentialsProvider).call();
     }
 }

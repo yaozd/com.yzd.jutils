@@ -1,7 +1,6 @@
 package com.yzd.jutils.streamExt;
 
 import com.yzd.jutils.person.Person;
-import org.jetbrains.annotations.Nullable;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -17,7 +16,7 @@ public class _MainTest {
     //Java 8新特性：全新的Stream API
     //https://www.liaoxuefeng.com/article/001411309538536a1455df20d284b81a7bfa2f91db0f223000
     @Test
-    public void t1(){
+    public void t1() {
         //按照年龄归组：
         Map<Integer, List<Person>> personGroups =
                 Stream.generate(new PersonSupplier()).
@@ -36,22 +35,24 @@ public class _MainTest {
      * Stream-取集合中某一对象的某一字段的值
      */
     @Test
-    public void t2(){
+    public void t2() {
         //取集合中某一对象的字段的值
-        List<Person> itemList4Person=new ArrayList<>();
-        String name= itemList4Person.stream().filter(w->w.getName()!=null).map(Person::getName).findFirst().orElseGet(()->"default-value");
+        List<Person> itemList4Person = new ArrayList<>();
+        String name = itemList4Person.stream().filter(w -> w.getName() != null).map(Person::getName).findFirst().orElseGet(() -> "default-value");
         System.out.println(name);
-         getPerson();
+        getPerson();
     }
 
     private Person getPerson() {
         // Optional.ofNullable - 允许传递为 null 参数
         Integer value1 = null;
         Optional<Integer> a = Optional.ofNullable(value1);
-        List<Person> itemList4Person=null;
-        if(itemList4Person==null){return null;}
+        List<Person> itemList4Person = null;
+        if (itemList4Person == null) {
+            return null;
+        }
         //如果是在mybatis-selectOnlyOne
-        itemList4Person.stream().findFirst().orElseGet(()->null);
+        itemList4Person.stream().findFirst().orElseGet(() -> null);
         return itemList4Person.stream().findFirst().get();
     }
 }

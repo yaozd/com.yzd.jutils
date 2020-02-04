@@ -1,8 +1,9 @@
 package com.yzd.jutils.dateExt;
+
 import java.security.InvalidParameterException;
-        import java.text.ParseException;
-        import java.util.Calendar;
-        import java.util.Date;
+import java.text.ParseException;
+import java.util.Calendar;
+import java.util.Date;
 
 public class DateUtil3 {
 
@@ -30,9 +31,9 @@ public class DateUtil3 {
     /**
      * 根据年月日构建日期对象。注意月份是从1开始计数的，即month为1代表1月份。
      *
-     * @param year 年
+     * @param year  年
      * @param month 月。注意1代表1月份，依此类推。
-     * @param day 日
+     * @param day   日
      * @return 一个日期
      */
     public static Date date(int year, int month, int day) {
@@ -45,10 +46,10 @@ public class DateUtil3 {
     /**
      * 根据年月日构建日期对象。注意月份是从1开始计数的，即month为1代表1月份。
      *
-     * @param year 年
-     * @param month 月。注意1代表1月份，依此类推。
-     * @param day 日
-     * @param hour 时
+     * @param year   年
+     * @param month  月。注意1代表1月份，依此类推。
+     * @param day    日
+     * @param hour   时
      * @param minute 分
      * @param second 秒
      * @return 一个日期
@@ -326,8 +327,8 @@ public class DateUtil3 {
     /**
      * 计算两个日期之间包含的星期X的天数。
      *
-     * @param fromDate 起始日期
-     * @param toDate 结束日期
+     * @param fromDate  起始日期
+     * @param toDate    结束日期
      * @param dayOfWeek 星期，例如星期三，星期四
      * @return 两个日期之间包含的星期X的数量
      */
@@ -350,8 +351,8 @@ public class DateUtil3 {
     /**
      * 获取在两个日期之间的第一个星期X
      *
-     * @param fromDate 起始日期
-     * @param toDate 结束日期
+     * @param fromDate  起始日期
+     * @param toDate    结束日期
      * @param dayOfWeek 星期，例如星期三，星期四
      * @return 两个日期之间的第一个星期X
      */
@@ -386,7 +387,7 @@ public class DateUtil3 {
     /**
      * 取得指定年月的总天数
      *
-     * @param year 年份
+     * @param year  年份
      * @param month 月份
      * @return 当月的总天数
      */
@@ -466,7 +467,7 @@ public class DateUtil3 {
      * 获得指定日期之后一段时期的日期。例如某日期之后3天的日期等。
      *
      * @param origDate 基准日期
-     * @param amount 时间数量
+     * @param amount   时间数量
      * @param timeUnit 时间单位，如年、月、日等。用Calendar中的常量代表
      * @return 一个日期
      */
@@ -481,7 +482,7 @@ public class DateUtil3 {
      * 获得指定日期之前一段时期的日期。例如某日期之前3天的日期等。
      *
      * @param origDate 基准日期
-     * @param amount 时间数量
+     * @param amount   时间数量
      * @param timeUnit 时间单位，如年、月、日等。用Calendar中的常量代表
      * @return 一个日期
      */

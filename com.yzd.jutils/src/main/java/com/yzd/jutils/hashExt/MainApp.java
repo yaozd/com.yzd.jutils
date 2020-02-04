@@ -29,14 +29,14 @@ public class MainApp {
         System.out.println(consistentHash.get("test5"));
         Multimap<String, String> countMultimap = ArrayListMultimap.create();
         //循环50次，是为了取50个数来测试效果，当然也可以用其他任何的数据来测试
-        int total=50000;
-        for(int i=0; i<total; i++) {
-            String shardInfoVal= consistentHash.get(String.valueOf(i));
+        int total = 50000;
+        for (int i = 0; i < total; i++) {
+            String shardInfoVal = consistentHash.get(String.valueOf(i));
             //System.out.println(shardInfoVal);
-            countMultimap.put(shardInfoVal,shardInfoVal);
+            countMultimap.put(shardInfoVal, shardInfoVal);
         }
-        for(Map.Entry<String, Collection<String>> e : countMultimap.asMap().entrySet()){
-            String v1= BigDecimalUtil.div(String.valueOf(e.getValue().size()) , String.valueOf(total), 4);
+        for (Map.Entry<String, Collection<String>> e : countMultimap.asMap().entrySet()) {
+            String v1 = BigDecimalUtil.div(String.valueOf(e.getValue().size()), String.valueOf(total), 4);
             System.out.println(String.format("%s%s%s", e.getKey(), e.getValue().size(), v1));
         }
     }

@@ -7,11 +7,11 @@ package com.yzd.jutils.reflectExt;
  * @date 2018/9/17 17:57.
  */
 
-public class Hello{
+public class Hello {
 
-    private String name ;
+    private String name;
 
-    public String helloStrs(){
+    public String helloStrs() {
         //根据不同的方法名称，调用不用的方法
         System.out.println("hello1");
         return "hello1";
@@ -22,7 +22,7 @@ public class Hello{
         System.out.println("hello11");
     }
 
-    public void helloStrs2(String a ,Integer b) throws Exception{
+    public void helloStrs2(String a, Integer b) throws Exception {
         //根据不同的方法名称，调用不用的方法
         System.out.println("hello12");
     }

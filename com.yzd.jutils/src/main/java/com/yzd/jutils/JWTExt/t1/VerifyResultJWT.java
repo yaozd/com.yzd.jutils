@@ -7,12 +7,14 @@ package com.yzd.jutils.JWTExt.t1;
  */
 
 public class VerifyResultJWT {
-    public static VerifyResultJWT success(String userJson){
-        return new VerifyResultJWT(true,userJson,null);
+    public static VerifyResultJWT success(String userJson) {
+        return new VerifyResultJWT(true, userJson, null);
     }
-    public static VerifyResultJWT fail(String errorMsg){
-        return new VerifyResultJWT(false,null,errorMsg);
+
+    public static VerifyResultJWT fail(String errorMsg) {
+        return new VerifyResultJWT(false, null, errorMsg);
     }
+
     private VerifyResultJWT(Boolean isOk, String userJson, String errorMsg) {
         this.isOk = isOk;
         this.userJson = userJson;
@@ -22,6 +24,7 @@ public class VerifyResultJWT {
     private Boolean isOk;
     private String userJson;
     private String errorMsg;
+
     public String getErrorMsg() {
         return errorMsg;
     }

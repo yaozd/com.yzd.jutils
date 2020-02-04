@@ -9,8 +9,8 @@ package com.yzd.jutils.log4jExt.t2;
 import org.apache.log4j.Level;
 
 /**
- * @project MRMAutoloc
  * @author sunnylocus
+ * @project MRMAutoloc
  * @vresion 1.0 2009-7-22
  * @description 自定义级别REMIND，该级别用来发送提醒邮件,级别要比INFO低
  */
@@ -23,8 +23,8 @@ public class TDTLevel extends Level {
     private static String REMIND_STR = "REMIND";
     private static String LETHAL_STR = "LETHAL";
 
-    public static final TDTLevel REMIND = new TDTLevel(REMIND_INT, REMIND_STR,7);
-    public static final TDTLevel LETHAL = new TDTLevel(LETHAL_INT, LETHAL_STR,0);
+    public static final TDTLevel REMIND = new TDTLevel(REMIND_INT, REMIND_STR, 7);
+    public static final TDTLevel LETHAL = new TDTLevel(LETHAL_INT, LETHAL_STR, 0);
 
     protected TDTLevel(int level, String strLevel, int syslogEquiv) {
         super(level, strLevel, syslogEquiv);
@@ -52,6 +52,7 @@ public class TDTLevel extends Level {
 
         return Level.toLevel(sArg, (Level) defaultValue);
     }
+
     public static Level toLevel(int i) throws IllegalArgumentException {
         switch (i) {
             case REMIND_INT:

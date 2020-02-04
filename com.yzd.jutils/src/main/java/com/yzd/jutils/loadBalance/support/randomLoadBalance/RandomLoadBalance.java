@@ -8,6 +8,7 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * 参考：dubbo 2.7.4
  * RandomLoadBalance
+ *
  * @author: yaozhendong
  * @create: 2019-10-12 09:35
  **/
@@ -18,27 +19,27 @@ public class RandomLoadBalance {
         if (CollectionUtils.isEmpty(nodeList)) {
             return null;
         }
-        int nodeListSize=nodeList.size();
+        int nodeListSize = nodeList.size();
         if (nodeListSize == 1) {
             return nodeList.get(0);
         }
         boolean sameWeight = true;
-        int firstWeight=nodeList.get(0).getWeight();
-        int totalWeight=firstWeight;
+        int firstWeight = nodeList.get(0).getWeight();
+        int totalWeight = firstWeight;
         for (Node node : nodeList) {
-            int weight=node.getWeight();
-            totalWeight+=weight;
-            if(sameWeight&&firstWeight!=weight){
-                sameWeight=false;
+            int weight = node.getWeight();
+            totalWeight += weight;
+            if (sameWeight && firstWeight != weight) {
+                sameWeight = false;
             }
         }
-        if(sameWeight){
+        if (sameWeight) {
             return nodeList.get(ThreadLocalRandom.current().nextInt(nodeListSize));
         }
-        int offset=ThreadLocalRandom.current().nextInt(totalWeight);
+        int offset = ThreadLocalRandom.current().nextInt(totalWeight);
         for (Node node : nodeList) {
-            offset=offset-node.getWeight();
-            if(offset<1){
+            offset = offset - node.getWeight();
+            if (offset < 1) {
                 return node;
             }
         }

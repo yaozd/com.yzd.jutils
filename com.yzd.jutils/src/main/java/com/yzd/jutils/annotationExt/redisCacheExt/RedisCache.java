@@ -4,6 +4,7 @@ import java.lang.annotation.*;
 
 /**
  * 自定义注解，结合AOP实现Redis自动缓存
+ *
  * @Target(ElementType.METHOD):该注解只能用于方法
  */
 @Retention(RetentionPolicy.RUNTIME)

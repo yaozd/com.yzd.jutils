@@ -3,6 +3,7 @@ package com.yzd.jutils.htmlExt;
 /**
  * 此类中收集Java编程中WEB开发常用到的一些工具。
  * 为避免生成此类的实例，构造方法被申明为private类型的。
+ *
  * @author
  */
 

@@ -3,6 +3,7 @@ package com.yzd.jutils.constant;
 /**
  * Created by zd.yao on 2017/7/4.
  */
+
 /**
  * 项目常量
  */

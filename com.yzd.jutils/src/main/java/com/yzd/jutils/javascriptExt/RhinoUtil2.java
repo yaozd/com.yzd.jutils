@@ -26,10 +26,11 @@ public class RhinoUtil2 {
         sb.append(functionStr);
         PrintUtil.outLn(sb.toString());
         //
-        String result=evaluateString(sb.toString(),"enterFun();");
-        PrintUtil.outLn("result2=" +result);
+        String result = evaluateString(sb.toString(), "enterFun();");
+        PrintUtil.outLn("result2=" + result);
     }
-    public static String evaluateString(String jsStr,String enterFunName){
+
+    public static String evaluateString(String jsStr, String enterFunName) {
         //
         Context ctx = Context.enter();
         try {

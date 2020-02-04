@@ -19,9 +19,9 @@ import java.net.Socket;
 public class _MainTest {
     //清理varnish缓存
     @Test
-    public void purge(){
+    public void purge() {
         CloseableHttpClient httpclient = HttpClients.createDefault();
-        String varnishUrl="https://www.baidu.com/";
+        String varnishUrl = "https://www.baidu.com/";
         HttpUriRequest purgeRequest = RequestBuilder.create("PURGE").setUri(varnishUrl).build();
         try {
             httpclient.execute(purgeRequest);
@@ -37,17 +37,18 @@ public class _MainTest {
      * http://www.cnblogs.com/kcen/p/3200244.html
      * ban是手动清楚
      * ​Varnish命令行管理工具：varnishadm
-       http://www.sohu.com/a/120341271_494937
+     * http://www.sohu.com/a/120341271_494937
+     *
      * @throws IOException
      */
     @Test
     public void ban() throws IOException {
         //varnish purge缓存清理技术总结（附相关的代码）
         //http://lisily.blog.163.com/blog/static/24414520127203845453/
-        String url="";
+        String url = "";
         //
-        Socket socket=new Socket();
-        socket.connect(new InetSocketAddress("192.168.1.1", 3500),5000);
+        Socket socket = new Socket();
+        socket.connect(new InetSocketAddress("192.168.1.1", 3500), 5000);
         socket.setSendBufferSize(1000);
         socket.setSoTimeout(5000);
         BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -57,11 +58,11 @@ public class _MainTest {
         String command = baseCMD + ".url " + url;
         writer.println(command);
         writer.flush();
-        String result=null;
-        while((result = reader.readLine()) != null){
+        String result = null;
+        while ((result = reader.readLine()) != null) {
             result = result.trim();
             System.out.println(result);
-            if(result.equals("200 0")){
+            if (result.equals("200 0")) {
                 break;
             }
         }

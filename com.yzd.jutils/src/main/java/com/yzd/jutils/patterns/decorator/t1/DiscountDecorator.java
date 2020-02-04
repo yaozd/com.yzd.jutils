@@ -6,7 +6,7 @@ public abstract class DiscountDecorator extends DiscountComponent {
      */
     protected DiscountComponent discountComponentObj;
 
-    public DiscountDecorator(DiscountComponent discountComponent){
-        this.discountComponentObj=discountComponent;
+    public DiscountDecorator(DiscountComponent discountComponent) {
+        this.discountComponentObj = discountComponent;
     }
 }

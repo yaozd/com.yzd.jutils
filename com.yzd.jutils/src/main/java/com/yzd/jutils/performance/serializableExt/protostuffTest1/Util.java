@@ -11,27 +11,31 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 
 public class Util {
-	public Util(){};
-	
-	public static <T> byte[] serializer(T o) {  
-        Schema schema = RuntimeSchema.getSchema(o.getClass());  
-        return ProtobufIOUtil.toByteArray(o, schema, LinkedBuffer.allocate(256));  
-    }  
-  
-    public static <T> T deserializer(byte[] bytes, Class<T> clazz) {  
-  
-        T obj = null;  
-        try {  
-            obj = clazz.newInstance();  
-            Schema schema = RuntimeSchema.getSchema(obj.getClass());  
-            ProtostuffIOUtil.mergeFrom(bytes, obj, schema);  
-        } catch (InstantiationException e) {  
-            e.printStackTrace();  
-        } catch (IllegalAccessException e) {  
-            e.printStackTrace();  
-        }
-        return obj;  
+    public Util() {
     }
+
+    ;
+
+    public static <T> byte[] serializer(T o) {
+        Schema schema = RuntimeSchema.getSchema(o.getClass());
+        return ProtobufIOUtil.toByteArray(o, schema, LinkedBuffer.allocate(256));
+    }
+
+    public static <T> T deserializer(byte[] bytes, Class<T> clazz) {
+
+        T obj = null;
+        try {
+            obj = clazz.newInstance();
+            Schema schema = RuntimeSchema.getSchema(obj.getClass());
+            ProtostuffIOUtil.mergeFrom(bytes, obj, schema);
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return obj;
+    }
+
     public static int calcSize(java.io.Serializable o) {
         int ret = 0;
         class DumbOutputStream extends OutputStream {
@@ -49,14 +53,14 @@ public class Util {
             os.writeObject(o);
             ret = buf.count;
         } catch (IOException e) {
-           // No need handle this exception
-           e.printStackTrace();
-           ret = -1;
+            // No need handle this exception
+            e.printStackTrace();
+            ret = -1;
         } finally {
-           try {
-               os.close();
-           } catch (Exception e) {
-           }
+            try {
+                os.close();
+            } catch (Exception e) {
+            }
         }
 
         return ret;

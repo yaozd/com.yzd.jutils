@@ -8,8 +8,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- *加密解密工具类
- *http://www.cnblogs.com/mjzhang/p/4606863.html
+ * 加密解密工具类
+ * http://www.cnblogs.com/mjzhang/p/4606863.html
  * Created by Administrator on 2016/10/13.
  */
 public class EncryptUtil {
@@ -62,34 +62,40 @@ public class EncryptUtil {
 
     /**
      * 根据一定的算法得到相应的key
+     *
      * @param src
      * @return
      */
-    public String getKey(String algorithm,String src){
-        if(algorithm.equals("AES")){
+    public String getKey(String algorithm, String src) {
+        if (algorithm.equals("AES")) {
             return src.substring(0, 16);
-        }else if(algorithm.equals("DES")){
+        } else if (algorithm.equals("DES")) {
             return src.substring(0, 8);
-        }else{
+        } else {
             return null;
         }
     }
+
     /**
      * 得到AES加密的key
+     *
      * @param src
      * @return
      */
-    public String getAESKey(String src){
+    public String getAESKey(String src) {
         return this.getKey("AES", src);
     }
+
     /**
      * 得到DES加密的key
+     *
      * @param src
      * @return
      */
-    public String getDESKey(String src){
+    public String getDESKey(String src) {
         return this.getKey("DES", src);
     }
+
     /**
      * 创建密匙
      *
@@ -115,6 +121,7 @@ public class EncryptUtil {
 
     /**
      * 创建一个AES的密钥
+     *
      * @return
      */
     public SecretKey createSecretAESKey() {
@@ -123,6 +130,7 @@ public class EncryptUtil {
 
     /**
      * 创建一个DES的密钥
+     *
      * @return
      */
     public SecretKey createSecretDESKey() {
@@ -131,6 +139,7 @@ public class EncryptUtil {
 
     /**
      * 根据相应的加密算法、密钥、源文件进行加密，返回加密后的文件
+     *
      * @param Algorithm 加密算法:DES,AES
      * @param key
      * @param info
@@ -156,6 +165,7 @@ public class EncryptUtil {
 
     /**
      * 根据相应的解密算法、密钥和需要解密的文本进行解密，返回解密后的文本内容
+     *
      * @param Algorithm
      * @param key
      * @param sInfo
@@ -178,8 +188,9 @@ public class EncryptUtil {
 
     /**
      * 根据相应的解密算法、指定的密钥和需要解密的文本进行解密，返回解密后的文本内容
+     *
      * @param Algorithm 加密算法:DES,AES
-     * @param key 这个key可以由用户自己指定 注意AES的长度为16位,DES的长度为8位
+     * @param key       这个key可以由用户自己指定 注意AES的长度为16位,DES的长度为8位
      * @param sInfo
      * @return
      */
@@ -216,8 +227,9 @@ public class EncryptUtil {
 
     /**
      * 根据相应的加密算法、指定的密钥、源文件进行加密，返回加密后的文件
+     *
      * @param Algorithm 加密算法:DES,AES
-     * @param key 这个key可以由用户自己指定 注意AES的长度为16位,DES的长度为8位
+     * @param key       这个key可以由用户自己指定 注意AES的长度为16位,DES的长度为8位
      * @param info
      * @return
      */
@@ -244,6 +256,7 @@ public class EncryptUtil {
 
     /**
      * 采用DES随机生成的密钥进行加密
+     *
      * @param key
      * @param info
      * @return
@@ -254,6 +267,7 @@ public class EncryptUtil {
 
     /**
      * 采用DES指定密钥的方式进行加密
+     *
      * @param key
      * @param info
      * @return
@@ -262,8 +276,10 @@ public class EncryptUtil {
     public String encryptToDES(String key, String info) throws Exception {
         return encrypt("DES", info, key);
     }
+
     /**
      * 采用DES随机生成密钥的方式进行解密，密钥需要与加密的生成的密钥一样
+     *
      * @param key
      * @param sInfo
      * @return
@@ -274,6 +290,7 @@ public class EncryptUtil {
 
     /**
      * 采用DES用户指定密钥的方式进行解密，密钥需要与加密时指定的密钥一样
+     *
      * @param key
      * @param sInfo
      * @return
@@ -284,6 +301,7 @@ public class EncryptUtil {
 
     /**
      * 采用AES随机生成的密钥进行加密
+     *
      * @param key
      * @param info
      * @return
@@ -291,8 +309,10 @@ public class EncryptUtil {
     public String encryptToAES(SecretKey key, String info) {
         return encrypt("AES", key, info);
     }
+
     /**
      * 采用AES指定密钥的方式进行加密
+     *
      * @param key
      * @param info
      * @return
@@ -304,6 +324,7 @@ public class EncryptUtil {
 
     /**
      * 采用AES随机生成密钥的方式进行解密，密钥需要与加密的生成的密钥一样
+     *
      * @param key
      * @param sInfo
      * @return
@@ -311,8 +332,10 @@ public class EncryptUtil {
     public String decryptByAES(SecretKey key, String sInfo) {
         return decrypt("AES", key, sInfo);
     }
+
     /**
      * 采用AES用户指定密钥的方式进行解密，密钥需要与加密时指定的密钥一样
+     *
      * @param key
      * @param sInfo
      * @return

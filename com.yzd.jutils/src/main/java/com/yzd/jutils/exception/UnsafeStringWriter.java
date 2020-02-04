@@ -22,7 +22,7 @@ public class UnsafeStringWriter extends Writer {
     }
 
     public void write(int c) {
-        this.mBuffer.append((char)c);
+        this.mBuffer.append((char) c);
     }
 
     public void write(char[] cs) throws IOException {
@@ -60,7 +60,7 @@ public class UnsafeStringWriter extends Writer {
 
     public Writer append(CharSequence csq, int start, int end) {
         CharSequence cs = csq == null ? "null" : csq;
-        this.write(((CharSequence)cs).subSequence(start, end).toString());
+        this.write(((CharSequence) cs).subSequence(start, end).toString());
         return this;
     }
 

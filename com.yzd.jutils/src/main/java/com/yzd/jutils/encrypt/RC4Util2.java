@@ -122,10 +122,10 @@ public class RC4Util2 {
     }
 
     public static void main(String[] args) {
-        String plainTxt="156><?(*75455659156><?(*754555659156><?(*75455659";
-        String key="71147114b4c61a6b4c61a6";
-        String encryptStr=RC4Util2.encryRC4String(plainTxt, key);
-        String decryptStr=RC4Util2.decryRC4(encryptStr,key);
+        String plainTxt = "156><?(*75455659156><?(*754555659156><?(*75455659";
+        String key = "71147114b4c61a6b4c61a6";
+        String encryptStr = RC4Util2.encryRC4String(plainTxt, key);
+        String decryptStr = RC4Util2.decryRC4(encryptStr, key);
         PrintUtil.outLn(encryptStr);
         PrintUtil.outLn(decryptStr);
     }

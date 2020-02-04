@@ -10,11 +10,14 @@ public class ObjectLock {
     private static class SingletonHolder {
         private static final ObjectLock INSTANCE = new ObjectLock();
     }
+
     public static final ObjectLock getInstance() {
         return SingletonHolder.INSTANCE;
     }
-    public LoadingCache<String, Object>  monitorCache;
-    private ObjectLock (){
+
+    public LoadingCache<String, Object> monitorCache;
+
+    private ObjectLock() {
         PrintUtil.outLn("ObjectLock monitor cache init");
         //todo 主要是测试方便查看-生产环境是可以把移除监听删除的
         RemovalListener<String, Object> removalListener = new RemovalListener<String, Object>() {
@@ -34,6 +37,6 @@ public class ObjectLock {
                         return new Object();
                     }
                 });
-        this.monitorCache=monitorCache;
+        this.monitorCache = monitorCache;
     }
 }

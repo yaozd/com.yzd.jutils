@@ -4,10 +4,10 @@ import java.util.Random;
 
 public class RandomValue {
     static Random rand = new Random();
-    public static String name_sex="M";
+    public static String name_sex = "M";
 
     public static String getChineseName() {
-        return "getChineseName"+rand.nextLong();
+        return "getChineseName" + rand.nextLong();
     }
 
     public static int getNum(int i, int i1) {
@@ -15,14 +15,14 @@ public class RandomValue {
     }
 
     public static String getEmail(int i, int i1) {
-        return "getEmail"+rand.nextLong();
+        return "getEmail" + rand.nextLong();
     }
 
     public static String getTel() {
-        return "getTel"+rand.nextLong();
+        return "getTel" + rand.nextLong();
     }
 
     public static String getRoad() {
-        return "getRoad"+rand.nextLong();
+        return "getRoad" + rand.nextLong();
     }
 }

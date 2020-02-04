@@ -29,29 +29,33 @@ public class PrometheusTest {
      *  java进行正则数据提取
      */
     @Test
-    public void t1(){
+    public void t1() {
         //String s="1\r\n2\r\n3\r\n \r\nabd\rb";
-        String s="java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_init{name=\"G1 Young Generation\",key=\"G1 Survivor Space\",} 2.7262976E7\njava_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_init{name=\"G1 Young Generation\",key=\"Compressed Class Space\",} 0.0";
+        String s = "java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_init{name=\"G1 Young Generation\",key=\"G1 Survivor Space\",} 2.7262976E7\njava_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_init{name=\"G1 Young Generation\",key=\"Compressed Class Space\",} 0.0";
         //byArvin推荐使用StringUtils.split方式做字符串按行读取
         //把字符串按行读取--方式一:split 方式10000000次的速度大约是4s
-        String[] itemArr= StringUtils.split(s,"[\r\n]");
-        for(String item:itemArr){
+        String[] itemArr = StringUtils.split(s, "[\r\n]");
+        for (String item : itemArr) {
             System.out.println(item);
-            if(StringUtils.isBlank(item)){continue;}
-            String numStr= RegExUtil.fetchStr("[\\d\\.E]+$",item);
+            if (StringUtils.isBlank(item)) {
+                continue;
+            }
+            String numStr = RegExUtil.fetchStr("[\\d\\.E]+$", item);
             System.out.println(numStr);
-            boolean isNum=NumberUtils.isCreatable(numStr);
+            boolean isNum = NumberUtils.isCreatable(numStr);
             System.out.println(isNum);
-            if(BooleanUtils.isNotTrue(isNum)){continue;}
+            if (BooleanUtils.isNotTrue(isNum)) {
+                continue;
+            }
             //Prometheus JVM_Export的数据大部分是科学计数据：2.7262976E7 显示：27262976
-            BigDecimal decimalVal= NumberUtils.createBigDecimal(numStr);
-            System.out.println("number.BigDecimal()="+decimalVal.toString());
+            BigDecimal decimalVal = NumberUtils.createBigDecimal(numStr);
+            System.out.println("number.BigDecimal()=" + decimalVal.toString());
         }
         System.out.println("=========");
         //判断是否包括指标：不区分字母大小写的方式
-        int firstIndex= StringUtils.indexOfIgnoreCase("a11","A");
+        int firstIndex = StringUtils.indexOfIgnoreCase("a11", "A");
         System.out.println(firstIndex);
-        if(firstIndex==0){
+        if (firstIndex == 0) {
             System.out.println("在字符串首位");
         }
         System.out.println("=========");

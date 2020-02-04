@@ -16,29 +16,30 @@ import java.util.Map;
  */
 public class MultimapTest {
     public static void main(String[] args) {
-        int id=0;
+        int id = 0;
         Multimap<String, String> shardMap = LinkedListMultimap.create();
         //构建模拟数据
         for (; id < 160; id++) {
             String dbVal = getDBInfoByUserId(id);
             String tbVal = getTableInfoByUserId(id);
-            boolean isExist= shardMap.get(dbVal).contains(tbVal);
-            if(isExist){
+            boolean isExist = shardMap.get(dbVal).contains(tbVal);
+            if (isExist) {
                 continue;
-            };
+            }
+            ;
             shardMap.put(dbVal, tbVal);
         }
         //Multimap<String, String>转为Map<String,List<String>>
-        Map<String,List<String>> m=new HashMap<>();
-        for(Map.Entry<String, Collection<String>> e : shardMap.asMap().entrySet())
-        {
-            String dbVal= e.getKey();
-            List<String> itemList= Lists.newArrayList(e.getValue());
-            m.put(dbVal,itemList);
+        Map<String, List<String>> m = new HashMap<>();
+        for (Map.Entry<String, Collection<String>> e : shardMap.asMap().entrySet()) {
+            String dbVal = e.getKey();
+            List<String> itemList = Lists.newArrayList(e.getValue());
+            m.put(dbVal, itemList);
         }
-        String v2= FastJsonUtil.serialize(m);
+        String v2 = FastJsonUtil.serialize(m);
         PrintUtil.outLn(v2);
     }
+
     private static String getDBInfoByUserId(int id) {
         if (id < 10) {
             //当只有一个数据库时是不需要进行库的分片计算的
@@ -63,6 +64,7 @@ public class MultimapTest {
         //
         throw new IllegalArgumentException("[dbRule]id out of range. id:" + id);
     }
+
     private static String getTableInfoByUserId(int id) {
         if (id < 10) {
             //2个表

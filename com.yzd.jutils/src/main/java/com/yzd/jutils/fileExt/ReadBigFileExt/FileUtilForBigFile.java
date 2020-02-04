@@ -54,16 +54,17 @@ public class FileUtilForBigFile {
     /**
      * 写入文件
      * 在文件的尾部做追加
+     *
      * @param file
      * @param encoding
      * @param pins
      */
-    public static void writer(File file,String encoding,List<String>pins) {
+    public static void writer(File file, String encoding, List<String> pins) {
         OutputStreamWriter out = null;
         try {
             out = new OutputStreamWriter(new FileOutputStream(file, true), encoding);
-            for(String item:pins){
-                out.write(item+ "\n");
+            for (String item : pins) {
+                out.write(item + "\n");
             }
         } catch (Exception e) {
             log.error("Exception:", e);

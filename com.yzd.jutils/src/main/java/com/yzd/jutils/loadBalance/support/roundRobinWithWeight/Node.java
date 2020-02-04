@@ -1,7 +1,5 @@
 package com.yzd.jutils.loadBalance.support.roundRobinWithWeight;
 
-import lombok.Builder;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
@@ -12,7 +10,7 @@ import lombok.NoArgsConstructor;
 public class Node {
     private String name;
     private Integer weight;
-    private Integer currentWeight=Integer.valueOf(0);
+    private Integer currentWeight = Integer.valueOf(0);
 
     public String getName() {
         return name;

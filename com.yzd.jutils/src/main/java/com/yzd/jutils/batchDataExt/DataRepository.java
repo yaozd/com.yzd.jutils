@@ -67,6 +67,7 @@ public enum DataRepository {
 
     /**
      * 批量读取数据-通过阻塞队列
+     *
      * @param maxSize
      * @param sleep
      * @return
@@ -81,7 +82,8 @@ public enum DataRepository {
                 try {
                     //通过休眠，代表等待1秒，执行时间最大为1秒。
                     TimeUnit.SECONDS.sleep(sleep);
-                } catch (InterruptedException e) { }
+                } catch (InterruptedException e) {
+                }
                 firstEmpty = false;
                 continue;
             }

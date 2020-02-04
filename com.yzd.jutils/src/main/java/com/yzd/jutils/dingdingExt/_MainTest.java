@@ -21,9 +21,10 @@ public class _MainTest {
 
     public static String WEBHOOK_TOKEN = "https://oapi.dingtalk.com/robot/send?access_token=XXXXXX";
 
-    public static void main(String args[]) throws Exception{
-        DingRobotUtil.send(WEBHOOK_TOKEN,"我就是我, 是不一样的烟火-测试");
+    public static void main(String args[]) throws Exception {
+        DingRobotUtil.send(WEBHOOK_TOKEN, "我就是我, 是不一样的烟火-测试");
     }
+
     public static void example() throws IOException {
         HttpClient httpclient = HttpClients.createDefault();
 
@@ -35,8 +36,8 @@ public class _MainTest {
         httppost.setEntity(se);
 
         HttpResponse response = httpclient.execute(httppost);
-        if (response.getStatusLine().getStatusCode()== HttpStatus.SC_OK){
-            String result= EntityUtils.toString(response.getEntity(), "utf-8");
+        if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
+            String result = EntityUtils.toString(response.getEntity(), "utf-8");
             System.out.println(result);
         }
     }

@@ -1,12 +1,6 @@
 package com.yzd.jutils.springBoot.conf;
 
 
-import org.springframework.web.servlet.HandlerInterceptor;
-import org.springframework.web.servlet.ModelAndView;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 /**
  * 拦截未登录的用户信息
  * Created by Administrator on 2016/10/11.

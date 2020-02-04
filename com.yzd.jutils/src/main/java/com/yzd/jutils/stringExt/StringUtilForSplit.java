@@ -8,10 +8,10 @@ import java.util.List;
 public class StringUtilForSplit {
 
     @Test
-    public void t1(){
-        String value="/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh";
+    public void t1() {
+        String value = "/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh";
         //5K=5*1024
-        List<String> arr=splitBySize(value,5*1024);
+        List<String> arr = splitBySize(value, 5 * 1024);
     }
 
     /***
@@ -26,13 +26,13 @@ public class StringUtilForSplit {
         StringBuilder result = new StringBuilder();
         List<String> resultList = new ArrayList<String>();
         int index = 0;
-        for (char c: cs){
+        for (char c : cs) {
             index += String.valueOf(c).getBytes().length;
-            if (index > length){
+            if (index > length) {
                 resultList.add(result.toString());
-                result.delete(0,index-1);
+                result.delete(0, index - 1);
                 index = 0;
-            }else {
+            } else {
                 result.append(c);
             }
         }

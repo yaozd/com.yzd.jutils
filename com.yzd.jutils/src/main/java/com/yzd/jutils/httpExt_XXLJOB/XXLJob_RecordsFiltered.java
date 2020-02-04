@@ -5,7 +5,7 @@ import java.util.List;
 
 public class XXLJob_RecordsFiltered {
     private int recordsFiltered;
-    private List<XXLJob_R_Data> data=new ArrayList<>();
+    private List<XXLJob_R_Data> data = new ArrayList<>();
 
     public int getRecordsFiltered() {
         return recordsFiltered;

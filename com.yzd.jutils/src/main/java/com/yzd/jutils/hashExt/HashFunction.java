@@ -8,6 +8,7 @@ import java.security.NoSuchAlgorithmException;
  */
 public class HashFunction {
     private MessageDigest md5 = null;
+
     public long hash(String key) {
         if (md5 == null) {
             try {

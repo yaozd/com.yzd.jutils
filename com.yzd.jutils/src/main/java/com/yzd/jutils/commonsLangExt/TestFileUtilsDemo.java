@@ -28,27 +28,27 @@ public class TestFileUtilsDemo {
     @Test
     public void readLine() throws IOException {
         int index = 0;
-        List<String> existFileList= Lists.newArrayList();
+        List<String> existFileList = Lists.newArrayList();
         //创建临时文件目录
-        File exportFile = File.createTempFile("ExistFileExport",".csv");
-        int count=0;
+        File exportFile = File.createTempFile("ExistFileExport", ".csv");
+        int count = 0;
         while (true) {
             List<String> pins = FileUtil.readLine(file, ENCODING, index, NUM);
-            for (String item: pins) {
+            for (String item : pins) {
                 count++;
-                String[] arr= StringUtils.split(item, ",");
-                if(arr.length!=10){
+                String[] arr = StringUtils.split(item, ",");
+                if (arr.length != 10) {
                     continue;
                 }
-                String url=arr[3];
+                String url = arr[3];
                 //
-                url=StringUtils.remove(url,"\"");
+                url = StringUtils.remove(url, "\"");
                 //以http字符开始
-                if(!StringUtils.startsWith(url,"http")){
+                if (!StringUtils.startsWith(url, "http")) {
                     continue;
                 }
-                boolean isExistFile= HttpUtil.sendGetForCheckFileIsExist(url);
-                if(isExistFile){
+                boolean isExistFile = HttpUtil.sendGetForCheckFileIsExist(url);
+                if (isExistFile) {
                     existFileList.add(item);
                 }
             }

@@ -14,7 +14,7 @@ public class WaterDecorator extends DecoratorForDrinks {
         super(yp);
     }
 
-    public void addWater(){
+    public void addWater() {
         System.out.println("饮料兑水....尴尬不老铁...");
     }
 

@@ -11,13 +11,14 @@ public class BeanToMapUtilsTest {
     /**
      * JavaBean与Map相互转换
      * https://my.oschina.net/sodeve/blog/533933
+     *
      * @param args
      */
     public static void main(String[] args) {
-        Person person=new Person();
+        Person person = new Person();
         person.setAge("1");
         person.setName("name");
-        Map<String,Object> map= BeanToMapUtils.convertBean(person);
+        Map<String, Object> map = BeanToMapUtils.convertBean(person);
         PrintUtil.outLn(map);
     }
 }

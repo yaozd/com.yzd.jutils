@@ -13,11 +13,11 @@ import java.util.List;
 public class _MainTest {
     @Test
     public void roundRobinSimpleTest() {
-        List<String>nodeList=new ArrayList<>();
+        List<String> nodeList = new ArrayList<>();
         nodeList.add("1");
         nodeList.add("2");
         nodeList.add("3");
-        RoundRobinSimple roundRobinSimple=new RoundRobinSimple();
+        RoundRobinSimple roundRobinSimple = new RoundRobinSimple();
         for (int i = 0; i < 100; i++) {
 
             System.out.println(roundRobinSimple.doSelect(nodeList));

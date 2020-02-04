@@ -34,6 +34,7 @@ public class AnnotationTest {
 
     /**
      * 使用lombok的方式不能通过自定义注解进行赋值
+     *
      * @throws IllegalAccessException
      * @throws InvocationTargetException
      */

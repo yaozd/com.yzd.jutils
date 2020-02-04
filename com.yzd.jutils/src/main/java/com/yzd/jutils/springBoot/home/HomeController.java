@@ -5,8 +5,7 @@ package com.yzd.jutils.springBoot.home;
  */
 public class HomeController {
     /***
-     * @RestController
-    public class HomeController {
+     * @RestController public class HomeController {
     private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
      @RequestMapping(value = {"", "/index"})
      public String Index(){
@@ -22,8 +21,7 @@ public class HomeController {
      return "home/index";
      }
      //--------------------------------------------------
-     @GetMapping("openExe/{id}")
-     public void openExe(@PathVariable("id")Integer id){
+     @GetMapping("openExe/{id}") public void openExe(@PathVariable("id")Integer id){
      Shortcut entity=shortcutMapper.getById(id);
      String filePath=entity.getFilePath()==null?"":entity.getFilePath();
      ExeUtil.openWindowsExe(filePath);
@@ -31,8 +29,7 @@ public class HomeController {
      //--------------------------------------------------
      使用forward实现API接口转发
      @RequestMapping("call")
-     @ResponseBody
-     public void call(String api,String v,HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+     @ResponseBody public void call(String api,String v,HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
      Preconditions.checkArgument(StringUtils.isNotBlank(api),"api is null");
      //api不等于openapi.call
      Preconditions.checkArgument(!"openapi.call".equals(api.toLowerCase()),"api=openapi.call");
@@ -41,8 +38,7 @@ public class HomeController {
      request.getRequestDispatcher("/"+api).forward(request, response);
      }
      //--------------------------------------------------
-     @RequestMapping(value="/redirect",method=RequestMethod.GET)
-     public String testRedirect(RedirectAttributes attr){
+     @RequestMapping(value="/redirect",method=RequestMethod.GET) public String testRedirect(RedirectAttributes attr){
      attr.addAttribute("a", "a");
      attr.addFlashAttribute("b", "b");
      return "redirect:/index.action";
@@ -62,10 +58,8 @@ public class HomeController {
      return vm;
      }
      //测试同时使用get与post方法
-     @RestController
-     public class TestController {
-     @RequestMapping("openExe")
-     public void openExe(String id,@RequestBody String body){
+     @RestController public class TestController {
+     @RequestMapping("openExe") public void openExe(String id,@RequestBody String body){
      int debug=0;
      }
      }

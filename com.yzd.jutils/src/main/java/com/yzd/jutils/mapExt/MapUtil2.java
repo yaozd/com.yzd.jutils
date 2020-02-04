@@ -10,11 +10,12 @@ import java.util.TreeMap;
 public class MapUtil2 {
     /**
      * ASCII 码从小到大排序（字典序）
+     *
      * @param paramMap
      * @return
      */
-    public static Map<String,Object> sortByASCII(Map<String,Object> paramMap){
-        SortedMap<String,Object> sort=new TreeMap<String,Object>(paramMap);
+    public static Map<String, Object> sortByASCII(Map<String, Object> paramMap) {
+        SortedMap<String, Object> sort = new TreeMap<String, Object>(paramMap);
         return sort;
     }
 }

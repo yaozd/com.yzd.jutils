@@ -1,8 +1,7 @@
 package com.yzd.jutils.encrypt;
 
 
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
+import com.yzd.jutils.rsaExt.Base64;
 
 import javax.crypto.KeyGenerator;
 import javax.crypto.Mac;
@@ -35,7 +34,7 @@ public abstract class CoderUtil {
      * @throws Exception
      */
     public static byte[] decryptBASE64(String key) throws Exception {
-        return (new BASE64Decoder()).decodeBuffer(key);
+        return Base64.decode(key);
     }
 
     /**
@@ -46,7 +45,7 @@ public abstract class CoderUtil {
      * @throws Exception
      */
     public static String encryptBASE64(byte[] key) throws Exception {
-        return (new BASE64Encoder()).encodeBuffer(key);
+        return Base64.encode(key);
     }
 
     /**

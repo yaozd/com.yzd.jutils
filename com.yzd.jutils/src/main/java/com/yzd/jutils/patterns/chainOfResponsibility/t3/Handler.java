@@ -9,6 +9,7 @@ package com.yzd.jutils.patterns.chainOfResponsibility.t3;
 public abstract class Handler {
     // 设置继任者
     protected Handler successor;
+
     // 设置继任者
     public void setSuccessor(Handler successor) {
         this.successor = successor;

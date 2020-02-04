@@ -19,19 +19,13 @@ public class BeanToMapUtils {
     /**
      * 将一个 Map 对象转化为一个 JavaBean
      *
-     * @param type
-     *            要转化的类型
-     * @param map
-     *            包含属性值的 map
+     * @param type 要转化的类型
+     * @param map  包含属性值的 map
      * @return 转化出来的 JavaBean 对象
-     * @throws IntrospectionException
-     *             如果分析类属性失败
-     * @throws IllegalAccessException
-     *             如果实例化 JavaBean 失败
-     * @throws InstantiationException
-     *             如果实例化 JavaBean 失败
-     * @throws InvocationTargetException
-     *             如果调用属性的 setter 方法失败
+     * @throws IntrospectionException    如果分析类属性失败
+     * @throws IllegalAccessException    如果实例化 JavaBean 失败
+     * @throws InstantiationException    如果实例化 JavaBean 失败
+     * @throws InvocationTargetException 如果调用属性的 setter 方法失败
      */
     public static Object convertMap(Class<?> type, Map<?, ?> map) {
 
@@ -48,7 +42,7 @@ public class BeanToMapUtils {
         } catch (InstantiationException e) {
             logger.error("实例化 JavaBean 失败");
             e.printStackTrace();
-        }catch (IllegalAccessException e) {
+        } catch (IllegalAccessException e) {
             logger.error("实例化 JavaBean 失败");
             e.printStackTrace();
         }
@@ -68,7 +62,7 @@ public class BeanToMapUtils {
 
                 try {
                     descriptor.getWriteMethod().invoke(obj, args);
-                } catch (IllegalAccessException  e) {
+                } catch (IllegalAccessException e) {
                     logger.error("实例化 JavaBean 失败");
                     e.printStackTrace();
                 } catch (IllegalArgumentException e) {
@@ -86,15 +80,11 @@ public class BeanToMapUtils {
     /**
      * 将一个 JavaBean 对象转化为一个 Map
      *
-     * @param bean
-     *            要转化的JavaBean 对象
+     * @param bean 要转化的JavaBean 对象
      * @return 转化出来的 Map 对象
-     * @throws IntrospectionException
-     *             如果分析类属性失败
-     * @throws IllegalAccessException
-     *             如果实例化 JavaBean 失败
-     * @throws InvocationTargetException
-     *             如果调用属性的 setter 方法失败
+     * @throws IntrospectionException    如果分析类属性失败
+     * @throws IllegalAccessException    如果实例化 JavaBean 失败
+     * @throws InvocationTargetException 如果调用属性的 setter 方法失败
      */
     public static Map<String, Object> convertBean(Object bean) {
         Class<? extends Object> type = bean.getClass();
@@ -117,13 +107,13 @@ public class BeanToMapUtils {
                 Object result = null;
                 try {
                     result = readMethod.invoke(bean, new Object[0]);
-                } catch (IllegalAccessException  e) {
+                } catch (IllegalAccessException e) {
                     logger.error("实例化 JavaBean 失败");
                     e.printStackTrace();
-                }catch (IllegalArgumentException e) {
+                } catch (IllegalArgumentException e) {
                     logger.error("实例化 JavaBean 失败");
                     e.printStackTrace();
-                }  catch (InvocationTargetException e) {
+                } catch (InvocationTargetException e) {
                     logger.error("调用属性的 setter 方法");
                     e.printStackTrace();
                 }
