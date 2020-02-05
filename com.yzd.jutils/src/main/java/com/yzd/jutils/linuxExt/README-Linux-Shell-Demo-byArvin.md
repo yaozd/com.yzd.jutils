@@ -23,16 +23,16 @@ jarFileMd5ExpectVal=$(cat -A $md5File |cut -b 1-32)
 echo $jarFileMd5ExpectVal
 if [[ $jarFileMd5Val =~ $jarFileMd5ExpectVal ]]
 then
-    echo "验证文件完整性-成功"
+    echo -e "\033[31m 验证文件完整性-成功 \033[0m"
 	rm -f $md5File
 	rm -f $jarFile
 else
-    echo "验证文件完整性-失败"
+    echo -e "\033[33m 验证文件完整性-失败 \033[0m"
 	rm -f $md5File
 	rm -f $jarFile
 fi
 echo "显示文件列表"
-ls -lh
+ls -lh 
 
 apply ./download
 ```

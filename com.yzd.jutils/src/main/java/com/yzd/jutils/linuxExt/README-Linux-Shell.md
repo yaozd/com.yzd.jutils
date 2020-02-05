@@ -9,6 +9,7 @@
 - [Shell判断字符串包含关系的几种方法](https://www.cnblogs.com/AndyStudy/p/6064834.html)
 - [Linux下Shell的for循环语句](https://www.cnblogs.com/EasonJim/p/8315939.html)
 - [Bash Shell 获取进程 PID](https://www.cnblogs.com/lovychen/p/6211209.html)
+- [echo 命令显示带颜色的字](https://blog.csdn.net/u013027894/article/details/89631979)
 - []()
 
 ### Shell-示例
@@ -182,6 +183,7 @@ else
  echo "$file1 not equal $file2"
 fi
 ```
+
 - [Bash Shell 获取进程 PID](https://www.cnblogs.com/lovychen/p/6211209.html)
 - [shell 脚本 后台启动springboot 详解](https://blog.csdn.net/ff445566/article/details/100561027)
     - start.sh
@@ -203,3 +205,18 @@ fi
         echo 'Application is already stopped...'
     fi
     ```
+
+- [echo 命令显示带颜色的字](https://blog.csdn.net/u013027894/article/details/89631979)
+```
+格式如下：
+`echo -e "\033[字背景颜色；文字颜色m字符串\033[0m"`
+字颜色：30—–37
+　　echo -e "\033[30m 黑色字 \033[0m" 
+　　echo -e "\033[31m 红色字 \033[0m" 
+　　echo -e "\033[32m 绿色字 \033[0m" 
+　　echo -e "\033[33m 黄色字 \033[0m" 
+　　echo -e "\033[34m 蓝色字 \033[0m" 
+　　echo -e "\033[35m 紫色字 \033[0m" 
+　　echo -e "\033[36m 天蓝字 \033[0m" 
+　　echo -e "\033[37m 白色字 \033[0m"
+```
