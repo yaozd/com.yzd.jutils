@@ -8,6 +8,7 @@
 - [shell将命令执行的结果赋值给变量](https://blog.csdn.net/lemontree1945/article/details/79126819)
 - [Shell判断字符串包含关系的几种方法](https://www.cnblogs.com/AndyStudy/p/6064834.html)
 - [Linux下Shell的for循环语句](https://www.cnblogs.com/EasonJim/p/8315939.html)
+- [Bash Shell 获取进程 PID](https://www.cnblogs.com/lovychen/p/6211209.html)
 - []()
 
 ### Shell-示例
@@ -181,3 +182,24 @@ else
  echo "$file1 not equal $file2"
 fi
 ```
+- [Bash Shell 获取进程 PID](https://www.cnblogs.com/lovychen/p/6211209.html)
+- [shell 脚本 后台启动springboot 详解](https://blog.csdn.net/ff445566/article/details/100561027)
+    - start.sh
+    ```
+    #!/bin/bash  
+    nohup java -jar qzznnb-0.0.1-SNAPSHOT.jar -Xms256m -Xmx1024m > qzznnb-0.0.1-SNAPSHOT.out 2>&1 &
+    ```
+    - stop.sh
+    ```
+    
+    #!/bin/bash
+    PID=$(ps -ef | grep qzznnb-0.0.1-SNAPSHOT.jar | grep -v grep | awk '{ print $2 }')
+    if [ ${PID} ];
+    then
+        echo 'Application is stpping...'
+        echo kill $PID DONE
+        kill $PID
+    else
+        echo 'Application is already stopped...'
+    fi
+    ```
