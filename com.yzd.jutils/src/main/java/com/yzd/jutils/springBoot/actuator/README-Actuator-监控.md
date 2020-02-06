@@ -3,6 +3,15 @@
 - [Spring boot 2.0 Actuator 的健康检查](https://www.jianshu.com/p/1aadc4c85f51)
 - [Spring Boot Actuator:健康检查、审计、统计和监控](https://www.jianshu.com/p/d5943e303a1f)
 
+- 健康检查的探活地址
+```
+默认：
+http://localhost:8080/actuator/health
+调整后：
+management.endpoints.web.base-path=/
+http://localhost:8080/health
+```
+
 - Actuator 添加 Git 和 Build 信息
     - [Maven插件之git-commit-id-plugin](https://blog.csdn.net/wangjunjun2008/article/details/10526151)
     - 参考：hyperspace-console
