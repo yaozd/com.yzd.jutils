@@ -10,6 +10,8 @@
 - [Linux下Shell的for循环语句](https://www.cnblogs.com/EasonJim/p/8315939.html)
 - [Bash Shell 获取进程 PID](https://www.cnblogs.com/lovychen/p/6211209.html)
 - [echo 命令显示带颜色的字](https://blog.csdn.net/u013027894/article/details/89631979)
+- [Shell 基本运算符](https://www.runoob.com/linux/linux-shell-basic-operators.html)
+- [shell脚本实现取当前时间](https://www.cnblogs.com/janezhao/p/9732157.html)
 - []()
 
 ### Shell-示例

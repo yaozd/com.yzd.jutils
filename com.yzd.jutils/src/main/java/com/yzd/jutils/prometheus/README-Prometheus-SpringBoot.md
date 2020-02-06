@@ -3,6 +3,7 @@
 - [监控神器普罗米修斯Prometheus安装配置](https://blog.csdn.net/ywd1992/article/details/85989259)
 
 ##　SpringBoot 2.0+prometheus+Grafana
+- [https://github.com/yaozd/com.yzd.prometheus.demo](https://github.com/yaozd/com.yzd.prometheus.demo) -首要参考byArvin
 - SpringBoot 2.0+prometheus+Grafana
     - [SpringBoot 2.0+prometheus+Grafana](https://blog.csdn.net/str0708/article/details/88405163)
     - [spring boot2.x暴露监控endpoint并配置prometheus及grafana对多个targets进行监控](https://blog.csdn.net/u013905744/article/details/97231735)
