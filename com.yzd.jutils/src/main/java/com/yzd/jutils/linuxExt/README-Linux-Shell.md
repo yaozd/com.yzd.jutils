@@ -12,6 +12,8 @@
 - [echo 命令显示带颜色的字](https://blog.csdn.net/u013027894/article/details/89631979)
 - [Shell 基本运算符](https://www.runoob.com/linux/linux-shell-basic-operators.html)
 - [shell脚本实现取当前时间](https://www.cnblogs.com/janezhao/p/9732157.html)
+- [su - user -c commandline: 以user身份运行commandline这句命令]()
+- [Linux运行shell脚本提示No such file or directory错误的解决办法](https://blog.csdn.net/u013626215/article/details/88050425)
 - []()
 
 ### Shell-示例
@@ -221,4 +223,17 @@ fi
 　　echo -e "\033[35m 紫色字 \033[0m" 
 　　echo -e "\033[36m 天蓝字 \033[0m" 
 　　echo -e "\033[37m 白色字 \033[0m"
+echo -e "\033[31m ============================= \033[0m"
+```
+- su - user -c commandline: 以user身份运行commandline这句命令
+```
+su - user -c commandline: 以user身份运行commandline这句命令
+eg:
+#!/bin/bash
+# jdk路径
+JAVAHOME=$JAVA_HOME
+# 运行程序的用户
+RUNNING_USER=$USER
+JAVA_CMD="nohup $JAVAHOME/bin/java -jar $APP_HOME -c $configPath ./program >log.out &"
+su - $RUNNING_USER -c "$JAVA_CMD"
 ```

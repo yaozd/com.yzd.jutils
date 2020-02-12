@@ -32,7 +32,7 @@ https://visualvm.github.io/archive/uc/8u40/updates.xml.gz
 - 抽样器=》内存 (PS:方便查看实例个数)
 
 
-### jvisualVM 监控远程 spring boot程序
+### jvisualVM 监控远程 spring boot程序-JMX方式
 - [jconsole 和jvisualVM 监控远程 spring boot程序](https://www.cnblogs.com/shengs/p/10796518.html)
 ```
 java -Djava.rmi.server.hostname=192.168.56.112 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -jar http-demo-1.0-SNAPSHOT.jar
@@ -55,4 +55,25 @@ PS:
 JMX端口为1099 ；
 如果不设置服务器主机名 -Djava.rmi.server.hostname 到时候可能连不上。
 
+```
+### jvisualVM 监控远程 spring boot程序-jstatd方式-
+- [jvisualvm连接远程应用终于成功，附踩大坑记录！！（一：jstatd方式）](https://www.cnblogs.com/grey-wolf/p/9234780.html)
+- [jvisualvm远程监控 visualgc插件 不受此jvm支持问题](https://www.cnblogs.com/rgqancy/p/10104886.html)
+```
+1.修改远程服务器上java设置
+
+    vi $JAVA_HOME/jre/lib/security/java.policy    在文件末位的 }; 前添加 
+    permission java.security.AllPermission; 
+
+2.cd $JAVA_HOME/bin
+
+  ./jstatd -J-Djava.security.policy=jstatd.all.policy -J-Djava.rmi.server.hostname=192.168.97.51（远程服务器IP）
+
+后台启动 jstatd (PS:默认端口是1099)
+jstatd -J-Djava.security.policy=jstatd.all.policy -J-Djava.rmi.server.hostname=192.168.56.112 &
+//
+jstatd -J-Djava.security.policy=jstatd.all.policy -J-Djava.rmi.server.hostname=192.168.56.112 -p 5555&
+PS:-p 5555 ----------修改端口为5555
+eg:
+jstatd -J-Djava.security.policy=jstatd.all.policy -J-Djava.rmi.server.hostname=192.168.56.112
 ```

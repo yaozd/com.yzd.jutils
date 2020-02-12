@@ -33,7 +33,19 @@
 - String Manipulation
     - [String Manipulation](https://blog.csdn.net/j3T9Z7H/article/details/78684055)
 - Markdown Navigator
-- 
+- Rainglow Color Schemes (PS:颜色主题插件)
+- RestfulToolkit (ps:一套 RESTful 服务开发辅助工具集)
+- MyBatis Log Plugin (PS:这款插件是直接将Mybatis执行的sql脚本显示出来，无需处理)
+    ```
+    https://plugins.jetbrains.com/plugin/10065-mybatis-log-plugin
+    把 mybatis 输出的sql日志还原成完整的sql语句。
+    将日志输出的sql语句中的问号 ? 替换成真正的参数值。 
+    通过 "Tools -> MyBatis Log Plugin" 菜单或快捷键 "Ctrl+Shift+Alt+O" 启用。 
+    点击窗口左边的 "Filter" 按钮，可以过滤不想要输出的sql语句。 
+    点击窗口左边的 "Format Sql" 按钮，可以格式化输出的sql语句。 
+    选中console的sql日志，右击 "Restore Sql from Selection" 菜单可以还原sql语句。 
+    前提条件：输出的sql日志必须包含"Preparing:"和"Parameters:"才能
+    ```
 - 
 
 ## [IntelliJ IDEA 18个常用插件，动图演示，让效率成为习惯](https://blog.csdn.net/lin443514407lin/article/details/86692736)
