@@ -6,4 +6,6 @@
 
 ## Java命令行程序构建工具airlift使用之分组（group） -推荐参考byArvin
 - [Java命令行程序构建工具airlift使用之分组（group）](https://blog.csdn.net/sidongxue2/article/details/72628452)
+- [https://github.com/yaozd/grpc-proxy](https://github.com/yaozd/grpc-proxy) -推荐参考byArvin PS:根据个人习惯做了一些调整，更加方便测试
+    > airlift的示例已测试可用
 - []()
