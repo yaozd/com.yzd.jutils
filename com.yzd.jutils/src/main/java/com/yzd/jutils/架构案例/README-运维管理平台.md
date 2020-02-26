@@ -18,3 +18,8 @@
 
 ## DevOps
 - [深度剖析DevOps系列（4）-- Devops in Cloud](https://www.jianshu.com/p/857379ea90bf)
+
+
+## 设备管理
+- [django-idcops 数据中心运维管理平台](https://www.iloxp.com/archive/10/)
+- []()
