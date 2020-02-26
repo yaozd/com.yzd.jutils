@@ -23,3 +23,7 @@
 ## 设备管理
 - [django-idcops 数据中心运维管理平台](https://www.iloxp.com/archive/10/)
 - []()
+
+## DNS管理系统
+- [OpenDnsdb 是去哪儿网OPS团队开源的基于Python语言的DNS管理系统](https://github.com/qunarcorp/open_dnsdb)
+- []()
