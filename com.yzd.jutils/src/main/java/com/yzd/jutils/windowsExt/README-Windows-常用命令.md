@@ -15,3 +15,9 @@
     LINUX:
     md5sum hyperspace-container-0.0.1-SNAPSHOT.jar
     ```
+- 启用/禁用休眠功能
+```
+ powercfg /h /?     //输出帮助信息
+ powercfg -h off
+ powercfg -h on
+```
