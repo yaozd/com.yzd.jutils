@@ -107,3 +107,8 @@
 - API网关的使用场景
     - [API网关的使用场景](https://blog.csdn.net/SilenceCarrot/article/details/79527464)
     - []()
+
+- API网关实现问题定位
+```
+服务-方法-方法参数-出错的代码位置
+```
