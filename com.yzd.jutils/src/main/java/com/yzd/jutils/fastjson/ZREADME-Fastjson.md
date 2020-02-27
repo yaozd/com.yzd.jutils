@@ -35,3 +35,4 @@ fastjson比gson快大约6倍，测试结果上这里：性能测试对比。gson
 ##　java 对json 格式做参数格式校验
 - [java 对json 格式做参数格式校验](https://blog.csdn.net/Dream_bin/article/details/92656876)
 - [Java后台实现json字符串格式验证工具类](http://www.zuidaima.com/code/file/3605601447003136.htm?dir=/3605601447003136.java)
+- [判断一个字符串是否是合法的JSON字符串](https://blog.csdn.net/aa1215018028/article/details/87916228)
