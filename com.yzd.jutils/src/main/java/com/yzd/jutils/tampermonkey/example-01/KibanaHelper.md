@@ -6,7 +6,7 @@
 // @version      0.1
 // @description  Link the pages each other
 // @author       Nix
-// @include      http://ulp.kibana.demo.com/*
+// @include      http://ulp.kibana.hualala.com/*
 // @grant        none
 // @require https://code.jquery.com/jquery-2.1.4.min.js
 // ==/UserScript==
@@ -15,7 +15,7 @@
   'use strict';
 
   const currentUrl = window.location.href;
-  if (!/^http:\/\/ulp.kibana.demo.com\/app\/kibana#\/dashboard\/.+$/igm.test(currentUrl)) {
+  if (!/^http:\/\/ulp.kibana.hualala.com\/app\/kibana#\/dashboard\/.+$/igm.test(currentUrl)) {
     return
   }
 
@@ -39,6 +39,29 @@
   function handlePanelClick() {
     checkStatus(backendStatisticsWorker)
   }
+    /**
+    *
+    */
+   function UrlParamHash(url) {
+       var params = [],
+           h;
+       var hash = url.slice(url.indexOf("?") + 1).split('&');
+       //console.log(hash);
+       for (var i = 0; i < hash.length; i++) {
+           h = hash[i].split("="); //
+           params[h[0]] = h[1];
+           //console.log(h);
+       }
+       return params;
+   }
+   /**
+   * 获取参数
+   *
+   */
+   function getUrlParam(name){
+       var params = UrlParamHash(window.location.href);
+       return params[name];
+   }
   /**
    * 后端服务耗时统计
    *  一个 worker 函数
@@ -55,9 +78,11 @@
       const row = $(rowSet[i])
       const columnSet = row.children('td')
       const domain = $(columnSet[1]).text().trim()
-      const path = $(columnSet[2]).text().trim()
-      const queryUrl="http://ulp.kibana.demo.com/app/kibana#/discover?_g=()&_a=(columns:!(_source),index:cef94120-c9c6-11e9-a9e2-45125a6654d4,interval:auto,query:(language:kuery,query:'%20requestHost.keyword:%22#ServiceName#%22%20and%20%09uri_path.keyword:%22#ServiceMethod#%22'),sort:!('@timestamp',desc))";
-      const url = queryUrl.replace(new RegExp("#ServiceName#","gm"),domain).replace(new RegExp("#ServiceMethod#","gm"),path);
+      const path = $(columnSet[2]).text().trim();
+      //获取时间参数
+      const timeParam=getUrlParam("_g");
+      const queryUrl="http://ulp.kibana.hualala.com/app/kibana#/discover?_g=#time#&_a=(columns:!(_source),index:cef94120-c9c6-11e9-a9e2-45125a6654d4,interval:auto,query:(language:kuery,query:'%20requestHost.keyword:%22#ServiceName#%22%20and%20%09uri_path.keyword:%22#ServiceMethod#%22'),sort:!('@timestamp',desc))";
+      const url = queryUrl.replace(new RegExp("#time#","gm"),timeParam).replace(new RegExp("#ServiceName#","gm"),domain).replace(new RegExp("#ServiceMethod#","gm"),path);
       console.log(url);
 
       $(columnSet[2]).find('span:first').replaceWith(`<span ng-non-bindable><a href="${url}" target="_blank">${path}</a></span>`)
