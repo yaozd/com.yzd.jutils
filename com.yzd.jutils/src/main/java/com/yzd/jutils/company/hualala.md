@@ -37,6 +37,8 @@
 - httpDNS -高可用
 - Linux内核调优+Nginx内核调优
 - Multidatasource-动态数据源（实例级别：一个实例上多个数据库共享一组连接池）
-- []()
+- [https://github.com/yaozd/com.yzd.prometheus.demo](https://github.com/yaozd/com.yzd.prometheus.demo) -prometheus
+    > 添加git代码的提交id到prometheus,这样就可以知道当前运行的代码的版本<br>
+    通过提交ID，我们可以知道每个版本，都有哪几台机器正在运行。
 - []()
 - []()
