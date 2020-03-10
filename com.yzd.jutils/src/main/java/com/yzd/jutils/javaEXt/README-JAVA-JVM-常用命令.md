@@ -1,4 +1,21 @@
-- 参看GC情况
+- 查看内存
+    - jmap
+    ```
+    查看JVM堆中对象详细占用情况
+    jmap -histo [pid]
+    
+    导出整个JVM 中内存信息
+    jmap -dump:format=b,file=文件名 [pid]
+    eg:
+    jps -l
+    jmap -dump:format=b,file=1224.hprof 1224
+    eclipse Memory Analyzer
+    Eclipse 提供的一个用于分析JVM 堆Dump文件的插件。借助这个插件可查看对象的内存占用状况，引用关系，分析内存泄露等。
+    http://www.eclipse.org/mat/
+    ```
+- 查看GC情况
+    - jstat
+    - [ jstat命令查看jvm的GC情况 （以Linux为例）](https://www.cnblogs.com/yjd_hycf_space/p/7755633.html) 推荐参考byArvin
     ```
     jstat -gcutil ：
     
