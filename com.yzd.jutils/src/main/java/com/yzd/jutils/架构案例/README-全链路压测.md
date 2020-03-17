@@ -1,2 +1,5 @@
 - 参考
     - [聊聊全链路压测](https://www.cnblogs.com/imyalost/p/8439910.html)
+- 饿了么全链路压测的探索与实践
+    - [饿了么全链路压测的探索与实践](https://zhuanlan.zhihu.com/p/30306892)
+    - [饿了么全链路压测平台的实现与原理](https://zhuanlan.zhihu.com/p/30511486)
