@@ -1,3 +1,9 @@
+### Nginx之Location配置详解(Location匹配顺序)
+- [Nginx之Location配置详解(Location匹配顺序)](https://blog.csdn.net/RobertoHuang/article/details/70249007)
+```
+Lcoation命中过程：
+精确匹配=》普通匹配=》正则匹配
+```
 ###　nginx location匹配规则
 - [Nginx Location指令URI匹配规则详解小结](https://www.jb51.net/article/159631.htm)
 - [nginx location匹配规则](https://www.nginx.cn/115.html)
