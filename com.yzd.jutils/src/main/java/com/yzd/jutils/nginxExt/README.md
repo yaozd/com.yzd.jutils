@@ -9,6 +9,10 @@
 # nginx访问日志转化为json格式
 - [nginx访问日志转化为json格式](https://blog.csdn.net/ljx1528/article/details/81872065)
 
+# nginx的重试机制
+- [nginx的重试机制](https://blog.csdn.net/mj158518/article/details/49847119)
+> 使用场景：nginx的重试机制是通过proxy_next_upstream项定义的。支付服务可能为了提高服务的可用性，可能会在nginx会在上配置了重试机制
+
 # Nginx 配置详解
 - [Nginx 配置详解](https://www.runoob.com/w3cnote/nginx-setup-intro.html)
 - [Nginx 使用及配置](https://www.jianshu.com/p/849343f679aa)
