@@ -12,7 +12,12 @@
     rm -rf   symbolic_name   注意不是rm -rf   symbolic_name/ 
     ```
 -  查看当前文件夹大小
-    > du -sh
+    ```
+    目录：
+    df -h
+    文件夹:
+    du -sh
+    ```
 -  TCP 连接数查看
     ```
     ==PID:1454
