@@ -1,3 +1,11 @@
+###　Spring Boot应用上传文件时报错-multipart.location
+- [Spring Boot应用上传文件时报错](https://www.cnblogs.com/nuccch/p/11546494.html)-推荐参考byArvin-2020-03-20
+```
+spring.servlet.multipart.max-file-size=3072MB
+spring.servlet.multipart.max-request-size=3072MB
+spring.servlet.multipart.location=/var/tmp
+```
+
 ### 上传文件设置绝对路径和访问绝对路径下的静态资源
 - [https://blog.csdn.net/superlover_/article/details/80893007](https://blog.csdn.net/superlover_/article/details/80893007)
 

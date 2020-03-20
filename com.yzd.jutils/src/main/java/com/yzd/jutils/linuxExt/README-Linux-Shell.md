@@ -14,6 +14,7 @@
 - [shell脚本实现取当前时间](https://www.cnblogs.com/janezhao/p/9732157.html)
 - [su - user -c commandline: 以user身份运行commandline这句命令]()
 - [Linux运行shell脚本提示No such file or directory错误的解决办法](https://blog.csdn.net/u013626215/article/details/88050425)
+- [使用“:”命令定义一个无限循环实例](http://blog.sina.com.cn/s/blog_6436b8ec0102xfyb.html)
 - []()
 
 ### Shell-示例
@@ -236,4 +237,18 @@ JAVAHOME=$JAVA_HOME
 RUNNING_USER=$USER
 JAVA_CMD="nohup $JAVAHOME/bin/java -jar $APP_HOME -c $configPath ./program >log.out &"
 su - $RUNNING_USER -c "$JAVA_CMD"
+```
+
+- 使用“:”命令定义一个无限循环实例
+```
+使用“:”命令定义一个无限循环实例
+[root@aa ~]# cat infinitewhile_colon.sh
+#!/bin/bash -
+
+while :
+do
+    echo "Do something..."
+    echo "Hit [ CTRL+C ] to stop!"
+    sleep 3
+done
 ```
