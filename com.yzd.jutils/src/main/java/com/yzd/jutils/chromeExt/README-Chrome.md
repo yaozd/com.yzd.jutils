@@ -54,3 +54,11 @@ ctrl+shift+delete
 - [Download Youtube videos and subtitles](https://greasyfork.org/zh-CN/scripts/8426-download-youtube-videos-and-subtitles)-提供方：Find
 - []()
 - []()
+
+###　怎么从Chrome浏览器中导出扩展程序为crx文件
+- [怎么从Chrome浏览器中导出扩展程序为crx文件](https://blog.csdn.net/TheBeauty2016/article/details/77198627)
+- [Chrome的插件扩展程序安装目录是什么？在哪个文件夹？](https://blog.csdn.net/qq_34764577/article/details/81184628)
+```
+地址栏输入chrome:version 回车
+个人资料路径：
+```

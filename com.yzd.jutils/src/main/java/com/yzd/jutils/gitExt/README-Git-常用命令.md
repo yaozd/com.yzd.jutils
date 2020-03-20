@@ -1,5 +1,20 @@
 ##　Git 常用命令大全
 - [Git 常用命令大全](https://blog.csdn.net/dengsilinming/article/details/8000622)
+
+## 通过short_commit_id，显示对应日志
+- [Git命令之log日志](https://blog.csdn.net/xxlt0310/article/details/83243935)
+```
+git show 23c4ff8109 --shortstat
+//
+git show [commit id]
+git show [commit id] --name-only
+git show [commit id] --name-only --oneline
+git show [commit id] --name-status
+git show [commit id] --stat
+git show [commit id] --shortstat
+
+```
+##　Git 常用命令大全
 ```
 Git常用操作命令：
 
