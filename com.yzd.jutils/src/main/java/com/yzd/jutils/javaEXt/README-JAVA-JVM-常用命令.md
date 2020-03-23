@@ -1,5 +1,6 @@
 - 查看内存
     - jmap
+    - [java高分局之jmap命令使用](https://blog.csdn.net/maosijunzi/article/details/46119077)
     ```
     查看JVM堆中对象详细占用情况
     jmap -histo [pid]
@@ -15,6 +16,7 @@
     ```
 - 查看GC情况
     - jstat
+    - [java高分局之jstat命令使用](https://blog.csdn.net/maosijunzi/article/details/46049117)
     - [ jstat命令查看jvm的GC情况 （以Linux为例）](https://www.cnblogs.com/yjd_hycf_space/p/7755633.html) 推荐参考byArvin
     ```
     jstat -gcutil ：
@@ -35,9 +37,49 @@
     FGCT– 从应用程序启动到采样时 Full GC 所用的时间(单位秒) 
     GCT — 从应用程序启动到采样时用于垃圾回收的总时间(单位秒)
     ————————————————
+    S0C：年轻代中第一个survivor（幸存区）的容量 (kb)
+    S1C：年轻代中第二个survivor（幸存区）的容量 (kb)
+    S0U：年轻代中第一个survivor（幸存区）目前已使用空间 (kb)
+    S1U：年轻代中第二个survivor（幸存区）目前已使用空间 (kb)
+    EC：年轻代中Eden（伊甸园）的容量 (kb)
+    EU：年轻代中Eden（伊甸园）目前已使用空间 (kb)
+    OC：Old代的容量 (kb)
+    OU：Old代目前已使用空间 (kb)
+    PC：Perm(持久代)的容量 (kb)
+    PU：Perm(持久代)目前已使用空间 (kb)
+    YGC：从应用程序启动到采样时年轻代中gc次数
+    YGCT：从应用程序启动到采样时年轻代中gc所用时间(s)
+    FGC：从应用程序启动到采样时old代(全gc)gc次数
+    FGCT：从应用程序启动到采样时old代(全gc)gc所用时间(s)
+    GCT：从应用程序启动到采样时gc用的总时间(s)
+    NGCMN：年轻代(young)中初始化(最小)的大小 (kb)
+    NGCMX：年轻代(young)的最大容量 (kb)
+    NGC：年轻代(young)中当前的容量 (kb)
+    OGCMN：old代中初始化(最小)的大小 (kb)
+    OGCMX：old代的最大容量 (kb)
+    OGC：old代当前新生成的容量 (kb)
+    PGCMN：perm代中初始化(最小)的大小 (kb)
+    PGCMX：perm代的最大容量 (kb)
+    PGC：perm代当前新生成的容量 (kb)
+    S0：年轻代中第一个survivor（幸存区）已使用的占当前容量百分比
+    S1：年轻代中第二个survivor（幸存区）已使用的占当前容量百分比
+    E：年轻代中Eden（伊甸园）已使用的占当前容量百分比
+    O：old代已使用的占当前容量百分比
+    P：perm代已使用的占当前容量百分比
+    S0CMX：年轻代中第一个survivor（幸存区）的最大容量 (kb)
+    S1CMX ：年轻代中第二个survivor（幸存区）的最大容量 (kb)
+    ECMX：年轻代中Eden（伊甸园）的最大容量 (kb)
+    DSS：当前需要survivor（幸存区）的容量 (kb)（Eden区已满）
+    TT： 持有次数限制
+    MTT ： 最大持有次数限制
+    ————————————————
+    版权声明：本文为CSDN博主「厚积_薄发」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+    原文链接：https://blog.csdn.net/yuxin6866/article/details/77718748
+    ————————————————
     原文链接：https://blog.csdn.net/jiankunking/article/details/79688903
     ```
 - 用jstack定位CPU占用率高的代码
+    - [java高分局之jstack命令使用](https://blog.csdn.net/maosijunzi/article/details/46124405)
     - [高手是怎么使用jstack精确找到异常代码的](https://jingyan.baidu.com/article/4f34706e3ec075e387b56df2.html) 
     ```
     java -jar JavaStudy.jar
