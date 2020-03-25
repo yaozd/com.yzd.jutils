@@ -5,15 +5,6 @@
     /*
     Navicat MySQL Data Transfer
     
-    Source Server         : dohko.mysql.002.master.hualala.com
-    Source Server Version : 50723
-    Source Host           : dohko.mysql.002.master.hualala.com:3306
-    Source Database       : hyperspace
-    
-    Target Server Type    : MYSQL
-    Target Server Version : 50723
-    File Encoding         : 65001
-    
     Date: 2019-09-16 18:10:07
     */
     

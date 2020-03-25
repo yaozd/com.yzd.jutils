@@ -22,7 +22,7 @@
     ===========================
     error.log:
     2019/12/24 09:44:29 [info] 6574#0: *2190106131 epoll_wait() reported that client prematurely closed connection, so upstream connection is closed too while
-    reading upstream, client: 100.x.x.x, server: m.hualala.com, request: "POST /xx/xx/xx?groupID=255194 HTTP/1.0", upstream: "http://172.x.x.x:
+    reading upstream, client: 100.x.x.x, server: m.demo.com, request: "POST /xx/xx/xx?groupID=255194 HTTP/1.0", upstream: "http://172.x.x.x:
     80/x/x/x?groupID=255194", host: "m.x.x"
     
     ```
@@ -55,13 +55,13 @@
                 location / {
                     #root   html;
                     #index  index.html index.htm;
-                    proxy_set_header Host dohko.http-demo.9091.hualala.com;
+                    proxy_set_header Host dohko.http-demo.9091.demo.com;
                     proxy_pass http://pro;
                     #proxy_set_header Connection "";
                     #proxy_http_version 1.1;       
                 }
                 location /proxy {
-                    proxy_set_header Host dohko.online.h5api.hualala.com;
+                    proxy_set_header Host dohko.online.h5api.demo.com;
                     proxy_pass http://pro;
                     proxy_http_version   1.1;
                 }

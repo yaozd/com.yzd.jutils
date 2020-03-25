@@ -23,15 +23,15 @@ server {
         listen 80;
         listen [::]:80;
 
-        server_name shopapi.hualala.com;
-        # root /var/www/shopapi.hualala.com/public;
+        server_name shopapi.demo.com;
+        # root /var/www/shopapi.demo.com/public;
 
         # security
         # include nginxconfig.io/security.conf;
 
         # logging
-        access_log /var/log/nginx/shopapi.hualala.com.access.log;
-        error_log /var/log/nginx/shopapi.hualala.com.error.log warn;
+        access_log /var/log/nginx/shopapi.demo.com.access.log;
+        error_log /var/log/nginx/shopapi.demo.com.error.log warn;
 
         # reverse proxy
         location / {

@@ -12,7 +12,7 @@ parentId
 ```
 ## Zipkin示例-01
 - 这条跟踪信息对应的代码片段为
-``` java
+```
 Span twoPhase = tracer.newTrace().name("twoPhase").start();
 try {
     Span prepare = tracer.newChild(twoPhase.context()).name("prepare").start();

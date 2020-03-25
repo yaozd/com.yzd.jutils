@@ -6,7 +6,7 @@ package com.yzd.jutils.validationExt.enumExt;
  **//*
 
 
-import com.hualala.infrastructure.hyperspace.console.exceptions.ArgumentValidException;
+import com.demo.infrastructure.hyperspace.console.exceptions.ArgumentValidException;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
