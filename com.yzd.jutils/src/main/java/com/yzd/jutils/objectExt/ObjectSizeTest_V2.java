@@ -31,4 +31,9 @@ public class ObjectSizeTest_V2 {
         System.out.println("shallowSizeOf:"+RamUsageEstimator.shallowSizeOf(new Person(1,"1","2",3)));
         System.out.println("sizeOf:"+RamUsageEstimator.sizeOf(new Person(1,"1","2",3)));
     }
+    @Test
+    public void allFieldSizeTest(){
+        Person person = new Person(1, "1", "2", 3);
+        System.err.println(FieldSizeUtil.getString(person,Person.class));
+    }
 }

@@ -14,6 +14,9 @@ public class ObjectSizeTest_V1 {
      */
     @Test
     public void test() {
+        String str="parent";
+        System.out.println(RamUsageEstimator.sizeOf(str));
+        System.out.println(RamUsageEstimator.sizeOf(System.currentTimeMillis()));
         System.out.println(RamUsageEstimator.sizeOf(1));
         System.out.println(RamUsageEstimator.sizeOf(1L));
         System.out.println(RamUsageEstimator.sizeOf(1f));
