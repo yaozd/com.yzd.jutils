@@ -109,6 +109,33 @@ jps -l
 tail -f /tmp/log/yzd-demo-console/yzd-demo-console.log 
 
 ```
+- HTTP-DEMO示例 -GC:CMS
+- 
+```
+//V-1
+#!/bin/sh
+nohup java -server -Xms2G -Xmx2G -XX:+UseConcMarkSweepGC -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/data/demo/java_pid%p.hprof  -Dspring.config.location=file:/data/demo/config/application.yaml  -jar /data/demo/demo.jar >/data/demo/demo.out 2>&1 &
+//V-2
+nohup java -server -Xms2G -Xmx2G -XX:+UseConcMarkSweepGC -XX:+HeapDumpOnOutOfMemoryError -jar demo.jar >demo.out 2>&1 &
+```
+- HYPE-DEMO示例 -GC:CMS
+-
+```
+java -jar 
+-Xmx4g
+-Xms4g
+-XX:+UseConcMarkSweepGC
+-XX:+HeapDumpOnOutOfMemoryError
+-Djava.rmi.server.hostname=172.20.132.85
+-Dcom.sun.management.jmxremote
+-Dcom.sun.management.jmxremote.port=2099
+-Dcom.sun.management.jmxremote.authenticate=false
+-Dcom.sun.management.jmxremote.ssl=false
+-Dlog4j2.contextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector
+-Dlogging.config=/root/api-router/config/log4j2-spring.xml
+-Dspring.config.location=file:/root/api-router/config/application.yaml
+```
+
 - 显示IP地址
 
 ```
