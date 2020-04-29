@@ -9,10 +9,12 @@
     wrk 也可用，性能也更好些。建议跟 wrk2 对照，毕竟CO是个大坑，全世界绝大部分压测工具都掉坑里。
     ```
 - [性能测试工具的 Coordinated Omission 问题](https://www.jianshu.com/p/bfb2b0f50edd?from=timeline&isappinstalled=0)
-- []()
+- [性能测试之－wrk(转)](https://www.cnblogs.com/rainy-shurun/p/5867946.html) -推荐参考byArvin
 
 - 安装wrk
 ```
+git clone https://github.com/wg/wrk.git  
+cd wrk 
 make
 ln -s /usr/local/src/wrk/wrk /usr/local/bin 
 PS:Linux设置环境变量(解决许多命令找不到) https://www.cnblogs.com/bugutian/p/5051109.html
