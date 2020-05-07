@@ -1,5 +1,6 @@
 package com.yzd.jutils.algorithmExt.byteArrayExt;
 
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 
 import java.nio.ByteBuffer;
@@ -24,9 +25,16 @@ public class _MainTest {
     Charset charset = Charset.forName("utf-8");
     // 获取charset对象对应的编码器
     CharsetDecoder charsetDecoder = charset.newDecoder();
+
+    /**
+     * 最后的方案：
+     * 通过netty的byteBuf进行字符的拼接，然后直接传给netty进行发送，解决的。
+     * @throws CharacterCodingException
+     */
     @Test
     public void t1() throws CharacterCodingException {
         ByteArrayJava byteArrayJava=new ByteArrayJava(13);
+        "ttt".getBytes();
         byteArrayJava.add("{\"traceId\":\"".getBytes(charset));
         byteArrayJava.add("{\"traceId\":\"".getBytes(charset));
         byte[] bytes = byteArrayJava.getBytes();
@@ -35,5 +43,15 @@ public class _MainTest {
         byteBuffer.flip();
         // 将ByteBuffer的数据解码成字符序列
         System.out.println(charsetDecoder.decode(byteBuffer));
+        ByteBuffer buffer = charset.encode("txt");
+        byte[] bytes1 = charset.encode("txt").array();
+        buffer.array();
+        byteBuffer.put(buffer);
     }
+    @Test
+    public void t2(){
+        int i=0;
+        System.out.println(i++>0);
+    }
+
 }

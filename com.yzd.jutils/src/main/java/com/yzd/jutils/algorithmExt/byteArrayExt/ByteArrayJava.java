@@ -32,16 +32,18 @@ public class ByteArrayJava {
             bytesFull=true;
             return this;
         }
-        System.arraycopy(value, 0, bytes, begin,srcLength );
-        begin +=srcLength;
+        for (int i = 0; i < srcLength; i++) {
+            bytes[begin++]=value[i];
+        }
+        //begin +=srcLength;
         return this;
     }
     public byte[] getBytes(){
+        if(!bytesFull){
+            return bytes;
+        }
         byte[] tempBytes=new byte[totalLength];
         System.arraycopy(bytes,0,tempBytes,0, begin);
-        if(!bytesFull){
-            return tempBytes;
-        }
         int tempBegin= begin;
         for (byte[] bytes1 : linkedList) {
             int tempLength=bytes1.length;

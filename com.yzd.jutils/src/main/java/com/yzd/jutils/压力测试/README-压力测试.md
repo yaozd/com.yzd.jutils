@@ -6,6 +6,9 @@
 - [如何生成每秒百万级别的 HTTP 请求？](https://my.oschina.net/qiangzigege/blog/519340)
 - [几乎所有的WEB压力测试工具 WEB压力测试工具大全](https://www.iamle.com/archives/2173.html)
 
+## 软件测试之性能测试
+- [软件测试之性能测试](https://blog.csdn.net/bit666888/article/details/81746538)
+
 ##　 压测名词解释:
 ```
 

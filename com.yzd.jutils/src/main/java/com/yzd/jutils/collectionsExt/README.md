@@ -1,3 +1,8 @@
+### Java Collections Cheat Sheet
+- [Java Collections Cheat Sheet](https://www.jrebel.com/blog/java-collections-cheat-sheet)
+- [java-streams-cheat-sheet](https://www.jrebel.com/blog/java-streams-cheat-sheet)
+- []()
+
 ### Arrays.asList（）vs Collections.singletonList（）
 - [Arrays.asList（）vs Collections.singletonList（）](https://www.cnblogs.com/xingzc/p/9144375.html)
 - [使用Collections.singletonList（）方法-不可变列表](http://www.leftso.com/blog/438.html)
