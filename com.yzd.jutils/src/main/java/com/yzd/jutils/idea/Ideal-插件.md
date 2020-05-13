@@ -51,7 +51,8 @@
     选中console的sql日志，右击 "Restore Sql from Selection" 菜单可以还原sql语句。 
     前提条件：输出的sql日志必须包含"Preparing:"和"Parameters:"才能
     ```
-- 
+- singleton （PS:by WangYi 单例模式）
+- [gradianto](https://plugins.jetbrains.com/plugin/12334-gradianto) （PS:主题，保护眼睛）
 
 ## [IntelliJ IDEA 18个常用插件，动图演示，让效率成为习惯](https://blog.csdn.net/lin443514407lin/article/details/86692736)
 ```

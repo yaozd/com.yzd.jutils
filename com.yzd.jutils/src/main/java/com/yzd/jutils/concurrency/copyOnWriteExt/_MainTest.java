@@ -28,5 +28,6 @@ public class _MainTest {
         CopyOnWriteArraySet copyOnWriteArraySet = new CopyOnWriteArraySet();
         Set<String> itemSet = new HashSet<>();
         copyOnWriteArraySet.addAll(itemSet);
+
     }
 }
