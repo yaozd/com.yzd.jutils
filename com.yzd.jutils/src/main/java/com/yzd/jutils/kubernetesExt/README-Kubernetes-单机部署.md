@@ -11,6 +11,14 @@
 - [Kubernetes中文手册](https://www.kubernetes.org.cn/docs)
 - [Kubernetes中文社区 | 中文文档](http://docs.kubernetes.org.cn/) -推荐byArvin
 
+## Kubernetes-常用命令
+- [官网](https://kubernetes.io/docs/reference/kubectl/overview/)
+- [K8s的kubectl常用命令](https://www.cnblogs.com/vito-lee/p/11911963.html)
+- [kubectl 常用命令总结](https://www.cnblogs.com/miclesvic/articles/10997060.html)
+- []()
+```
+https://kubernetes.io/docs/reference/kubectl/overview/
+```
 
 - 安装K8S指令：
     ```
@@ -247,4 +255,15 @@ $ kubectl exec -it [pod_id] -- /bin/sh
 # docker info
 $ docker info
 $ kubectl cluster-info
+```
+
+- 名称简写
+```
+po (pod)
+ns (命名空间namespace)
+instance (实例)
+svc (service服务): 定义一个pod的逻辑分组，一种可以访问他们的策略（微服务）。
+cm (configMap): 存储全局配置变量的，将分布式系统中不同模块的环境变量统一到一个对象中管理。
+ds (deamonSet)：在每台计算机节点上运行一个守护进程（如日志采集等）,有时pod处于pending可能是因为某个deamonSet没起来。
+deploy (deployment）
 ```
