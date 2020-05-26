@@ -6,6 +6,10 @@
 - [Hypertext Transfer Protocol Version 2 (HTTP/2)](https://tools.ietf.org/html/rfc7540)
 - [https://developer.mozilla.org/zh-CN/docs/Web/HTTP](https://developer.mozilla.org/zh-CN/docs/Web/HTTP) -HTTP状态码
 
+## http chunked
+- [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding)
+- [https://tools.ietf.org/html/rfc7230#section-4.1](https://tools.ietf.org/html/rfc7230#section-4.1)
+- []()
 
 ## http协议规范
 - []()
