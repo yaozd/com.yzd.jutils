@@ -26,4 +26,10 @@
 
 ```
 
-### 
+### 故障处理
+- [HttpRequestException encountered解决方法](https://www.cnblogs.com/yang-xiansen/p/12000999.html)
+```
+每次pull代码的时候，总是要输入账号，密码，百度了一下HttpRequestException encountered错误
+发现是Github 禁用了TLS v1.0 and v1.1，必须更新Windows的git凭证管理器。
+网址：https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/
+```
