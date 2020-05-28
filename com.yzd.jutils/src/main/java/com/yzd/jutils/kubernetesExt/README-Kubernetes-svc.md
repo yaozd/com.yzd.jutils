@@ -10,6 +10,60 @@ ClusterIP
 无头模式，无serviceip，即把spec.clusterip设置为None 。
 ```
 
+### 各种Service类型以及对应操作详解（ClusterIP, ExternalName, LoadBalancer, NodePort）
+- [各种Service类型以及对应操作详解（ClusterIP，NodePort，ExternalName）](https://blog.csdn.net/Victor2code/article/details/105969032) -推荐参考byArvin
+```
+Service的类型
+k8s中的Service有如下几种类型，对应着定义Service的yaml文件的type字段
+
+ClusterIP
+默认类型，该Service的虚拟IP仅为集群内部访问
+NodePort
+在ClusterIP的基础上，在每个Node的物理网卡上都为该Service建立一个相同的端口映射，例如上图中将每个Node的8443端口都映射到Frontend这个Service的443端口，
+这样不管外部访问哪个Node的IP:8443都可以访问到该Service。如果要对集群外提供服务采用该方式，并且通常在Node的前面加上针对Node物理网卡IP的负载均衡
+LoadBalancer
+在NodePort的基础上，借助第三方的云服务提供Node物理网卡IP的负载均衡。企业中用的不多，因为第三方云服务要额外收费，并且完全可以用免费方案代替
+ExternalName
+相当于给集群外部的一个第三方服务加了一个DNS的CNAME记录，将外部流量引入集群内部
+
+```
+
+###　kubectl expose详解
+- [https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#expose](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#expose)
+
+##  type=NodePort yaml
+```
+kubectl expose deployment m-prometheus-demo --type="NodePort" --port=8090
+kubectl edit svc m-prometheus-demo 
+//
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: 2020-05-28T05:28:04Z
+  labels:
+    run: m-prometheus-demo
+  name: m-prometheus-demo
+  namespace: default
+  resourceVersion: "346289"
+  selfLink: /api/v1/namespaces/default/services/m-prometheus-demo
+  uid: 012d537b-a0a4-11ea-b7c5-0800271d5e97
+spec:
+  clusterIP: 10.254.25.193
+  ports:
+  ## 修改nodePort为固定端口
+  - nodePort: 30001
+    port: 8090
+    protocol: TCP
+    targetPort: 8090
+    name: http
+  selector:
+    run: m-prometheus-demo
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
+```
+
 ## svc:服务相关操作
 
 - 期望

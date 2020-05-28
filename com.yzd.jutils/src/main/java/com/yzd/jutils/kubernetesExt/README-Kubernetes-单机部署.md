@@ -11,6 +11,12 @@
 - [Kubernetes中文手册](https://www.kubernetes.org.cn/docs)
 - [Kubernetes中文社区 | 中文文档](http://docs.kubernetes.org.cn/) -推荐byArvin
 
+## Kubernetes-官方文档
+- [https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.15/](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.15/)
+- [https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
+
+
+
 ## Kubernetes-常用命令
 - [官网](https://kubernetes.io/docs/reference/kubectl/overview/)
 - [K8s的kubectl常用命令](https://www.cnblogs.com/vito-lee/p/11911963.html)
@@ -119,6 +125,7 @@ kubectl get cs
 kubectl get node
 kubectl get service
 kubectl get pod
+kubectl get pods -o wide
 netstat -ntpl
 kubectl get services
 kubectl get deployments
@@ -255,6 +262,44 @@ $ kubectl exec -it [pod_id] -- /bin/sh
 # docker info
 $ docker info
 $ kubectl cluster-info
+```
+
+### K8s-完整部署示例
+```
+docker images
+kubectl run m-prometheus-demo --image=prometheus.demo:v1.0 --port=8090
+kubectl get pods -o wide
+curl -v http://172.17.0.5:8090
+netstat -ntpl
+kubectl get deployments
+kubectl get services
+//创建服务
+kubectl expose deployment m-prometheus-demo
+//通过edit操作设置ports下增加或是修改name
+kubectl edit svc m-prometheus-demo
+kubectl get services
+//扩容与缩容
+#扩容
+kubectl scale deployment m-prometheus-demo --replicas=10
+#缩容
+kubectl scale deployment m-prometheus-demo --replicas=1
+//更新回滚
+#更新应用的镜像从v1.0版本——>v1.1
+kubectl set image deployment m-prometheus-demo m-prometheus-demo=m-prometheus-demo:v1.1
+#确认是否更新成功
+kubectl rollout status deployment m-prometheus-demo
+deployment "m-prometheus-demo" successfully rolled out
+#回滚到上一代版本
+kubectl rollout undo deployment m-prometheus-demo
+deployment "m-prometheus-demo" rolled back
+## 删除所有pod,可以用于模拟pod升级所带来的抖动场景
+kubectl delete pod --all --force --grace-period=0
+```
+
+### 问题解决汇总
+- [kubectl delete pod Terminating 删不掉](https://blog.csdn.net/iouczp/article/details/80302043)
+```
+kubectl delete pod --all --force --grace-period=0
 ```
 
 - 名称简写
