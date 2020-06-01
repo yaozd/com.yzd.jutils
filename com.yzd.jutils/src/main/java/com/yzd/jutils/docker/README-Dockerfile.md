@@ -46,6 +46,8 @@ ENTRYPOINT java ${JAVA_OPTS} -Djava.security.egd=file:/dev/./urandom -jar /app.j
 ```
 - 把jar包构建成镜像
 ```
+//打包时一定要加上tag(v1.0),如果没有tag的话则直接使用lastest。但lastest状态时，K8S会从远程仓库拉取镜像，
+//如果使用标签则如果本地存在镜像就优先使用本地镜像
 docker build -t prometheus.demo:v1.0 .
 //
 docker images
@@ -56,6 +58,7 @@ docker.io/openjdk                       8-jdk-alpine        a3562aa0b991        
 ```
 - 运行刚才构建成的镜像
 ```
+//
 docker run -d -p 18090:8090 --name prometheus.demo prometheus.demo:v1.0
 //查看所有容器，包括关闭的
 docker ps -a
@@ -87,7 +90,12 @@ docker ps
 ### K8s-完整部署示例
 ```
 docker images
+//打包时一定要加上tag(v1.0),如果没有tag的话则直接使用lastest。但lastest状态时，K8S会从远程仓库拉取镜像，
+//如果使用标签则如果本地存在镜像就优先使用本地镜像
 kubectl run m-prometheus-demo --image=prometheus.demo:v1.0 --port=8090
+//查看日志
+kubectl describe deploy m-prometheus-demo
+//
 kubectl get pods -o wide
 curl -v http://172.17.0.5:8090
 netstat -ntpl
