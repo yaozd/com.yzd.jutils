@@ -10,6 +10,13 @@
     - [https://github.com/yaozd/grpc-proxy](https://github.com/yaozd/grpc-proxy) -推荐参考byArvin PS:根据个人习惯做了一些调整，更加方便测试
     - [https://github.com/codahale/grpc-proxy](https://github.com/codahale/grpc-proxy)
 
+## GRPC-基础概念
+- [Grpc中Deadline分析](https://www.jianshu.com/p/f67be6287c1d)
+```
+1.Deadline核心解决的问题，就是在client请求在遇到异常情况时的最大等待时间，减少不必要的阻塞。
+2.GRPC中没有采用传统的timeout方式去处理，而是采用了Deadline机制，主要的区别大致如下
+```
+
 ## [protobuf-maven-plugin插件编译proto文件生成客户端和服务端代码](https://blog.csdn.net/jiangshuanshuan/article/details/100581269)
 ```
 protobuf:compile //编译消息对象

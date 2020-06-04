@@ -21,3 +21,19 @@ WINDOW_UPDATE: 窗口更新帧 (type=0x8)，用于执行流量控制功能，可
 CONTINUATION: 延续帧 (type=0x9)，用于继续传送首部块片段序列，见
 
 ```
+
+## END_HEADERS
+- [https://www.rfc-editor.org/rfc/rfc7540.txt](https://www.rfc-editor.org/rfc/rfc7540.txt)
+- [HTTP2 详解](https://www.jianshu.com/p/e57ca4fec26f)
+```
+A receiving endpoint reassembles the header block by concatenating
+its fragments and then decompresses the block to reconstruct the
+header list.
+//
+A complete header block consists of either:
+a single HEADERS or PUSH_PROMISE frame, with the END_HEADERS flag
+set, or
+a HEADERS or PUSH_PROMISE frame with the END_HEADERS flag cleared
+and one or more CONTINUATION frames, where the last CONTINUATION
+frame has the END_HEADERS 
+```
