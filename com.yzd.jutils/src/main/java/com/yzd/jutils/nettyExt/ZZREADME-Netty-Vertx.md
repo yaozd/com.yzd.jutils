@@ -6,10 +6,19 @@
 - [https://github.com/vert-x3](https://github.com/vert-x3)
 - [vertx-web-client](https://vertx.io/docs/vertx-web-client/java/#_rxjava_2_api)
 - []()
+## Vertx高级开发教程
+- [https://github.com/vietj/advanced-vertx-guide](https://github.com/vietj/advanced-vertx-guide)
+- [vert.x中future的简单使用](https://blog.csdn.net/qq_38366063/article/details/105906296)
+- [Vert.x Future 解决复杂查询](https://blog.csdn.net/weixin_33856370/article/details/88112968)
+
 ## Vertx
 - [Vertx学习一：这玩意是到底是个啥](https://blog.csdn.net/lizhou828/article/details/93297153)
 - [VERT.X 线程模型揭秘](https://www.cnblogs.com/zhangboyu/p/7452605.html)
 - [Vert.x Web Client](https://www.cnblogs.com/heqiyoujing/p/9746253.html)
+### Vert.x核心组件
+- [Vert.x核心组件概览](https://www.dazhuanlan.com/2019/10/17/5da7749d4e9eb/)
+- [https://vertx.io/docs/vertx-core/java/](https://vertx.io/docs/vertx-core/java/)
+- []()
 - []()
 - []()
 
@@ -27,6 +36,28 @@ Verticles在Vert.x实例中运行。 一个Vertx可以承载多个verticles，�
 Vert.x使用相对较少的线程来创建一个事件循环和执行verticles。 但在某些情况下，需要verticle做一些要么昂贵计算，或可能阻塞，如连接到数据库。 当发生这种情况Vert.x可以让你标记verticle实例作为worker verticle 。
 Vert.x确保worker verticles将永远不会被同时执行
 ```
+### Verticle也有三种类型
+- 
+- [worker_verticles](https://vertx.io/docs/vertx-core/java/#worker_verticles)
+```
+Vert.x中一共有三种类型的contexts
+Eventloop Context
+Worker Context
+Multi-Thread worker Context
+//
+Vert.x Context中三种Context对应，Verticle也有三种类型，简单说下每种Verticle特点。
+# Standard Verticle
+这是最常用的Verticle类型, 这种Verticle会被指派到创建和启动时的Eventloop线程上，
+Vert.x会保证你在这个Verticle实例上调用任何的handler操作将在同样的eventloop线程上面执行。
+# Worker Verticle
+Worker Verticle目标是为了执行阻塞的代码，不会在Eventloop上执行，而是从Vert.x worker线程池中拿出一个线程来执行。
+这样的话即使进行的是阻塞操作，它也不会让eventloop阻塞挂掉。Worker verticle在同一个时间片内只会被Vert.x执行在一个线程内，
+它不会被并发执行，但是不同时间段有可能被不同线程执行。
+# Multi-Thread worker Verticle
+Multi-Thread worker Verticle跟Worker Verticle很像，不同的是，
+它会被多个线程执行。一旦使用了这种Verticle就一定得注意它在多个线程之间共享的状态所带来的问题。
+```
+
 ### 示例参考
 - [https://github.com/vert-x3/vertx-examples](https://github.com/vert-x3/vertx-examples)
 - websocket
