@@ -1,3 +1,10 @@
+- [Postman简单用法以及转cURL等命令的正确姿势](https://blog.csdn.net/w605283073/article/details/94902637) -网络故障时，应急处理-curl使用IP直连方式
+```
+curl --location --request POST 'http://127.0.0.1:9312/applyConfig' \
+--header 'Content-Type: application/json' \
+--data-raw 'json data'
+```
+
 - 通过chrome的调试器获取curl
     ```
     chrome 浏览器生成 curl文件，打开开发者模式(快捷键F12)=>Network=>Copy=>Copy as cURL 

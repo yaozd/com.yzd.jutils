@@ -12,6 +12,11 @@
     - [https://github.com/yaozd/grpc-proxy](https://github.com/yaozd/grpc-proxy) -推荐参考byArvin PS:根据个人习惯做了一些调整，更加方便测试
     - [https://github.com/codahale/grpc-proxy](https://github.com/codahale/grpc-proxy)
 
+### GRPC双向流
+- [GRPC单向/双向流](https://www.cnblogs.com/bluestorm/p/10552846.html)
+- [grpc双向流式](https://gitee.com/sunnymore/grpc_bidirectional_stream)
+- []()
+
 ## GRPC-基础概念
 - [Grpc中Deadline分析](https://www.jianshu.com/p/f67be6287c1d)
 ```

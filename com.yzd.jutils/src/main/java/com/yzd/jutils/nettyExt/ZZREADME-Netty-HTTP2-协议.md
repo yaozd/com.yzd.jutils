@@ -2,7 +2,14 @@
 - [HTTP2 详解](https://www.jianshu.com/p/e57ca4fec26f)
 - [https://www.rfc-editor.org/rfc/rfc7540.txt](https://www.rfc-editor.org/rfc/rfc7540.txt)
 - [https://github.com/abbshr/rfc7540-translation-zh_cn](https://github.com/abbshr/rfc7540-translation-zh_cn)
+- [https://httpwg.org/specs/rfc7540.html](https://httpwg.org/specs/rfc7540.html)
 - []()
+
+### streamId
+- [https://httpwg.org/specs/rfc7540.html#StreamIdentifiers](https://httpwg.org/specs/rfc7540.html#StreamIdentifiers)
+```
+Stream Dependency: 指定一个 stream identifier，代表当前流所依赖的流的 id，存在则代表 PRIORITY flag 被设置
+```
 
 ### [帧的结构](https://www.jianshu.com/p/e57ca4fec26f)
 ```
@@ -20,6 +27,27 @@ GOAWAY: GOWAY 帧 (type=0x7)，用于发起关闭连接的请求，或者警示�
 WINDOW_UPDATE: 窗口更新帧 (type=0x8)，用于执行流量控制功能，可以作用在单独某个流上 (指定具体 Stream Identifier) 也可以作用整个连接 (Stream Identifier 为 0x0)，只有 DATA 帧受流量控制影响。初始化流量窗口后，发送多少负载，流量窗口就减少多少，如果流量窗口不足就无法发送，WINDOW_UPDATE 帧可以增加流量窗口大小
 CONTINUATION: 延续帧 (type=0x9)，用于继续传送首部块片段序列，见
 
+```
+
+### Error Codes
+```
+https://www.rfc-editor.org/rfc/rfc7540.txt
+Error Codes
+//
+NO_ERROR(0L),		        				没有错误
+PROTOCOL_ERROR(1L),                         协议错误
+INTERNAL_ERROR(2L),                         内部错误
+FLOW_CONTROL_ERROR(3L),                     流控制错误
+SETTINGS_TIMEOUT(4L),                       设置超时
+STREAM_CLOSED(5L),                          流关闭
+FRAME_SIZE_ERROR(6L),                       帧大小错误
+REFUSED_STREAM(7L),                         拒绝流
+CANCEL(8L),                                 取消
+COMPRESSION_ERROR(9L),                      压缩错误
+CONNECT_ERROR(10L),                         连接错误
+ENHANCE_YOUR_CALM(11L),                     提高你的平静
+INADEQUATE_SECURITY(12L),                   安全不足
+HTTP_1_1_REQUIRED(13L);                     HTTP_1_1要求
 ```
 
 ## END_HEADERS
