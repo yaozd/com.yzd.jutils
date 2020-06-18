@@ -37,7 +37,14 @@ PS:0x002:SYN 建立连接
 - [Tcp抓包以及tcp状态解释](https://blog.csdn.net/zouqingfang/article/details/44452153)
 - [TCP RETRANSMISSION 连接超时](https://www.cnblogs.com/bobo-wq/p/11645256.html)
 - [关于抓包出现TCP DUP ACK问题](https://blog.csdn.net/doitsjz/article/details/73457447)
+- [wireshark的统计功能](https://www.jianshu.com/p/e7b3760c25b2)
 - []()
+
+## 当用户面对大量连续断开、大量数据帧丢失，这种特性可以帮助排错
+- []()
+```
+统计=》Flow Graph 流量图
+```
 
 ## Tcp抓包以及tcp状态解释
 - [Tcp抓包以及tcp状态解释](https://blog.csdn.net/zouqingfang/article/details/44452153)

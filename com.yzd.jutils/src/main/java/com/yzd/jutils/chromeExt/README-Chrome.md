@@ -13,6 +13,10 @@ ctrl+f5
 ctrl+shift+delete
 ```
 
+### [Chrome浏览器将网页保存为pdf文件几种方法介绍](https://jingyan.baidu.com/article/5bbb5a1bebd34213eba17994.html)
+1. 浏览网页，按下Ctrl+p 打印页面，进入打印预览。
+2. 点选目标打印机下面的"更改"按钮，在选择目标打印机中选择"另存为PDF"
+
 ### chrome-常用插件
 - [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)-提供方：tampermonkey.net
 - [baidu-translate百度翻译：网页翻译、海淘神器](https://chrome.google.com/webstore/detail/%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91%EF%BC%9A%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E3%80%81%E6%B5%B7%E6%B7%98%E7%A5%9E%E5%99%A8/edhchknefojhifoiebpcbkhcjlkkklci)-推荐使用byArvin-提供方：fanyi.baidu.com

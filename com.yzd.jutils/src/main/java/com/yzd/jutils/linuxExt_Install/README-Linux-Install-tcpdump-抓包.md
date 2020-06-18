@@ -7,6 +7,9 @@ tcpdump -i eth0 -s 0 -w a.acp
 tcpdump -i enp0s3 -s 0 -w a.acp
 抓取指定端口
 tcpdump -i eth0 -s 0 -w 80.acp port 80
+抓包示例：推荐参考byArvin
+tcpdump tcp -i eth0 -s 0 and port 80 -w apirouter.acp
+
 ```
 ##　[Tcp抓包以及tcp状态解释](https://blog.csdn.net/zouqingfang/article/details/44452153)－首要参考byArvin
 - tcpdump抓包命令
@@ -45,3 +48,4 @@ tcpdump -i eth0 -s 0 -w 80.acp port 80
     ————————————————
     原文链接：https://blog.csdn.net/zouqingfang/article/details/44452153
     ```
+  

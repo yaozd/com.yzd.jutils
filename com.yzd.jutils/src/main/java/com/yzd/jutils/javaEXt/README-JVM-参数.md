@@ -25,7 +25,11 @@ jvm参数
 -XX:+HeapDumpOnOutOfMemoryError 
 -XX:HeapDumpPath=/home/logs/HeapDump_Gc/${HOSTNAME}.hprof 
 -Dfile.encoding=UTF-8
-
+=====
+说明： 
+Xms1024m 表示最小堆内存1024M， Xmx4096m 表示最大堆内存4096M， Xmn512m 表示新生代512M。以上三个参数可以根据实际情况调整。
+调整规则:xmn设定为xms一半大小即可，如果内存使用较小又稳定，可以最大堆=最小堆，
+否则可以将最小堆调大（实际上最好xms=xmx，因为应用情况复杂为了兜底，调大xmx），其它参数不需要调整。
 ```
 ### [-Xms和-Xmx的值设置成一样 Java不断地吃内存](https://blog.csdn.net/Truong/article/details/71126868)
 
