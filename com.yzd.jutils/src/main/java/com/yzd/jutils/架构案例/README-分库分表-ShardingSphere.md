@@ -7,3 +7,5 @@
 ## 示例
 - [Sharding-jdbc分库分表入门实例](https://blog.csdn.net/wk52525/article/details/89020367)
 - [springboot整合sharding-jdbc分库分表最全详解](https://blog.csdn.net/weixin_43168010/article/details/100215988)
+- [ShardingSphere x Seata，一致性更强的分布式数据库中间件](https://developer.aliyun.com/article/712037)
+- [蚂蚁金服服务注册中心如何实现 DataServer 平滑扩缩容 | SOFARegistry 解析](https://developer.aliyun.com/article/759414)

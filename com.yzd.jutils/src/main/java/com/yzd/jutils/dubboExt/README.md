@@ -156,3 +156,6 @@ Provider上尽量多配置Consumer端的属性，让Provider实现者一开始�
 
 
 ```
+
+## 参考
+- [Apache Dubbo服务自省架构设计与实现](https://developer.aliyun.com/article/765345)
