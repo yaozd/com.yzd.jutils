@@ -28,3 +28,10 @@
     - []()
  
  
+ ## LEAK: ByteBuf.release() was not called before it's garbage-collected
+ - [1. in.readBytes 导致堆外内存泄漏](https://www.jianshu.com/p/944ab8e0ef34)
+```
+ResourceLeakDetector.setLevel(ResourceLeakDetector.Level.ADVANCED);
+-Dio.netty.leakDetectionLevel=advanced
+```
+ 
