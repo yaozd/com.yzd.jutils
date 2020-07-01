@@ -13,10 +13,8 @@
 (function() {
     'use strict';
     //alert(1);
-    // Your code here...
+    const $ = window.$;
     function check(){
-
-    }
         console.log("执行检查"+new Date());
         $.get("http://你的域名/",function(data,status){
             //console.log(data);
