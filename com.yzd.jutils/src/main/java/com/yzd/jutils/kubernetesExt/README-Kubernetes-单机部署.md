@@ -14,8 +14,36 @@
 ## Kubernetes-官方文档
 - [https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.15/](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.15/)
 - [https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
+- [Kubernetes的核心概念（Concepts）](https://www.jianshu.com/p/04f7bd1752d5)
 
-
+## k8s部署pod到指定的节点上
+- [k8s部署pod到指定的节点上](https://www.jianshu.com/p/4e7e3718787d)
+```
+1、给节点打标签
+kubectl label nodes k8snode-03 slave=3
+2、部署时指定标签
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+name: test
+spec:
+serviceName: "test"
+replicas: 2
+selector:
+  matchLabels:
+    app: test
+template:
+  metadata:
+    labels:
+      app: test
+  spec:
+    containers:
+      - name: test
+        imagePullPolicy: IfNotPresent
+        image: registry/test-image:1.0.1
+    nodeSelector:
+      slave: "3"
+```
 
 ## Kubernetes-常用命令
 - [官网](https://kubernetes.io/docs/reference/kubectl/overview/)
