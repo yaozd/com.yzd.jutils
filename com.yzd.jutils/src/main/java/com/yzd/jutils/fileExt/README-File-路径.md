@@ -1,7 +1,7 @@
 ## Java中文件的相对路径与绝对路径
 - [Java中文件的相对路径与绝对路径](https://blog.csdn.net/u011983531/article/details/48443195)-推荐参考byArvin
 - [Apache-common-io](https://www.jianshu.com/p/dae8b71f9c98)-Apache-common-io帮助类
-
+- [springboot获取根目录及资源路径及解决jar发布时的出现D:/export-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/static](https://blog.csdn.net/Shiyxu/article/details/100762311)
 
 ### [getPath()、getAbsolutePath()、getCanonicalPath()的区别](https://blog.csdn.net/u011983531/article/details/48443195)
 ```
@@ -38,4 +38,7 @@ file:/E:/workspace/Test/bin/testpackage/
 file:/E:/workspace/Test/bin/
 上面说到的【path以’/'开头时，则是从ClassPath根下获取】，在这里就是相当于bin目录(Eclipse环境下)
 
+```
+```
+InputStream inputStream=this.getClass().getResourceAsStream("/static/temp/hello.ftl");
 ```
