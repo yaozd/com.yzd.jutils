@@ -6,6 +6,10 @@
 -[蚂蚁金服开源 SOFAJRaft：生产级 Java Raft 算法库](https://blog.csdn.net/weixin_34356310/article/details/91474270)
 -[https://github.com/wenweihu86/raft-java](https://github.com/wenweihu86/raft-java)
 -[]()
+
+## 应用缓存-RocksDB
+- [Java RocksDB的详细介绍](https://blog.csdn.net/qy20115549/article/details/89393512)
+
 ## 脑裂问题
 -[分布式系统选举算法及脑裂](https://blog.csdn.net/m0_37609579/article/details/100189166)
 -[分布式脑裂问题分析](https://blog.csdn.net/xinquanv1/article/details/103126372)-推荐byArvin
