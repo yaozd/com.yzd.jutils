@@ -65,3 +65,16 @@ a HEADERS or PUSH_PROMISE frame with the END_HEADERS flag cleared
 and one or more CONTINUATION frames, where the last CONTINUATION
 frame has the END_HEADERS 
 ```
+
+## flow-control window
+```
+https://www.rfc-editor.org/rfc/rfc7540.txt      page-22
+HTTP/2 provides for flow control through use of the WINDOW_UPDATE frame
+Deployments that do not require this capability can advertise a flow-
+control window of the maximum size (2^31-1) and can maintain this
+window by sending a WINDOW_UPDATE frame when any data is received.
+
+默认：2^20     1048576
+- 524288次调用 是2的19次方
+最大值：2^31-1        2147483647
+```
