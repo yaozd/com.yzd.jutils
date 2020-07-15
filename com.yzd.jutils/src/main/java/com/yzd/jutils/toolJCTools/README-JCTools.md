@@ -1,5 +1,7 @@
 # JCTools
 - [https://github.com/JCTools/JCTools](https://github.com/JCTools/JCTools)
+- [JCTools简介](https://www.jianshu.com/p/14dcfd84704f)
+- [System.identityHashCode(obj) 与 obj.hashcode()](https://www.jianshu.com/p/24fa4bdb9b9d)
 
 ## [JCTools 简介]()
 > JCTools (Java Concurrency Tools) 提供了一系列非阻塞并发数据结构（标准 Java 中缺失的），
