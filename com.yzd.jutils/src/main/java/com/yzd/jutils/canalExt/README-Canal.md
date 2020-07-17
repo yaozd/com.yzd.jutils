@@ -109,5 +109,67 @@ isNull      [值是否为null]
 value       [具体的内容，注意为string文本]  
 ```
 
+### 修改slave读取的位置
+- [修改slave读取的位置](https://blog.csdn.net/fst438060684/article/details/82593407)
+```
+修改conf/examlpe里面的meta.data
+
+journalName=也就是mysql的binlog的名字
+
+position=也就是binlog的位置
+
+timestamp=也就是时间戳
+
+可以通过一下语句找到mysql 的binlog某个位置的具体信息，从而跳过或者进行别的操作：
+
+mysqlbinlog --start-position=281985638 --base64-output=decode-rows -v /pydtdata/mysqllog/binlog/mylogbin.000435>>/pydata/binlog20180906.sql
+
+## --stop-position=400000000
+## --database=pydtcredit_prod_2
+
+```
+
 ## 案例
 - [缓存一致性和跨服务器查询的数据异构解决方案canal](https://www.cnblogs.com/Leo_wl/p/7456892.html)
+- [使用canal client-adapter完成mysql到es数据同步教程(包括全量和增量)](https://blog.csdn.net/puhaiyang/article/details/100171395)
+- [基于canal client 自实现canal同步es(增量,全量)](https://blog.csdn.net/qq_38665235/article/details/102514649)
+    ```
+     由于业务数据量较大,单表超亿,根据实际业务对数据库进行分库分表,es中存储主键和账号对应关系,访问数据库时先送es中获取主键再查db,这样可以直接打到对应分片上秒回
+    
+     起初打算采用官方提供的工具实现,后续发现官方的不太符合我们的需求(或许是自己没搞明白官方的工具),并切我们是分库分表的,按照官方的配置太过繁琐.一个表到底层就分了几百张表,所以决定就基于canal client自己实现了同步es,全量和增量.不过踩了不少得吭.
+    
+    采用es的bulk api批量更新 .设置自定义模板,后续翻阅官方的源码,其实大致也是这么实现的,只不过官方的具有通用性而已.
+    
+    ```
+- [实战 | canal 实现Mysql到Elasticsearch实时增量同步](https://blog.csdn.net/laoyang360/article/details/88600799)-推荐参考byArvin
+```
+5、坑
+坑1：canal.adapter-1.1.2 启动失败
+启动失败：https://github.com/alibaba/canal/issues/1513
+该问题在1.1.3版本已经修复。
+
+坑2：不支持全量同步
+全量同步建议使用logstash或者其他工具:
+
+坑3：必须先在ES创建好对应索引的Mapping
+否则，会没有识别索引，会报写入错误。
+
+坑4：多张表的同步如何实现？
+在canal.adapter-1.1.3/conf/es的新增*.yml配置即可。
+也就是说，可以一张Mysql表一个配置文件。
+
+坑5：空指针异常错误
+解决方案：sql语句部分，指定对应库表id为ES中的_id，否则会报错。
+举例：
+
+select sx_sid as _id, name from baidu_info
+1
+坑6：基于 row 模式的 binlog 会不会记录变更前、变更后的值呢？
+
+INSERT:只有变更后的值。
+UPDATE:包含了变更前、变更后的值。
+DELETE:变更前的值
+关于全量同步：https://github.com/alibaba/canal/issues/376
+
+```
+##全量同步
