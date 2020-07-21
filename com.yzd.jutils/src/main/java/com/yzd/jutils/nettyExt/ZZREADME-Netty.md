@@ -35,3 +35,58 @@ ResourceLeakDetector.setLevel(ResourceLeakDetector.Level.ADVANCED);
 -Dio.netty.leakDetectionLevel=advanced
 ```
  
+ ## netty IOException: 你的主机中的软件中止了一个已建立的连接
+```
+产生原因：
+AdvancedLeakAwareByteBuf对象在channel关闭状态时，进入到channel read方法产生的
+AdvancedLeakAwareByteBuf(PooledUnsafeDirectByteBuf(ridx: 0, widx: 8, cap: 512))
+解决方案：
+@Override
+public void handleChannelRead(ChannelHandlerContext ctx, Object msg){
+    if(!(msg instanceof HttpObject)){
+        System.out.println(msg);
+        ReferenceCountUtil.release(msg);
+        return;
+    }
+}
+```
+## io.netty.util.IllegalReferenceCountException: refCnt: 0, decrement: 1
+```
+原因分析：channelInactive时出错
+private void channelInputClosed(ChannelHandlerContext ctx, boolean callChannelInactive) {
+    CodecOutputList out = CodecOutputList.newInstance();
+    try {
+        channelInputClosed(ctx, out);
+    } catch (DecoderException e) {
+        throw e;
+    } catch (Exception e) {
+        throw new DecoderException(e);
+    } finally {
+        try {
+            if (cumulation != null) {
+                cumulation.release();
+                cumulation = null;
+            }
+            int size = out.size();
+            fireChannelRead(ctx, out, size);
+            if (size > 0) {
+                // Something was read, call fireChannelReadComplete()
+                ctx.fireChannelReadComplete();
+            }
+            if (callChannelInactive) {
+                ctx.fireChannelInactive();
+            }
+        } finally {
+            // Recycle in all cases
+            out.recycle();
+        }
+    }
+}
+```
+## io.netty.util.IllegalReferenceCountException: refCnt: 0
+```
+原因分析：writeData时数据已经被回收
+frameWriter.writeData(channelHandlerContext, frameWrapper.getStreamId(), dataFrame.content(),
+                        dataFrame.padding(), dataFrame.isEndStream(), promise);
+```
+ 
