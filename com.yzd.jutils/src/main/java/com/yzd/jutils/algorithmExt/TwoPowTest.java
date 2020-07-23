@@ -60,7 +60,7 @@ public class TwoPowTest {
             b++;
         }
         double c = val - n;
-        System.out.println("val-n=" + c);
+        System.out.println(b+"次方:val-n=" + c);
         return c == 0 ? b : b - 1;
     }
 
