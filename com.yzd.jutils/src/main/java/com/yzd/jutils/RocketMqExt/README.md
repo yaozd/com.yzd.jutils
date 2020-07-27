@@ -3,6 +3,8 @@
 https://github.com/atliwen/RocketMqCurrencyBoot
 https://github.com/yaozd/RocketMqCurrencyBoot`
 ``
+- [RabbitMQ都写了，RocketMQ怎么能落下](https://my.oschina.net/u/4447432/blog/4429039)
+    - [https://github.com/erlieStar/rocketmq-examples](https://github.com/erlieStar/rocketmq-examples)
 对MQ高级封装。 支持规则匹配 转发消息、外调 WEB API、内销。 容错次数设置等..
 
 

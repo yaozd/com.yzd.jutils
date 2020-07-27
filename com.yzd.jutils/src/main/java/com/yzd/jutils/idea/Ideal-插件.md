@@ -53,7 +53,13 @@
     ```
 - singleton （PS:by WangYi 单例模式）
 - [gradianto](https://plugins.jetbrains.com/plugin/12334-gradianto) （PS:主题，保护眼睛）
+- Translation-必备的翻译插件
+    ```
+    使用快捷键 command+ctrl+u(mac) / shift+ctrl+y(win/linux)
+    ```
+- Codota—代码智能提示
 
+## [安利10个让你爽到爆的IDEA必备插件](https://my.oschina.net/u/4447432/blog/4366920)
 ## [IntelliJ IDEA 18个常用插件，动图演示，让效率成为习惯](https://blog.csdn.net/lin443514407lin/article/details/86692736)
 ```
 阿里代码规约检测

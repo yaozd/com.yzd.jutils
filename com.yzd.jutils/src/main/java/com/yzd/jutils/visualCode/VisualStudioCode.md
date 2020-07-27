@@ -22,6 +22,10 @@ Visual Studio Code必备插件
 https://www.cnblogs.com/huanghuali/p/9525153.html
 Visual Studio Code 常用插件分享
 https://blog.csdn.net/weixin_42417806/article/details/102184302
+8.将 Draw.io 集成到 VS Code 中 vscode-drawio
+https://www.oschina.net/p/vscode-drawio
+PS:画图|架构图
+
 ``` 
 - 两个文件进行比较
     - [用Visual Studio Code对两个文件进行比较](https://blog.csdn.net/qq_32642107/article/details/89343107)

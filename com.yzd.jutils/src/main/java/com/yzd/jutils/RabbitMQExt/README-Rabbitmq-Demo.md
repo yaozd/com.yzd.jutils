@@ -1,5 +1,8 @@
 > Spring-boot-RabbitMQ参考代码-byArvin
 - [https://github.com/yaozd/rabbitmq/tree/dev-yzd](https://github.com/yaozd/rabbitmq/tree/dev-yzd)
+- [全网最全RabbitMQ总结，别再说你不会RabbitMQ](https://mp.weixin.qq.com/s?__biz=MzIxMzk3Mjg5MQ==&mid=2247484826&idx=1&sn=a464cf9fac2c21718e951e2c2f5efbe0)-特别推荐参考byArvin
+    - [https://github.com/erlieStar/rabbitmq-example](https://github.com/erlieStar/rabbitmq-example)
+    - [全网最全RabbitMQ总结，别再说你不会RabbitMQ](https://my.oschina.net/u/4447432/blog/3160824)
 
 ### [springboot整合rabbitmq的五种模式,开启的消息确认机制](https://github.com/a870368162/SpringBoot-RabbitMQ)
 ```
