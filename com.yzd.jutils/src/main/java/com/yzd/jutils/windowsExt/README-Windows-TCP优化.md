@@ -1,4 +1,5 @@
 ### Window TCP连接优化
+- [于 No buffer space available (maximum connections reached?): connect 的处理](https://www.cnblogs.com/tudachui/p/9889649.html)
 ```
 windows客户端
 打开注册表：regedit HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\ Services\TCPIP\Parameters

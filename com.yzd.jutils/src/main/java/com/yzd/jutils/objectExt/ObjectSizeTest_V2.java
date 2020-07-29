@@ -30,6 +30,12 @@ public class ObjectSizeTest_V2 {
         System.out.println("humanSizeOf:"+RamUsageEstimator.humanSizeOf(new Person(1,"1","2",3)));
         System.out.println("shallowSizeOf:"+RamUsageEstimator.shallowSizeOf(new Person(1,"1","2",3)));
         System.out.println("sizeOf:"+RamUsageEstimator.sizeOf(new Person(1,"1","2",3)));
+        //字节单位换算
+        System.out.println(RamUsageEstimator.humanReadableUnits(10000));
+        //50 MB
+        System.out.println(RamUsageEstimator.ONE_MB*50);
+        System.out.println(RamUsageEstimator.humanReadableUnits(RamUsageEstimator.ONE_MB*50));
+
     }
     @Test
     public void allFieldSizeTest(){
