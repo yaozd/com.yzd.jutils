@@ -6,6 +6,27 @@
 - [如何生成每秒百万级别的 HTTP 请求？](https://my.oschina.net/qiangzigege/blog/519340)
 - [几乎所有的WEB压力测试工具 WEB压力测试工具大全](https://www.iamle.com/archives/2173.html)
 
+## 测试报告模板
+- [Nacos服务发现性能测试报告](https://nacos.io/zh-cn/docs/nacos-naming-benchmark.html)
+- [Nacos服务配置性能测试报告](https://nacos.io/zh-cn/docs/nacos-config-benchmark.html)
+```
+测试环境
+1.环境
+指标	参数
+机器	CPU 16核，内存32G
+集群规模	3节点
+Nacos版本	1.0.0
+//
+2.设置启动参数
+//
+3.测试场景
+以下测试场景都是服务发现重要接口：
+//
+4.测试数据
+//
+5.测试结论
+```
+
 ## 软件测试之性能测试
 - [软件测试之性能测试](https://blog.csdn.net/bit666888/article/details/81746538)
 
