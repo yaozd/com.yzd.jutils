@@ -13,6 +13,11 @@
 注：推荐存储节点使用influxDB-byArvin-201809211138
 5.grafna图表可视化
 ```
+### 教程
+- [SpringBoot 2.0 + 阿里巴巴 Sentinel 动态限流实战](https://www.cnblogs.com/smallSevens/p/11531534.html)
+- [SpringBoot 2.0 + InfluxDB+ Sentinel 实时监控数据存储](https://www.cnblogs.com/smallSevens/p/11576263.html)
+- [SpringBoot 2.0 + Nacos + Sentinel 流控规则集中存储](https://www.cnblogs.com/smallSevens/p/11553695.html)
+
 #### [CrateDB-nosql数据库](https://crate.io/pricing/)
 
 ```

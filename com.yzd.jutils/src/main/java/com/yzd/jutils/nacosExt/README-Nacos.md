@@ -76,6 +76,8 @@ s/conf/	--logging.config=/home/admin/nacos/conf/nacos-logback.xml	nacos.nacos
 - [阿里的dubbo注册中心要放弃zookeeper, 而用Nacos](https://my.oschina.net/u/867417/blog/1865971)
 
 ## 示例
+### 流控规则集中存储
+- [SpringBoot 2.0 + Nacos + Sentinel 流控规则集中存储](https://www.cnblogs.com/smallSevens/p/11553695.html)
 ### Spring boot
 - [SpringBoot使用Nacos作为配置中心服务和服务注册中心](https://blog.csdn.net/zjcjava/article/details/88316190)
 - [Nacos地图](https://blog.csdn.net/zjcjava/article/details/88316190)
