@@ -11,5 +11,9 @@
 - 服务发现与注册- Nacos
 - apm
     - [Zipkin、Jaeger、SkyWalking、OpenTracing](https://blog.csdn.net/weixin_34268310/article/details/91438444)
+- SQL自动检查神器
+    - [SQL自动检查神器-Yearning MYSQL 是一个SQL语句审核平台](https://www.jianshu.com/p/099a9282229c)
+-
+-
 -
 ## 敏捷开发-故事地图

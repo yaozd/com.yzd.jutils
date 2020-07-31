@@ -89,3 +89,11 @@ PS:CONCAT的方式目前测试也是可以走索引的。
 ---------------------
 
 ---------------------
+
+### [因用了Insert into select语句，同事被开除了！](https://www.jianshu.com/p/88c58a09f95a)
+```
+在默认的事务隔离级别下：
+insert into order_record select * from order_today 加锁规则是：
+order_record 表锁，order_today 逐步锁（扫描一个锁一个）。
+
+```
