@@ -105,6 +105,9 @@ kubectl get services
 kubectl expose deployment m-prometheus-demo
 //通过edit操作设置ports下增加或是修改name
 kubectl edit svc m-prometheus-demo
+//PS:调整name
+//"ports":[{"name":"http","port":80,"protocol":"TCP"}]
+//"ports":[{"name":"grpc","port":80,"protocol":"TCP"}]
 kubectl get services
 //扩容与缩容
 #扩容
