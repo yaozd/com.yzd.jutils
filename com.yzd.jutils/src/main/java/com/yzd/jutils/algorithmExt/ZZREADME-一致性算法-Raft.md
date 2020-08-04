@@ -1,3 +1,5 @@
+# Raft 论文
+- [寻找一种易于理解的一致性算法（扩展版）](https://github.com/maemual/raft-zh_cn/blob/master/raft-zh_cn.md)
 ## 一致性算法-共识（Raft）算法
 - [共识（Raft）算法](https://blog.csdn.net/m0_37609579/article/details/100189973)
 - [编写你的第一个 Java 版 Raft 分布式 KV 存储](https://www.cnblogs.com/stateis0/p/10259339.html)
