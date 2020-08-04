@@ -1,19 +1,19 @@
 ## 一致性算法-共识（Raft）算法
--[共识（Raft）算法](https://blog.csdn.net/m0_37609579/article/details/100189973)
--[编写你的第一个 Java 版 Raft 分布式 KV 存储](https://www.cnblogs.com/stateis0/p/10259339.html)
+- [共识（Raft）算法](https://blog.csdn.net/m0_37609579/article/details/100189973)
+- [编写你的第一个 Java 版 Raft 分布式 KV 存储](https://www.cnblogs.com/stateis0/p/10259339.html)
     - [https://github.com/stateIs0/lu-raft-kv](https://github.com/stateIs0/lu-raft-kv)
--[Raft算法的Java实现](https://blog.csdn.net/qq_33797928/article/details/91041381)-推荐参考byArvin(帮助理解Raft算法)
--[蚂蚁金服开源 SOFAJRaft：生产级 Java Raft 算法库](https://blog.csdn.net/weixin_34356310/article/details/91474270)
--[https://github.com/wenweihu86/raft-java](https://github.com/wenweihu86/raft-java)
+- [Raft算法的Java实现](https://blog.csdn.net/qq_33797928/article/details/91041381)-推荐参考byArvin(帮助理解Raft算法)
+- [蚂蚁金服开源 SOFAJRaft：生产级 Java Raft 算法库](https://blog.csdn.net/weixin_34356310/article/details/91474270)
+- [https://github.com/wenweihu86/raft-java](https://github.com/wenweihu86/raft-java)
 -[]()
 
 ## 应用缓存-RocksDB
 - [Java RocksDB的详细介绍](https://blog.csdn.net/qy20115549/article/details/89393512)
 
 ## 脑裂问题
--[分布式系统选举算法及脑裂](https://blog.csdn.net/m0_37609579/article/details/100189166)
--[分布式脑裂问题分析](https://blog.csdn.net/xinquanv1/article/details/103126372)-推荐byArvin
--[脑裂问题以及如何避免](https://blog.csdn.net/u014156013/article/details/81226424)-案例
+- [分布式系统选举算法及脑裂](https://blog.csdn.net/m0_37609579/article/details/100189166)
+- [分布式脑裂问题分析](https://blog.csdn.net/xinquanv1/article/details/103126372)-推荐byArvin
+- [脑裂问题以及如何避免](https://blog.csdn.net/u014156013/article/details/81226424)-案例
 ```
 1 "脑裂"定义
 在一个高可用系统中，当联系着的节点断开联系时，本来为一个整体的系统，分裂成两个独立节点，两个节点开始争抢共享资源造成系统混乱、数据损坏的现象，成为“脑裂”。
