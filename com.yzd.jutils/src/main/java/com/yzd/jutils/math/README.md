@@ -21,3 +21,10 @@ if(r==1) //大于
 if(r==-1) //小于
 
 ```
+
+### java 二进制和十进制相互转化
+```
+十进制转二进制：Integer.toBinaryString(int i);
+
+二进制转十进制：Integer.valueOf("0101",2).toString;
+```

@@ -13,7 +13,10 @@
     - [Zipkin、Jaeger、SkyWalking、OpenTracing](https://blog.csdn.net/weixin_34268310/article/details/91438444)
 - SQL自动检查神器
     - [SQL自动检查神器-Yearning MYSQL 是一个SQL语句审核平台](https://www.jianshu.com/p/099a9282229c)
--
+- redis实现延迟消息队列
+    - [https://github.com/yangwenjie88/delay-queue](https://github.com/yangwenjie88/delay-queue)
+    - [基于Redis的延时任务队列](https://blog.csdn.net/liuyanglglg/article/details/96299435)
+- [EventBus-实现java状态机](https://www.jianshu.com/p/8def04b34b3c) -推荐参考byArvin
 -
 -
 ## 敏捷开发-故事地图
