@@ -1,3 +1,5 @@
+## HTTP状态码
+- [HTTP状态码](https://baike.baidu.com/item/HTTP%E7%8A%B6%E6%80%81%E7%A0%81/5053660?fr=aladdin)
 ## HTTP-状态码
 - [服务器出现 HTTP 400、404、500、502 错误原因及解决方法](https://blog.51cto.com/13293070/2051786)
     - 1xx – 肯定的初步答复
