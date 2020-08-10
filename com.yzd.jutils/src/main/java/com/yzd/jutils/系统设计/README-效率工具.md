@@ -1,6 +1,11 @@
 ## 效率工具
 - SSO (单点登录)
+    - 支持按钮级控制、分级授权、分级管理
+    - [http://www.xuxueli.com/xxl-sso/](https://gitee.com/xuxueli0323/xxl-sso)
+    - [https://kawhii.github.io/sso](https://gitee.com/Kawhi-Carl/sso)
     - [基于Spring Cloud，写了一个单点登陆的starter](https://my.oschina.net/u/4447432/blog/4366850)
+    - 淘宝登录或微信登录时，建议设置两个ID：登录ID,与用户ID。做为订单数据在用户绑定与解绑时，关系拆分。订单记录：订单ID,登录ID,用户ID
+    - [https://github.com/apereo/cas](https://github.com/apereo/cas) -Central Authentication Service (CAS)
 - 接口管理平台
     - [BAT都在使用的开源接口管理平台](https://my.oschina.net/u/4447432/blog/4366974)
     - [https://github.com/YMFE/yapi](https://github.com/YMFE/yapi)
@@ -16,7 +21,12 @@
 - redis实现延迟消息队列
     - [https://github.com/yangwenjie88/delay-queue](https://github.com/yangwenjie88/delay-queue)
     - [基于Redis的延时任务队列](https://blog.csdn.net/liuyanglglg/article/details/96299435)
+    - [xxL-mq](http://www.xuxueli.com/xxl-mq/)
+    ```
+    一款轻量级分布式消息队列，支持 "并发消息、串行消息、广播消息、延迟消息、事务消息、失败重试、超时控制" 等消息特性。现已开放源代码，开箱即用
+    ```
 - [EventBus-实现java状态机](https://www.jianshu.com/p/8def04b34b3c) -推荐参考byArvin
--
+- Web爬虫
+    - [http://www.xuxueli.com/xxl-crawler](http://www.xuxueli.com/xxl-crawler)
 -
 ## 敏捷开发-故事地图

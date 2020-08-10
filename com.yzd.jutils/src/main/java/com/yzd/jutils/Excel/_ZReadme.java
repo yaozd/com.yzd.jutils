@@ -8,4 +8,9 @@ Hutool是一个Java工具集，
 Hutool 对文件、流、加密解密、转码、正则、线程、XML、日期、Http客户端 等 JDK 方法进行封装，组成各种 Util 工具类。
 Hutool并非框架，而是一个工具类方法集合，随用随取，且随时可被替换，与任何框架不冲突。 Hutool的大部分工具方法并不依赖第三方包（extra模块对第三方框架封装工具类除外），
 轻量简洁。 http://www.hutool.cn -- 编辑
+
+《Java工具类库XXL-TOOL》
+https://www.xuxueli.com/xxl-tool/
+Excel模块	一个灵活的Java对象和Excel文档相互转换的工具。一行代码完成Java对象和Excel之间的转换
 * */
+
