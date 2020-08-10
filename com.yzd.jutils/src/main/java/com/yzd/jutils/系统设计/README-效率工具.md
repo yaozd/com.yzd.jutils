@@ -28,5 +28,28 @@
 - [EventBus-实现java状态机](https://www.jianshu.com/p/8def04b34b3c) -推荐参考byArvin
 - Web爬虫
     - [http://www.xuxueli.com/xxl-crawler](http://www.xuxueli.com/xxl-crawler)
+- 分布式事务
+    - RocketMQ
+        - [基于RocketMQ的分布式事务解决方案](https://www.jianshu.com/p/286cac4625b6)
+            ```
+            回查本地事物消息是否成功的操作，来对MQ的消息做个补偿动作实现数据一致性
+            回查表：checkTransactionState
+            RocketMQ事务消息回查设计方案
+            https://blog.csdn.net/qq_27529917/article/details/79802406
+            
+            ```
+        - [springboot-rocketmq-example](https://github.com/zygfengyuwuzu/springboot-rocketmq-example)
+            - [听说RocketMQ与MYSQL事务消息联姻了](https://mp.weixin.qq.com/s/zdPRpEahzQOmba3gz_APaA)
+            ```
+            对RocketMQ示例的编写，并针对事物消息与mysql事物相结合
+            https://github.com/search?p=1&q=rocketmq+transaction&type=Repositories
+            ```
+        - []()
+    - seata 阿里开源
+        - [https://github.com/seata/seata-samples.git](https://github.com/seata/seata-samples.git)
+        - []()
+-
+-
+-
 -
 ## 敏捷开发-故事地图

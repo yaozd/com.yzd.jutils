@@ -61,7 +61,10 @@
 
 ## 参考
 ### 用户意图设计
+- [58本地服务场景下的流量分发算法实践 陈琳](https://myslide.cn/slides/22605)
 - []()
-- []()
-### 
+### 相关性与标签向量表征
+- [Embedding技术在房产推荐的应用 周彤](https://myslide.cn/slides/22604)
+- [二手车商业推荐场景中的算法实践 脱敏版](https://myslide.cn/slides/22602)
+- [2 度召回在招聘推荐中的挑战和实践](https://myslide.cn/slides/22603)
 - []()
