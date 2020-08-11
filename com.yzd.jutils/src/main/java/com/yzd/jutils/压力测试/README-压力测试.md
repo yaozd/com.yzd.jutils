@@ -29,6 +29,13 @@ Nacos版本	1.0.0
 
 ## 软件测试之性能测试
 - [软件测试之性能测试](https://blog.csdn.net/bit666888/article/details/81746538)
+- [性能测试：一种计算 TP90、TP95 和 TP99 等水位线的方法](https://blog.csdn.net/qq_35246620/article/details/101284451)
+```
+解释一下 TP90、TP95 和 TP99 的含义：
+TP90，top percent 90，即 90% 的数据都满足某一条件；
+TP95，top percent 95，即 95% 的数据都满足某一条件；
+TP99，top percent 99，即 99% 的数据都满足某一条件；
+```
 
 ##　 压测名词解释:
 ```

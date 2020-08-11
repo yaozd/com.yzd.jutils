@@ -1,4 +1,8 @@
 ## 效率工具
+- 系统架构设计
+    - [日均百万订单下的高可用苏宁拼购系统架构设计 朱羿全](https://myslide.cn/slides/19942)
+- [StackOverflow创始人关于如何高效编程的清单](https://blog.csdn.net/qq_35246620/article/details/73015315)
+    - []()
 - SSO (单点登录)
     - 支持按钮级控制、分级授权、分级管理
     - [http://www.xuxueli.com/xxl-sso/](https://gitee.com/xuxueli0323/xxl-sso)
@@ -28,6 +32,7 @@
 - [EventBus-实现java状态机](https://www.jianshu.com/p/8def04b34b3c) -推荐参考byArvin
 - Web爬虫
     - [http://www.xuxueli.com/xxl-crawler](http://www.xuxueli.com/xxl-crawler)
+    - [https://gitee.com/spirit_demon/CrawlerDemon](https://gitee.com/spirit_demon/CrawlerDemon) - 分布式爬虫 Crawler
 - 分布式事务
     - RocketMQ
         - [基于RocketMQ的分布式事务解决方案](https://www.jianshu.com/p/286cac4625b6)
@@ -47,9 +52,111 @@
         - []()
     - seata 阿里开源
         - [https://github.com/seata/seata-samples.git](https://github.com/seata/seata-samples.git)
+        - [https://gitee.com/linzhangxian/seata-cloud](https://gitee.com/linzhangxian/seata-cloud)
+            > Spring Cloud 整合最新版seata分布式事务 Seata 是一款开源的分布式事务解决方案
         - []()
--
+- 分布式缓存
+    - Codis redis
+- RETE算法的纯Java规则引擎
+    - [https://gitee.com/youseries/urule](https://gitee.com/youseries/urule)
+    > URULE是一款基于RETE算法的纯Java规则引擎，提供规则集、决策表、决策树、评分卡，规则流等各种规则表现工具及基于网页的可视化设计器，可快速开发出各种复杂业务规则
+- 分布式聚合支付系统
+    - [https://gitee.com/jmdhappy/xxpay-master](https://gitee.com/jmdhappy/xxpay-master)
+    > 使用spring-cloud开发的分布式聚合支付系统,集成微信,支付宝,易宝支付,京东支付,IAP支付等.
+- 后台管理框架
+    - [https://gitee.com/geek_qi/cloud-platform](https://gitee.com/geek_qi/cloud-platform) -spring-cloud
+    - [https://gitee.com/aun/Timo](https://gitee.com/aun/Timo)
+- 后台模板
+    - [https://gitee.com/bmloveyou/Ace-Admin](https://gitee.com/bmloveyou/Ace-Admin)
+- 数据压缩
+    - [https://gitee.com/yu120/compress](https://gitee.com/yu120/compress)
+    > 基于gzip、deflate、lz4、snappy、lzo等算法实现数据压缩，主要用于RPC通讯数据的压缩！
+- 分布式websocket聊天程序
+    - [CookIM - 一个基于akka的分布式websocket聊天程序](https://gitee.com/cookeem/CookIM)
+    - []()
+- 分库分表
+    - [分库分表？如何做到永不迁移数据和避免热点？](https://blog.csdn.net/qq_35246620/article/details/90407308)
+- 消息队列
+    - [面试题：Kafka、ActiveMQ、RabbitMQ、RocketMQ 有什么优缺点？](https://blog.csdn.net/qq_35246620/article/details/107175767)
+- 异常检测
+    - [https://gitee.com/guobinhit/archimedes](https://gitee.com/guobinhit/archimedes)
+    - [https://github.com/guobinhit/archimedes](https://github.com/guobinhit/archimedes)
+- 秒杀解决方案
+    - ["小米在印度把亚马逊搞挂了"事件的秒杀解决方案](https://gitee.com/chanjarster/artemis-disruptor-miaosha)
+- netty实现的高性能内网穿透
+    - [https://gitee.com/haojiangbo/venomous_sting](https://gitee.com/haojiangbo/venomous_sting) -毒刺
+- 通用报警框架
+    - [https://gitee.com/liuyueyi/quick-alarm](https://gitee.com/liuyueyi/quick-alarm)
+- mock数据
+    - [https://gitee.com/kkk001/mockj](https://gitee.com/kkk001/mockj)
+- 数据同步中间件
+    - [https://gitee.com/sxfad/porter](https://gitee.com/sxfad/porter)
+- 阿里云组件封装
+    - [https://gitee.com/ITEater/vinus-spring-boot-starter](https://gitee.com/ITEater/vinus-spring-boot-starter)
+    > afs（人机验证，captcha）、sms（短信验证）、oss（对象存储）、sts（访问控制）四个模块
 -
 -
 -
 ## 敏捷开发-故事地图
+
+## SpringCloud
+- [https://gitee.com/zuihou111/zuihou-admin-cloud](https://gitee.com/zuihou111/zuihou-admin-cloud)
+- [https://gitee.com/zscat/mallcloud-platform](https://gitee.com/zscat/mallcloud-platform)
+- [https://github.com/fafeidou/fast-cloud-nacos](https://github.com/fafeidou/fast-cloud-nacos)
+- []()
+
+## 工具及其它
+- [工具及其它](https://blog.csdn.net/qq_35246620/category_6633794.html) -推荐参考byArvin
+- [工具及其它](https://blog.csdn.net/qq_35246620/category_6633794.html) -推荐参考byArvin
+
+## 分布式系统
+- [https://gitee.com/zscat/mallcloud-platform](https://gitee.com/zscat/mallcloud-platform)
+- [https://gitee.com/catshen/zscat_sw](https://gitee.com/catshen/zscat_sw)
+```
+AOP、RPC、分布式缓存、限流、降级、熔断、统一配置中心、swagger api自动生成、
+Opentracing数据追踪、metrics数据监控、分布式session、代码生成器、shiro安全控制
+统一认证功能
+
+支持oauth2的四种模式登录
+支持用户名、密码加图形验证码登录
+支持手机号加密码登录
+支持openId登录
+支持第三方系统单点登录
+分布式系统基础支撑
+
+服务注册发现、路由与负载均衡
+服务降级与熔断
+服务限流(url/方法级别)
+统一配置中心
+统一日志中心
+统一分布式缓存操作类、cacheManager配置扩展
+分布式锁
+分布式任务调度器
+支持CI/CD持续集成(包括前端和后端)
+分布式高性能Id生成器
+分布式事务
+系统监控功能
+
+服务调用链监控
+应用拓扑图
+慢服务检测
+服务Metric监控
+应用监控(应用健康、JVM、内存、线程)
+错误日志查询
+慢查询SQL监控
+应用吞吐量监控(qps、rt)
+服务降级、熔断监控
+服务限流监控
+分库分表、读写分离
+业务基础功能支撑
+
+高性能方法级幂等性支持
+RBAC权限管理，实现细粒度控制(方法、url级别)
+快速实现导入、导出功能
+数据库访问层自动实现crud操作
+代码生成器
+基于Hutool的各种便利开发工具
+网关聚合所有服务的Swagger接口文档
+统一跨域处理
+统一异常处理
+```

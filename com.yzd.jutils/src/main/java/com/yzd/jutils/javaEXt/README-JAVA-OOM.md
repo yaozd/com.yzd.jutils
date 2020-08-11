@@ -26,3 +26,5 @@ java.lang.OutOfMemoryError: reason stack_trace_with_native_method，JVM的本地
 增加堆大小，例如
 -Xmx1g.
 ```
+
+- [Java 内存溢出（OOM）异常完全指南](https://blog.csdn.net/qq_35246620/article/details/77898295) -推荐参考byArvin
