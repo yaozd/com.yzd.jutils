@@ -57,6 +57,9 @@
         - []()
 - 分布式缓存
     - Codis redis
+    - [Codis与RedisCluster的原理详解](https://www.cnblogs.com/pingyeaa/p/11294773.html)
+    - [JVM内存级分布式缓存Hazelcast](https://my.oschina.net/u/3768341/blog/3071997)
+    - []()
 - RETE算法的纯Java规则引擎
     - [https://gitee.com/youseries/urule](https://gitee.com/youseries/urule)
     > URULE是一款基于RETE算法的纯Java规则引擎，提供规则集、决策表、决策树、评分卡，规则流等各种规则表现工具及基于网页的可视化设计器，可快速开发出各种复杂业务规则

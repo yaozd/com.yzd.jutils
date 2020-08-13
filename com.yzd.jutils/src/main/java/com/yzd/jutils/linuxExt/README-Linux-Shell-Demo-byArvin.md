@@ -1,4 +1,20 @@
 ## 示例 byArvin
+- KILL 进程
+```
+#!/bin/sh
+kill -9 `jps -l|grep APP-NAME|awk -F " " '{print $1}'`
+jps -l
+
+无限循环实例
+#!/bin/bash -
+while :
+do
+    echo "Do something..."
+    echo "Hit [ CTRL+C ] to stop!"
+    sleep 3
+done
+```
+
 - 下载文件-通过MD5验证完整性
 ```
 download.sh

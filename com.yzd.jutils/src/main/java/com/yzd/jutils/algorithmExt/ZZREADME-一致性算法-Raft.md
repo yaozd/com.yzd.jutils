@@ -7,6 +7,7 @@
 - [Raft算法的Java实现](https://blog.csdn.net/qq_33797928/article/details/91041381)-推荐参考byArvin(帮助理解Raft算法)
 - [蚂蚁金服开源 SOFAJRaft：生产级 Java Raft 算法库](https://blog.csdn.net/weixin_34356310/article/details/91474270)
 - [https://github.com/wenweihu86/raft-java](https://github.com/wenweihu86/raft-java)
+-[分布式一致性协议Raft原理与实例](https://blog.csdn.net/hellochenlu/article/details/51565103) -JGroups-raft实例
 -[]()
 
 ## 应用缓存-RocksDB
