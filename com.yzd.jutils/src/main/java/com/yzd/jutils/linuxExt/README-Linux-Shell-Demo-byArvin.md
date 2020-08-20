@@ -15,6 +15,19 @@ do
 done
 ```
 
+- deploy.sh-部署
+```
+#! /bin/env sh
+set -e
+set -u
+set -x
+
+ls -t /tmp/hyperspace-console-web-* | head -1 | xargs -I f cp f .
+ls -t | head -1 | xargs tar -zxf
+```
+> [Linux：set -eux](https://blog.csdn.net/textdemo123/article/details/100694371)
+是以调试的方式执行shell ，只识别定义过的变量，同时脚本传回值非0 直接结束shell
+
 - 下载文件-通过MD5验证完整性
 ```
 download.sh
