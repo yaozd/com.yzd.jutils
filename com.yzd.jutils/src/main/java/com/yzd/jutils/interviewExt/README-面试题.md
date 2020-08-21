@@ -1,5 +1,8 @@
 ## JAVA-面试题-参考
 >
+- [JavaGuide面试突击版](https://github.com/Snailclimb/JavaGuide)
+    - https://github.com/Snailclimb/JavaGuide
+    - https://gitee.com/SnailClimb/JavaGuide
 - JAVA面试_中华石杉老师_突击第一季（百度-》电子书-》F-分布式）
 - [https://github.com/xingshaocheng/architect-awesome后端架构师技术图谱](https://github.com/xingshaocheng/architect-awesome)
 - [advanced-java-互联网Java工程师进阶知识完全扫盲](https://github.com/doocs/advanced-java)<br>
