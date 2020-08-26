@@ -33,3 +33,6 @@
 发现是Github 禁用了TLS v1.0 and v1.1，必须更新Windows的git凭证管理器。
 网址：https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/
 ```
+
+### git报错
+- [git报错husky > pre-commit hook failed (add --no-verify to bypass)](https://www.cnblogs.com/jasonzhang-blog/p/11298580.html)

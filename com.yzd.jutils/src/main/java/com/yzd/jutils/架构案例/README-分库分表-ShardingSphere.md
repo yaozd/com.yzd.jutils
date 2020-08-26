@@ -1,3 +1,7 @@
+## 分库分表
+    - [分库分表？如何做到永不迁移数据和避免热点？](https://blog.csdn.net/qq_35246620/article/details/90407308)
+    - [炸！亿级数据DB秒级平滑扩容](https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89839471)
+    
 ## ShardingSphere
 - [ShardingSphere的快速入门](https://shardingsphere.apache.org/document/current/cn/quick-start/)
 - [数据库连接池：连接模式](https://shardingsphere.apache.org/document/current/cn/features/sharding/principle/execute/)

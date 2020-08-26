@@ -79,8 +79,12 @@
     - []()
 - 分库分表
     - [分库分表？如何做到永不迁移数据和避免热点？](https://blog.csdn.net/qq_35246620/article/details/90407308)
+    - [炸！亿级数据DB秒级平滑扩容](https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89839471)
+- 跨库分页
+    - [业界难题-“跨库分页”的四种方案](https://blog.csdn.net/shenjian58/article/details/89849907)
 - 消息队列
     - [面试题：Kafka、ActiveMQ、RabbitMQ、RocketMQ 有什么优缺点？](https://blog.csdn.net/qq_35246620/article/details/107175767)
+    
 - 异常检测
     - [https://gitee.com/guobinhit/archimedes](https://gitee.com/guobinhit/archimedes)
     - [https://github.com/guobinhit/archimedes](https://github.com/guobinhit/archimedes)
@@ -97,6 +101,10 @@
 - 阿里云组件封装
     - [https://gitee.com/ITEater/vinus-spring-boot-starter](https://gitee.com/ITEater/vinus-spring-boot-starter)
     > afs（人机验证，captcha）、sms（短信验证）、oss（对象存储）、sts（访问控制）四个模块
+- Istio分层架构
+    - [Istio分层架构？80%的人有误解](https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89597120)
+- 技术演讲
+    - [技术演讲，如何快速做到80分（值得收藏）](https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/88968084)
 -
 -
 -

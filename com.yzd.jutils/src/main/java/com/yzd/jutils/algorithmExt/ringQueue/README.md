@@ -1,5 +1,6 @@
 # 环形队列
 ## 问题：算法-大数据量的定时超时
+- [10w定时任务，如何高效触发超时](https://blog.csdn.net/shenjian58/article/details/89849908)
 - [算法-大数据量的定时超时](https://blog.csdn.net/aBOUNTWINTER/article/details/79407768)
 - 方法一：轮询扫描法
 - 方法二：多timer触发
