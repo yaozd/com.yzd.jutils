@@ -28,3 +28,9 @@
 
 文章还有许多不足，我仍在不断改进！如果你本地没有这些环境,可以先找我要我的阿里云地址,看效果！ ps: 本文章基础思路来自于若鱼1919老师！大家可以关注老师的课和博客很不错,老师很nice！ 谢谢大家 ！课程地址
 ```
+
+### JVM面试题（附答案）
+- [史上最全！2020面试阿里，字节跳动90%被问到的JVM面试题（附答案](https://www.jianshu.com/p/49e76079243d)
+
+### Spring面试题
+- [https://github.com/wmyskxz/MoreThanJava#part3-redis](https://github.com/wmyskxz/MoreThanJava#part3-redis)
