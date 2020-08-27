@@ -1,4 +1,5 @@
-
+## 如何进行code review？
+- [如何进行code review？](https://github.com/akun/pm/blob/master/docs/codereview/howto.rst)
 ### [Code Review-代码审查（Review）之我见](https://blog.csdn.net/u013315650/article/details/84035431 )
 ```
 作为一个服务器开发人员，目前我在负责现场问题处理，但是处理的问题多了，有了一些自己的思考。在处理过的问题中，有很多问题是比较低级的问题，比如判断没有else处理，内存泄漏等，还有一些问题是现场出问题后日志信息不够，无法得到有效的定位问题信息，当然还有一些其他问题。导致这些问题的原因有很多，或许是因为编码者的能力不一，也可能是局限于自己的主观性，无法排除问题。
