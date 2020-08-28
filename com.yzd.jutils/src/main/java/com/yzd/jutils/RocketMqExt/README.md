@@ -1,3 +1,24 @@
+# 场景分析
+- [RocketMQ 在联想大数据中的应用简析](https://www.infoq.cn/article/3qUmN-5bmVBlkJLP1lyi?) 推荐参考 
+```
+应用 RocketMQ 的使用场景中经常会出现：异步请求，应用解耦和日志处理等场景情况。
+使用 RocketMQ 做为应对特殊的业务处理流程的技术手段:
+需要在数据生产端承接瞬时高数据流量，在数据消费端平稳地将数据推送到下游业务线。
+```
+
+# 案例参考
+- [RocketMQ 在联想大数据中的应用简析](https://www.infoq.cn/article/3qUmN-5bmVBlkJLP1lyi?)
+```
+RocketMQ 的吞吐量基本保证在 11~12w/s，磁盘 IO 率虽已接近 100%
+
+```
+
+# rocketmq管理界面
+- [RcoketMq集群安装和RocketMQ web界面监控rocketmq-console部署](https://blog.csdn.net/weidong22/article/details/79246726)
+- [RocketMQ 学习之四 —— RocketMQ Web管理界面](https://blog.csdn.net/ruanhao1203/article/details/89496832)
+- []()
+
+
 # [RocketMqCurrencyBoot](https://github.com/atliwen/RocketMqCurrencyBoot)
 ``
 https://github.com/atliwen/RocketMqCurrencyBoot

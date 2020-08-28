@@ -41,6 +41,8 @@ Pulsar 在订阅（Subscription）级别而不是主题级别执行此操作，�
 我们已经将超过 30％的生产数据流迁移到 Pulsar，并计划在未来六个月内将所有数据流都迁移到 Pulsar。
 
 ```
+## 案例参考
+- [实践 | Kafka 不够好，智联招聘基于 Pulsar 打造企业级事件中心](https://www.infoq.cn/article/eep0B1ECQR5c-7XP3FYb)
 
 ## Pulsar与其他消息系统的区别与特点
 - [新一代消息系统Apache Pulsar 2.1 重磅发布](https://www.cnblogs.com/apachepulsar/p/9466440.html)
