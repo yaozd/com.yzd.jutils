@@ -1,3 +1,9 @@
+## A1-Nginx 多个location配置相同的upstream-血的教训
+> 健康检查时，如果一个有问题就会影响所有location,
+> 建议每个location使用独立的upstream
+
+## A2-SLB -长连接不均匀问题
+
 ## *Nginx-故障*
 - [Nginx常见的错误及解决方法](https://blog.51cto.com/nanchunle/1657410)
 ```
