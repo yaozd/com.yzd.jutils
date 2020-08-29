@@ -1,5 +1,61 @@
 ##　Git 常用命令大全
 - [Git 常用命令大全](https://blog.csdn.net/dengsilinming/article/details/8000622)
+- [git常用命令与常见面试题总结](https://blog.csdn.net/qq_36095679/article/details/91804051) -特别推荐参考byArvin
+```
+1、git框架介绍 
+Workspace：开发者工作区
+Index / Stage：暂存区/缓存区
+Repository：仓库区（或本地仓库）
+Remote：远程仓库
+2、列举工作中常用的几个git命令？
+新增文件的命令：git add file或者git add .
+提交文件的命令：git commit –m或者git commit –a
+查看工作区状况：git status –s
+拉取合并远程分支的操作：git fetch/git merge或者git pull
+查看提交记录命令：git reflog
+
+ 3、提交时发生冲突，如何解决？
+为什么会产生冲突？（可参考git发生冲突的实例）
+
+因为在合并分支的时候，master分支和dev分支恰好有人都修改了同一个文件，GIT不知道应该以哪一个人的文件为准，所以就产生了冲突了。 两个分支相同文件相同位置的的不同操作！
+
+如何解决？
+
+发生冲突，在IDE里面一般都是对比本地文件和远程分支的文件，然后把远程分支上文件的内容手工修改到本地文件，然后再提交冲突的文件使其保证与远程分支的文件一致，这样才会消除冲突，然后再提交自己修改的部分。特别要注意下，修改本地冲突文件使其与远程仓库的文件保持一致后，需要提交后才能消除冲突，否则无法继续提交。必要时可与同事交流，消除冲突。
+发生冲突，也可以使用命令。
+
+通过git stash命令，把工作区的修改提交到栈区，目的是保存工作区的修改；
+通过git pull命令，拉取远程分支上的代码并合并到本地分支，目的是消除冲突；
+通过git stash pop命令，把保存在栈区的修改部分合并到最新的工作空间中；
+4、新建git功能分支的步骤？
+Git branch name     创建名字为name的branch
+Git checkout xxx_dev    切换到名字为xxx_dev的分支
+Git pull    从远程分支拉取代码到本地分支
+Git checkout -b main_furture_xxx    创建并切换到 main_furture_xxx 分支
+Git push origin main_furture_xxx    执行推送的操作，完成本地分支向远程分支的同步
+
+在执行git pull的时候，提示当前branch没有跟踪信息：
+01： git pull origin  远程分支名称
+02：git branch --set-upstream-to=origin/远程分支名称 本地分支名       （先建立远程分支与本地分支的连接，再pull）
+git pull    再pull
+
+5、 说明GIT合并的两种方法以及区别。
+Git代码合并有两种：Git Merge 和 Git ReBase
+Git Merge：这种合并方式是将两个分支的历史合并到一起，现在的分支不会被更改，它会比对双方不同的文件缓存下来，生成一个commit，去push。
+Git ReBase：这种合并方法通常被称为“衍合”。他是提交修改历史，比对双方的commit，然后找出不同的去缓存，然后去push，修改commit历史。
+
+6、Git提交代码的步骤
+git clone （这个是你新建本地git仓库，如已有可忽略此步）
+git pull    取回远程主机某个分支的更新，再与本地的指定分支合并。
+git status  查看当前状态
+git add + 文件
+git add -u + 路径：将修改过的被跟踪代码提交缓存
+git add -A + 路径: 将修改过的未被跟踪的代码提交至缓存
+git add -u com/breakyizhan/src
+将 com/breakyizhan/src 目录下被跟踪的已修改过的代码提交到缓存中
+git commit -m "修复XXbug"   推送修改到本地git库中
+git push    把当前提交到git本地仓库的代码推送到远程主机的某个远程分之上
+```
 
 ## 通过short_commit_id，显示对应日志
 - [Git命令之log日志](https://blog.csdn.net/xxlt0310/article/details/83243935)
