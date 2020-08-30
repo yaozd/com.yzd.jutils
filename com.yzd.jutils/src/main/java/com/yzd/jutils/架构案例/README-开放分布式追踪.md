@@ -17,6 +17,13 @@ Tracing - 用于记录请求范围内的信息。例如，一次远程方法调�
 
 ```
 
+### opentracing 采样率问题
+```
+1. 目前不推荐在中间层网关控制采样率。中间层控制控制采样率，会产生许多不完整的trace
+2. 采样率控制可以入口网关，或者在DC（数据接收中心）控制采样率
+3. DC（数据接收中心）控制采样率，对tracId进行hash,然后再取余，这样可以以traceId完整的丢弃数据
+```
+
 ### 参考示例
 - [zipkin](https://zipkin.io/pages/instrumenting.html)
 - [openzipkin/b3-propagation](https://github.com/openzipkin/b3-propagation) -有示例说明-推荐参考byArvin

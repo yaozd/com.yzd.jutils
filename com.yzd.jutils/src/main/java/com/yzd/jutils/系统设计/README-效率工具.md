@@ -3,6 +3,17 @@
     - [日均百万订单下的高可用苏宁拼购系统架构设计 朱羿全](https://myslide.cn/slides/19942)
 - [StackOverflow创始人关于如何高效编程的清单](https://blog.csdn.net/qq_35246620/article/details/73015315)
     - []()
+- SLA
+    - [SLA服务可用性4个9是什么意思？怎么达到？](https://blog.csdn.net/varyall/article/details/80010784)
+    ```
+    SLA：服务等级协议（简称：SLA，全称：service level agreement）。
+    是在一定开销下为保障服务的性能和可用性，服务提供商与用户间定义的一种双方认可的协定
+    99.99 = 8760 * 0.0001 = 0.876小时 = 0.876 * 60 = 52.6分钟
+    ```
+- Google监控的4个黄金指标
+    - [Google监控的4个黄金指标](https://blog.csdn.net/weixin_39123372/article/details/106070586)
+    > google的黄金指标： 流量，延迟，错误，饱和度
+    
 - SSO (单点登录)
     - 支持按钮级控制、分级授权、分级管理
     - [http://www.xuxueli.com/xxl-sso/](https://gitee.com/xuxueli0323/xxl-sso)
