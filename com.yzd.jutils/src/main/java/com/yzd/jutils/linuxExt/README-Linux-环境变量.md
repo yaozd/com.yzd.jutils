@@ -2,6 +2,28 @@
 - [Linux设置环境变量(解决许多命令找不到)](https://www.cnblogs.com/bugutian/p/5051109.html)
 - []()
 
+### 设置JDK 环境变量
+```
+bash_profile(用户专用环境变量)
+vim ~/.bash_profile
+cat ~/.bash_profile
+
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+JAVA_HOME=/home/hll/jdk
+
+PATH=$JAVA_HOME/bin:$PATH:$HOME/bin
+
+export PATH
+```
+
 ```
 vi /etc/profile
 

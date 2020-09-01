@@ -1,3 +1,29 @@
+### 设置JDK 环境变量
+```
+bash_profile(用户专用环境变量)
+vim ~/.bash_profile
+cat ~/.bash_profile
+
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+JAVA_HOME=/home/hll/jdk
+
+PATH=$JAVA_HOME/bin:$PATH:$HOME/bin
+
+export PATH
+```
+> /etc/profile中设定的变量(全局)的可以作用于任何用户
+>
+> ~/.bash_profile: 每个用户都可使用该文件输入专用于自己使用的shell信息
+
+
 - JAVA JDK 
     - [centos7 删除自带openJDK，安装所需JDK和JDK环境变量配置](https://blog.csdn.net/weixin_43081559/article/details/82381077)
     ```
