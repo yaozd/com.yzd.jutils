@@ -12,3 +12,12 @@ cat elasticsearch.yml  | grep -v  ^#  |grep -v ^$
 ```
 grep 'BothWayListener' NAME.log |wc -l
 ```
+
+- [linux根据进程号PID查找启动程序的全路径](https://blog.csdn.net/lsbhjshyn/article/details/18764613)
+```
+netstat -ntpl
+ps -ef|grep 16454
+cd /proc/16454
+ll
+exe
+```
