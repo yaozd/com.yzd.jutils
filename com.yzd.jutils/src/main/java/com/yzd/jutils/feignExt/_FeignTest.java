@@ -7,6 +7,8 @@ import feign.gson.GsonEncoder;
 import org.junit.Test;
 
 /**
+ * 本项目连接：
+ * {@link com.yzd.jutils.httpExt.lensclient.HttpServiceClient#()}
  * Created by zd.yao on 2018/9/13.
  */
 public class _FeignTest {
@@ -14,6 +16,7 @@ public class _FeignTest {
     //- [Feign真正正确的使用方法](https://www.jianshu.com/p/3d597e9d2d67)
     //- [Feign基础教程](https://blog.csdn.net/u010862794/article/details/73649616)
     //- [feign官网示例详解](http://p.codekk.com/detail/Android/OpenFeign/feign)
+    //- [Java探索之Feign入门使用详解](https://www.jb51.net/article/126976.htm)
     @Test
     public void t1() {
         Wikipedia wikipedia = Feign.builder()
