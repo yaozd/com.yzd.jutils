@@ -1,3 +1,10 @@
+### Git日志说明信息前缀标签参考：
+- feat:XXXX 功能
+- fix:XXXX 修复
+- refactor:XXXX 重构
+- version:2.1.2 版本
+
+
 
 ### [三种清除Git提交历史的方法](https://blog.csdn.net/yiifaa/article/details/78603410)
 
