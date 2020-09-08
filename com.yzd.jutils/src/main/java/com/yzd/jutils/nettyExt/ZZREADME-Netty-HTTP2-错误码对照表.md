@@ -61,3 +61,16 @@
 16：Unauthenticated：表示请求没有有效的操作认证凭证
 
 ```
+
+## Grpc问题分析
+> grpc调试可以开启dubug模式即可！
+- Received unexpected EOS on DATA frame from server
+```
+grpc 同步阻塞模式下 DATA帧设置为is_end_stream=true
+PS:
+EOS（end-of-stream） 会在最后的 DATA frame 里面带上了 END_STREAM 这个 flag。用来表示 stream 不会在发送任何数据，可以关闭了
+```
+- INTERNAL: Encountered end-of-stream mid-frame
+```
+DATA帧上传输的数据不完整导致！
+```
