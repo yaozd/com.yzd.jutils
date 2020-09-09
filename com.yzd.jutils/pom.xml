@@ -381,8 +381,23 @@
             -->
         </plugins>
     </build>
+<!--    阿里云maven仓库-->
     <repositories>
-        <!--<repository>
+        <repository>
+            <id>alimaven</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>alimaven</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+<!--    <repositories>
+        &lt;!&ndash;<repository>
             <id>hb-snapshot</id>
             <name>hb Snapshot Repository</name>
             <url>http://n.hb.com:8081/nexus/content/repositories/snapshots</url>
@@ -394,7 +409,7 @@
                 <enabled>true</enabled>
                 <checksumPolicy>warn</checksumPolicy>&lt;!&ndash; 表示maven检查和查验文件的策略 &ndash;&gt;
             </snapshots>
-        </repository>-->
+        </repository>&ndash;&gt;
         <repository>
             <id>nexus-aliyun</id>
             <url>http://maven.aliyun.com/nexus/content/groups/public</url>
@@ -475,7 +490,7 @@
             <id>unidal.releases</id>
             <url>http://unidal.org/nexus/content/repositories/releases/</url>
         </pluginRepository>
-    </pluginRepositories>
+    </pluginRepositories>-->
     <distributionManagement>
         <snapshotRepository>
             <id>hb-snapshot</id>
