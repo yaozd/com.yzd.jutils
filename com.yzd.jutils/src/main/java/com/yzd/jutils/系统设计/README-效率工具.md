@@ -119,7 +119,10 @@
 - [技术管理岗位的思考总结](https://www.cnblogs.com/xiaoyangjia/p/11338959.html)
 - ES集群管理
     - [可视化工具之cerebro](https://blog.csdn.net/liumiaocn/article/details/98517815)
--
+- OSS(对象存储)
+    - MinIO是一个开源的对象存储服务 -推荐byArvin
+        - [SpringBoot2 整合MinIO中间件，实现文件便捷管理](https://mp.weixin.qq.com/s/93aQawYIT2Ce-9CvkHjQrQ)
+        - [https://github.com/cicadasmile/middle-ware-parent](https://github.com/cicadasmile/middle-ware-parent)
 -
 -
 -

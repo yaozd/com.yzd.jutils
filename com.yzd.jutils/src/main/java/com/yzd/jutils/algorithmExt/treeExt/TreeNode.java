@@ -72,7 +72,7 @@ public class TreeNode {
         List<TreeNode> result = new ArrayList<TreeNode>();
         List<TreeNode> temp = new ArrayList<TreeNode>();
         for (TreeNode item : data) {
-            if (item.getPid() == pid) {
+            if (pid.equals(item.getPid())) {
                 result.add(item);
                 temp = toTree(data, item.getId());
                 if (!temp.isEmpty()) {
