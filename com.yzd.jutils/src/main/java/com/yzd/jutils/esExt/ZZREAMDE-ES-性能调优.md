@@ -7,3 +7,5 @@
     - 部署建议
     - 写入性能优化
     - 查询性能优化
+
+- [让 Elasticsearch 飞起来!——性能优化实践干货](http://www.codeceo.com/article/elasticsearch-for-performance-optimization-practice.html)
