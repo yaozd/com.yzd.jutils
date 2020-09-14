@@ -13,6 +13,56 @@ https://dl.min.io/server/minio/release/windows-amd64/minio.exe
 
  .\minio.exe server --address 0.0.0.0:60035 D:\S-Software\miniio\data
 ```
+- linux 系统部署
+```
+https://docs.min.io/cn/
+1.
+下载：
+https://dl.min.io/server/minio/release/linux-amd64/minio
+2.
+chmod +x minio
+mkdir -p /data/minio
+3.
+设置环境变量：
+vim ~/.bash_profile
+export MINIO_ACCESS_KEY=admin
+export MINIO_SECRET_KEY=password
+4.
+环境变量生效：
+source ~/.bash_profile 
+5.
+启动：
+./minio server --address 0.0.0.0:6050 --config-dir /root/minio/ /data/minio
+
+nohup ./minio server --address 0.0.0.0:6050  /data/minio >minio-nohup.log 2>&1 &
+
+nohup ./minio server --address 0.0.0.0:6050 --config-dir /root/minio/ /data/minio >minio-nohup.log 2>&1 &
+```
+- wget 下载
+```
+解决:
+wget -O 名称 地址 
+wget -O hyperspace-container-0.0.1-SNAPSHOT.jar 'http://url'
+```
+
+##　[Minio设置永久下载链接](https://docs.min.io/cn/minio-client-complete-guide.html#policy)
+```
+1.
+window设置：
+.\mc.exe config host add minio http://192.168.10.81:9000 minioadmin minioadmin --api s3v4
+.\mc.exe policy set download minio/api-router/
+2.
+linux设置：
+./mc config host add minio http://172.20.132.85:6050 admin password --api s3v4
+./mc policy set download minio/api-router/
+3.
+直接使用IP下载即可：
+错误地址：
+http://192.168.10.81:9000/minio/download/api-router/e2697ae4/hyperspace-container-0.0.1-SNAPSHOT.jar
+正确地址：
+http://192.168.10.81:9000/api-router/e2697ae4/hyperspace-container-0.0.1-SNAPSHOT.jar
+
+```
 
 ## 常见问题参考：
 - [liunx环境修改minio默认端口和后台启动](https://www.cnblogs.com/haha66/p/13343426.html)
