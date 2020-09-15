@@ -6,6 +6,7 @@
     });
     ```
 - [解决 jQuery 动态新增节点无法触发 onclick 点击事件的问题](https://blog.csdn.net/zcf980/article/details/83060286)
+- [jquery点击事件失效原因和解决办法](https://www.cnblogs.com/leiting/p/9323539.html)
     ```
     使用 on() 方法：推荐使用该方法
     自 jQuery 版本 1.7 起，on() 方法是 bind()、live() 和 delegate() 方法的新的替代品。该方法给 API 带来很多便利
@@ -13,6 +14,11 @@
     $("#parent").on('click', 'child', function(){});
     --------------
     $('body').on('click', '.but', function() {});
+    --------------
+    通用方法：
+    $(document).on('click', 'li',function(){
+        alert($(this).html());
+    });
     ```
 - [JavaScript或jQuery模拟点击超链接和按钮](https://www.cnblogs.com/freeweb/p/4797872.html)
 ```
