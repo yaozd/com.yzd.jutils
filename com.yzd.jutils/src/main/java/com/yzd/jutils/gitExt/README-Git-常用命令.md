@@ -259,3 +259,11 @@ git push -u origin master
 
  
 ```
+
+## [Git的子模块更新递归](http://cn.voidcc.com/question/p-zsrwmliu-bc.html)
+```
+git submodule update --recursive
+可能需要使用--init选项，该选项将使其初始化任何未初始化的子模块：
+
+git submodule update --init --recursive
+```

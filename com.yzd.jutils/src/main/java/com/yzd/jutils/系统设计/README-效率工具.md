@@ -123,6 +123,16 @@
     - MinIO是一个开源的对象存储服务 -推荐byArvin
         - [SpringBoot2 整合MinIO中间件，实现文件便捷管理](https://mp.weixin.qq.com/s/93aQawYIT2Ce-9CvkHjQrQ)
         - [https://github.com/cicadasmile/middle-ware-parent](https://github.com/cicadasmile/middle-ware-parent)
+- 如何平稳用户无感知的完成系统重构升级
+    - [如何平稳用户无感知的完成系统重构升级](https://segmentfault.com/a/1190000023924409)
+    ```
+    面临几个问题：
+        1.代码逻辑的切换：包括增删改查
+        2.表结构的变更
+        3.数据的迁移
+        4.迁移过程中用户无感知
+    ```
+-
 -
 -
 -
