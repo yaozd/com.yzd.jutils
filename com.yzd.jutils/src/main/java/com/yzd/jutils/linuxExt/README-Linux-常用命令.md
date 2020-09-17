@@ -41,6 +41,14 @@
     ```
     ps -eo pid,lstart,etime,cmd
     ```
+- Linux less命令
+    ```
+    /字符串：向下搜索"字符串"的功能
+    ?字符串：向上搜索"字符串"的功能
+    b 向上翻一页
+    d 向后翻半页
+    空格键 滚动一页
+    ```
 ### [CentOS7使用firewalld打开关闭防火墙与端口](https://www.cnblogs.com/moxiaoan/p/5683743.html)
 
 ```

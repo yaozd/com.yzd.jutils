@@ -2,13 +2,16 @@
 - [爱资料在线工具-https://www.toolnb.com](https://www.toolnb.com)
 
 ### 推荐使用的在线工具-byArvin-20181213-1455
+- [json工具 - 在线工具](https://tool.lu/json/)
+
 - [http://www.bejson.com/json/col2json/](http://www.bejson.com/json/col2json/)
-
-```
-bejson中有许多工具：
-实体转换：
-
-```
+    ```
+    bejson中有许多工具：
+    实体转换：
+    ```
+- [转换字符串 - 在线字符串转换工具](https://www.convertstring.com/zh_CN/)
+- [16进制到文本字符串](https://www.bejson.com/convert/ox2str/)
+- [十六进制到文本 解码器](https://www.convertstring.com/zh_CN/EncodeDecode/HexDecode)
 - [在线JSON字符串转Java实体类(JavaBean、Entity)](http://www.bejson.com/json2javapojo/new/)
 - [在线properties转yaml、yml工具(properties to yaml,yml)](https://www.bejson.com/devtools/properties2yaml/)
 - [在线properties转yaml-在线yaml转properties-ToYaml.com](https://www.toyaml.com/index.html)

@@ -1,5 +1,6 @@
 ## Vertx-官网
 - [https://vertx.io/](https://vertx.io/)
+- [FAQ · Vert.x 官方文档中文翻译](https://vertxchina.github.io/vertx-translation-chinese/start/FAQ.html)
 - [Documentation](https://vertx.io/docs/)
 - [Create a new Vert.x application](https://start.vertx.io/) -https://start.vertx.io
 - [https://github.com/vert-x3/vertx-examples](https://github.com/vert-x3/vertx-examples)
@@ -125,3 +126,15 @@ public class Main  extends AbstractVerticle {
 - [Hazelcast的一些问题](http://www.iigrowing.cn/hazelcast_de_yi_xie_wen_ti.html) 
 - [Vertx集群部署实例](https://blog.csdn.net/feinifi/article/details/55007319) 
 - []() 
+
+### Verticle
+- Verticle在同一个EventLoop线程调用，由此保证Verticle内部的线程安全
+```
+Lambda本身也是一个对象，
+是一个@FunctionalInterface的对象，
+Verticle对象中包含了一个或者多个处理器（Handler）对象，
+比如上述例子中MyVerticle中就包含有两个handler。
+在Vert.x中，完成Verticle的部署之后，真正调用处理逻辑的入口往往是处理器（Handler），
+Vert.x保证同一个普通Verticle（也就是EventLoop Verticle，非Worker Verticle）内部的所有处理器（Handler）都只会由同一个EventLoop线程调用，
+由此保证Verticle内部的线程安全。所以我们可以放心地在Verticle内部声明各种线程不安全的属性变量，并在handler中分享他们，比如：
+```

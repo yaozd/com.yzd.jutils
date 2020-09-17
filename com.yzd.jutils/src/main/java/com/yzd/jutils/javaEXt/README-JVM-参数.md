@@ -1,3 +1,7 @@
+# Java JVM 参数设置大全
+- [Java JVM 参数设置大全](http://51gjie.com/java/551.html) -第一参考，参数说明详细byArvin
+
+
 ## 参考（HAla）
 jvm参数
 ```
