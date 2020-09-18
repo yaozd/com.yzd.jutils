@@ -70,6 +70,8 @@
     - Codis redis
     - [Codis与RedisCluster的原理详解](https://www.cnblogs.com/pingyeaa/p/11294773.html)
     - [JVM内存级分布式缓存Hazelcast](https://my.oschina.net/u/3768341/blog/3071997)
+    - binlog+Canal+Kafka 做好映射。“冲”掉redis上旧数据--明华（让架构保持简单） 
+    - []()
     - []()
 - RETE算法的纯Java规则引擎
     - [https://gitee.com/youseries/urule](https://gitee.com/youseries/urule)
