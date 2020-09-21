@@ -5,6 +5,7 @@
     - [一次线上java应用响应时间过长问题的排查](https://blog.csdn.net/xinzhongtianxia/article/details/101544986)
     - [记一次java程序CPU占用过高问题排查](https://blog.csdn.net/puhaiyang/article/details/78663942) -推荐参考byArvin
 - [java线上服务问题排查](https://blog.51cto.com/13293070/2380036)
+- [曹工改bug：cpu狂飙，old gc频繁，线程神秘死亡连环案件调查报告](https://www.cnblogs.com/grey-wolf/p/13558194.html)
 - []()
 
 ## *visualVMExt* 
@@ -26,6 +27,9 @@
  jmap -permstat 29170
  
  jstack -l 29170 |more
+
+验证old区对象是否可以正常回收，触发fullgc
+jmap -histo:live pid
 ```
 
  
