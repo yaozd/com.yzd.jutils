@@ -3,6 +3,23 @@
 - [http://51gjie.com/java/551.html](http://51gjie.com/java/551.html)
 - [Java JVM 参数设置大全](http://51gjie.com/java/551.html)
 
+## 关键词
+- [jvm中的新生代Eden和survivor区](https://blog.csdn.net/wy5612087/article/details/52369677)
+- [MaxTenuringThreshold](https://blog.csdn.net/ning0323/article/details/75675448) -CMS中默认值为6
+```
+参数：-XX:MaxTenuringThreshold
+含义：
+Sets the maximum tenuring threshold for use in adaptive GC sizing.
+The largest value is 15.
+The default value is 15 for the parallel (throughput) collector, and 6 for the CMS collector.
+在可自动调整对象晋升老年代年龄阈值的GC中，该参数用于设置上述年龄阈值的最大值
+参数值最大为15
+Parallel Scavenge中默认值为15，CMS中默认值为6，G1中默认值为15
+默认值：
+```
+- []()
+
+1. 使用Survivor空间不足的场景
 - grpc 长连接模式参数
 ```
 -Xms6g
