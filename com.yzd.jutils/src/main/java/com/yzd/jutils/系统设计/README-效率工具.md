@@ -119,6 +119,10 @@
 - 技术演讲
     - [技术演讲，如何快速做到80分（值得收藏）](https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/88968084)
 - [技术管理岗位的思考总结](https://www.cnblogs.com/xiaoyangjia/p/11338959.html)
+- 搜索服务
+    - Sonic
+        - [Sonic 是一个快速、轻量级、无模式的搜索后端](https://gitee.com/mirrors/Sonic)
+        - [Sonic：用Rust编写的Elasticsearch的极简替代品](https://zhuanlan.zhihu.com/p/63963140)
 - ES集群管理
     - [可视化工具之cerebro](https://blog.csdn.net/liumiaocn/article/details/98517815)
 - OSS(对象存储)
