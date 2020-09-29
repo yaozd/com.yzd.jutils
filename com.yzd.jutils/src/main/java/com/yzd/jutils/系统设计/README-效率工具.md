@@ -139,7 +139,10 @@
     ```
 - 故障演练
     - [降级预案在同程艺龙的工程实践](https://myslide.cn/slides/18424?vertical=1)
--
+- Postman
+    - [postman官方解说文档 中文版 完整PDF](https://www.jb51.net/books/735315.html)
+- 
+- 
 -
 -
 ## 敏捷开发-故事地图

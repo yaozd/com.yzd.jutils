@@ -1,6 +1,8 @@
 # 演讲
 - 技术演讲
     - [技术演讲，如何快速做到80分（值得收藏）](https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/88968084)
+- [高效演讲技巧](https://myslide.cn/slides/22814?vertical=1)
+
 - [《演讲的力量》目录 ](https://www.cnblogs.com/yaoyuan2/p/12856237.html)
 ```
 演讲的基础

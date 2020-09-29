@@ -6,6 +6,9 @@
 需要在数据生产端承接瞬时高数据流量，在数据消费端平稳地将数据推送到下游业务线。
 ```
 
+# 电子书
+- [RocketMQ使用排查指南 中文pdf高清版](https://www.jb51.net/books/741642.html)
+
 # 案例参考
 - [RocketMQ 在联想大数据中的应用简析](https://www.infoq.cn/article/3qUmN-5bmVBlkJLP1lyi?)
 ```
