@@ -116,8 +116,7 @@
     > afs（人机验证，captcha）、sms（短信验证）、oss（对象存储）、sts（访问控制）四个模块
 - Istio分层架构
     - [Istio分层架构？80%的人有误解](https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89597120)
-- 技术演讲
-    - [技术演讲，如何快速做到80分（值得收藏）](https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/88968084)
+
 - [技术管理岗位的思考总结](https://www.cnblogs.com/xiaoyangjia/p/11338959.html)
 - 搜索服务
     - Sonic
