@@ -124,5 +124,8 @@
 - win防止休眠软件
     - [win防止休眠软件](https://www.cr173.com/soft/926258.html)
     - 移动鼠标避免休眠
+- [识别图片转换为文字](https://jingyan.baidu.com/article/bea41d43c89704b4c51be698.html)
+    - 小度扫描 -推荐使用byArvin
+    - [得力OCR文字识别工具](http://www.deliocr.cn/)
 - []()
 - []()
