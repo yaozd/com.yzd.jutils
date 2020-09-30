@@ -8,6 +8,8 @@ import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * 测试cache的性能，在同时读，写与缓存清除的情况下的性能的变化
+ * PS:
+ * 推荐的过期策略： expireAfterWrite。这样可以使用整体的删除操作更加简单。
  */
 public class CacheTest {
     public static void main(String[] args) throws InterruptedException {
