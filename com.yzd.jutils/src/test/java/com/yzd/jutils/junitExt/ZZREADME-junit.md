@@ -12,3 +12,8 @@
 
 ## JUnit 5 Jupiter
 - []()
+
+## 自定义Rule
+- [https://gitee.com/yaozd/Gravitee-API-Gateway](https://gitee.com/yaozd/Gravitee-API-Gateway) 参考
+- [JUnit源码分析 - 扩展 - 自定义Rule](https://www.cnblogs.com/coolstream/p/9756334.html)
+- []()

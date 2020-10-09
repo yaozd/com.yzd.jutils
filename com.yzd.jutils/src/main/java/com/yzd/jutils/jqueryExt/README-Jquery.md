@@ -37,3 +37,7 @@ document.getElementById("roleListLi").click();
 - [30个值得收藏的CSS代码片段](http://www.htmleaf.com/ziliaoku/qianduanjiaocheng/201506011951.html)
 - []()
 - []()
+
+###　前端复制功能
+- [前端复制功能 -- document.execCommand()](https://www.jianshu.com/p/1ad45e4b2547)
+- [Clipboard.js : 移动端复制到粘贴板兼容问题](https://www.jianshu.com/p/6b37e16fb47e)
