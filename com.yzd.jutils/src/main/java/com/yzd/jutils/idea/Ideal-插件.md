@@ -1,3 +1,7 @@
+## 显示 Problems 窗口的方法-特别有用byArvin-2020-10-10
+- [ntellij IDEA 显示 Problems 窗口的方法](https://blog.csdn.net/huang__2/article/details/83474076)
+- [IntelliJ IDEA调出problem窗口](https://blog.csdn.net/u011712163/article/details/79880767)
+> ps:帮助发现问题
 
 ### Ideal-常用插件-特别推荐byArvin
 - 时序图生成工具：SequenceDiagram 推荐安装
