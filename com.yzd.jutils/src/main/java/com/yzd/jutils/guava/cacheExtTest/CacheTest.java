@@ -43,8 +43,29 @@ public class CacheTest {
 //        System.out.println("1\t" + readFailedTime(1, 10_000, 10_000_000) + "\t" + readFailedTime(1, 100_000, 10_000_000));
 //        System.out.println("8\t" + readFailedTime(8, 10_000, 10_000_000) + "\t" + readFailedTime(8, 100_000, 10_000_000));
 //        System.out.println("16\t" + readFailedTime(16, 10_000, 10_000_000) + "\t" + readFailedTime(16, 100_000, 10_000_000));
-        test1();
+        //test1();
+        test2();
+    }
 
+    private static void test2() {
+        Cache<String, String> cache = CacheBuilder.newBuilder()
+                .maximumSize(1)
+                .expireAfterWrite(3,TimeUnit.SECONDS)
+                .build();
+        cache.put("key1", "value1");
+        cache.put("key2", "value2");
+        cache.put("key3", "value3");
+        cache.put("key4", "value4");
+        cache.put("key5", "value5");
+        cache.put("key6", "value5");
+        cache.put("key7", "value5");
+        cache.put("key8", "value5");
+        System.out.println(cache.getIfPresent("key1"));
+        System.out.println(cache.getIfPresent("key2"));
+        //Thread.sleep(3*1000);
+        System.out.println(cache.getIfPresent("key3"));
+        System.out.println(cache.getIfPresent("key4"));
+        System.out.println(cache.getIfPresent("key5"));
     }
 
     private static long mem(int n) {

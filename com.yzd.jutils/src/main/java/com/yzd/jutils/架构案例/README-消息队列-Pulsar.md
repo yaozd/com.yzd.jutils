@@ -46,3 +46,5 @@ Pulsar 在订阅（Subscription）级别而不是主题级别执行此操作，�
 
 ## Pulsar与其他消息系统的区别与特点
 - [新一代消息系统Apache Pulsar 2.1 重磅发布](https://www.cnblogs.com/apachepulsar/p/9466440.html)
+- [对比测试：Apache Pulsar 与 Kafka 在金融场景下的性能分析](https://my.oschina.net/apachepulsar/blog/4665775)
+- []()

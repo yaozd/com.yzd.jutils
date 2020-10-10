@@ -67,6 +67,10 @@ public class StringUtil {
         return str != null && str.length() > 0;
     }
 
+    public static boolean isNull(Object obj) {
+        return null == obj;
+    }
+
     public static boolean isEquals(String s1, String s2) {
         if (s1 == null && s2 == null) {
             return true;

@@ -71,7 +71,10 @@
     - [Codis与RedisCluster的原理详解](https://www.cnblogs.com/pingyeaa/p/11294773.html)
     - [JVM内存级分布式缓存Hazelcast](https://my.oschina.net/u/3768341/blog/3071997)
     - binlog+Canal+Kafka 做好映射。“冲”掉redis上旧数据--明华（让架构保持简单） 
+    - [Caffeine 取代guava](https://www.cnblogs.com/CrankZ/p/10889859.html)
     - []()
+- 数据同步
+    - [RedisShake Redis 数据同步工具](https://www.oschina.net/p/redisshake)
     - []()
 - RETE算法的纯Java规则引擎
     - [https://gitee.com/youseries/urule](https://gitee.com/youseries/urule)
@@ -141,7 +144,8 @@
     - [降级预案在同程艺龙的工程实践](https://myslide.cn/slides/18424?vertical=1)
 - Postman
     - [postman官方解说文档 中文版 完整PDF](https://www.jb51.net/books/735315.html)
-- 
+- Excel 工具
+    - [easyexcel Java 解析 Excel 工具](https://www.oschina.net/p/easyexcel) 阿里巴巴
 - 
 -
 -
