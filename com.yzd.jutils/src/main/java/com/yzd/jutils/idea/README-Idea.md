@@ -1,3 +1,9 @@
+# 问题代码检查-插件
+1. SonarLint
+2. FindBugs
+3. Alibaba Java Coding Guidelines (阿里编码规约扫描)
+> PS:建议同时使用这3个插件，提前找到有问题代码！
+
 ### IntelliJ IDEA 注册码
 - [http://idea.lanyus.com](http://idea.lanyus.com)
 ```

@@ -1,4 +1,10 @@
-## 显示 Problems 窗口的方法-特别有用byArvin-2020-10-10
+# 问题代码检查-插件-特别有用byArvin-2020-10-10
+1. SonarLint
+2. FindBugs
+3. Alibaba Java Coding Guidelines (阿里编码规约扫描)
+> PS:建议同时使用这3个插件，提前找到有问题代码！
+>
+## 显示 Problems 窗口的方法 （目前好像不太好使，暂时不知道什么原因）
 - [ntellij IDEA 显示 Problems 窗口的方法](https://blog.csdn.net/huang__2/article/details/83474076)
 - [IntelliJ IDEA调出problem窗口](https://blog.csdn.net/u011712163/article/details/79880767)
 > ps:帮助发现问题
