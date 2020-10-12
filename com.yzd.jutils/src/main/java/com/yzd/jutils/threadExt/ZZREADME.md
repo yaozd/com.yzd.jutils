@@ -18,3 +18,22 @@ handler 拒绝策略（添加任务失败后如何处理该任务）.
 - [Thread的run（）与start（）的区别](https://blog.csdn.net/qiumeng_1314/article/details/79466655)
     - run :当作普通方法的方式调用。程序还是要顺序执行，要等待run方法体执行完毕后，才可继续执行下面的代码
     - start:启动线程，真正实现了多线程运行。这时无需等待run方法体代码执行完毕
+    
+- 手动创建线程池
+```
+    private final ExecutorService executor = newThreadPoolExecutor();
+    /**
+     * 异步发送任务消息
+     * ThreadFactoryBuilder来自：guava包
+     * eg :ExecutorService executorService=Executors.newFixedThreadPool(1);
+     * @return
+     */
+    private ExecutorService newThreadPoolExecutor() {
+        ThreadFactory namedThreadFactory = new ThreadFactoryBuilder()
+                .setNameFormat("demo-pool-%d").build();
+        //Common Thread Pool
+        return new ThreadPoolExecutor(1, 1, 0L,
+                TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>(1024),
+                namedThreadFactory, new ThreadPoolExecutor.AbortPolicy());
+    }
+```

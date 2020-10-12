@@ -21,3 +21,52 @@
  powercfg -h off
  powercfg -h on
 ```
+
+- [Win10在当前目录快速打开cmd的方法](https://www.cnblogs.com/yizhilin/p/12975052.html)
+```
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenCmdHere]
+
+@="在此处打开命令提示符"
+
+"Icon"="cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenCmdHere\command]
+
+@="PowerShell -windowstyle hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/k, pushd,%V' -Verb RunAs\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCmdHere]
+
+@="在此处打开命令窗口"
+
+"Icon"="cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCmdHere\command]
+
+@="PowerShell -windowstyle hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/k, pushd,%V' -Verb RunAs\""
+
+[HKEY_CLASSES_ROOT\Drive\shell\OpenCmdHere]
+
+@="在此处打开命令窗口"
+
+"Icon"="cmd.exe"
+
+[HKEY_CLASSES_ROOT\Drive\shell\OpenCmdHere\command]
+
+@="PowerShell -windowstyle hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/k, pushd,%V' -Verb RunAs\""
+
+[HKEY_CLASSES_ROOT\LibraryFolder\background\shell\OpenCmdHere]
+
+@="在此处打开命令窗口"
+
+"Icon"="cmd.exe"
+
+[HKEY_CLASSES_ROOT\LibraryFolder\background\shell\OpenCmdHere\command]
+
+@="PowerShell -windowstyle hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/k, pushd,%V' -Verb RunAs\""
+
+apply:
+1.保存后,把后缀名改成reg格式
+2.这样就变成了注册表的形式,最后,双击,点击确认
+```
