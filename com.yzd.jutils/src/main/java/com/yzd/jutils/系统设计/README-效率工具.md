@@ -75,7 +75,16 @@
     - []()
 - 数据同步
     - [RedisShake Redis 数据同步工具](https://www.oschina.net/p/redisshake)
-    - []()
+    - db-subscriber
+        - [https://github.com/shuaiys/db-subscriber](https://github.com/shuaiys/db-subscriber)
+        ```
+        数据库订阅中间件，当订阅的数据库/表发生数据改变时，主动推送消息给订阅的客户端。主要使用场景：
+        
+        对Redis等缓存的更新。
+        多数据库数据之间的数据近实时同步。
+        es数据同步。
+        其他需要监听数据库变化的业务。
+        ```
 - RETE算法的纯Java规则引擎
     - [https://gitee.com/youseries/urule](https://gitee.com/youseries/urule)
     > URULE是一款基于RETE算法的纯Java规则引擎，提供规则集、决策表、决策树、评分卡，规则流等各种规则表现工具及基于网页的可视化设计器，可快速开发出各种复杂业务规则
@@ -127,6 +136,7 @@
         - [Sonic：用Rust编写的Elasticsearch的极简替代品](https://zhuanlan.zhihu.com/p/63963140)
 - ES集群管理
     - [可视化工具之cerebro](https://blog.csdn.net/liumiaocn/article/details/98517815)
+    - [sql4es(Sql-for-Elasticsearch)，是一个 Elasticsearch(ES)的 JDBC 驱动](https://ld246.com/article/1502277406358)
 - OSS(对象存储)
     - MinIO是一个开源的对象存储服务 -推荐byArvin
         - [SpringBoot2 整合MinIO中间件，实现文件便捷管理](https://mp.weixin.qq.com/s/93aQawYIT2Ce-9CvkHjQrQ)
