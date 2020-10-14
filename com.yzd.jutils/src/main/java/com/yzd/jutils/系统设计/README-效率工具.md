@@ -85,6 +85,7 @@
         es数据同步。
         其他需要监听数据库变化的业务。
         ```
+      - [https://github.com/yezhongye/com.mygithub.ye.canal](https://github.com/yezhongye/com.mygithub.ye.canal)
 - RETE算法的纯Java规则引擎
     - [https://gitee.com/youseries/urule](https://gitee.com/youseries/urule)
     > URULE是一款基于RETE算法的纯Java规则引擎，提供规则集、决策表、决策树、评分卡，规则流等各种规则表现工具及基于网页的可视化设计器，可快速开发出各种复杂业务规则
@@ -137,6 +138,7 @@
 - ES集群管理
     - [可视化工具之cerebro](https://blog.csdn.net/liumiaocn/article/details/98517815)
     - [sql4es(Sql-for-Elasticsearch)，是一个 Elasticsearch(ES)的 JDBC 驱动](https://ld246.com/article/1502277406358)
+    - [https://github.com/yezhongye/com.springboot.elasticsearch.sql](https://github.com/yezhongye/com.springboot.elasticsearch.sql)
 - OSS(对象存储)
     - MinIO是一个开源的对象存储服务 -推荐byArvin
         - [SpringBoot2 整合MinIO中间件，实现文件便捷管理](https://mp.weixin.qq.com/s/93aQawYIT2Ce-9CvkHjQrQ)
