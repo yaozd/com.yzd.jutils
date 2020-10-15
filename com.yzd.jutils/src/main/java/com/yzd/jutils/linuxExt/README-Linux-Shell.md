@@ -14,8 +14,9 @@
 - [shell脚本实现取当前时间](https://www.cnblogs.com/janezhao/p/9732157.html)
 - [su - user -c commandline: 以user身份运行commandline这句命令]()
 - [Linux运行shell脚本提示No such file or directory错误的解决办法](https://blog.csdn.net/u013626215/article/details/88050425)
+- [linux 中的test 命令](https://blog.csdn.net/liudsl/article/details/79240347)
 - [使用“:”命令定义一个无限循环实例](http://blog.sina.com.cn/s/blog_6436b8ec0102xfyb.html)
-- []()
+- 文件备份-backup
 
 ### Shell-示例
 - start.sh
@@ -251,4 +252,31 @@ do
     echo "Hit [ CTRL+C ] to stop!"
     sleep 3
 done
+```
+
+- 文件备份-backup
+```
+#!/bin/sh
+set -x
+set -e
+file_name=hyperspace-container-0.0.1-SNAPSHOT.jar
+if ! test -e ${file_name}
+then
+echo -e "\033[31m $file_name not found \033[0m"
+exit 0
+fi
+time=$(date +%F-%H%M)
+file_bak_name=${file_name}_${time}
+echo ${file_bak_name}
+mv ${file_name}  ${file_bak_name}
+ls -lht
+==========================================================
+#!/bin/sh
+set -x
+set -e
+file_name=hyperspace-container-0.0.1-SNAPSHOT.jar
+time=$(date +%F-%H%M)
+file_bak_name=${file_name}_${time}
+echo ${file_bak_name}
+mv ${file_name}  ${file_bak_name}
 ```
