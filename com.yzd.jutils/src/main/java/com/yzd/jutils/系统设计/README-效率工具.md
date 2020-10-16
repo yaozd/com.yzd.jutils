@@ -158,7 +158,15 @@
     - [postman官方解说文档 中文版 完整PDF](https://www.jb51.net/books/735315.html)
 - Excel 工具
     - [easyexcel Java 解析 Excel 工具](https://www.oschina.net/p/easyexcel) 阿里巴巴
-- 
+-
+-
+-
+
+## 分布式系统概念
+- 分布式接口的幂等性
+    - [分布式接口的幂等性](https://www.jianshu.com/p/6ce230d7e64e)
+- 缓存穿透、缓存雪崩和缓存击穿
+    - [缓存穿透、缓存雪崩和缓存击穿](https://www.jianshu.com/p/1025f176c71f)
 -
 -
 ## 敏捷开发-故事地图

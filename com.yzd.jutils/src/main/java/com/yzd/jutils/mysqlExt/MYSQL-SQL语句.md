@@ -166,3 +166,8 @@ Create table tmp_table_fullname2(
 select ind_bp_id,ind_bp_number,ud_true_name,ud_phone,concat(ud_true_name,ud_phone)as fullName from tb_income_detail as tid JOIN tb_user_details as tud on tid.ind_login_id=tud.ud_login_id 
 where ind_fund_type=1 and ind_money>=1000)
 ```
+### [sql 中or与in的查询效率对比](https://blog.csdn.net/chenweihua556/article/details/97016842)
+```
+在看《mysql数据库开发的36条军规》的文章，里面提到了or和in的效率问题，文中提到or的效率为O(n)，而in的效率为O(logn), 当n越大的时候效率相差越明显
+ 因此在给in和or的效率下定义的时候，应该再加上一个条件，就是所在的列是否有索引或者是否是主键。如果有索引或者主键性能没啥差别，如果没有索引，性能差别不是一点点！
+```

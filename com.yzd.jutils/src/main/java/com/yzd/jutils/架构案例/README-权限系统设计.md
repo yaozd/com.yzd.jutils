@@ -9,3 +9,14 @@
 - [Mybatis拦截器实现SAAS平台（动态修改SQL）随笔](https://blog.csdn.net/qq_33454884/article/details/88061860)
 - [通用数据权限的思考与设计](https://www.cnblogs.com/liuyh/p/9774998.html)
 - []()
+
+## B端产品的数据权限设计  -推荐参考
+- [B端产品的数据权限设计](https://baijiahao.baidu.com/s?id=1659052180233962558&wfr=spider&for=pc)
+- [代理分销制度的6个设计思路](https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9839337232520430352%22%7D&n_type=1&p_from=4)
+```
+通过组织机构树实现
+在一个门店管理系统中，我们设定组织机构为：
+总公司-省级分部-县市级分部-门店4级架构；
+并创建好“默认管理员”“默认普通用户”“默认经理用户”三个角色；
+数据权限范围分为：本人、本人及下属、本部门、本部门及下级部门、全部。
+```
