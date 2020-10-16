@@ -19,3 +19,11 @@
     当数据量大的时候还是用基于堆的方法比较好
     ```
 - [基本算法——BFPRT线性查找算法](https://www.jianshu.com/p/0fb557f3c412)
+
+## 示例参考
+- [https://github.com/ONLY-LTY/hacker](https://github.com/ONLY-LTY/hacker) 最快的方式找到访问次数最多的5个IP
+```
+题目内容：给定陌陌一段时间的Nginx AccessLog（多个文件，估计66G左右），
+以最快的方式找到访问次数最多的5个IP。提交脚本或是可执行程序，
+约定以命令行参数的形式传入文件所在路径。按照次数降序输出5个IP，每个IP一行。
+```
