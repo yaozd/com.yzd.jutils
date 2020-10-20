@@ -5,7 +5,19 @@
 使用 RocketMQ 做为应对特殊的业务处理流程的技术手段:
 需要在数据生产端承接瞬时高数据流量，在数据消费端平稳地将数据推送到下游业务线。
 ```
-
+## 基础概念
+- rocket mq
+    -  [RocketMQ核心概念扫盲篇](https://my.oschina.net/u/4052033/blog/4679761)
+        ```
+        RocketMQ提供了众多的队列负载算法:
+        1.AllocateMessageQueueAveragely 平均分配
+        2.AllocateMessageQueueAveragelyByCircle 轮流平均分配
+        消费进度
+        1. 集群模式下，消息消费进度存储在broker端
+        消费模型:
+        1.并发消费
+        2.顺序消费
+        ```
 # 电子书
 - [RocketMQ使用排查指南 中文pdf高清版](https://www.jb51.net/books/741642.html)
 

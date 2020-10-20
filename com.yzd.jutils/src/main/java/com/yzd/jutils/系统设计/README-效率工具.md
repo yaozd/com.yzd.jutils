@@ -165,6 +165,7 @@
 ## 分布式系统概念
 - 分布式接口的幂等性
     - [分布式接口的幂等性](https://www.jianshu.com/p/6ce230d7e64e)
+    - [MQ，究竟如何保证消息幂等](https://my.oschina.net/u/4254706/blog/4679610)
 - 缓存穿透、缓存雪崩和缓存击穿
     - [缓存穿透、缓存雪崩和缓存击穿](https://www.jianshu.com/p/1025f176c71f)
 -
