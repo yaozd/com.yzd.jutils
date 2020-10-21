@@ -317,6 +317,13 @@
             <version>0.9.11</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.esotericsoftware/reflectasm -->
+        <dependency>
+            <groupId>com.esotericsoftware</groupId>
+            <artifactId>reflectasm</artifactId>
+            <version>1.11.9</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/io.opentracing/opentracing-api -->
         <dependency>
             <groupId>io.opentracing</groupId>
