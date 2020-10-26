@@ -1,7 +1,13 @@
 ## http2-frame-WINDOW_UPDATE
 - [http2-frame-WINDOW_UPDATE](https://blog.csdn.net/weixin_34349320/article/details/89609644)
 - [理解HTTP/2流量控制(一)](https://blog.csdn.net/liujiyong7/article/details/60151838)-主要参考byArvin
-- []()
+- [HTTP/2 Flow Control](https://medium.com/coderscorner/http-2-flow-control-77e54f7fd518)
+  ```
+  WINDOW_UPDATE Frame
+  WINDOW_UPDATE frame indicates the number of octets the sender can transmit in addition to the existing flow control window. The legal range is 1 to 2³¹ -1 octets.
+  Initial Flow Control Window Size
+  According to the HTTP/2 specification, the initial value for the flow control window is 65,535 octets for both the new streams and the overall connection.
+  ```
 - []()
 ## 算法描述
 ```

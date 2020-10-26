@@ -17,3 +17,8 @@ netstat -an|find "9091" /C
 netstat -an|find "ES"|find "9091" 
 netstat -an|find "9091" 
 ```
+- [windows类似grep的命令——findstr](https://www.cnblogs.com/zxy1992/p/4372717.html)
+```
+curl http://127.0.0.1:9311 |findstr /s "connection"
+findstr /s /i /m "www.google.com.hk"
+```
