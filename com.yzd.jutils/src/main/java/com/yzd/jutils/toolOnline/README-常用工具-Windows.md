@@ -3,6 +3,7 @@
 - [异次元软件下载](http://search.onlinedown.net/search_list.php?searchsid=1&searchname=pdf&button=)
 - [胡萝卜周博客](http://www.carrotchou.blog/)
 - [腾讯软件管家 3.1.1442 独立版](http://www.carrotchou.blog/27791.html)
+- [挖软否-挖掘软件的乐趣](https://www.wrfou.com/) 破解软件下载
 
 ## 政府查询网站
 - [国家企业信用信息公示系统](http://www.gsxt.gov.cn/index.html)
@@ -127,5 +128,7 @@
 - [识别图片转换为文字](https://jingyan.baidu.com/article/bea41d43c89704b4c51be698.html)
     - 小度扫描 -推荐使用byArvin
     - [得力OCR文字识别工具](http://www.deliocr.cn/)
+- [系统还原工具]()
+    - [系统还原工具 Rollback Rx Pro v11.2.27059 中文特别破解版下载](https://www.wrfou.com/windows/rollback-rx-pro.html)
 - []()
 - []()

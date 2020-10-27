@@ -24,6 +24,9 @@
 - 数据库建模工具
     - MySQL设计的ER/数据库建模工具-MySQL Workbench 
     - PowerDesigner
+    - [Navicat Data Modeler](https://www.navicat.com/en/products/navicat-data-modeler)
+    - [pdman](https://gitee.com/robergroup/pdman)
+    - 
 - 可视化服务平台
     - [Davinci 可视化服务平台](https://www.oschina.net/p/davinci)
 - OA 办公平台
