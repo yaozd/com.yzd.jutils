@@ -48,3 +48,8 @@
    比较特殊的情况，响应码非1xx,204,304，同时响应的header中不存在Transfer-Encoding与Content-Length标识的时候
    则发送EMPTY_LAST_CONTENT完，响应后关闭连接
    ```
+4. 特别说明：使用http2协议可不遵守上面的这些规范
+   ```
+   例如：
+   https://www.cnblogs.com/nxlhero/ajax/sidecolumn.aspx
+   ```
