@@ -158,6 +158,11 @@
     - [postman官方解说文档 中文版 完整PDF](https://www.jb51.net/books/735315.html)
 - Excel 工具
     - [easyexcel Java 解析 Excel 工具](https://www.oschina.net/p/easyexcel) 阿里巴巴
+- 日志聚合工具loki
+    - [Grafana Loki 日志聚合系统](https://www.oschina.net/p/grafana-loki)
+    - [轻量级日志系统Loki stack](https://zhuanlan.zhihu.com/p/144259015)
+    - [用了日志系统新贵Loki，ELK突然不香了](https://www.jianshu.com/p/145d6af7b026)
+-
 -
 -
 -

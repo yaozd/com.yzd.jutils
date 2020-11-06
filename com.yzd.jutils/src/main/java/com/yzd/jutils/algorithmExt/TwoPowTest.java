@@ -11,9 +11,10 @@ package com.yzd.jutils.algorithmExt;
 public class TwoPowTest {
     public static void main(String[] args) {
         int num = 2;
-        int pow = 5;
+        int pow = 31;
         System.out.println(power2(num, pow));
         System.out.println("N次方:" + powerN(2147418112, 2));
+        System.out.println("N次方:" + powerN(539667, 2));
     }
 
     /**

@@ -28,6 +28,9 @@ PS:0x002:SYN 建立连接
 //
 tcp.flags == 0x002 and frame.coloring_rule.name == "Bad TCP" and tcp.stream eq 8549
 PS:0x002:SYN 建立连接
+4.
+抓取grpc数据包必须使用8080端口
+如果使用非8080端口，数据包解码会不正常
 
 ```
 

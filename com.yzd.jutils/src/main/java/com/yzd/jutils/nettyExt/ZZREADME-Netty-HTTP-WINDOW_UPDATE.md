@@ -10,6 +10,21 @@
   ```
 - []()
 ## 算法描述
+-  [HTTP/2 Flow Control](https://medium.com/coderscorner/http-2-flow-control-77e54f7fd518)
+```
+Maintaining Flow Control Window Size
+Since the flow control is directional, both endpoints maintain stream level and connection level windows. The basic mechanism to maintaining the flow control windows, defined by the spec, is as follows.
+1.When the sender sends a flow controlled frame(DATA frame), it reduces the space in both windows(stream and connection window) by the length of the transmitted frame.
+2.When the receiver consumes data, it can send WINDOW_UPDATE frames to the sender to free up flow control windows. The receiver should send separate WINDOW_UPDATE frames for the stream and the connection.
+3.When the sender receives the WINDOW_UPDATE frames it should update the corresponding windows by the specified value in the frame.
+====================================
+保持流量控制窗口的大小
+由于流控制是定向的，两个端点都维护流级和连接级窗口。维护规范定义的流控制窗口的基本机制如下所示。
+1.当发送方发送一个流控制帧(数据帧)时，它减少了两个窗口(流和连接窗口)的空间由传输帧的长度。
+2.当接收方使用数据时，它可以向发送方发送WINDOW_UPDATE帧来释放流控制窗口。接收方应该为流和连接发送单独的WINDOW_UPDATE帧。
+3.当发送方接收到WINDOW_UPDATE帧时，它应该按照帧中指定的值更新相应的窗口
+```
+## 算法描述
 ```
 送端保有一个流量控制窗口（window）初始值。初始值的设定请参考SETTING 帧的 SETTINGS_INITIAL_WINDOW_SIZE
 发送端每发送一个DATA帧，就把window递减，递减量为这个帧的大小。如果当前window小于帧大小，那么这个帧就必须被拆分到不大于window，如果window等于0，就不能发送任何帧
