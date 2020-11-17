@@ -19,6 +19,25 @@
     - [compileflow 轻量级可扩展流程引擎](https://www.oschina.net/p/compileflow) -阿里巴巴
 - mqtt协议
     - [Jmqtt](https://gitee.com/YanceSpring/jmqtt)
+    ```
+    基于Java及Netty开发，插件化模式，高性能，高扩展性
+    支持mqtt协议qos0，qos1，qos2消息质量服务
+    支持mqtt协议cleansession，retain，will等消息服务
+    完整支持mqtt Topic匹配过滤
+    支持websocket协议
+    支持RocksDB进行数据本地存储，数据高可靠
+    支持以redis为中央存储的集群（可用其他中央存储替换）
+    ```
+- 即时通信系统架构
+    - [F-IM即时通信系统](https://gitee.com/YanceSpring/F-IM)
+      ```
+      hazelcast+dubbo+redis
+      ```
+- Java AIO框架-smart-socket
+    - [smart-socket](https://gitee.com/smartboot/smart-socket)
+    - [smart-http](https://gitee.com/smartboot/smart-http)
+- wrk 测试
+    - [https://gitee.com/noear/helloworld_wrk_test](https://gitee.com/noear/helloworld_wrk_test)
 - swagger
     - [swagger-admin 1.3.0 发布，Swagger 文档管理后台](https://www.oschina.net/news/119049/swagger-admin-1-3-0-released)
 - 数据库建模工具
