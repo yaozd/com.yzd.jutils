@@ -132,5 +132,7 @@
     - [得力OCR文字识别工具](http://www.deliocr.cn/)
 - [系统还原工具]()
     - [系统还原工具 Rollback Rx Pro v11.2.27059 中文特别破解版下载](https://www.wrfou.com/windows/rollback-rx-pro.html)
+- 思维导图
+    - [亿图思维导图mindmaster pro 8 v8.0.0激活版](https://www.5down.net/soft/mindmaster-pro-8.html)
 - []()
 - []()
