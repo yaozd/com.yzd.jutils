@@ -162,7 +162,13 @@
     - [Grafana Loki 日志聚合系统](https://www.oschina.net/p/grafana-loki)
     - [轻量级日志系统Loki stack](https://zhuanlan.zhihu.com/p/144259015)
     - [用了日志系统新贵Loki，ELK突然不香了](https://www.jianshu.com/p/145d6af7b026)
--
+- NewSQL 对比
+    - [TiDB,CockroachDB](https://www.cnblogs.com/GO-NO-1/p/9935195.html)
+      ```
+      单机情况下mysql的吞吐量比tidb高几倍，在集群情况下tidb表现会好点
+      MySQL 测试工具（基准测试、压力测试）
+      https://www.cnblogs.com/GO-NO-1/p/10039047.html
+      ```
 -
 -
 -
