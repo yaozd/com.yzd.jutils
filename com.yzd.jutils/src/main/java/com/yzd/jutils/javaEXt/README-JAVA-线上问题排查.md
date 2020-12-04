@@ -32,4 +32,28 @@
 jmap -histo:live pid
 ```
 
+- java不打印异常堆栈
+- [java不打印异常堆栈](https://blog.csdn.net/tengdazhang770960436/article/details/91838820)
+- [异常栈信息不见了之JVM参数OmitStackTraceInFastThrow](https://www.jianshu.com/p/cc1bd35466cb)
+```
+VM在默认启动的时候会加上OmitStackTraceInFastThrow参数，
+含义是当大量抛出同样的异常的后，后面的异常输出将不打印堆栈。
+原因是打印堆栈的时候底层会调用到Throwable.getOurStackTrace()方法，
+而这个方法是synchronized的，对性能有比较明显对影响。所以这个参数设置是合理的。
+1.执行优化选项
+不需要对jvm参数进行设置，因为默认就是
+-XX:+OmitStackTraceInFastThrow这么配置的
+2.取消jvm的优化
+在测试启动类里面配置上jvm的参数，去掉优化，
+-XX:-OmitStackTraceInFastThrow
+PS:
+switch .. case ..部分可知，JVM只对几个特定类型异常开启了Fast Throw优化，这些异常包括：
+
+NullPointerException
+ArithmeticException
+ArrayIndexOutOfBoundsException
+ArrayStoreException
+ClassCastException
+
+```
  

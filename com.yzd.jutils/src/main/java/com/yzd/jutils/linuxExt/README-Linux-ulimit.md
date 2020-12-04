@@ -17,7 +17,31 @@ ulimit -a
 -n     打开文件数的上限
 -u     进程数的上限
 -v     虚拟内存的上限
+
 ```
+- [linux下通过/proc查看进程的limit](https://www.cnblogs.com/helloweblogic/articles/12787476.html)
+```
+cat /proc/14453/limits
+
+Limit Soft Limit Hard Limit Units
+Max cpu time unlimited unlimited seconds
+Max file size unlimited unlimited bytes
+Max data size unlimited unlimited bytes
+Max stack size 8388608 unlimited bytes
+Max core file size unlimited unlimited bytes
+Max resident set unlimited unlimited bytes
+Max processes unlimited unlimited processes
+Max open files 65536 65536 files
+Max locked memory 65536 65536 bytes
+Max address space unlimited unlimited bytes
+Max file locks unlimited unlimited locks
+Max pending signals 64055 64055 signals
+Max msgqueue size 819200 819200 bytes
+Max nice priority 0 0
+Max realtime priority 0 0
+Max realtime timeout unlimited unlimited us
+```
+
 
 # linux 实现目标
 ```

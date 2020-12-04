@@ -34,7 +34,7 @@ java.lang.OutOfMemoryError: reason stack_trace_with_native_method，JVM的本地
     
     ```
     PS: cat /var/log/message
-    日志：kernel: Out of memory: Kill process 1270 (java) score 478 or sacrifice child
+    日志：kernel: Killed process 17279  Out of memory: Kill process 1270 (java) score 478 or sacrifice child
     Linux 内核有个机制叫OOM killer（Out-Of-Memory killer），
     该机制会监控那些占用内存过大，尤其是瞬间很快消耗大量内存的进程，为了防止内存耗尽而内核会把该进程杀掉。
     重启机器后查看系统日志/var/log/messages会发现Out of Memory: Kill process 1865（sshd）类似的错误信息

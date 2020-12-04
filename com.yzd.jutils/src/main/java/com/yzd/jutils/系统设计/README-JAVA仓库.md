@@ -119,6 +119,7 @@
     - [https://github.com/luhuiguo/chinese-utils](https://github.com/luhuiguo/chinese-utils)
     - [https://github.com/frapples/java-pinyin](https://github.com/frapples/java-pinyin)
     - []()
-- 
+- 现代化社区（论坛/问答/BBS/社交网络/博客）系统平台 推荐参考byArvin
+    - [https://github.com/88250/symphony](https://github.com/88250/symphony)
 - 
 - 

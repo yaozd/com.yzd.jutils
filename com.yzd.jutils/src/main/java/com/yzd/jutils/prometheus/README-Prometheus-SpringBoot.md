@@ -17,3 +17,49 @@
     - [SpringBoot自定义prometheus监控](https://blog.csdn.net/u010588262/article/details/83094560)
     - []()
     - []()
+    
+## Prometheus Monitoring for Java Developers 推荐
+- [https://github.com/fstab/prometheus-for-java-developers](https://github.com/fstab/prometheus-for-java-developers)
+- [https://github.com/yaozd/prometheus-for-java-developers](https://github.com/yaozd/prometheus-for-java-developers)
+```
+01-hello-world
+02a-direct-instrumentation
+02b-direct-instrumentation-with-spring-boot-endpoint
+03a-spring-boot-actuator-enabled
+03b-spring-boot-actuator-custom-metric
+03c-spring-boot-actuator-prometheus-bridge
+04a-jmx-enabled
+04b-jmx-custom-metric
+04c-jmx-remote-prometheus-bridge
+04d-jmx-agent-prometheus-bridge
+05a-dropwizard-enabled
+05b-dropwizard-prometheus-bridge
+2.
+eg:
+@Controller
+@SpringBootApplication
+@EnablePrometheusEndpoint
+public class HelloWorldController {
+
+    private final Counter promRequestsTotal = Counter.build()
+            .name("requests_total")
+            .help("Total number of requests.")
+            .register();
+    private final CounterService springRequestsTotal;
+
+    public HelloWorldController(@Autowired CounterService sprintRequestsTotal) {
+        this.springRequestsTotal = sprintRequestsTotal;
+    }
+
+    @RequestMapping(path = "/hello-world")
+    public @ResponseBody String sayHello() {
+        promRequestsTotal.inc();
+        springRequestsTotal.increment("counter.calls.promdemo.hello_world");
+        return "hello, world";
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(HelloWorldController.class, args);
+    }
+}
+```

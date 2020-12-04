@@ -1,14 +1,32 @@
 ## HTTP2-协议
 - [HTTP2 详解](https://www.jianshu.com/p/e57ca4fec26f)
 - [https://www.rfc-editor.org/rfc/rfc7540.txt](https://www.rfc-editor.org/rfc/rfc7540.txt)
-- [https://github.com/abbshr/rfc7540-translation-zh_cn](https://github.com/abbshr/rfc7540-translation-zh_cn)
+- [https://github.com/abbshr/rfc7540-translation-zh_cn](https://github.com/abbshr/rfc7540-translation-zh_cn) 中文翻译-推荐byArvin
 - [https://httpwg.org/specs/rfc7540.html](https://httpwg.org/specs/rfc7540.html)
 - []()
 
 ### streamId
 - [https://httpwg.org/specs/rfc7540.html#StreamIdentifiers](https://httpwg.org/specs/rfc7540.html#StreamIdentifiers)
+- [HTTP2 Stream标识符](https://blog.csdn.net/yangguosb/article/details/80640264)
 ```
 Stream Dependency: 指定一个 stream identifier，代表当前流所依赖的流的 id，存在则代表 PRIORITY flag 被设置
+//
+Stream标识符
+作用：唯一标识连接内的某个流，用31位无符号整型标识，范围2~2^31-1；
+注意：
+
+0x0用来表示连接控制信息流，不能用来标识流；
+0x1用于标识升级到HTTP/2的客户端流，不能用来标识流；(stream id=1,表示升级)
+新建流第一次被使用时，低于此标识符的并且处于空闲”idle”状态的流都会被关闭；
+创建规则：
+
+已使用的流标识符不能被再次使用；
+新建流的标识符要大于已有流和预留的流的标识符；
+客户端创建的流以奇数表示，服务器端创建流以偶数表示；
+终端的流标识符被耗尽时的处理规则：
+
+若是客户端，需要关闭连接，创建新的连接创建新流；
+若是服务器端，需要发送一个GOAWAY帧通知客户端，强迫其打开一个新连接；
 ```
 
 ### [帧的结构](https://www.jianshu.com/p/e57ca4fec26f)
