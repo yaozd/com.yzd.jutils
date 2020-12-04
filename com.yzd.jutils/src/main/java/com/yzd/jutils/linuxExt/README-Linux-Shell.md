@@ -7,6 +7,7 @@
 - [如何在Shell读取文件并赋值](https://www.cnblogs.com/rayment/p/8446939.html)
 - [shell将命令执行的结果赋值给变量](https://blog.csdn.net/lemontree1945/article/details/79126819)
 - [Shell判断字符串包含关系的几种方法](https://www.cnblogs.com/AndyStudy/p/6064834.html)
+- [linux shell 中判断字符串为空的正确方法](https://www.cnblogs.com/cute/archive/2011/08/26/2154137.html)
 - [Linux下Shell的for循环语句](https://www.cnblogs.com/EasonJim/p/8315939.html)
 - [Bash Shell 获取进程 PID](https://www.cnblogs.com/lovychen/p/6211209.html)
 - [echo 命令显示带颜色的字](https://blog.csdn.net/u013027894/article/details/89631979)
@@ -98,6 +99,20 @@ else
 fi
 复制代码
 这个也很easy，用通配符*号代理strA中非strB的部分，如果结果相等说明包含，反之不包含。
+```
+- [linux shell 中判断字符串为空的正确方法](https://www.cnblogs.com/cute/archive/2011/08/26/2154137.html)
+```
+#!/bin/sh
+
+STRING=
+
+if [ -z "$STRING" ]; then
+    echo "STRING is empty"
+fi
+
+if [ -n "$STRING" ]; then
+    echo "STRING is not empty"
+fi
 ```
 - [Linux下Shell的for循环语句](https://www.cnblogs.com/EasonJim/p/8315939.html)
 ```

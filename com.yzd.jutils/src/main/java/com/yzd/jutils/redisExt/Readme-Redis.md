@@ -2,6 +2,9 @@
 - [Redis闲谈（1）：构建知识图谱](https://my.oschina.net/u/4007037/blog/3045328)
 - [Redis专题（3）：锁的基本概念到Redis分布式锁实现](https://my.oschina.net/u/4007037/blog/3110617)
 - []()
+
+## Redis系统架构
+- [Redis系统架构](https://www.yuque.com/jifeng-bvojj/elllo4/zkozh5)
 ### [redis的五种存储类型的具体用法](https://www.cnblogs.com/liangzia/p/5731403.html)
 
 ```

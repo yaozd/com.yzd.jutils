@@ -49,6 +49,16 @@
     d 向后翻半页
     空格键 滚动一页
     ```
+- nc 建立和监听任意TCP和UDP连接
+  - [Linux系统下nc命令的常见用法](https://jingyan.baidu.com/article/0964eca25516758285f53615.html)
+  ```
+  nc的全名是netcat，其主要用途是建立和监听任意TCP和UDP连接，
+  支持ipv4和ipv6。因此，它可以用来网络调试、端口扫描等等。
+  用法：nc -l 端口号(如果是UDP，则是nc -lu 端口号)
+  ```
+- lsof
+    - [Linux 命令神器：lsof](https://www.jianshu.com/p/a3aa6b01b2e1)
+
 ### [CentOS7使用firewalld打开关闭防火墙与端口](https://www.cnblogs.com/moxiaoan/p/5683743.html)
 
 ```
