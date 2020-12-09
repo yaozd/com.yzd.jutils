@@ -121,5 +121,49 @@
     - []()
 - 现代化社区（论坛/问答/BBS/社交网络/博客）系统平台 推荐参考byArvin
     - [https://github.com/88250/symphony](https://github.com/88250/symphony)
+- X-SpringBoot是一个轻量级的Java快速开发平台，能快速开发项目并交付【接私活利器】
+    - [https://github.com/yzcheng90/X-SpringBoot](https://github.com/yzcheng90/X-SpringBoot)
+    - [https://github.com/hxrui/youlai-mall](https://github.com/hxrui/youlai-mall)
+- springcloud微服务 阿里巴巴
+    - [https://github.com/15160200501/cloud2020](https://github.com/15160200501/cloud2020)
+    - [springcloud脑图在项目里面](https://github.com/15160200501/cloud2020)
+    ```
+    依托 Spring Cloud Alibaba
+    组件：
+    Nacos:服务注册与发现,配置,默认集成Ribbon的支持
+    Sentinel:服务限流降级
+    Seata:分布式事务
+    ```
+- Key-Value 数据库
+    - [TiKV 分布式事务 Key-Value 数据库](https://www.oschina.net/p/tikv?hmsr=aladdin1e1)
+        - [https://github.com/tikv/tikv](https://github.com/tikv/tikv)
+        - [https://github.com/tikv/client-java](https://github.com/tikv/client-java)
+    - [KeyDB Redis 的高性能分支](https://www.oschina.net/p/KeyDB)
+    - [https://github.com/Qihoo360/zeppelin](https://github.com/Qihoo360/zeppelin)
+      ```
+      Zeppelin 高性能 KV 存储平台
+      360团队：性能未知
+      Zeppelin: A Scalable, High-Performance Distributed Key-Value Platform
+      ```
+- 新一代序列化工具
+    -  FlatBuffers
+        - [Google FlatBuffers——开源、跨平台的新一代序列化工具](https://www.cnblogs.com/lizhenghn/p/3854244.html)
+        - [feeyo-flatbuffers](https://github.com/variflight/feeyo-flatbuffers) 
+- HTTP Live Streaming (HLS) 当前直播服务的主流协议之一
+    - [https://github.com/variflight/feeyo-hlsserver](https://github.com/variflight/feeyo-hlsserver)
+- 分布式 Redis 解决方案 （redis 代理）
+    - [Feeyo-RedisProxy](https://gitee.com/mirrors/Feeyo-RedisProxy/tree/master)
+    - [https://github.com/variflight/feeyo-redisproxy](https://github.com/variflight/feeyo-redisproxy)
+      ```
+      A fast and lightweight Redis Proxy and Kafka Proxy
+      
+      一个分布式 Redis 解决方案, 上层应用可以像使用单机的 Redis 一样使用, RedisProxy 底层会处理请求的分发，一切对你无感 ～
+      
+      内部的服务能力，当前单节点RedisProxy，日处理查询量50亿+， QPS维持在( 50K～80K )
+      ```
+- influx-proxy
+    - [https://github.com/Qihoo360/influx-proxy](https://github.com/Qihoo360/influx-proxy)
+- 
+- 
 - 
 - 
