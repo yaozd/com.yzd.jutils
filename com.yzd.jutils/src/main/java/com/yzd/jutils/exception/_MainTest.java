@@ -85,4 +85,24 @@ public class _MainTest {
 
         System.out.println("time: " + (System.nanoTime() - start));
     }
+
+    @Test
+    public void t4_throwable() {
+        try{
+            doThrowable();
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+
+    }
+
+    private void doThrowable() {
+        try {
+            int a=0;
+            int c=100/a;
+            //无需自定异常直接抛出即可。
+        }catch (Exception t){
+            throw t;
+        }
+    }
 }
