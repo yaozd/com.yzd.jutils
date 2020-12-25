@@ -93,4 +93,44 @@ public class CollectionsTest {
         System.out.println(address);
 
     }
+
+    /**
+     * ConcurrentModificationException
+     * [java.util.ConcurrentModificationException异常分析及解决](https://blog.csdn.net/qq_20492999/article/details/81216453)
+     * [java.util.ConcurrentModificationException异常原因及解决方法](https://www.cnblogs.com/loong-hon/p/10256686.html)
+     */
+    @Test
+    public void removeLinkData_Throw_ConcurrentModificationException() {
+        LinkedList<Object> linkedList = new LinkedList<>();
+        linkedList.offer(1);
+        linkedList.offer(2);
+        Iterator<Object> iterator = linkedList.iterator();
+        while (iterator.hasNext()) {
+            Object next = iterator.next();
+            System.out.println(next);
+            doRemoveLinkData(linkedList);
+//            if (!linkedList.isEmpty()) {
+//                iterator.remove();
+//            }
+        }
+        Iterator<Object> iterator1 = linkedList.iterator();
+        while (iterator1.hasNext()) {
+            Object next = iterator1.next();
+            System.out.println(next);
+            iterator.remove();
+        }
+        while (iterator1.hasNext()) {
+            System.out.println("not empty!");
+        }
+    }
+
+    private void doRemoveLinkData(LinkedList<Object> linkedList) {
+        Iterator<Object> iterator = linkedList.iterator();
+        while (iterator.hasNext()) {
+            Object next = iterator.next();
+            System.out.println(next);
+            iterator.remove();
+            return;
+        }
+    }
 }

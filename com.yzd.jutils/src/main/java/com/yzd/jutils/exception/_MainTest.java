@@ -4,6 +4,9 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Iterator;
+import java.util.LinkedList;
+
 /**
  * Java 进阶：异常影响性能吗？-byArvin推荐-2018-12-17-1758
  * https://blog.csdn.net/hustspy1990/article/details/78075394
@@ -88,9 +91,9 @@ public class _MainTest {
 
     @Test
     public void t4_throwable() {
-        try{
+        try {
             doThrowable();
-        }catch (Exception ex){
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
 
@@ -98,11 +101,13 @@ public class _MainTest {
 
     private void doThrowable() {
         try {
-            int a=0;
-            int c=100/a;
+            int a = 0;
+            int c = 100 / a;
             //无需自定异常直接抛出即可。
-        }catch (Exception t){
+        } catch (Exception t) {
             throw t;
         }
     }
+
+
 }

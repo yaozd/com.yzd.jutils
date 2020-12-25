@@ -15,6 +15,7 @@ MinIO压测
 1、读请求：4千QPS，响应的平均延迟是35毫秒；
 2、写请求：900 QPS时，平均响应时间是45毫秒。
 ```
+- Minio 小文件写入性能不好 byArvin
 
 ## minio java
 - [https://github.com/trotyzyq/miniOss](https://github.com/trotyzyq/miniOss)
@@ -34,3 +35,6 @@ MinIO压测
 - [Minio benchmarks with COSBench](https://www.colabug.com/2018/0117/2217189/)
 - [https://github.com/minio/benchmarks](https://github.com/minio/benchmarks)
 - [https://blog.min.io/hdfsbenchmark/](https://blog.min.io/hdfsbenchmark/)
+
+## 使用场景
+- [基于Minio和Thumbor搭建独立图片服务](https://blog.csdn.net/weixin_33910137/article/details/89100929) 

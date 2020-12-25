@@ -23,7 +23,7 @@ public class _MainTest {
         nodeList.add(new Node().setName("3").setWeight(3));
         RoundRobinWithWeight roundRobinWithWeight = new RoundRobinWithWeight();
         Multimap<String, String> countMap = LinkedListMultimap.create();
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 600; i++) {
             Node node = roundRobinWithWeight.doSelect(nodeList);
             countMap.put(node.getName(), node.getName());
             System.out.println(node.getName());
