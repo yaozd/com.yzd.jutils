@@ -1,5 +1,22 @@
 ## key/value数据库
 
+### Pika
+- [https://github.com/Qihoo360/pika](https://github.com/Qihoo360/pika)
+- 性能
+    - [https://github.com/Qihoo360/pika](https://github.com/Qihoo360/pika)
+    - [https://gitee.com/baotiao/pika](https://gitee.com/baotiao/pika)
+    - [pika 性能压不上去【sharding 模式】](https://github.com/Qihoo360/pika/issues/985)
+- 选型参考
+    - [高性能kv存储之Redis、Redis Cluster、Pika：如何应对4000亿的日访问量？](https://www.cnblogs.com/ExMan/p/10691325.html)
+    - [TerarkDB 能把 Pika 顶到多高的性能](https://cloud.tencent.com/developer/news/366922)
+- 关键词解释
+    - TerarkDB
+        ```
+      TerarkDB 是 Terark 修改版的 RocksDB，包括了完全开源的 Terark RocksDB 和 部分依赖私有库的 Terark-Zip-RocksDB。
+      在兼容 RocksDB API 的同时，TerarkDB 使用了独创的可检索压缩算法，替代了 RocksDB 原有的数据压缩与索引算法
+      ```
+
+
 ### TiKV
 - [https://github.com/tikv/](https://github.com/tikv/)
 - [TiKV 在饿了么的大规模应用实践](https://blog.csdn.net/weixin_34258078/article/details/88880908)
@@ -16,7 +33,28 @@
         ```
       业务高峰期时，最繁忙的一个集群，写入 QPS 近 5w，读取 QPS 近 10w
       ```
-- []()
+- 部署
+    - [TiDB 整体架构主要概念](https://docs.pingcap.com/zh/tidb/v3.0/architecture)
+    - [https://gitee.com/mirrors/TiKV](https://gitee.com/mirrors/TiKV)
+    - [https://tikv.org/docs/4.0/tasks/deploy/docker/](https://tikv.org/docs/4.0/tasks/deploy/docker/)
+    - [https://tikv.org/docs/4.0/tasks/deploy/binary/](https://tikv.org/docs/4.0/tasks/deploy/binary/)
+- 选型参考
+    - [TiDB 深度实践之旅--真实“踩坑”经历](https://www.bbsmax.com/A/gVdnDamEJW/)
+- java client
+    - [https://github.com/tikv/client-java/](https://github.com/tikv/client-java/)
+
+- Tikv 兼容Redis协议
+    - [https://github.com/distributedio/titan](https://github.com/distributedio/titan)    
+           - [Benchmarks of Titan](https://github.com/distributedio/titan/blob/master/docs/benchmark/benchmark.md)
+    - [https://github.com/eleme/tedis](https://github.com/eleme/tedis)    
+    - [https://github.com/yongman/tidis/wiki/Tidis-base-benchmark](https://github.com/yongman/tidis/wiki/Tidis-base-benchmark)
+    - 原理   
+        - [使用 TiKV 构建分布式类 Redis 服务](https://www.jianshu.com/p/b4dee8372d8d)
+            ```
+            
+            ```    
+
+
 
 ### cassandra
 - 参考

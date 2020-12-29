@@ -7,3 +7,9 @@ Cloud-Platform是国内首个基于Spring Cloud微服务化开发平台，
 核心技术采用Spring Boot 2.1.2以及Spring Cloud (Greenwich.RELEASE) 相关核心组件，
 采用Nacos注册和配置中心，集成流量卫兵Sentinel，前端采用vue-element-admin组件
 ```
+
+## Spring Cloud Alibaba 微服务原理与实战
+- [Spring Cloud Alibaba 微服务原理与实战](https://www.jianshu.com/p/70f4bc7fa322)-目录-推荐参考byArvin
+    ```
+  百度云盘-》电子书-》spring cloud下
+  ```

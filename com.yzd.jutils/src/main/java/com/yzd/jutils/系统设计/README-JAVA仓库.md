@@ -74,6 +74,8 @@
     - [spider-flow 爬虫平台](https://www.oschina.net/p/spider-flow)
 - 接口映射框架
     - [magic-api HTTP 接口映射框架](https://www.oschina.net/p/magic-api)
+-  WEB 接口管理工具
+    - [Rigel Automation GUI 的 WEB 接口管理工具](https://www.oschina.net/p/rigel-automation)
 - 数据库同步系统
     - [otter 阿里巴巴分布式数据库同步系统](https://www.oschina.net/p/otter)
 - 数据库中间件
@@ -163,7 +165,16 @@
       ```
 - influx-proxy
     - [https://github.com/Qihoo360/influx-proxy](https://github.com/Qihoo360/influx-proxy)
-- 
+- 流程自动化工具
+    - [mcg-helper 流程自动化工具](https://www.oschina.net/p/mcg-helper) 
+- 运维监控平台
+    - [WGCLOUD 运维监控平台](https://www.oschina.net/p/wgcloud)
+- 数据交换平台
+    - [Exchangis 轻量级数据交换平台](https://www.oschina.net/p/exchangis)
+- 分布式金融级消息总线
+    - [DeFiBus 分布式金融级消息总线](https://www.oschina.net/p/defibus)
+- 企业级消息平台
+    - [JoyQueue 企业级消息平台](https://www.oschina.net/p/joyqueue)
 - 
 - 
 - 
