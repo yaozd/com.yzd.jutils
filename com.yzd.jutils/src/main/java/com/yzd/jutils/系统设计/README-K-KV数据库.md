@@ -2,10 +2,22 @@
 
 ### Pika
 - [https://github.com/Qihoo360/pika](https://github.com/Qihoo360/pika)
+- 安装
+    ```
+  https://github.com/Qihoo360/pika/releases
+  pika-linux-x86_64-v3.3.6.tar.bz2
+  //
+  1.
+  /bin/pika -c ./conf/pika.conf
+  2.
+  nohup ./bin/pika -c ./conf/pika.conf >> output-pika.log 2>&1 &
+  ```
 - 性能
     - [https://github.com/Qihoo360/pika](https://github.com/Qihoo360/pika)
     - [https://gitee.com/baotiao/pika](https://gitee.com/baotiao/pika)
     - [pika 性能压不上去【sharding 模式】](https://github.com/Qihoo360/pika/issues/985)
+    - [3.2.x Performance](https://github.com/Qihoo360/pika/wiki/3.2.x-Performance)
+    - [https://github.com/yaozd/com.yzd.redis.learn](https://github.com/yaozd/com.yzd.redis.learn) byArvin 
 - 选型参考
     - [高性能kv存储之Redis、Redis Cluster、Pika：如何应对4000亿的日访问量？](https://www.cnblogs.com/ExMan/p/10691325.html)
     - [TerarkDB 能把 Pika 顶到多高的性能](https://cloud.tencent.com/developer/news/366922)
@@ -15,6 +27,18 @@
       TerarkDB 是 Terark 修改版的 RocksDB，包括了完全开源的 Terark RocksDB 和 部分依赖私有库的 Terark-Zip-RocksDB。
       在兼容 RocksDB API 的同时，TerarkDB 使用了独创的可检索压缩算法，替代了 RocksDB 原有的数据压缩与索引算法
       ```
+- 最佳实践
+    - [【360开源】Pika最佳实践](https://blog.csdn.net/weixin_33857230/article/details/89549448) -推荐参考 byArvin
+    - [pika主备部署（redis-sentinel）+监控（prometheus+grafana）](https://blog.csdn.net/weixin_43832846/article/details/90024274)
+    - []()
+- 奇虎360 Pika 文档手册
+    - [奇虎360 Pika 文档手册](https://www.bookstack.cn/read/Pika-zh/9.md)
+    - [奇虎360 Pika 文档手册](https://github.com/Qihoo360/pika/wiki) github
+    - [pika 配置文件说明](https://github.com/qihoo360/pika/wiki/pika-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E)
+- 支持的语言和客户端
+    - [支持的语言和客户端](https://github.com/Qihoo360/pika/wiki/%E6%94%AF%E6%8C%81%E7%9A%84%E8%AF%AD%E8%A8%80%E5%92%8C%E5%AE%A2%E6%88%B7%E7%AB%AF)
+- [pika 支持的redis接口及兼容情况](https://github.com/Qihoo360/pika/wiki/pika-%E6%94%AF%E6%8C%81%E7%9A%84redis%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%85%BC%E5%AE%B9%E6%83%85%E5%86%B5)
+
 
 
 ### TiKV

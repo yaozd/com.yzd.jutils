@@ -27,6 +27,9 @@
     - [Netty使用案例 -发送队列积压导致内存泄漏](https://blog.csdn.net/u013642886/article/details/86632752)
     - []()
  
+ - 示例
+    - [使用netty实现文件上传服务器](https://segmentfault.com/a/1190000020087277)
+ 
  
  ## LEAK: ByteBuf.release() was not called before it's garbage-collected
  - [1. in.readBytes 导致堆外内存泄漏](https://www.jianshu.com/p/944ab8e0ef34)

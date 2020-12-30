@@ -1,3 +1,12 @@
+## yum -y install redis
+- [CentOS7 linux下yum安装redis以及使用](https://www.cnblogs.com/rslai/p/8249812.html)
+    - 调整配置
+    ```
+    vim /etc/redis.config
+    #解决只能特定网段连接的限制
+    bind 127.0.0.1 改为 bind 0.0.0.0
+    ```
+
 ## Redis
 - [Linux下最新版Redis5.0.5的详细安装及配置过程](https://blog.csdn.net/qq_36737803/article/details/90578860)
 - [【redis】1.redis-windows安装+配置介绍](https://www.cnblogs.com/sxdcgaq8080/p/7204878.html) -参考中文说明

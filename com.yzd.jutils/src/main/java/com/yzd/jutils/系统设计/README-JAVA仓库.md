@@ -84,6 +84,7 @@
     - [https://gitee.com/cym1102/mongoHelper](https://gitee.com/cym1102/mongoHelper)
 - 文档在线预览
     - [https://gitee.com/kekingcn/file-online-preview](https://gitee.com/kekingcn/file-online-preview)
+    - [kkFileView-v3.3.0 年终版本发布，文件在线预览方案](http://www.kailing.pub/article/index/arcid/323.html)
 - nginx网页配置工具
     - [https://gitee.com/cym1102/nginxWebUI/tree/master](https://gitee.com/cym1102/nginxWebUI/tree/master)
 - 文件服务器
@@ -147,6 +148,9 @@
       360团队：性能未知
       Zeppelin: A Scalable, High-Performance Distributed Key-Value Platform
       ```
+    - []()
+    - [手写一个简版的key/value服务kedis](https://my.oschina.net/keking/blog/3037372)
+    - []()
 - 新一代序列化工具
     -  FlatBuffers
         - [Google FlatBuffers——开源、跨平台的新一代序列化工具](https://www.cnblogs.com/lizhenghn/p/3854244.html)
@@ -175,6 +179,36 @@
     - [DeFiBus 分布式金融级消息总线](https://www.oschina.net/p/defibus)
 - 企业级消息平台
     - [JoyQueue 企业级消息平台](https://www.oschina.net/p/joyqueue)
-- 
-- 
-- 
+- Jar包保护加密解决方案
+    - [Jar包保护加密解决方案](https://github.com/lygoing/JarEncrypt2)
+- binlog数据变动监听分发工具
+    - [kkbinlog 数据变动监听分发工具](https://www.oschina.net/p/kkbinlog)
+        ```
+      kkbinlog是一个mysql、MongoDB数据变动监听分发工具。
+      本项目意在简化监听mysql、MongoDB数据库的不同表的各种数据变动 项目依赖redis,mysql 使用场景：刷新缓存、异构系统
+      ```
+- 短信服务支持
+    - [guerlab-sms 基于Spring boot 的短信服务支持](https://www.oschina.net/p/guerlab-sms)
+- 反爬虫、接口防盗刷
+    - [kk-anti-reptile 反爬虫、接口防盗刷 spring boot stater 组件](https://www.oschina.net/p/kk-anti-reptile)
+- CI/CD
+    - [GitOps 与 ChatOps 的落地实践](GitOps 与 ChatOps 的落地实践)
+    - [湾区日报是如何运作的？](https://wanqu.co/b/7/%E6%B9%BE%E5%8C%BA%E6%97%A5%E6%8A%A5%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E4%BD%9C%E7%9A%84/)
+    - [Drone-CI 持续集成系统](https://www.oschina.net/p/drone-ci)
+        - [使用Gitlba、Drone实现CI](https://my.oschina.net/u/4273871/blog/4286977)
+    - [bk-ci 蓝鲸 CI 平台](https://www.oschina.net/p/bk-ci)
+    - 
+- 数据备份
+    - [湾区日报是如何运作的？](https://wanqu.co/b/7/%E6%B9%BE%E5%8C%BA%E6%97%A5%E6%8A%A5%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E4%BD%9C%E7%9A%84/)
+        ```
+      数据备份
+      有一个每天自动执行一次的 job 把所有数据 dump 出来，压缩一下，按日期命名，最后上传到某个地方。上传到哪里呢？任何提供API的云存储服务都行（Dropbox、Box之类的）。
+      
+      对于 PostgreSQL 里的数据，我用 Django 的 dumpdata 命令把所有数据 dump 成一个 json file，然后 gzip 一下。
+      
+      对于 Redis 里的数据，直接 gzip 一下 disk 上的 dump.rdb。
+      
+      详情见这篇博文：湾区日报是如何备份数据库的？
+      ```
+-
+-

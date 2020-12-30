@@ -10,3 +10,11 @@
     
     解决这些缺陷问题更好的方法应该是使用二叉查找树了，最好自然是自平衡二叉查找树了，既能高效的（O(n log n)）构建有序元素集合，又能如同二分查找法一样快速（O(log n)）的搜寻目标数。
     ```
+- 跳表排序
+    - [SkipList 跳表](https://www.iteye.com/blog/kenby-1187303) 原理
+    - [算法：用Java实现跳表(SkipList)，让查找的时间复杂度媲美红黑树](https://blog.csdn.net/weixin_39448458/article/details/104707932) 代码实现
+    - [java 效率极高的查询数据结构——SkipList 跳表](https://blog.csdn.net/QuinnNorris/article/details/74025389) 原理
+    - []()
+- 
+- 
+- 

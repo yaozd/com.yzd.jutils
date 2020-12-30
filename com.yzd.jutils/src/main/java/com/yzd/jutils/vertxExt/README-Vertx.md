@@ -21,3 +21,5 @@ final HttpClient client = httpClients.computeIfAbsent(Vertx.currentContext(), cr
 ```
 - 
 - 
+### vertx 调用redis
+- [https://github.com/lygoing/redis-benchmark](https://github.com/lygoing/redis-benchmark)
