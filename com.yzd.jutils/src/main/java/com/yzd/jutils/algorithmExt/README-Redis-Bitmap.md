@@ -49,5 +49,11 @@ key由属性id＋视频分片id组成。value按照视频id对分片范围取模
 什么是Bitmaps
 Bitmaps如何使用（含详细命令对比分析及示例）
 ```
-- []()
+- [Redis 高级特性之 Bitmap 使用姿势及应用场景介绍](https://my.oschina.net/u/566591/blog/4678052) 代码实现
+    ```
+  bitmap 基本使用
+  日活统计应用场景中 bitmap 使用姿势
+  点赞去重应用场景中 bitmap 使用姿势
+  布隆过滤器 bloomfilter 基本原理及体验 case
+  ```
 - []()
