@@ -1,5 +1,12 @@
 ## key/value数据库
 
+### Go-Redix一个非常快速的持久化支持的KV存储
+- [Go-Redix一个非常快速的持久化支持的KV存储](https://github.com/alash3al/redix)
+- [https://github.com/alash3al/redix](https://github.com/alash3al/redix)
+    - 引用组件
+        - badger
+            - [badger和rocksDB性能对比](https://www.cnblogs.com/zhangchaoyang/articles/9427675.html)
+
 ### Pika
 - [https://github.com/Qihoo360/pika](https://github.com/Qihoo360/pika)
 - 安装
@@ -38,7 +45,20 @@
 - 支持的语言和客户端
     - [支持的语言和客户端](https://github.com/Qihoo360/pika/wiki/%E6%94%AF%E6%8C%81%E7%9A%84%E8%AF%AD%E8%A8%80%E5%92%8C%E5%AE%A2%E6%88%B7%E7%AB%AF)
 - [pika 支持的redis接口及兼容情况](https://github.com/Qihoo360/pika/wiki/pika-%E6%94%AF%E6%8C%81%E7%9A%84redis%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%85%BC%E5%AE%B9%E6%83%85%E5%86%B5)
-
+- PIKA如何设置Maxmemory
+    - [请问PIKA如何设置Maxmemory，我想把Pika内存使用量限制在100GB左右，请问如何实现？](https://github.com/Qihoo360/pika/issues/450)
+       ```
+       Pika不能直接设置使用内存的上限， 但是可以通过修改write-buffer-size，maxclients等参数，间接的控制内存使用量
+       内存上限=write-buffer-size*maxclients
+       //保证连接的稳定性，配置如下：
+       new Jedis(redisHost, redisPort, 60,60);//错误，连接不稳定，则内存会暴涨
+       new Jedis(redisHost, redisPort, 2000,60000);//正确，稳定连接
+       PS:
+       连接超时：2s
+       读超时：60s
+       ```
+    - [pika占用系统内存过大问题](https://github.com/Qihoo360/pika/issues/39)
+    - []()
 
 
 ### TiKV
