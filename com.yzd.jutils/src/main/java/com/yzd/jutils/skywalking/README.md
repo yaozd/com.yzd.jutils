@@ -1,6 +1,11 @@
 #### 调用链选型
 - [调用链选型之Zipkin，Pinpoint，SkyWalking，CAT](https://www.jianshu.com/p/0fbbf99a236e)
 
+#### 环境搭建
+- [基于SkyWalking的分布式跟踪系统 - 环境搭建](https://www.cnblogs.com/jianzh5/p/11753595.html)
+- [skywalking调研相关资料整理](https://blog.csdn.net/lo085213/article/details/94993484)
+
+
 #### [Skywalking 是一个APM系统，即应用性能监控系统](http://www.kailing.pub/article/index/arcid/177.html)
 - [Skywalking 是一个APM系统，即应用性能监控系统](http://www.kailing.pub/article/index/arcid/177.html)
 - [incubator-skywalking](https://github.com/apache/incubator-skywalking)
