@@ -1,4 +1,5 @@
 ## HTT2-错误码
+- [https://github.com/grpc/grpc/blob/master/doc/statuscodes.md](https://github.com/grpc/grpc/blob/master/doc/statuscodes.md) -推荐参考grpc官方文档
 ----
 | name          |code           |desc           |
 | ------------- | ------------- | ------------- |
