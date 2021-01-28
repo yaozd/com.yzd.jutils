@@ -1,5 +1,6 @@
 ## HTTP2-协议
 - [HTTP2 详解](https://www.jianshu.com/p/e57ca4fec26f)
+- [https://httpwg.org/specs/rfc7540.html](https://httpwg.org/specs/rfc7540.html)
 - [https://www.rfc-editor.org/rfc/rfc7540.txt](https://www.rfc-editor.org/rfc/rfc7540.txt)
 - [https://github.com/abbshr/rfc7540-translation-zh_cn](https://github.com/abbshr/rfc7540-translation-zh_cn) 中文翻译-推荐byArvin
 - [https://httpwg.org/specs/rfc7540.html](https://httpwg.org/specs/rfc7540.html)
