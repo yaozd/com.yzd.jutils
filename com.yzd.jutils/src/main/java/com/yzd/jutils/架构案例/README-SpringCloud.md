@@ -13,3 +13,8 @@ Cloud-Platform是国内首个基于Spring Cloud微服务化开发平台，
     ```
   百度云盘-》电子书-》spring cloud下
   ```
+
+## JeecgBoot 2.4 微服务正式版发布
+- [基于SpringBoot的低代码平台](https://www.jianshu.com/p/59a42054daa5)
+- [JeecgBoot 2.4.2 积木报表版本发布](https://www.jianshu.com/p/59a42054daa5)
+- []()
