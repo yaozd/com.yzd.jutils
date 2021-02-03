@@ -117,3 +117,14 @@ sysctl -p
   ```
 - [linux netstat tcp（全连接半连接）详解](https://blog.csdn.net/weixin_40139740/article/details/84034390)
 - []()
+
+## tcp连接的建立时间
+- [如何查看tcp连接的建立时间？](https://blog.csdn.net/stpeace/article/details/104651624/)
+    ```
+  stat /proc/12335/fd/6
+  ```
+- [Linux系统stat指令用法](https://www.cnblogs.com/klb561/p/9241228.html)
+    ```
+  stat命令主要用于显示文件或文件系统的详细信息
+  ```
+- []()

@@ -59,3 +59,15 @@ https://blog.csdn.net/lemontree1945/article/details/88581516
     TCP  Previoussegment lost（发送方数据段丢失）
     tcp spurious retransmission(tcp伪重传)
     ```
+- [几种TCP连接中出现RST的场景分析](https://blog.csdn.net/chenlycly/article/details/76383198)
+```
+1 端口未打开
+PS:服务器程序端口未打开而客户端来连接
+2.请求超时
+PS:程序认为接收超时，所以发送了RST拒绝进一步发送数据
+3.提前关闭
+PS:TCP是一种可靠的连接'。 而这可靠有这样一种含义，那就是操作系统接收到的来自TCP连接中的每一个字节，我都会让应用程序接收到。如果应用程序不接收怎么办？你猜对了，RST
+4.在一个已关闭的socket上收到数据
+PS:如果某个socket已经关闭，但依然收到数据也会产生RST。
+
+```
