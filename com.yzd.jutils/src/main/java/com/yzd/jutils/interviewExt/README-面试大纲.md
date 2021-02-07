@@ -24,7 +24,8 @@
 ## 基础
 1. ArrayList与LinkedList底层实现与增删查效率比较
     - [ArrayList与LinkedList底层实现与增删查效率比较](https://blog.csdn.net/stanxl/article/details/84707945)
-
+2. 为什么ConcurrentHashMap的读操作不需要加锁
+    - [为什么ConcurrentHashMap的读操作不需要加锁](https://blog.csdn.net/xiaoningxueJAVA/article/details/108524292)
 
 ## 数据库
 - [MySQL主从延时这么长，要怎么优化？](https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651961644&idx=1&sn=e1034de4069abbeed85d8367c732d1ea)
