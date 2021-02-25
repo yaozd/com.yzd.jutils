@@ -5,3 +5,5 @@
 ```
 
 - [Java 内存溢出（OOM）异常完全指南](https://blog.csdn.net/qq_35246620/article/details/77898295)
+
+- [解决 java.lang.OutOfMemoryError： unable to create new native thread](https://blog.csdn.net/thwsir/article/details/86480956)

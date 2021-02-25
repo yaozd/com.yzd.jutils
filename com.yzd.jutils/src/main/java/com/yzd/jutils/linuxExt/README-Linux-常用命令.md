@@ -66,6 +66,12 @@
 - lsof
     - [Linux 命令神器：lsof](https://www.jianshu.com/p/a3aa6b01b2e1)
 
+- pstree
+    -  查看当前用户启动的所有应用列表
+- route
+    - route -n 查看当前支持的路由
+    
+
 ### [CentOS7使用firewalld打开关闭防火墙与端口](https://www.cnblogs.com/moxiaoan/p/5683743.html)
 
 ```
@@ -76,3 +82,4 @@
 开机禁用  ： systemctl disable firewalld
 开机启用  ： systemctl enable firewalld
 ```
+
